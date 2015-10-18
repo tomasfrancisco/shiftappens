@@ -95,7 +95,8 @@ body, html {
             background-color: #FF25A4;
             color: #FFF100;
             border: 10px solid #FF25A4;
-            cursor: pointer; }
+            cursor: pointer;
+            min-width: 120px; }
       #contact .contact-container article address {
         margin: 5% 0; }
         #contact .contact-container article address a {
@@ -110,5 +111,3 @@ body, html {
               opacity: 0.7; }
           #contact .contact-container article address a:hover {
             opacity: 0.7; }
-
-/*# sourceMappingURL=style.css.map */
