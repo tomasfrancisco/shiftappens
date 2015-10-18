@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <meta charset="utf-8"/>
     	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
     	<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
@@ -13,23 +14,43 @@
 	    			<h4>19, 20 e 21 de Fevereiro</h4>
 	    		</div>
 	    		<div class="logo">
-    				<img src="assets/img/logo-desktop.png"/>
 				</div>
 				<div class="scroll-btn">
-					<img/>
+                    <a href="#about">
+					   <img src="assets/arrow.svg"/>
+                   </a>
 				</div>
     		</div>
     	</section>
     	<section id="about">
-    		<div class="about-container">
-    			<div class="card">
-    				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-    				<p>Cras fermentum blandit libero, at egestas augue vulputate sed. Sed elementum dui quam. Mauris eleifend eros in tortor sollicitudin mollis eget eu augue. Vivamus eu justo eget sapien aliquet varius et a odio. Praesent scelerisque, tellus ut egestas aliquam, lacus metus ornare felis, a mattis dolor ante non eros.</p>
-    			</div>
-    		</div>
+            <section class="about-container">
+        		<article>    			
+        				<header>
+                            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                        </header>
+        				<p>Cras fermentum blandit libero, at egestas augue vulputate sed. Sed elementum dui quam. Mauris eleifend eros in tortor sollicitudin mollis eget eu augue. Vivamus eu justo eget sapien aliquet varius et a odio. Praesent scelerisque, tellus ut egestas aliquam, lacus metus ornare felis, a mattis dolor ante non eros.</p>
+        		</article>
+            </section>
     	</section>
     	<section id="contact">
-    		<h1>Viewport Contact</h1>
+    		<section class="contact-container">
+                <article>
+                    <header>
+                        <h1>Ficaste interessado?</h1>
+                    </header>
+                    <form>
+                        <label for="email">Subscribe our newsletter to know the latest news</label>
+                        <input id="email" type="email" placeholder="Enter your e-mail address here">
+                        <input id="subscribe" class="submit" type="submit" value="Subscribe">
+                    </form>
+                    <address>
+                        <a href="mailto:info@shiftappens.com?Subject=ShiftAPPens:Contacto">
+                            <img src="assets/img/mail.png"/>
+                            <p>info@shiftappens.com</p>
+                        </a>
+                    </address>
+                </article>
+            </section>
     	</section>
     </body>
 </html>

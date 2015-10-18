@@ -9,7 +9,7 @@ body, html
 	height: 100vh
 
 #home
-	background: url(../img/home-background.png) no-repeat center center fixed
+	background: url(../img/optimized/home-background.png) no-repeat center center fixed
 	background-size: cover
 	background-color: white
 	display: table
@@ -22,11 +22,16 @@ body, html
 			color: #262261
 			font-size: 100%
 		.logo
-			img
-				width: 80%
-
+			height: 150px
+			background: url(../img/optimized/logo-desktop.png) no-repeat center center
+			background-size: 70%
+			@media (max-width: 700px)
+				height: 250px
+				background: url(../img/optimized/logo-mobile.png) no-repeat center center
+				background-size: 70%
+				
 #about
-	background: url(../img/about-background.png) no-repeat center center fixed
+	background: url(../img/optimized/about-background.png) no-repeat center center fixed
 	background-size: cover
 	background-color: #00A69C
 	display: table
@@ -34,21 +39,73 @@ body, html
 		display: table-cell
 		text-align: center
 		vertical-align: middle
-		.card
-			margin: 0 auto
+		article
 			width: 70%
 			height: 70%
+			margin: 0 auto
 			background-color: white
 			box-shadow: -10px -10px 0 #FFF100
 			padding: 5px
 			color: #262261
 			overflow: scroll
-			h1
+			header
 				margin: 30px 0
 			p
-				margin: 30px 0
+				margin: 30px 0		
 
 #contact
-	background: url(../img/contact-background.png) no-repeat center center fixed
+	background: url(../img/optimized/contact-background.png) no-repeat center center fixed
 	background-size: cover
 	background-color: #FFF100
+	display: table
+	.contact-container
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+		article
+			width: 70%
+			height: 70%
+			margin: 0 auto
+			background-color: white
+			box-shadow: -10px -10px 0 #262261
+			padding: 5px
+			color: #262261
+			overflow: scroll
+			color: #FF25A4
+			header
+				margin: 2% 0
+			form
+				margin: 5% auto
+				width: 70%
+				label
+					display: block
+					margin: 5% 0
+				input
+					margin: 1% 0
+					background-color: #E2E2E2
+					border: none
+					outline: none
+					font-size: 60%
+					border: 10px solid #E2E2E2
+					width: 100%
+					text-align: center
+					&.submit
+						width: 40%
+						background-color: #FF25A4
+						color: #FFF100
+						border: 10px solid #FF25A4
+						cursor: pointer
+			address
+				margin: 5% 0
+				a
+					text-decoration: none
+					color: #c7c7c7
+					font-style: normal
+					img
+						width: 50px
+					p
+						font-size: 50%
+						&:hover
+							opacity: 0.7
+					&:hover
+						opacity: 0.7

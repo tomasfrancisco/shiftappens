@@ -9,7 +9,7 @@ body, html {
   height: 100vh; }
 
 #home {
-  background: url(../img/home-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: white;
   display: table; }
@@ -21,11 +21,18 @@ body, html {
       margin-bottom: 5%;
       color: #262261;
       font-size: 100%; }
-    #home .home-container .logo img {
-      width: 80%; }
+    #home .home-container .logo {
+      height: 150px;
+      background: url(../img/optimized/logo-desktop.png) no-repeat center center;
+      background-size: 70%; }
+      @media (max-width: 700px) {
+        #home .home-container .logo {
+          height: 250px;
+          background: url(../img/optimized/logo-mobile.png) no-repeat center center;
+          background-size: 70%; } }
 
 #about {
-  background: url(../img/about-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/about-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #00A69C;
   display: table; }
@@ -33,23 +40,75 @@ body, html {
     display: table-cell;
     text-align: center;
     vertical-align: middle; }
-    #about .about-container .card {
-      margin: 0 auto;
+    #about .about-container article {
       width: 70%;
       height: 70%;
+      margin: 0 auto;
       background-color: white;
       box-shadow: -10px -10px 0 #FFF100;
       padding: 5px;
       color: #262261;
       overflow: scroll; }
-      #about .about-container .card h1 {
+      #about .about-container article header {
         margin: 30px 0; }
-      #about .about-container .card p {
+      #about .about-container article p {
         margin: 30px 0; }
 
 #contact {
-  background: url(../img/contact-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/contact-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #FFF100; }
+  background-color: #FFF100;
+  display: table; }
+  #contact .contact-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+    #contact .contact-container article {
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: -10px -10px 0 #262261;
+      padding: 5px;
+      color: #262261;
+      overflow: scroll;
+      color: #FF25A4; }
+      #contact .contact-container article header {
+        margin: 2% 0; }
+      #contact .contact-container article form {
+        margin: 5% auto;
+        width: 70%; }
+        #contact .contact-container article form label {
+          display: block;
+          margin: 5% 0; }
+        #contact .contact-container article form input {
+          margin: 1% 0;
+          background-color: #E2E2E2;
+          border: none;
+          outline: none;
+          font-size: 60%;
+          border: 10px solid #E2E2E2;
+          width: 100%;
+          text-align: center; }
+          #contact .contact-container article form input.submit {
+            width: 40%;
+            background-color: #FF25A4;
+            color: #FFF100;
+            border: 10px solid #FF25A4;
+            cursor: pointer; }
+      #contact .contact-container article address {
+        margin: 5% 0; }
+        #contact .contact-container article address a {
+          text-decoration: none;
+          color: #c7c7c7;
+          font-style: normal; }
+          #contact .contact-container article address a img {
+            width: 50px; }
+          #contact .contact-container article address a p {
+            font-size: 50%; }
+            #contact .contact-container article address a p:hover {
+              opacity: 0.7; }
+          #contact .contact-container article address a:hover {
+            opacity: 0.7; }
 
 /*# sourceMappingURL=style.css.map */
