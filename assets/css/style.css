@@ -45,7 +45,6 @@ body, html {
     text-align: center;
     vertical-align: middle; }
     #about .about-container article {
-      opacity: 0;
       width: 70%;
       margin: 0 auto;
       background-color: white;
@@ -71,7 +70,6 @@ body, html {
     text-align: center;
     vertical-align: middle; }
     #contact .contact-container article {
-      opacity: 0;
       width: 70%;
       margin: 0 auto;
       background-color: white;
