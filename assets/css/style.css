@@ -1,3 +1,6 @@
+html {
+  overflow-y: hidden; }
+
 body, html {
   font-family: "Dosis";
   font-size: 1.3em;
@@ -108,3 +111,5 @@ body, html {
               opacity: 0.7; }
           #contact .contact-container article address a:hover {
             opacity: 0.7; }
+
+/*# sourceMappingURL=style.css.map */
