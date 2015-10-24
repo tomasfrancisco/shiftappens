@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8"/>
         <title>Shift APPens</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name=viewport content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicon.jpeg"/>
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
         <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
@@ -14,13 +14,13 @@
     <body>
         <section id="home">
             <div class="home-container">
-                <div class="shift-date">
+                <div class="shift-date animated fadeIn">
                     <h4>19, 20 e 21 de Fevereiro</h4>
                 </div>
-                <div class="logo">
+                <div class="logo animated fadeIn">
                 </div>
                 <div class="scroll-btn">
-                    <a id="scroll-down-to-about" href="#">
+                    <a id="scroll-down-to-about" class="animated fadeIn" href="#">
                        <img src="assets/svg/arrow.svg" alt="O que é o Shift APPens?"/>
                    </a>
                 </div>
@@ -28,7 +28,7 @@
         </section>
         <section id="about">
             <section class="about-container">
-                <article>              
+                <article class="animated">              
                         <header>
                             <h2>O que é o Shift APPens?</h2>
                         </header>
@@ -38,7 +38,7 @@
                         </p>
                 </article>
                 <div class="scroll-btn">
-                    <a id="scroll-down-to-contact" href="#">
+                    <a id="scroll-down-to-contact" class="animated" href="#">
                        <img src="assets/svg/arrow.svg" alt="Contactos"/>
                    </a>
                 </div>
@@ -46,7 +46,7 @@
         </section>
         <section id="contact">
             <section class="contact-container">
-                <article>
+                <article class="animated">
                     <header>
                         <h2>Ficaste interessado?</h2>
                     </header>
@@ -66,6 +66,7 @@
         </section>
         <script src="assets/js/jquery-1.8.3.min.js"></script>
         <script src="assets/js/animatescroll.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
         <script src="assets/js/functions.js"></script>
     </body>
 </html>
