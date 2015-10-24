@@ -2,8 +2,7 @@ body, html {
   font-family: "Dosis";
   font-size: 1.3em;
   height: 100%;
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 #home, #about, #contact {
   width: 100vw;
