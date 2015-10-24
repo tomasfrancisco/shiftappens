@@ -3,7 +3,6 @@ body, html
 	font-size: 1.3em
 	height: 100%
 	margin: 0
-	overflow-x: hidden
 
 #home, #about, #contact
 	width: 100vw
@@ -42,11 +41,13 @@ body, html
 		vertical-align: middle
 		article
 			width: 70%
+			height: 70%
 			margin: 0 auto
 			background-color: white
 			box-shadow: -10px -10px 0 #FFF100
 			padding: 5px
 			color: #262261
+			overflow: scroll
 			header
 				margin: 30px 0
 			p
@@ -63,11 +64,13 @@ body, html
 		vertical-align: middle
 		article
 			width: 70%
+			height: 70%
 			margin: 0 auto
 			background-color: white
 			box-shadow: -10px -10px 0 #262261
 			padding: 5px
 			color: #262261
+			overflow: scroll
 			color: #FF25A4
 			header
 				margin: 2% 0
@@ -75,17 +78,16 @@ body, html
 				margin: 5% auto
 				width: 70%
 				label
-					display: inline-block
+					display: block
 					margin: 5% 0
 				input
-					display: inline-block
 					margin: 1% 0
 					background-color: #E2E2E2
 					border: none
 					outline: none
 					font-size: 60%
 					border: 10px solid #E2E2E2
-					width: 80%
+					width: 100%
 					text-align: center
 					&.submit
 						width: 40%
