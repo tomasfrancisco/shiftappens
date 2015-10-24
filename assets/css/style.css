@@ -2,7 +2,8 @@ body, html {
   font-family: "Dosis";
   font-size: 1.3em;
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 #home, #about, #contact {
   width: 100vw;
@@ -42,13 +43,11 @@ body, html {
     vertical-align: middle; }
     #about .about-container article {
       width: 70%;
-      height: 70%;
       margin: 0 auto;
       background-color: white;
       box-shadow: -10px -10px 0 #FFF100;
       padding: 5px;
-      color: #262261;
-      overflow: scroll; }
+      color: #262261; }
       #about .about-container article header {
         margin: 30px 0; }
       #about .about-container article p {
@@ -65,13 +64,11 @@ body, html {
     vertical-align: middle; }
     #contact .contact-container article {
       width: 70%;
-      height: 70%;
       margin: 0 auto;
       background-color: white;
       box-shadow: -10px -10px 0 #262261;
       padding: 5px;
       color: #262261;
-      overflow: scroll;
       color: #FF25A4; }
       #contact .contact-container article header {
         margin: 2% 0; }
@@ -79,16 +76,17 @@ body, html {
         margin: 5% auto;
         width: 70%; }
         #contact .contact-container article form label {
-          display: block;
+          display: inline-block;
           margin: 5% 0; }
         #contact .contact-container article form input {
+          display: inline-block;
           margin: 1% 0;
           background-color: #E2E2E2;
           border: none;
           outline: none;
           font-size: 60%;
           border: 10px solid #E2E2E2;
-          width: 100%;
+          width: 80%;
           text-align: center; }
           #contact .contact-container article form input.submit {
             width: 40%;
@@ -111,3 +109,5 @@ body, html {
               opacity: 0.7; }
           #contact .contact-container article address a:hover {
             opacity: 0.7; }
+
+/*# sourceMappingURL=style.css.map */
