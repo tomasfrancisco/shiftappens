@@ -22,10 +22,10 @@ body, html {
     vertical-align: middle; }
     #home .home-container .shift-date {
       margin-bottom: 5%;
-      color: #262261;
-      font-size: 100%;
-      font-weight: 600;
-      font-size: 1.6rem; }
+      color: #262261; }
+      #home .home-container .shift-date h4 {
+        font-weight: 400;
+        font-size: 1.6rem; }
     #home .home-container .logo {
       height: 150px;
       background: url(../img/optimized/logo-desktop.png) no-repeat center center;
