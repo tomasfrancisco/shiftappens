@@ -1,122 +1,217 @@
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden; 
+}
 
 body, html {
   font-family: "Dosis";
   font-size: 1.3em;
   height: 100%;
-  margin: 0; }
+  margin: 0; 
+}
+
 
 #home, #about, #contact {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh; 
+}
 
 #home {
   background: url(../img/optimized/home-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: white;
-  display: table; }
-  #home .home-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
-    #home .home-container .shift-date {
-      margin-bottom: 5%;
-      color: #262261;
-      font-size: 100%; }
-    #home .home-container .logo {
-      height: 150px;
-      background: url(../img/optimized/logo-desktop.png) no-repeat center center;
-      background-size: 70%; }
-      @media (max-width: 700px) {
-        #home .home-container .logo {
-          height: 250px;
-          background: url(../img/optimized/logo-mobile.png) no-repeat center center;
-          background-size: 70%; } }
+  display: table; 
+}
+
+#home .home-container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+#home .home-container .shift-date {
+  margin-bottom: 5%;
+  color: #262261;
+  font-size: 1.4rem; 
+}
+
+#home .home-container .logo {
+  height: 150px;
+  background: url(../img/optimized/logo-desktop.png) no-repeat center center;
+  background-size: 70%; 
+}
+
+@media (max-width: 700px) {
+  #home .home-container .logo {
+    height: 250px;
+    background: url(../img/optimized/logo-mobile.png) no-repeat center center;
+    background-size: 70%; 
+  } 
+}
 
 #about {
   background: url(../img/optimized/about-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #00A69C;
-  display: table; }
-  #about .about-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px 0; }
-    #about .about-container article {
-      width: 70%;
-      margin: 0 auto;
-      background-color: white;
-      box-shadow: -10px -10px 0 #FFF100;
-      padding: 5px;
-      color: #262261; }
-      #about .about-container article header {
-        margin: 30px 0; }
-      #about .about-container article p {
-        margin: 30px 0; }
-        #about .about-container article p .meaning {
-          text-decoration: underline;
-          font-style: italic;
-          color: #262261; }
+  display: table; 
+}
+
+#about .about-container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 0; 
+}
+
+#about .about-container article {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: -10px -10px 0 #FFF100;
+  padding: 5px;
+  color: #262261; 
+}
+
+#about .about-container article header {
+  margin: 30px 0; 
+}
+
+#about .about-container article header h2 {
+  font-size: 1.5rem;
+}
+
+#about .about-container article p {
+  margin: 30px 0; 
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5vh;
+  line-height: 1.5rem;
+}
+
+#about .about-container article p .meaning {
+  text-decoration: underline;
+  font-style: italic;
+  color: #262261; 
+}
 
 #contact {
   background: url(../img/optimized/contact-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #FFF100;
-  display: table; }
-  #contact .contact-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px 0; }
-    #contact .contact-container article {
-      width: 70%;
-      margin: 0 auto;
-      background-color: white;
-      box-shadow: -10px -10px 0 #262261;
-      padding: 5px;
-      color: #262261;
-      color: #FF25A4; }
-      #contact .contact-container article header {
-        margin: 2% 0; }
-      #contact .contact-container article form {
-        margin: 5% auto;
-        width: 70%; }
-        #contact .contact-container article form label {
-          display: inline-block;
-          margin: 5% 0; }
-        #contact .contact-container article form input {
-          -webkit-appearance: none;
-             -moz-appearance: none;
-                  appearance: none;
-          border-radius: 0;
-          display: inline-block;
-          margin: 1% 0;
-          background-color: #E2E2E2;
-          outline: none;
-          font-size: 60%;
-          border: 10px solid #E2E2E2;
-          width: 80%;
-          text-align: center; }
-          #contact .contact-container article form input.submit {
-            width: 40%;
-            background-color: #FF25A4;
-            color: #FFF100;
-            border: 10px solid #FF25A4;
-            cursor: pointer;
-            min-width: 120px; }
-      #contact .contact-container article address {
-        margin: 5% 0; }
-        #contact .contact-container article address a {
-          text-decoration: none;
-          color: #c7c7c7;
-          font-style: normal; }
-          #contact .contact-container article address a img {
-            width: 50px; }
-          #contact .contact-container article address a p {
-            font-size: 50%; }
-            #contact .contact-container article address a p:hover {
-              opacity: 0.7; }
-          #contact .contact-container article address a:hover {
-            opacity: 0.7; }
+  display: table; 
+}
+
+#contact .contact-container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 0; 
+}
+
+#contact .contact-container article {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: -10px -10px 0 #262261;
+  padding: 5px;
+  color: #262261;
+  color: #FF25A4; 
+}
+
+#contact .contact-container article header {
+  margin: 2% 0; 
+}
+
+#contact .contact-container article form {
+  margin: 5% auto;
+  width: 70%; 
+}
+
+#contact .contact-container article form label {
+  display: inline-block;
+  margin: 5% 0; 
+}
+
+#contact .contact-container article form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  margin: 1% 0;
+  background-color: #E2E2E2;
+  outline: none;
+  font-size: 60%;
+  border: 10px solid #E2E2E2;
+  width: 80%;
+  text-align: center; 
+}
+
+#contact .contact-container article form input.submit {
+  width: 40%;
+  background-color: #FF25A4;
+  color: #FFF100;
+  border: 10px solid #FF25A4;
+  cursor: pointer;
+  min-width: 120px; 
+}
+
+#contact .contact-container article address {
+  margin: 5% 0; 
+}
+
+#contact .contact-container article address a {
+  text-decoration: none;
+  color: #c7c7c7;
+  font-style: normal; 
+}
+
+#contact .contact-container article address a img {
+  width: 50px; 
+}
+
+#contact .contact-container article address a p {
+  font-size: 50%; 
+}
+
+#contact .contact-container article address a p:hover {
+  opacity: 0.7; 
+}
+
+#contact .contact-container article address a:hover {
+  opacity: 0.7; 
+}
+
+
+footer {
+  background-color: white;
+}
+
+footer .item h3 {
+  margin-bottom: 2vh;
+}
+
+.container {
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item ul {
+  list-style: none;
+}
+
+.item h3 {
+  color: #FF25A4;
+}
+
+.item ul li {
+  padding-bottom: 1vh;
+}
+
+.org-img {
+  height: 10vh;
+}
+
+.nei {
+  padding-left: 4vw;
+}
