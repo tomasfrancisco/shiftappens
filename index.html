@@ -5,12 +5,12 @@
         <meta charset="utf-8"/>
         <title>Shift APPens</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicon.jpeg"/>
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
         <meta property="og:url" content="http://shiftappens.com/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Shift APPens" />
@@ -39,16 +39,12 @@
             <section class="about-container">
                 <article>              
                         <header>
-                            <h2>O que é o Shift APPens?</h2>
-                        </header>
-                        <div class="row">
-                        <div clasS="col-md-10 col-md-offset-1">
+                            <h1>O que é o Shift APPens?</h1>
+                        </header>                        
                         <p>
                             O Shift APPens é um 
                             <a class="meaning" href="https://goo.gl/XrZIO">hackathon</a> organizado por estudantes em Coimbra, no qual podes desenvolver um website, app ou jogo em três dias. Este evento destaca-se pelas actividades aleatórias e ambiente descontraído, destinado tanto a estudantes como não estudantes de todo o país.
                         </p>
-                        </div>
-                        </div>
                 </article>
                 <div class="scroll-btn">
                     <a id="scroll-down-to-contact" href="#">
@@ -65,23 +61,20 @@
                     </header>
                     <form action="//shiftappens.us12.list-manage.com/subscribe/post?u=6002684bae4a40458e05587b2&amp;id=636ad4711e" method="post" target="_blank">
                         <label for="email">Subscreve a nossa newsletter para saberes as novidades em primeira mão!</label>
-                        <input id="email" type="email" placeholder="O teu e-mail" name="EMAIL" required>
-                        <input id="subscribe" class="submit" type="submit" value="Subscrever">
+                        <input class="email-field" type="email" placeholder="O teu e-mail" name="EMAIL" required>
+                        <input class="submit" type="submit" value="Subscrever">
                     </form>
                     <address>
                         <a href="mailto:info@shiftappens.com?Subject=ShiftAPPens:Contacto">
-                            <i class="fa fa-envelope-o"></i>
+                            <span class="fa fa-envelope-o"></span>
                             <p>info@shiftappens.com</p>
-
                         </a>
-
-                         <a href="https://facebook.com/whereshiftappens" target="_blank">
-                            <i class="fa fa-facebook"></i>
+                        <a href="https://facebook.com/whereshiftappens" target="_blank">
+                            <span class="fa fa-facebook"></span>
                             <p>whereshiftappens</p>
-                        </a>
-                        
+                        </a>                        
                         <a href="https://twitter.com/ShiftAPPens" target="_blank">
-                            <i class="fa fa-twitter"></i>
+                            <span class="fa fa-twitter"></span>
                             <p>@shiftappens</p>
                         </a>                       
                     </address>
@@ -89,12 +82,43 @@
             </section>
         </section>
         <footer>
-          <div class="row container">
+            <section>
+                <article>
+                    <header>
+                        <h5>Edições anteriores</h5>
+                    </header>
+                    <ul class="hangover">
+                        <li><a href="http://2014.shiftappens.com">Shift APPens 2014</a></li> 
+                        <li><a href="http://2015.shiftappens.com">Shift APPens 2015</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <header>
+                        <h5>Organização</h5>
+                    </header>
+                    <ul class="organisations">
+                        <li>
+                            <a href="http://jeknowledge.pt" target="_blank">
+                                <img class="org-img" src="http://i.imgur.com/i19cSFc.png" />
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://nei.dei.uc.pt" target="_blank">
+                                <img class="org-img" src="http://i.imgur.com/wnt6Xxm.jpg" />
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+          <!-- <div class="row container">
             <div class="item col-md-6">
-              <h3>Edições dos anos passados</h3>
+              <h3>Edições</h3>
               <ul>
-                <li><a href="http://2014.shiftappens.com">Shift APPens 2014</a></li> 
-                <li><a href="http://2015.shiftappens.com">Shift APPens 2015</a></li>
+                <li><a href="http://2014.shiftappens.com">@ 2014</a></li> 
+                <li><a href="http://2015.shiftappens.com">@ 2015</a></li>
               </ul>
             </div> 
             <div class="item col-md-6">
@@ -110,7 +134,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </footer>
         <script src="assets/js/jquery-1.8.3.min.js"></script>
         <script src="assets/js/animatescroll.min.js"></script>
