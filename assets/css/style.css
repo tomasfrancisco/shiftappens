@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+
+
+
 html {
   overflow-x: hidden; 
 }
@@ -9,6 +13,9 @@ body, html {
   margin: 0; 
 }
 
+.scroll-btn { 
+  margin-top: 8vh;
+}
 
 #home, #about, #contact {
   width: 100vw;
@@ -32,6 +39,11 @@ body, html {
   margin-bottom: 5%;
   color: #262261;
   font-size: 1.4rem; 
+}
+
+.shift-date h4 {
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 
 #home .home-container .logo {
@@ -63,7 +75,7 @@ body, html {
 }
 
 #about .about-container article {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   background-color: white;
   box-shadow: -10px -10px 0 #FFF100;
@@ -71,20 +83,22 @@ body, html {
   color: #262261; 
 }
 
-#about .about-container article header {
-  margin: 30px 0; 
-}
+
 
 #about .about-container article header h2 {
   font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 6vh;
 }
 
 #about .about-container article p {
   margin: 30px 0; 
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 5vh;
-  line-height: 1.5rem;
+  margin-bottom: 7vh;
+  line-height: 1.6rem;
+  font-weight: 300;
+  font-size: 0.8em;
 }
 
 #about .about-container article p .meaning {
@@ -108,7 +122,7 @@ body, html {
 }
 
 #contact .contact-container article {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   background-color: white;
   box-shadow: -10px -10px 0 #262261;
@@ -117,18 +131,28 @@ body, html {
   color: #FF25A4; 
 }
 
+
 #contact .contact-container article header {
-  margin: 2% 0; 
+  margin: 4% 0 0 0; 
+}
+
+#contact .contact-container article header h2{
+  font-weight: 600;
+  font-size: 1em;
 }
 
 #contact .contact-container article form {
-  margin: 5% auto;
+  margin: 2% auto;
   width: 70%; 
 }
 
 #contact .contact-container article form label {
   display: inline-block;
-  margin: 5% 0; 
+  margin: 2% 0 5% 0; 
+
+  color: #303030;
+  font-weight: 300;
+  font-size: 0.8em;
 }
 
 #contact .contact-container article form input {
@@ -138,66 +162,105 @@ body, html {
   border-radius: 0;
   display: inline-block;
   margin: 1% 0;
-  background-color: #E2E2E2;
   outline: none;
-  font-size: 60%;
-  border: 10px solid #E2E2E2;
   width: 80%;
   text-align: center; 
 }
 
+#contact .contact-container article form #email {
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #E2E2E2;
+
+    color: #303030;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+#contact .contact-container article form #email:active, #contact .contact-container article form #email:focus {
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #FF25A4;
+}
+
 #contact .contact-container article form input.submit {
-  width: 40%;
+  width: 20%;
   background-color: #FF25A4;
-  color: #FFF100;
+  color: #FFF;
   border: 10px solid #FF25A4;
   cursor: pointer;
-  min-width: 120px; 
+  min-width: 120px;
+
+  font-size: 0.7em;
+  font-weight: 400; 
 }
 
 #contact .contact-container article address {
-  margin: 5% 0; 
+  margin: 5% 0;
+  display: inline-block; 
+
 }
 
 #contact .contact-container article address a {
   text-decoration: none;
   color: #c7c7c7;
-  font-style: normal; 
+  font-style: normal;
+  float: left;
+  margin: 0 30px;
 }
 
-#contact .contact-container article address a img {
+#contact .contact-container article address a .fa {
   width: 50px; 
+  color: #625F6B;
+  margin-bottom: 20px; 
 }
 
 #contact .contact-container article address a p {
   font-size: 50%; 
+  color: #625F6B;
+
 }
 
 #contact .contact-container article address a p:hover {
-  opacity: 0.7; 
+  opacity: 0.8; 
 }
 
 #contact .contact-container article address a:hover {
-  opacity: 0.7; 
+  opacity: 0.8; 
 }
 
 
 footer {
+  text-align: center;
   background-color: white;
 }
 
+
+.item {
+  margin-top: 30px;
+}
+
 footer .item h3 {
-  margin-bottom: 2vh;
+  font-size: 0.7em;
+  margin-bottom: 5vh;
 }
 
 .container {
   margin-top: 2vh;
+  margin-bottom: 4vh;
   margin-left: auto;
   margin-right: auto;
 }
 
+.item { 
+  display: inline-block;
+  margin-top: 10px;
+}
+
 .item ul {
   list-style: none;
+  margin-top: 70px;
+
 }
 
 .item h3 {
@@ -205,7 +268,23 @@ footer .item h3 {
 }
 
 .item ul li {
-  padding-bottom: 1vh;
+  float: left;
+  margin-bottom: 3vh;
+  color: #262261;
+
+  display:flex;justify-content:center;align-items:center;width:50%;
+
+}
+
+.item a {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  font-size: 0.9em;
+  color: #262261;
+}
+
+.item a:hover {
+  text-decoration: none;
 }
 
 .org-img {
@@ -213,5 +292,6 @@ footer .item h3 {
 }
 
 .nei {
-  padding-left: 4vw;
+  margin-left:auto;
+  margin-right:auto;
 }
