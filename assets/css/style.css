@@ -23,7 +23,9 @@ body, html {
     #home .home-container .shift-date {
       margin-bottom: 5%;
       color: #262261;
-      font-size: 100%; }
+      font-size: 100%;
+      font-weight: 600;
+      font-size: 1.6rem; }
     #home .home-container .logo {
       height: 150px;
       background: url(../img/optimized/logo-desktop.png) no-repeat center center;
@@ -33,6 +35,8 @@ body, html {
           height: 250px;
           background: url(../img/optimized/logo-mobile.png) no-repeat center center;
           background-size: 70%; } }
+    #home .home-container .scroll-btn {
+      margin-top: 8vh; }
 
 #about {
   background: url(../img/optimized/about-background.png) no-repeat center center fixed;
@@ -45,20 +49,30 @@ body, html {
     vertical-align: middle;
     padding: 20px 0; }
     #about .about-container article {
-      width: 70%;
+      width: 60%;
       margin: 0 auto;
       background-color: white;
       box-shadow: -10px -10px 0 #FFF100;
       padding: 5px;
       color: #262261; }
       #about .about-container article header {
-        margin: 30px 0; }
+        margin: 30px 0;
+        font-weight: 700;
+        font-size: 1.5rem; }
       #about .about-container article p {
-        margin: 30px 0; }
+        margin: 30px 0;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 7vh;
+        line-height: 1.6rem;
+        font-weight: 300;
+        font-size: 0.8em; }
         #about .about-container article p .meaning {
           text-decoration: underline;
           font-style: italic;
           color: #262261; }
+    #about .about-container .scroll-btn {
+      margin-top: 8vh; }
 
 #contact {
   background: url(../img/optimized/contact-background.png) no-repeat center center fixed;
@@ -71,8 +85,9 @@ body, html {
     vertical-align: middle;
     padding: 20px 0; }
     #contact .contact-container article {
-      width: 70%;
+      width: 60%;
       margin: 0 auto;
+      padding: 10px;
       background-color: white;
       box-shadow: -10px -10px 0 #262261;
       padding: 5px;
@@ -85,38 +100,102 @@ body, html {
         width: 70%; }
         #contact .contact-container article form label {
           display: inline-block;
-          margin: 5% 0; }
+          margin: 2% 0 5% 0;
+          color: #303030;
+          font-weight: 300;
+          font-size: 0.8em; }
         #contact .contact-container article form input {
-          -webkit-appearance: none;
-             -moz-appearance: none;
-                  appearance: none;
+          appearance: none;
           border-radius: 0;
           display: inline-block;
           margin: 1% 0;
-          background-color: #E2E2E2;
           outline: none;
-          font-size: 60%;
-          border: 10px solid #E2E2E2;
+          font-size: 0.7em;
+          font-weight: 200;
+          border: none;
+          border-bottom: 2px solid #E2E2E2;
           width: 80%;
-          text-align: center; }
+          text-align: center;
+          color: #303030; }
+          #contact .contact-container article form input:focus {
+            padding: 12px;
+            border: none;
+            border-bottom: 2px solid #FF25A4; }
           #contact .contact-container article form input.submit {
-            width: 40%;
+            width: 30%;
+            margin-top: 10px;
             background-color: #FF25A4;
-            color: #FFF100;
+            color: #FFF;
             border: 10px solid #FF25A4;
             cursor: pointer;
-            min-width: 120px; }
+            min-width: 130px; }
+        #contact .contact-container article form .email-field {
+          padding: 12px; }
       #contact .contact-container article address {
+        text-align: center;
         margin: 5% 0; }
         #contact .contact-container article address a {
           text-decoration: none;
-          color: #c7c7c7;
-          font-style: normal; }
-          #contact .contact-container article address a img {
-            width: 50px; }
+          color: #625F6B;
+          font-style: normal;
+          margin: 20px 20px;
+          display: inline-block; }
+          #contact .contact-container article address a span {
+            width: 50px;
+            color: #625F6B;
+            margin-bottom: 20px; }
           #contact .contact-container article address a p {
             font-size: 50%; }
             #contact .contact-container article address a p:hover {
               opacity: 0.7; }
           #contact .contact-container article address a:hover {
             opacity: 0.7; }
+
+footer {
+  text-align: center; }
+  footer section {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2vh; }
+    footer section header {
+      top: 0;
+      color: #FF25A4; }
+      footer section header h5 {
+        font-size: 0.7em;
+        font-weight: 500; }
+    footer section .organisations {
+      padding: 2%;
+      list-style-type: none; }
+      footer section .organisations li {
+        display: inline;
+        text-decoration: none;
+        margin: 20px;
+        padding: 0; }
+        footer section .organisations li a {
+          text-decoration: none;
+          color: #262261;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          font-size: 0.9em; }
+          footer section .organisations li a:hover {
+            opacity: 0.7; }
+        footer section .organisations li .org-img {
+          height: 80px; }
+    footer section .hangover {
+      margin: 4% 0;
+      list-style-type: none; }
+      footer section .hangover li {
+        display: inline-block;
+        text-decoration: none;
+        margin: 20px;
+        padding: 0; }
+        footer section .hangover li a {
+          text-decoration: none;
+          color: #262261;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          font-size: 0.9em; }
+          footer section .hangover li a:hover {
+            opacity: 0.7; }
+
+/*# sourceMappingURL=style.css.map */
