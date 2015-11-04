@@ -22,21 +22,37 @@ body, html {
     vertical-align: middle; }
     #home .home-container .shift-date {
       margin-bottom: 5%;
-      color: #262261; }
+      color: #262261;
+      font-size: 1.6rem; }
       #home .home-container .shift-date h4 {
-        font-weight: 400;
-        font-size: 1.6rem; }
+        font-weight: 600; }
     #home .home-container .logo {
-      height: 150px;
-      background: url(../img/optimized/logo-desktop.png) no-repeat center center;
-      background-size: 70%; }
-      @media (max-width: 700px) {
-        #home .home-container .logo {
-          height: 250px;
-          background: url(../img/optimized/logo-mobile.png) no-repeat center center;
-          background-size: 70%; } }
+      margin: 0 10%; }
+      #home .home-container .logo .desktop {
+        width: 100%; }
+        @media (max-width: 700px) {
+          #home .home-container .logo .desktop {
+            display: none; } }
+        @media (min-width: 701px) {
+          #home .home-container .logo .desktop {
+            display: block; } }
+      #home .home-container .logo .mobile {
+        width: 100%; }
+        @media (max-width: 700px) {
+          #home .home-container .logo .mobile {
+            display: block; } }
+        @media (min-width: 701px) {
+          #home .home-container .logo .mobile {
+            display: none; } }
+    #home .home-container .video {
+      display: none;
+      opacity: 0;
+      height: 60%; }
+      #home .home-container .video iframe {
+        width: 90%;
+        height: 100%; }
     #home .home-container .scroll-btn {
-      margin-top: 8vh; }
+      margin-top: 8%; }
 
 #about {
   background: url(../img/optimized/about-background.png) no-repeat center center fixed;
@@ -56,11 +72,11 @@ body, html {
       padding: 5px;
       color: #262261; }
       #about .about-container article header {
-        margin: 30px 0;
+        margin: 8% 0;
         font-weight: 700;
         font-size: 1.5rem; }
       #about .about-container article p {
-        margin: 30px 0;
+        margin: 8% 0;
         margin-left: 5%;
         margin-right: 5%;
         margin-bottom: 7vh;
@@ -72,7 +88,7 @@ body, html {
           font-style: italic;
           color: #262261; }
     #about .about-container .scroll-btn {
-      margin-top: 8vh; }
+      margin-top: 8%; }
 
 #contact {
   background: url(../img/optimized/contact-background.png) no-repeat center center fixed;
@@ -94,9 +110,9 @@ body, html {
       color: #262261;
       color: #FF25A4; }
       #contact .contact-container article header {
-        margin: 2% 0; }
+        margin: 8% 0; }
       #contact .contact-container article form {
-        margin: 5% auto;
+        margin: 8% auto;
         width: 70%; }
         #contact .contact-container article form label {
           display: inline-block;
