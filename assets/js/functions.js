@@ -11,7 +11,7 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$('#home .shift-date').animate({
 			"margin-bottom" : "0%",
-			"font-size" : "1.2rem"
+			"font-size" : "1.0rem"
 		}, 1000, function() {
 			$('#home .video').show(1000);
 			$('#home .video').animate({
@@ -19,8 +19,8 @@ $(document).ready(function() {
 			}, 1000);
 		});	
 		$('#home .logo').animate({
-			"margin-left": "20%",
-			"margin-right": "20%",
+			"margin-left": "21%",
+			"margin-right": "21%",
 			"margin-bottom": "1%"
 		}, 1000);	
 
