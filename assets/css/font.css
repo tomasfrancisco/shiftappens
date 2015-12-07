@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'mopsterregular';
+  src: url('../fonts/mopster-regular-webfont.eot');
+  src: url('../fonts/mopster-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/mopster-regular-webfont.woff2') format('woff2'), url('../fonts/mopster-regular-webfont.woff') format('woff'), url('../fonts/mopster-regular-webfont.ttf') format('truetype'), url('../fonts/mopster-regular-webfont.svg#mopsterregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

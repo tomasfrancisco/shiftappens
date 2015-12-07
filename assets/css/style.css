@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
 html {
   overflow-x: hidden; }
 
@@ -7,9 +8,22 @@ body, html {
   height: 100%;
   margin: 0; }
 
-#home, #about, #contact {
+#home, #about, #where, #schedule, #awards, #partners {
   width: 100vw;
   height: 100vh; }
+
+#navigation {
+  background-color: #333333; }
+  #navigation .nav-title {
+    font-family: "mopsterregular";
+    font-size: 1.6rem; }
+  #navigation .menu {
+    font-family: "Dosis";
+    font-weight: 500;
+    font-size: 1.2rem; }
+  #navigation .menu a:hover {
+    color: white;
+    -webkit-transition: color 0.2s ease-in-out; }
 
 #home {
   background: url(../img/optimized/home-background.png) no-repeat center center fixed;
@@ -58,162 +72,269 @@ body, html {
       margin-top: 8%; }
 
 #about {
+  background: url(../img/schedule-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #00a5e6;
+  display: table; }
+  #about .about-container {
+    display: table-row;
+    text-align: center;
+    vertical-align: middle;
+    color: white; }
+    #about .about-container article {
+      display: inline-block;
+      width: 40%;
+      min-width: 400px;
+      vertical-align: top;
+      text-align: left;
+      padding: 0 50px 20px 50px; }
+      #about .about-container article header h1 span {
+        font-family: "mopsterregular";
+        color: #ff259c; }
+      #about .about-container article header h2 span {
+        font-family: "mopsterregular";
+        color: #ff259c; }
+      #about .about-container article p {
+        font-size: 0.8em; }
+        #about .about-container article p span {
+          font-weight: 700;
+          color: #ff259c; }
+
+#where {
   background: url(../img/optimized/about-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #00A69C;
   display: table; }
-  #about .about-container {
+  #where .where-container {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    padding: 20px 0; }
-    #about .about-container article {
-      width: 50%;
-      margin: 0 auto;
-      background-color: white;
-      box-shadow: -10px -10px 0 #FFF100;
-      padding: 30px;
-      color: #262261; }
-      #about .about-container article header {
-        margin-bottom: 8%;
+    padding: 20px 0;
+    color: #26245f; }
+    #where .where-container header {
+      display: block; }
+      #where .where-container header h1 {
+        margin: 30px 10%;
+        font-family: "mopsterregular";
         font-weight: 700;
-        font-size: 1.5rem; }
-      #about .about-container article p {
-        margin-left: 5%;
-        margin-right: 5%;
-        line-height: 1.6rem;
-        font-weight: 300;
+        font-size: 1.5rem;
+        color: #26245f;
+        text-align: left; }
+    #where .where-container article {
+      display: inline-block;
+      width: 40%;
+      min-width: 400px;
+      vertical-align: top;
+      text-align: left;
+      padding: 0 50px 20px 50px; }
+      #where .where-container article.place-photo {
+        background: url(../img/pav-centro-portugal.jpg) no-repeat center center;
+        background-size: cover;
+        box-shadow: -10px -10px 0 #00a5e6;
+        height: 60vh;
+        min-height: 300px;
+        margin: 25px 0 0 0; }
+      #where .where-container article header h1 span {
+        font-family: "mopsterregular";
+        color: #00a5e6; }
+      #where .where-container article header h2 span {
+        font-family: "mopsterregular";
+        color: #00a5e6; }
+      #where .where-container article p {
         font-size: 0.8em; }
-        #about .about-container article p .meaning {
-          text-decoration: underline;
-          font-style: italic;
-          color: #262261; }
-    #about .about-container .scroll-btn {
+        #where .where-container article p span {
+          font-weight: 700;
+          color: #00a5e6; }
+    #where .where-container .scroll-btn {
       margin-top: 8%; }
 
-#contact {
-  background: url(../img/optimized/contact-background.png) no-repeat center center fixed;
+#schedule {
+  background: url(../img/schedule-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #FFF100;
+  background-color: #00a5e6;
   display: table; }
-  #contact .contact-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px 0; }
-    #contact .contact-container article {
-      width: 50%;
+  #schedule .schedule-container article header {
+    margin: 30px 10%;
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white; }
+  #schedule .schedule-container article .schedule-board-container {
+    width: 100%; }
+    #schedule .schedule-container article .schedule-board-container .schedule-board {
       margin: 0 auto;
-      padding: 10px;
-      background-color: white;
-      box-shadow: -10px -10px 0 #262261;
-      padding: 5px;
-      color: #262261;
-      color: #FF25A4; }
-      #contact .contact-container article header {
-        margin: 8% 0; }
-      #contact .contact-container article form {
-        margin: 8% auto;
-        width: 70%; }
-        #contact .contact-container article form label {
-          display: inline-block;
-          margin: 2% 0 5% 0;
-          color: #303030;
-          font-weight: 300;
-          font-size: 0.8em; }
-        #contact .contact-container article form input {
-          appearance: none;
-          border-radius: 0;
-          display: inline-block;
-          margin: 1% 0;
-          outline: none;
-          font-size: 0.7em;
-          font-weight: 200;
+      display: table; }
+      #schedule .schedule-container article .schedule-board-container .schedule-board .navigator {
+        text-align: center; }
+        #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button {
           border: none;
-          border-bottom: 2px solid #E2E2E2;
-          width: 80%;
-          text-align: center;
-          color: #303030; }
-          #contact .contact-container article form input:focus {
-            padding: 12px;
-            border: none;
-            border-bottom: 2px solid #FF25A4; }
-          #contact .contact-container article form input.submit {
-            width: 30%;
-            margin-top: 30px;
-            background-color: #FF25A4;
-            color: #FFF;
-            border: 10px solid #FF25A4;
-            cursor: pointer;
-            min-width: 130px; }
-        #contact .contact-container article form .email-field {
-          padding: 12px; }
-      #contact .contact-container article address {
-        text-align: center;
-        margin: 5% 0; }
-        #contact .contact-container article address a {
-          width: 120px;
-          text-decoration: none;
-          color: #625F6B;
-          font-style: normal;
-          margin: 20px 20px;
-          display: inline-block; }
-          #contact .contact-container article address a span {
-            width: 50px;
-            color: #625F6B;
-            margin-bottom: 20px; }
-          #contact .contact-container article address a p {
-            font-size: 50%; }
-            #contact .contact-container article address a p:hover {
-              opacity: 0.7; }
-          #contact .contact-container article address a:hover {
-            opacity: 0.7; }
+          background: none;
+          cursor: pointer;
+          display: none;
+          width: 40px;
+          height: 40px;
+          margin: 10px; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button:first-child {
+            opacity: 0.1; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer; }
+      #schedule .schedule-container article .schedule-board-container .schedule-board .day-period,
+      #schedule .schedule-container article .schedule-board-container .schedule-board .friday,
+      #schedule .schedule-container article .schedule-board-container .schedule-board .saturday,
+      #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
+        display: inline-block; }
+        #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period),
+        #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period),
+        #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period),
+        #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) {
+          width: 200px; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period) div:not(.day),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period) div:not(.day),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period) div:not(.day),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) div:not(.day) {
+            border-left: 4px solid #26245f;
+            border-top: 4px solid #26245f; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period) .day,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period) .day,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period) .day,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) .day {
+            border-left: 4px solid #26245f;
+            display: table-cell;
+            vertical-align: middle; }
+        #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div,
+        #schedule .schedule-container article .schedule-board-container .schedule-board .friday div,
+        #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div,
+        #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div {
+          height: 100px;
+          overflow: hidden;
+          padding: 10px; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div h4,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday div h4,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div h4,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div h4 {
+            color: #26245f; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div p,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday div p,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div p,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div p {
+            color: white;
+            font-size: 0.6em; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div:not(.day):not(.center-rotation),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday div:not(.day):not(.center-rotation),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div:not(.day):not(.center-rotation),
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div:not(.day):not(.center-rotation) {
+            border-top: 4px solid #26245f; }
+          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div .center-rotation,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .friday div .center-rotation,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div .center-rotation,
+          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div .center-rotation {
+            display: table-cell;
+            vertical-align: middle; }
+            #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div .center-rotation h4,
+            #schedule .schedule-container article .schedule-board-container .schedule-board .friday div .center-rotation h4,
+            #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div .center-rotation h4,
+            #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div .center-rotation h4 {
+              transform: rotate(270deg); }
+@media(max-width: 890px) {
+  #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button {
+    display: inline-block; }
+  #schedule .schedule-container article .schedule-board-container .schedule-board .friday {
+    display: inline-block; }
+  #schedule .schedule-container article .schedule-board-container .schedule-board .saturday {
+    display: inline-block; }
+  #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
+    display: none; } }
+@media(max-width: 660px) {
+  #schedule .schedule-container article .schedule-board-container .schedule-board .friday {
+    display: inline-block; }
+  #schedule .schedule-container article .schedule-board-container .schedule-board .saturday {
+    display: none; }
+  #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
+    display: none; } }
+  #schedule .scroll-btn {
+    text-align: center;
+    margin-top: 8vh; }
 
-footer {
-  text-align: center; }
-  footer section {
-    display: inline-block;
-    vertical-align: top;
-    padding: 2vh; }
-    footer section header {
-      top: 0;
-      color: #FF25A4; }
-      footer section header h5 {
-        font-size: 0.7em;
-        font-weight: 500; }
-    footer section .organisations {
+#awards {
+  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #231f20;
+  display: table; }
+  #awards .awards-container article header h1 {
+    margin: 30px 10%;
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white; }
+  #awards .awards-container article .awards-content {
+    text-align: center; }
+    #awards .awards-container article .awards-content div {
+      display: inline-block;
+      margin: 30px;
+      vertical-align: top;
+      width: 200px; }
+      #awards .awards-container article .awards-content div img {
+        width: 100%; }
+      #awards .awards-container article .awards-content div p {
+        color: #ffd828;
+        font-weight: 600;
+        font-size: 0.9em;
+        margin: 0; }
+
+#partners {
+  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: white;
+  display: table; }
+  #partners .partners-container {
+    text-align: center; }
+    #partners .partners-container article:first-child header {
+      font-family: "mopsterregular";
+      color: #262261; }
+    #partners .partners-container article:first-child .organisations {
       padding: 2%;
       list-style-type: none; }
-      footer section .organisations li {
+      #partners .partners-container article:first-child .organisations li {
         display: inline;
         text-decoration: none;
-        margin: 5px;
+        margin: 20px;
         padding: 0; }
-        footer section .organisations li a {
+        #partners .partners-container article:first-child .organisations li a {
           text-decoration: none;
           color: #262261;
           font-weight: 700;
           letter-spacing: 0.4px;
           font-size: 0.9em; }
-          footer section .organisations li a:hover {
+          #partners .partners-container article:first-child .organisations li a:hover {
             opacity: 0.7; }
-        footer section .organisations li .org-img {
+        #partners .partners-container article:first-child .organisations li .org-img {
           height: 80px; }
-    footer section .hangover {
-      margin: 4% 0;
+    #partners .partners-container article:last-child header {
+      font-family: "mopsterregular";
+      color: #ff259c; }
+    #partners .partners-container article:last-child .partners {
+      padding: 2%;
       list-style-type: none; }
-      footer section .hangover li {
+      #partners .partners-container article:last-child .partners li {
         display: inline-block;
         text-decoration: none;
         margin: 20px;
         padding: 0; }
-        footer section .hangover li a {
+        #partners .partners-container article:last-child .partners li a {
           text-decoration: none;
           color: #262261;
           font-weight: 700;
           letter-spacing: 0.4px;
           font-size: 0.9em; }
-          footer section .hangover li a:hover {
+          #partners .partners-container article:last-child .partners li a:hover {
             opacity: 0.7; }
+      #partners .partners-container article:last-child .partners.gold .org-img {
+        height: 100px; }
+      #partners .partners-container article:last-child .partners.silver .org-img {
+        height: 80px; }
+      #partners .partners-container article:last-child .partners.bronze .org-img {
+        height: 60px; }
 
 /*# sourceMappingURL=style.css.map */
