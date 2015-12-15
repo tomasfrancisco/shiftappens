@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
 html {
   overflow-x: hidden; }
 
@@ -8,9 +8,10 @@ body, html {
   height: 100%;
   margin: 0; }
 
-#home, #about, #where, #schedule, #panel, #awards, #sign-in, #partners {
+#home, #about, #where, #schedule, #panel, #awards, #sign-in, #partners, #faq {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  padding-top: 42px; }
 
 #navigation {
   background-color: #333333; }
@@ -32,14 +33,14 @@ body, html {
   width: 100%;
   height: 42px;
   z-index: 999;
-  -webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.75); }
+  -webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5); }
 
 #home {
   background: url(../img/optimized/home-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: white;
+  background-color: #fafafa;
   display: table;
   margin-top: 50px; }
   #home .home-container {
@@ -84,9 +85,9 @@ body, html {
       margin-top: 8%; }
 
 #about {
-  background: url(../img/schedule-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/about-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #26245f;
+  background-color: #00a5e6;
   display: table; }
   #about .about-container {
     display: table-cell;
@@ -102,20 +103,20 @@ body, html {
       padding: 0 50px 20px 50px; }
       #about .about-container article header h1 span {
         font-family: "mopsterregular";
-        color: #ff259c; }
+        color: whitesmoke; }
       #about .about-container article header h2 span {
         font-family: "mopsterregular";
-        color: #ff259c; }
+        color: whitesmoke; }
       #about .about-container article p {
         font-size: 0.8em; }
         #about .about-container article p span {
           font-weight: 700;
-          color: #ff259c; }
+          color: whitesmoke; }
 
 #where {
-  background: url(../img/optimized/about-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/where-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #fefe00;
+  background-color: #00a69c;
   display: table; }
   #where .where-container {
     display: table-cell;
@@ -142,26 +143,26 @@ body, html {
       #where .where-container article.place-photo {
         background: url(../img/pav-centro-portugal.jpg) no-repeat center center;
         background-size: cover;
-        box-shadow: -10px -10px 0 #00a5e6;
+        box-shadow: -10px -10px 0 #26245f;
         height: 60vh;
         min-height: 300px;
         margin: 25px 0 0 0; }
       #where .where-container article header h1 span {
         font-family: "mopsterregular";
-        color: #00a5e6; }
+        color: #26245f; }
       #where .where-container article header h2 span {
         font-family: "mopsterregular";
-        color: #00a5e6; }
+        color: #26245f; }
       #where .where-container article p {
         font-size: 0.8em; }
         #where .where-container article p span {
           font-weight: 700;
-          color: #00a5e6; }
+          color: #26245f; }
     #where .where-container .scroll-btn {
       margin-top: 8%; }
 
 #schedule {
-  background: url(../img/schedule-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/schedule-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #00a5e6;
   display: table; }
@@ -230,11 +231,11 @@ body, html {
               height: 100px;
               overflow: hidden;
               padding: 10px; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div h4,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div h4,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div h4,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div h4 {
-                color: #26245f; }
+              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div h2,
+              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div h2,
+              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div h2,
+              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div h2 {
+                color: white; }
               #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div p,
               #schedule .schedule-container article .schedule-board-container .schedule-board .friday div p,
               #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div p,
@@ -275,9 +276,9 @@ body, html {
   #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
     display: none; } }
 #awards {
-  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #231f20;
+  background-color: #2d2d2d;
   display: table; }
   #awards .awards-container article header h1 {
     margin: 30px 10%;
@@ -299,9 +300,12 @@ body, html {
         font-weight: 600;
         font-size: 0.9em;
         margin: 0; }
+  #awards .awards-container .scroll-btn {
+    text-align: center;
+    margin-top: 8vh; }
 
 #panel {
-  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #231f20;
   display: table; }
@@ -376,9 +380,9 @@ body, html {
       box-shadow: -10px -10px 0 #262261; }
 
 #partners {
-  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: white;
+  background-color: #fafafa;
   display: table; }
   #partners .partners-container {
     text-align: center; }
@@ -430,5 +434,29 @@ body, html {
         height: 80px; }
       #partners .partners-container article:last-child .partners.bronze .org-img {
         height: 60px; }
+
+#faq {
+  background: url(../img/optimized/faq-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #ed60f0;
+  display: table; }
+  #faq .faq-container {
+    display: table-row;
+    text-align: center;
+    vertical-align: middle;
+    color: white; }
+    #faq .faq-container article {
+      display: inline-block;
+      width: 40%;
+      min-width: 400px;
+      vertical-align: top;
+      text-align: left;
+      padding: 0 50px 20px 50px; }
+      #faq .faq-container article header h2 {
+        font-family: "mopsterregular";
+        color: white; }
+      #faq .faq-container article ul li {
+        font-size: 1.2em;
+        color: white; }
 
 /*# sourceMappingURL=style.css.map */
