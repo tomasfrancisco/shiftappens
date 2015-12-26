@@ -180,105 +180,59 @@ body, html {
         font-size: 1.5rem;
         color: white; }
       #schedule .schedule-container article .schedule-board-container {
-        width: 100%; }
-        #schedule .schedule-container article .schedule-board-container .schedule-board {
-          margin: 0 auto;
-          display: table; }
-          #schedule .schedule-container article .schedule-board-container .schedule-board .navigator {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        #schedule .schedule-container article .schedule-board-container table thead tr {
+          font-family: "mopsterregular";
+          border-bottom: 4px solid black;
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container table thead tr th {
             text-align: center; }
-            #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button {
-              border: none;
-              background: none;
-              cursor: pointer;
-              display: none;
-              width: 40px;
-              height: 40px;
-              margin: 10px; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button:first-child {
-                opacity: 0.1; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button img {
-                width: 40px;
-                height: 40px;
-                cursor: pointer; }
-          #schedule .schedule-container article .schedule-board-container .schedule-board .day-period,
-          #schedule .schedule-container article .schedule-board-container .schedule-board .friday,
-          #schedule .schedule-container article .schedule-board-container .schedule-board .saturday,
-          #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
-            display: inline-block; }
-            #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period),
-            #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period),
-            #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period),
-            #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) {
-              width: 200px; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period) div:not(.day),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period) div:not(.day),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period) div:not(.day),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) div:not(.day) {
-                border-left: 4px solid #26245f;
-                border-top: 4px solid #26245f; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period:not(.day-period) .day,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday:not(.day-period) .day,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday:not(.day-period) .day,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday:not(.day-period) .day {
-                border-left: 4px solid #26245f;
-                display: table-cell;
-                vertical-align: middle;
-                font-family: "mopsterregular"; }
-            #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div,
-            #schedule .schedule-container article .schedule-board-container .schedule-board .friday div,
-            #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div,
-            #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div {
-              height: 100px;
-              overflow: hidden;
-              padding: 10px; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div h2,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div h2,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div h2,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div h2 {
-                color: white; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div p,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div p,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div p,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div p {
-                color: white;
-                font-size: 0.6em; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div:not(.day):not(.center-rotation),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div:not(.day):not(.center-rotation),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div:not(.day):not(.center-rotation),
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div:not(.day):not(.center-rotation) {
-                border-top: 4px solid #26245f; }
-              #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div .center-rotation,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .friday div .center-rotation,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div .center-rotation,
-              #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div .center-rotation {
-                display: table-cell;
-                vertical-align: middle;
-                font-family: "mopsterregular"; }
-                #schedule .schedule-container article .schedule-board-container .schedule-board .day-period div .center-rotation h4,
-                #schedule .schedule-container article .schedule-board-container .schedule-board .friday div .center-rotation h4,
-                #schedule .schedule-container article .schedule-board-container .schedule-board .saturday div .center-rotation h4,
-                #schedule .schedule-container article .schedule-board-container .schedule-board .sunday div .center-rotation h4 {
-                  transform: rotate(270deg); }
+            #schedule .schedule-container article .schedule-board-container table thead tr th:not(:last-child) {
+              border-right: 4px solid black; }
+        #schedule .schedule-container article .schedule-board-container table tbody {
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container table tbody tr:not(:last-child) {
+            border-bottom: 4px solid black; }
+          #schedule .schedule-container article .schedule-board-container table tbody tr th {
+            max-width: 300px;
+            padding: 10px; }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:first-child {
+              font-family: "mopsterregular";
+              vertical-align: middle;
+              transform: rotate(270deg); }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:first-child) {
+              font-weight: 300;
+              font-size: 0.7em; }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:last-child) {
+              border-right: 4px solid black; }
+        #schedule .schedule-container article .schedule-board-container .mobile-schedule {
+          display: none;
+          margin: 10%;
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header {
+            margin: 0; }
+            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header h2 {
+              font-family: "mopsterregular";
+              font-weight: 700;
+              font-size: 1.5rem; }
+          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program {
+            list-style: none; }
+            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p {
+              font-weight: 300;
+              font-size: 0.7em; }
+              #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
+                border-bottom: 2px solid black; }
       #schedule .schedule-container article .scroll-btn {
         display: block;
         text-align: center;
         margin-top: 8vh; }
-@media(max-width: 890px) {
-  #schedule .schedule-container article .schedule-board-container .schedule-board .navigator button {
-    display: inline-block; }
-  #schedule .schedule-container article .schedule-board-container .schedule-board .friday {
-    display: inline-block; }
-  #schedule .schedule-container article .schedule-board-container .schedule-board .saturday {
-    display: inline-block; }
-  #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
-    display: none; } }
-@media(max-width: 660px) {
-  #schedule .schedule-container article .schedule-board-container .schedule-board .friday {
-    display: inline-block; }
-  #schedule .schedule-container article .schedule-board-container .schedule-board .saturday {
+@media(max-width: 800px) {
+  #schedule .schedule-container article .schedule-board-container table {
     display: none; }
-  #schedule .schedule-container article .schedule-board-container .schedule-board .sunday {
-    display: none; } }
+  #schedule .schedule-container article .schedule-board-container .mobile-schedule {
+    display: block; } }
 #awards {
   background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
   background-size: cover;

@@ -53,7 +53,7 @@ body, html
 			color: #262261
 			font-size: 1.6rem
 			h4
-				font-weight: 600				
+				font-weight: 600
 		.logo
 			margin: 0 10%
 			.desktop
@@ -183,87 +183,65 @@ body, html
 				color: white
 			.schedule-board-container
 				width: 100%
-				.schedule-board
-					margin: 0 auto
-					display: table
-					.navigator
-						text-align: center
-						button
-							border: none
-							background: none
-							cursor: pointer
-							display: none
-							width: 40px
-							height: 40px
-							margin: 10px
-							&:first-child
-								opacity: 0.1
-							img
-								width: 40px
-								height: 40px
-								cursor: pointer
-					.day-period,
-					.friday,
-					.saturday,
-					.sunday
-						display: inline-block
-						&:not(.day-period)
-							width: 200px
-							div:not(.day)
-								border-left: 4px solid rgb(38, 36, 95)
-								border-top: 4px solid rgb(38, 36, 95)
-							.day
-								border-left: 4px solid rgb(38, 36, 95)
-								display: table-cell
-								vertical-align: middle
-								font-family: 'mopsterregular'
-						div
-							height: 100px
-							overflow: hidden
-							padding: 10px
-							h2
-								color: white//rgb(38, 36, 95)
-							p
-								color: white
-								font-size: 0.6em
-							&:not(.day):not(.center-rotation)
-								border-top: 4px solid rgb(38, 36, 95)
-							.center-rotation
-								display: table-cell
-								vertical-align: middle
-								font-family: 'mopsterregular'
-								h4
+				display: flex
+				justify-content: center
+				table
+					thead
+						tr
+							font-family: 'mopsterregular'
+							border-bottom: 4px solid black
+							color: white
+							th
+								text-align: center
+								&:not(:last-child)
+									border-right: 4px solid black
+					tbody
+						color: white
+						tr
+							&:not(:last-child)
+								border-bottom: 4px solid black
+							th
+								max-width: 300px
+								padding: 10px
+								&:first-child
+									font-family: 'mopsterregular'
+									vertical-align: middle
 									transform: rotate(270deg)
+								&:not(:first-child)
+									font-weight: 300
+									font-size: 0.7em
+								&:not(:last-child)
+									border-right: 4px solid black
+				.mobile-schedule
+					display: none
+					margin: 10%
+					color: white
+					.day
+						header
+							margin: 0
+							h2
+								font-family: 'mopsterregular'
+								font-weight: 700
+								font-size: 1.5rem
+						.day-program
+							list-style: none
+							p
+								font-weight: 300
+								font-size: 0.7em
+								&:not(:last-child)
+									border-bottom: 2px solid black
 			.scroll-btn
 				display: block
 				text-align: center
 				margin-top: 8vh
-
-	@media(max-width: 890px)
+	@media(max-width: 800px)
 		.schedule-container
 			article
 				.schedule-board-container
-					.schedule-board
-						.navigator
-							button
-								display: inline-block
-						.friday
-							display: inline-block
-						.saturday
-							display: inline-block
-						.sunday
-							display: none
-	@media(max-width: 660px)
-		.schedule-container
-			article
-				.schedule-board-container
-					.schedule-board
-						.friday
-							display: inline-block
-						.saturday
-							display: none
-						.sunday
-							display: none
+					table
+						display: none
+					.mobile-schedule
+						display: block
 
 #awards
 	background: url(../img/optimized/awards-background.png) no-repeat center center fixed
@@ -281,7 +259,7 @@ body, html
 					color: white
 			.awards-content
 				text-align: center
-				div	
+				div
 					display: inline-block
 					margin: 30px
 					vertical-align: top
@@ -334,7 +312,7 @@ body, html
 					box-shadow: -10px -10px 0 rgb(38, 34, 97)
 					height: 200px
 					width: 200px
-					margin: 25px					
+					margin: 25px
 				h2
 					color: white
 				p
@@ -476,4 +454,4 @@ body, html
 				li
 					font-size: 1.2em
 					//font-weight: 700
-					color: white//rgb(50, 50, 250)								
+					color: white//rgb(50, 50, 250)
