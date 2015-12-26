@@ -4,9 +4,39 @@ $(document).ready(function() {
 	    $('#about').animatescroll();
 	});
 
-	$('#scroll-down-to-contact').click(function() {
-	    $('#contact').animatescroll();
+	$('#scroll-down-to-where').click(function() {
+	    $('#where').animatescroll();
 	});
+
+	$('#scroll-down-to-awards').click(function() {
+	    $('#awards').animatescroll();
+	});
+
+	$('#scroll-down-to-schedule').click(function() {
+	    $('#schedule').animatescroll();
+	});
+
+	$('#scroll-down-to-panel').click(function() {
+	    $('#panel').animatescroll();
+	});
+
+	$('#scroll-down-to-sign-in').click(function() {
+	    $('#sign-in').animatescroll();
+	});
+
+	$('#scroll-down-to-partners').click(function() {
+	    $('#partners').animatescroll();
+	});
+
+	$('#scroll-down-to-faq').click(function() {
+	    $('#faq').animatescroll();
+	});
+
+	$('#scroll-back-to-top').click(function() {
+	    $('#home').animatescroll();
+	});
+
+
 
 	setTimeout(function() {
 		$('#home .shift-date').animate({
