@@ -8,7 +8,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-#home, #about, #where, #schedule, #panel, #awards, #sign-in, #partners, #faq {
+#home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #partners, #faq {
   width: 100vw;
   height: 100vh;
   padding-top: 42px; }
@@ -29,7 +29,7 @@ body, html {
 #top-shadow {
   position: fixed;
   top: 0px;
-  left: 10px;
+  left: 0px;
   width: 100%;
   height: 42px;
   z-index: 999;
@@ -51,7 +51,7 @@ body, html {
       margin-bottom: 5%;
       color: #262261;
       font-size: 1.6rem; }
-      #home .home-container .shift-date h4 {
+      #home .home-container .shift-date h2 {
         font-weight: 600; }
     #home .home-container .logo {
       margin: 0 10%; }
@@ -112,6 +112,39 @@ body, html {
         #about .about-container article p span {
           font-weight: 700;
           color: whitesmoke; }
+
+#history {
+  background: url(../img/optimized/history-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #00a69c;
+  display: table; }
+  #history .history-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #26245f; }
+    #history .history-container article {
+      display: inline-block;
+      width: 40%;
+      min-width: 400px;
+      vertical-align: top;
+      text-align: left;
+      padding: 0 50px 20px 50px; }
+      #history .history-container article header h1 span {
+        font-family: "mopsterregular";
+        color: #26245f; }
+      #history .history-container article header h2 span {
+        font-family: "mopsterregular";
+        color: #26245f; }
+      #history .history-container article p {
+        font-size: 0.8em; }
+        #history .history-container article p span {
+          font-weight: 700;
+          color: #26245f; }
+    #history .history-container .scroll-btn {
+      display: block;
+      text-align: center;
+      margin-top: 8vh; }
 
 #where {
   background: url(../img/optimized/where-background.png) no-repeat center center fixed;
@@ -263,7 +296,7 @@ body, html {
     margin-top: 8vh; }
 
 #panel {
-  background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
+  background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
   background-size: cover;
   background-color: #231f20;
   display: table; }
@@ -405,13 +438,13 @@ body, html {
 #faq {
   background: url(../img/optimized/faq-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #ed60f0;
+  background-color: #fafafa;
   display: table; }
   #faq .faq-container {
     display: table-row;
     text-align: center;
     vertical-align: middle;
-    color: white; }
+    color: #262261; }
     #faq .faq-container article {
       display: inline-block;
       width: 40%;
@@ -421,9 +454,13 @@ body, html {
       padding: 0 50px 20px 50px; }
       #faq .faq-container article header h2 {
         font-family: "mopsterregular";
-        color: white; }
+        color: #262261; }
       #faq .faq-container article ul li {
         font-size: 1.2em;
-        color: white; }
+        color: #262261; }
+  #faq .scroll-btn {
+    display: block;
+    text-align: center;
+    margin-top: 8vh; }
 
 /*# sourceMappingURL=style.css.map */

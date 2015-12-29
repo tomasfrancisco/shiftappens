@@ -32,8 +32,8 @@ $(document).ready(function() {
 	    $('#faq').animatescroll();
 	});
 
-	$('#scroll-back-to-top').click(function() {
-	    $('#home').animatescroll();
+	$('#scroll-down-to-history').click(function() {
+	    $('#history').animatescroll();
 	});
 
 
