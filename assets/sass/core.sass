@@ -47,7 +47,7 @@ body, html
 	.home-container
 		display: table-cell
 		text-align: center
-		vertical-align: middle
+		//vertical-align: middle
 		.shift-date
 			margin-bottom: 5%
 			color: #262261
@@ -68,17 +68,19 @@ body, html
 					display: block
 				@media (min-width: 701px)
 					display: none
-		.video
-			display: none
-			opacity: 0
-			height: 60%
-			iframe
-				width: 56%
-				height: 100%
-			@media (max-width: 700px)
-				height: 50%
-		.scroll-btn
-			margin-top: 8%
+		.carousel
+			max-height: 40%
+			max-width: 40%
+			margin-left: auto
+			margin-right: auto
+			.carousel-inner
+				.item
+					img
+						max-height: 100%
+						width: auto
+						height: auto
+		//.scroll-btn
+			//margin-top: 8%
 
 #about
 	background: url(../img/optimized/about-background.png) no-repeat center center fixed
@@ -499,22 +501,27 @@ body, html
 		vertical-align: middle
 		color: #262261
 
+		header
+			h2
+				font-family: 'mopsterregular'
+				color: #262261
+
 		article
 			display: inline-block
-			width: 40%
+			width: 30%
 			min-width: 400px
 			vertical-align: top
 			text-align: left
 			padding: 0 50px 20px 50px
-			header
-				h2
-					font-family: 'mopsterregular'
-					color: #262261
 			ul
 				li
-					font-size: 1.2em
-					//font-weight: 700
 					color: #262261
+					h3
+						font-size: 1.0em
+						
+					p
+						font-size: 0.7em
+
 	.scroll-btn
 		display: block
 		text-align: center

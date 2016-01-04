@@ -45,8 +45,7 @@ body, html {
   margin-top: 50px; }
   #home .home-container {
     display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
+    text-align: center; }
     #home .home-container .shift-date {
       margin-bottom: 5%;
       color: #262261;
@@ -71,18 +70,15 @@ body, html {
         @media (min-width: 701px) {
           #home .home-container .logo .mobile {
             display: none; } }
-    #home .home-container .video {
-      display: none;
-      opacity: 0;
-      height: 60%; }
-      #home .home-container .video iframe {
-        width: 56%;
-        height: 100%; }
-      @media (max-width: 700px) {
-        #home .home-container .video {
-          height: 50%; } }
-    #home .home-container .scroll-btn {
-      margin-top: 8%; }
+    #home .home-container .carousel {
+      max-height: 40%;
+      max-width: 40%;
+      margin-left: auto;
+      margin-right: auto; }
+      #home .home-container .carousel .carousel-inner .item img {
+        max-height: 100%;
+        width: auto;
+        height: auto; }
 
 #about {
   background: url(../img/optimized/about-background.png) no-repeat center center fixed;
@@ -463,19 +459,22 @@ body, html {
     text-align: center;
     vertical-align: middle;
     color: #262261; }
+    #faq .faq-container header h2 {
+      font-family: "mopsterregular";
+      color: #262261; }
     #faq .faq-container article {
       display: inline-block;
-      width: 40%;
+      width: 30%;
       min-width: 400px;
       vertical-align: top;
       text-align: left;
       padding: 0 50px 20px 50px; }
-      #faq .faq-container article header h2 {
-        font-family: "mopsterregular";
-        color: #262261; }
       #faq .faq-container article ul li {
-        font-size: 1.2em;
         color: #262261; }
+        #faq .faq-container article ul li h3 {
+          font-size: 1em; }
+        #faq .faq-container article ul li p {
+          font-size: 0.7em; }
   #faq .scroll-btn {
     display: block;
     text-align: center;

@@ -1,3 +1,11 @@
+<?php
+
+if (count($_POST)==0) {
+    header("location:index.html");
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -143,7 +151,7 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <form action=\"index.html\" method=\"POST\">
+                    <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>

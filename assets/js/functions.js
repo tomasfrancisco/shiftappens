@@ -36,7 +36,10 @@ $(document).ready(function() {
 	    $('#history').animatescroll();
 	});
 
-
+	$('.carousel').carousel({
+		interval: 2500,
+		pause: "false"
+	});
 
 	setTimeout(function() {
 		$('#home .shift-date').animate({
