@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Shift APPens</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.jpeg"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/font.css"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+        <meta property="og:url" content="http://shiftappens.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Shift APPens" />
+        <meta property="og:site_name" content="Shift APPens"/>
+        <meta property="og:description" content="Shift APPens | O hackathon mais louco do país!" />
+        <meta property="og:locale" content="pt_PT" />
+        <meta property="og:image" content="http://shiftappens.com/assets/img/logo-mobile.png" />
+    </head>
+    <body>
+        <section id="sign-in">
+            <section class="sign-in-container">
+                <header>
+                    <h1>Inscricoes</h1>
+                </header>
+                <article>
+                    <form method="POST" action="handleSignin.php">
+                        <p>Dados Pessoais</p>
+                        <div class="form-group">
+                            <label for="nameInput" class="control-label">Nome</label>
+                            <input type="text" name="name" class="form-control" id="nameInput" placeholder="Nome" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailInput" class="control-label">Email</label>
+                            <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneInput" class="control-label">Telefone</label>
+                            <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="userNameInput" class="control-label">Username</label>
+                            <input type="text" name="username" class="form-control" id="userNameInput" placeholder="Username" required/>
+                        </div>
+                        <div class="form-group radio-group">
+                            <p>Profissão</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="occupation" id="worker" value="worker" required/>
+                                    Trabalhador
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="occupation" id="student" value="student" required/>
+                                    Estudante
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group collapse" id="faculty">
+                            <label for="workplaceInput" class="control-label">Faculdade</label>
+                            <input type="text" name="workplace" class="form-control" id="facultyInput" placeholder="Faculdade"/>
+                        </div>
+                        <div class="form-group collapse" id="workplace">
+                            <label for="workplaceInput" class="control-label">Local de Trabalho</label>
+                            <input type="text" name="workplace" class="form-control" id="workplaceInput" placeholder="Local de Trabalho"/>
+                        </div>
+
+
+                        <p>Web Presence</p>
+                        <div class="form-group">
+                            <label for="twitterInput" class="control-label">Twitter</label>
+                            <input type="url" class="form-control" name="twitter" id="twitterInput" placeholder="Twitter"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedinInput" class="control-label">Linkedin</label>
+                            <input type="url" class="form-control" name="linkedin" id="linkedinInput" placeholder="Linkedin"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="websiteInput" class="control-label">Website ou Blog</label>
+                            <input type="url" class="form-control" name="website" id="websiteInput" placeholder="Website ou Blog"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="repositoryInput" class="control-label">Repositório (github, bitbucket, gitlab)</label>
+                            <input type="url" class="form-control" name="repository" id="repositoryInput" placeholder="Repositório"/>
+                        </div>
+
+
+                        <p>Motivação</p>
+                        <div class="form-group">
+                            <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste?</label>
+                            <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar?</label>
+                            <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="ideaInput" class="control-label">Tens alguma ideia para desenvolver no ShiftAPPens?</label>
+                            <textarea name="idea" class="form-control" id="ideaInput" rows="5" placeholder="Se sim, descreve." required></textarea>
+                        </div>
+                        <div class="form-group radio-group">
+                            <p>Já participaste em alguma das edições passadas do ShiftAPPens?</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="pastEditions" value="yes" required/>
+                                    Sim
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="pastEditions" value="no" required/>
+                                    Não
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group radio-group">
+                            <p>E noutros hackathons?</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hackathons" value="yes" required/>
+                                    Sim
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hackathons" value="no" required/>
+                                    Não
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="teamInput" class="control-label">Já tens equipa em mente? Indica os nomes dos teus colegas.</label>
+                            <input type="text" name="team" class="form-control" id="teamInput" placeholder="Isto pode ajudar-nos a associar as pessoas a uma equipa"/>
+                        </div>
+
+                        <p>Em que áreas te sentes mais confortável?</p>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Backend"/>
+                                    Backend
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Frontend"/>
+                                    Frontend
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Sou full-stack"/>
+                                    Sou full-stack
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Game Dev"/>
+                                    Game Dev
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Segurança"/>
+                                    Segurança
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Mobile"/>
+                                    Mobile
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Hardware"/>
+                                    Hardware
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="areas[]" value="Nickles Batatóides"/>
+                                    Nickles Batatóides
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <p>Top Skills</p>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="PHP"/>
+                                    PHP
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Java"/>
+                                    Java
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="JavaScript"/>
+                                    JavaScript
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Ruby"/>
+                                    Ruby
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="HTML5+CSS3"/>
+                                    HTML5+CSS3
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Python"/>
+                                    Python
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="C/C++"/>
+                                    C/C++
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Cocoa/Objective-C/Swift"/>
+                                    Cocoa/Objective-C/Swift
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value=".NET/Mono"/>
+                                    .NET/Mono
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Devops"/>
+                                    Devops
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Desktop"/>
+                                    Desktop
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="APIs"/>
+                                    APIs
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Databases"/>
+                                    Databases
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Cooking"/>
+                                    Cooking
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Bioinformatics"/>
+                                    Bioinformatics
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Sketch/Photoshop"/>
+                                    Sketch/Photoshop
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="skills[]" value="Go Lang"/>
+                                    Go Lang
+                                </label>
+                            </div>
+
+                            <label for="otherSkillInput" class="control-label">Outro:</label>
+                            <input type="text" class="form-control" name="otherSkill" id="otherSkillInput" placeholder="Awesome skill"/>
+
+                            <label for="frameworkInput" class="control-label">Tens alguma framework de preferência? Se sim, qual?</label>
+                            <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor"/>
+                        </div>
+
+                        <div class="form-group" id="submit">
+                            <input type="submit" value="Inscrever-me"/>
+                        </div>
+
+                    </form>
+                </article>
+            </section>
+        </section>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/animatescroll.min.js"></script>
+        <script src="assets/js/functions.js"></script>
+        <script src="assets/js/signin.js"></script>
+    </body>
+</html>
