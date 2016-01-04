@@ -273,6 +273,23 @@ body, html {
     font-weight: 700;
     font-size: 1.5rem;
     color: white; }
+  #awards .awards-container article .coming-soon {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30px;
+    background-color: #f0f0f0;
+    box-shadow: -10px -10px 0 #646464;
+    height: 30%;
+    width: 30%;
+    display: block;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 10%;
+    z-index: 2; }
+    #awards .awards-container article .coming-soon h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #646464; }
   #awards .awards-container article .awards-content {
     text-align: center; }
     #awards .awards-container article .awards-content div {

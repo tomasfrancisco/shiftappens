@@ -47,8 +47,8 @@
                 <li><a href="#panel">Júri</a></li>
                 <li><a href="#schedule">Programa</a></li>
                 <li><a href="#where">Local</a></li>
-                <!--<li><a href="#sign-in">Inscrições</a></li>
-                <li><a href="#partners">Organização</a></li>-->
+                <li><a href="#partners">Organização</a></li>
+                <li><a href="#sign-in">Inscrições</a></li>
             </ul>
           </div>
         </div>
@@ -127,15 +127,12 @@
                     <header>
                         <h1>Premios</h1>
                     </header>
+                    <div class="coming-soon">
+                        <h1>COMING SOON</h1>
+                    </div>
                     <div class="awards-content">
                         <div class="gold">
                             <img src="assets/img/gold.png">
-                            <p>500€ / Pessoa em cursos flag</p>
-                            <p>300# em serviços lunacloud</p>
-                            <p>asus vivotab smart</p>
-                            <p>weareredlight's happy developer kit</p>
-                            <p>incubação no ipn</p>
-                            <p>2 cloogys</p>
                         </div>
                         <div class="silver">
                             <img src="assets/img/silver.png">
@@ -389,7 +386,7 @@
                 </article>
             </section>
         </section>
-        <!--<section id="partners">
+        <section id="partners">
             <section class="partners-container">
                 <article>
                     <header>
@@ -413,7 +410,7 @@
                         <h1>Parceiros</h1>
                     </header>
                     <ul class="partners gold">
-                        <li>
+                        <!--<li>
                             <a href="http://jeknowledge.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-jek.png" />
                             </a>
@@ -432,10 +429,10 @@
                             <a href="https://nei.dei.uc.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-nei.png" />
                             </a>
-                        </li>
+                        </li>-->
                     </ul>
                     <ul class="partners silver">
-                        <li>
+                        <!--<li>
                             <a href="http://jeknowledge.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-jek.png" />
                             </a>
@@ -454,10 +451,10 @@
                             <a href="https://nei.dei.uc.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-nei.png" />
                             </a>
-                        </li>
+                        </li>-->
                     </ul>
                     <ul class="partners bronze">
-                        <li>
+                        <!--<li>
                             <a href="http://jeknowledge.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-jek.png" />
                             </a>
@@ -475,6 +472,11 @@
                         <li>
                             <a href="https://nei.dei.uc.pt" target="_blank">
                                 <img class="org-img" src="assets/img/logo-nei.png" />
+                            </a>
+                        </li>-->
+                        <li>
+                            <a href="http://www.sleeklab.com" target="_blank">
+                                <img class="org-img" src="assets/img/partners/sleeklab.png" />
                             </a>
                         </li>
                     </ul>
@@ -485,7 +487,21 @@
                     <img src="assets/svg/arrow.svg" alt="Contactos"/>
                 </a>
             </div>
-        </section>-->
+        </section>
+        <section id="sign-in">
+            <section class="sign-in-container">
+                <header>
+                    <h1>Estas interessado? Inscreve-te ja!</h1>
+                </header>
+                <article>
+                    <form action="signin.html" method="POST">
+                        <div class="form-group" id="submit">
+                            <input type="submit" value="Inscrições"/>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </section>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/animatescroll.min.js"></script>
