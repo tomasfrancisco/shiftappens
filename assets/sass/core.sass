@@ -117,8 +117,7 @@ body, html
 	.faq-container
 		color: #262261
 		header
-			display: block
-			h2
+			h1
 				font-family: 'mopsterregular'
 				font-weight: 700
 				font-size: 1.5rem
@@ -132,178 +131,191 @@ body, html
 				p
 					font-size: 0.6em
 
-
-
-
-#where
-	background: url(../img/optimized/where-background.png) no-repeat center center fixed
-	background-size: cover
-	background-color: rgb(0,166,156)
-	display: table
-	.where-container
-		display: table-cell
-		text-align: center
-		vertical-align: middle
-		padding: 20px 0
-		color: rgb(38, 36, 95)
-		header
-			display: block
-			h1
-				margin: 30px 10%
-				font-family: 'mopsterregular'
-				font-weight: 700
-				font-size: 1.5rem
-				color: rgb(38, 36, 95)
-				text-align: left
-		article
-			display: inline-block
-			width: 40%
-			min-width: 400px
-			vertical-align: top
-			text-align: left
-			padding: 0 50px 20px 50px
-			&.place-photo
-				background: url(../img/pav-centro-portugal.jpg) no-repeat center center
-				background-size: cover
-				box-shadow: -10px -10px 0 rgb(38, 36, 95)//#00a5e6
-				height: 60vh
-				min-height: 300px
-				margin: 25px 0 0 0
-			header
-				h1
-					span
-						font-family: 'mopsterregular'
-						color: rgb(38, 36, 95)//#00a5e6
-				h2
-					span
-						font-family: 'mopsterregular'
-						color: rgb(38, 36, 95)//#00a5e6
-			p
-				font-size: 0.8em
-				span
-					font-weight: 700
-					color: rgb(38, 36, 95)//#00a5e6
-
-#schedule
-	background: url(../img/optimized/schedule-background.png) no-repeat center center fixed
-	background-size: cover
-	background-color: rgb(0,165,230)
-	display: table
-	.schedule-container
-		width: 100%
-		height: 100%
-		display: table
-		article
-			display: table-cell
-			vertical-align: middle
-			header
-				margin: 30px 10%
-				font-family: 'mopsterregular'
-				font-weight: 700
-				font-size: 1.5rem
-				color: white
-			.schedule-board-container
-				width: 100%
-				display: flex
-				justify-content: center
-				table
-					thead
-						tr
-							font-family: 'mopsterregular'
-							border-bottom: 4px solid black
-							color: white
-							th
-								text-align: center
-								&:not(:last-child)
-									border-right: 4px solid black
-					tbody
-						color: white
-						tr
-							&:not(:last-child)
-								border-bottom: 4px solid black
-							th
-								max-width: 300px
-								padding: 10px
-								&:first-child
-									font-family: 'mopsterregular'
-									vertical-align: middle
-									transform: rotate(270deg)
-								&:not(:first-child)
-									font-weight: 300
-									font-size: 0.7em
-								&:not(:last-child)
-									border-right: 4px solid black
-				.mobile-schedule
-					display: none
-					margin: 10%
-					color: white
-					.day
-						header
-							margin: 0
-							h2
-								font-family: 'mopsterregular'
-								font-weight: 700
-								font-size: 1.5rem
-						.day-program
-							list-style: none
-							p
-								font-weight: 300
-								font-size: 0.7em
-								&:not(:last-child)
-									border-bottom: 2px solid black
-	@media(max-width: 800px)
-		.schedule-container
-			article
-				.schedule-board-container
-					table
-						display: none
-					.mobile-schedule
-						display: block
-
 #panel
 	background: url(../img/optimized/panel-background.png) no-repeat center center fixed
 	background-size: cover
 	background-color: rgb(35, 31, 32)
-	display: table
-	header
-		margin-top: 5%
-		width: 100%
-		h1
-			text-align: left
-			margin: 30px 10%
-			font-family: 'mopsterregular'
-			font-weight: 700
-			font-size: 1.5rem
-			color: white
-	.panel-content
-		text-align: center
-		display: table-row
-		width: 100%
-		.panel-container
-			display: table-cell
-			text-align: center
-			vertical-align: middle
+	.panel-container
+		header
+			h1
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: white
+		.panel-content
 			padding: 20px 0
-			color: rgb(38, 34, 97)
-			width: 100%
-			height: 100%
 			.person
-				vertical-align: top
-				display: inline-block
-				width: 240px
-				article
-					background: url(../img/eduardo-nunes.png) no-repeat center center
-					background-size: cover
+				img
 					box-shadow: -10px -10px 0 rgb(38, 34, 97)
-					height: 200px
-					width: 200px
-					margin: 25px
 				h2
 					color: white
 				p
 					font-size: 1.0rem
 					color: white
 
+#schedule
+	background: url(../img/optimized/schedule-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(0,165,230)
+	.schedule-container
+		header
+			h1
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: white
+		.schedule-board-container
+			width: 100%
+			display: flex
+			justify-content: center
+			table
+				font-size: 0.9em
+				thead
+					tr
+						font-family: 'mopsterregular'
+						border-bottom: 4px solid black
+						color: white
+						th
+							text-align: center
+							&:not(:last-child)
+								border-right: 4px solid black
+				tbody
+					color: white
+					tr
+						&:not(:last-child)
+							border-bottom: 4px solid black
+						th
+							max-width: 300px
+							padding: 10px
+							&:first-child
+								font-family: 'mopsterregular'
+								vertical-align: middle
+								transform: rotate(270deg)
+							&:not(:first-child)
+								font-weight: 300
+								font-size: 0.7em
+							&:not(:last-child)
+								border-right: 4px solid black
+			.mobile-schedule
+				display: none
+				margin: 10%
+				color: white
+				.day
+					header
+						margin: 0
+						h2
+							font-family: 'mopsterregular'
+							font-weight: 700
+							font-size: 1.5rem
+					.day-program
+						list-style: none
+						p
+							font-weight: 300
+							font-size: 0.7em
+							&:not(:last-child)
+								border-bottom: 2px solid black
+	@media(max-width: 800px)
+		.schedule-container
+			.schedule-board-container
+				table
+					display: none
+				.mobile-schedule
+					display: block
+
+#where
+	background: url(../img/optimized/where-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(0,166,156)
+	.where-container
+		color: white//rgb(38, 36, 95)
+		header
+			h1
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: white//rgb(38, 36, 95)
+		.where-content
+			padding: 20px 0
+			div
+				img
+					//background: url(../img/pav-centro-portugal.jpg) no-repeat center center
+					//background-size: cover
+					box-shadow: -10px -10px 0 white//rgb(38, 36, 95)//#00a5e6
+					//height: 60vh
+					//min-height: 300px
+					//margin: 25px 0 0 0
+				p
+					font-size: 0.8em
+					span
+						font-weight: 700
+						color: white//rgb(38, 36, 95)//#00a5e6
+
+#partners
+	background: url(../img/optimized/partners-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(250,250,250)
+	display: table
+	.partners-container
+		//text-align: center
+		article:first-child
+			header
+				h1
+					margin: 0px 10%
+					font-family: 'mopsterregular'
+					color: rgb(38, 34, 97)
+					font-size: 1.5rem
+			.organisations
+				text-align: center
+				padding: 2%
+				list-style-type: none
+				li
+					display: inline
+					text-decoration: none
+					margin: 20px
+					padding: 0
+					a
+						text-decoration: none
+						color: #262261
+						font-weight: 700
+						letter-spacing: 0.4px
+						font-size: 0.9em
+						&:hover
+							opacity: 0.7
+					.org-img
+						height: 80px
+		article:last-child
+			header
+				h1
+					margin: 30px 10%
+					font-family: 'mopsterregular'
+					color: rgb(255, 37, 156)
+					font-size: 1.5rem
+			.partners
+				text-align: center
+				padding: 2%
+				list-style-type: none
+				li
+					display: inline-block
+					text-decoration: none
+					margin: 20px
+					padding: 0
+					a
+						text-decoration: none
+						color: #262261
+						font-weight: 700
+						letter-spacing: 0.4px
+						font-size: 0.9em
+						&:hover
+							opacity: 0.7
+				&.gold
+					.org-img
+						height: 100px
+				&.silver
+					.org-img
+						height: 80px
+				&.bronze
+					.org-img
+						height: 60px
 
 #sign-in
 	background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed
@@ -363,76 +375,6 @@ body, html
 				#submit
 					margin-top: 20px
 					text-align: center
-
-
-
-
-#partners
-	background: url(../img/optimized/partners-background.png) no-repeat center center fixed
-	background-size: cover
-	background-color: rgb(250,250,250)
-	display: table
-	.partners-container
-		//text-align: center
-		article:first-child
-			header
-				h1
-					margin: 30px 10%
-					font-family: 'mopsterregular'
-					color: rgb(38, 34, 97)
-					font-size: 1.5rem
-			.organisations
-				text-align: center
-				padding: 2%
-				list-style-type: none
-				li
-					display: inline
-					text-decoration: none
-					margin: 20px
-					padding: 0
-					a
-						text-decoration: none
-						color: #262261
-						font-weight: 700
-						letter-spacing: 0.4px
-						font-size: 0.9em
-						&:hover
-							opacity: 0.7
-					.org-img
-						height: 80px
-		article:last-child
-			header
-				h1
-					margin: 30px 10%
-					font-family: 'mopsterregular'
-					color: rgb(255, 37, 156)
-					font-size: 1.5rem
-			.partners
-				text-align: center
-				padding: 2%
-				list-style-type: none
-				li
-					display: inline-block
-					text-decoration: none
-					margin: 20px
-					padding: 0
-					a
-						text-decoration: none
-						color: #262261
-						font-weight: 700
-						letter-spacing: 0.4px
-						font-size: 0.9em
-						&:hover
-							opacity: 0.7
-				&.gold
-					.org-img
-						height: 100px
-				&.silver
-					.org-img
-						height: 80px
-				&.bronze
-					.org-img
-						height: 60px
 
 #error
 	background: url(../img/optimized/error-background.png) no-repeat center center fixed

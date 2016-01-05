@@ -112,13 +112,11 @@ body, html {
   background-color: #fafafa; }
   #faq .faq-container {
     color: #262261; }
-    #faq .faq-container header {
-      display: block; }
-      #faq .faq-container header h2 {
-        font-family: "mopsterregular";
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #262261; }
+    #faq .faq-container header h1 {
+      font-family: "mopsterregular";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #262261; }
     #faq .faq-container .row div h3 {
       font-size: 0.7em;
       font-weight: 400;
@@ -126,163 +124,164 @@ body, html {
     #faq .faq-container .row div p {
       font-size: 0.6em; }
 
-#where {
-  background: url(../img/optimized/where-background.png) no-repeat center center fixed;
+#panel {
+  background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #00a69c;
-  display: table; }
-  #where .where-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px 0;
-    color: #26245f; }
-    #where .where-container header {
-      display: block; }
-      #where .where-container header h1 {
-        margin: 30px 10%;
-        font-family: "mopsterregular";
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #26245f;
-        text-align: left; }
-    #where .where-container article {
-      display: inline-block;
-      width: 40%;
-      min-width: 400px;
-      vertical-align: top;
-      text-align: left;
-      padding: 0 50px 20px 50px; }
-      #where .where-container article.place-photo {
-        background: url(../img/pav-centro-portugal.jpg) no-repeat center center;
-        background-size: cover;
-        box-shadow: -10px -10px 0 #26245f;
-        height: 60vh;
-        min-height: 300px;
-        margin: 25px 0 0 0; }
-      #where .where-container article header h1 span {
-        font-family: "mopsterregular";
-        color: #26245f; }
-      #where .where-container article header h2 span {
-        font-family: "mopsterregular";
-        color: #26245f; }
-      #where .where-container article p {
-        font-size: 0.8em; }
-        #where .where-container article p span {
-          font-weight: 700;
-          color: #26245f; }
+  background-color: #231f20; }
+  #panel .panel-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white; }
+  #panel .panel-container .panel-content {
+    padding: 20px 0; }
+    #panel .panel-container .panel-content .person img {
+      box-shadow: -10px -10px 0 #262261; }
+    #panel .panel-container .panel-content .person h2 {
+      color: white; }
+    #panel .panel-container .panel-content .person p {
+      font-size: 1rem;
+      color: white; }
 
 #schedule {
   background: url(../img/optimized/schedule-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #00a5e6;
-  display: table; }
-  #schedule .schedule-container {
+  background-color: #00a5e6; }
+  #schedule .schedule-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white; }
+  #schedule .schedule-container .schedule-board-container {
     width: 100%;
-    height: 100%;
-    display: table; }
-    #schedule .schedule-container article {
-      display: table-cell;
-      vertical-align: middle; }
-      #schedule .schedule-container article header {
-        margin: 30px 10%;
+    display: flex;
+    justify-content: center; }
+    #schedule .schedule-container .schedule-board-container table {
+      font-size: 0.9em; }
+      #schedule .schedule-container .schedule-board-container table thead tr {
         font-family: "mopsterregular";
-        font-weight: 700;
-        font-size: 1.5rem;
+        border-bottom: 4px solid black;
         color: white; }
-      #schedule .schedule-container article .schedule-board-container {
-        width: 100%;
-        display: flex;
-        justify-content: center; }
-        #schedule .schedule-container article .schedule-board-container table thead tr {
+        #schedule .schedule-container .schedule-board-container table thead tr th {
+          text-align: center; }
+          #schedule .schedule-container .schedule-board-container table thead tr th:not(:last-child) {
+            border-right: 4px solid black; }
+      #schedule .schedule-container .schedule-board-container table tbody {
+        color: white; }
+        #schedule .schedule-container .schedule-board-container table tbody tr:not(:last-child) {
+          border-bottom: 4px solid black; }
+        #schedule .schedule-container .schedule-board-container table tbody tr th {
+          max-width: 300px;
+          padding: 10px; }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:first-child {
+            font-family: "mopsterregular";
+            vertical-align: middle;
+            transform: rotate(270deg); }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:not(:first-child) {
+            font-weight: 300;
+            font-size: 0.7em; }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:not(:last-child) {
+            border-right: 4px solid black; }
+    #schedule .schedule-container .schedule-board-container .mobile-schedule {
+      display: none;
+      margin: 10%;
+      color: white; }
+      #schedule .schedule-container .schedule-board-container .mobile-schedule .day header {
+        margin: 0; }
+        #schedule .schedule-container .schedule-board-container .mobile-schedule .day header h2 {
           font-family: "mopsterregular";
-          border-bottom: 4px solid black;
-          color: white; }
-          #schedule .schedule-container article .schedule-board-container table thead tr th {
-            text-align: center; }
-            #schedule .schedule-container article .schedule-board-container table thead tr th:not(:last-child) {
-              border-right: 4px solid black; }
-        #schedule .schedule-container article .schedule-board-container table tbody {
-          color: white; }
-          #schedule .schedule-container article .schedule-board-container table tbody tr:not(:last-child) {
-            border-bottom: 4px solid black; }
-          #schedule .schedule-container article .schedule-board-container table tbody tr th {
-            max-width: 300px;
-            padding: 10px; }
-            #schedule .schedule-container article .schedule-board-container table tbody tr th:first-child {
-              font-family: "mopsterregular";
-              vertical-align: middle;
-              transform: rotate(270deg); }
-            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:first-child) {
-              font-weight: 300;
-              font-size: 0.7em; }
-            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:last-child) {
-              border-right: 4px solid black; }
-        #schedule .schedule-container article .schedule-board-container .mobile-schedule {
-          display: none;
-          margin: 10%;
-          color: white; }
-          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header {
-            margin: 0; }
-            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header h2 {
-              font-family: "mopsterregular";
-              font-weight: 700;
-              font-size: 1.5rem; }
-          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program {
-            list-style: none; }
-            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p {
-              font-weight: 300;
-              font-size: 0.7em; }
-              #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
-                border-bottom: 2px solid black; }
+          font-weight: 700;
+          font-size: 1.5rem; }
+      #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program {
+        list-style: none; }
+        #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p {
+          font-weight: 300;
+          font-size: 0.7em; }
+          #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
+            border-bottom: 2px solid black; }
 @media(max-width: 800px) {
-  #schedule .schedule-container article .schedule-board-container table {
+  #schedule .schedule-container .schedule-board-container table {
     display: none; }
-  #schedule .schedule-container article .schedule-board-container .mobile-schedule {
+  #schedule .schedule-container .schedule-board-container .mobile-schedule {
     display: block; } }
-#panel {
-  background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
+#where {
+  background: url(../img/optimized/where-background.png) no-repeat center center fixed;
   background-size: cover;
-  background-color: #231f20;
-  display: table; }
-  #panel header {
-    margin-top: 5%;
-    width: 100%; }
-    #panel header h1 {
-      text-align: left;
-      margin: 30px 10%;
+  background-color: #00a69c; }
+  #where .where-container {
+    color: white; }
+    #where .where-container header h1 {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
       color: white; }
-  #panel .panel-content {
+    #where .where-container .where-content {
+      padding: 20px 0; }
+      #where .where-container .where-content div img {
+        box-shadow: -10px -10px 0 white; }
+      #where .where-container .where-content div p {
+        font-size: 0.8em; }
+        #where .where-container .where-content div p span {
+          font-weight: 700;
+          color: white; }
+
+#partners {
+  background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fafafa;
+  display: table; }
+  #partners .partners-container article:first-child header h1 {
+    margin: 0px 10%;
+    font-family: "mopsterregular";
+    color: #262261;
+    font-size: 1.5rem; }
+  #partners .partners-container article:first-child .organisations {
     text-align: center;
-    display: table-row;
-    width: 100%; }
-    #panel .panel-content .panel-container {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      padding: 20px 0;
-      color: #262261;
-      width: 100%;
-      height: 100%; }
-      #panel .panel-content .panel-container .person {
-        vertical-align: top;
-        display: inline-block;
-        width: 240px; }
-        #panel .panel-content .panel-container .person article {
-          background: url(../img/eduardo-nunes.png) no-repeat center center;
-          background-size: cover;
-          box-shadow: -10px -10px 0 #262261;
-          height: 200px;
-          width: 200px;
-          margin: 25px; }
-        #panel .panel-content .panel-container .person h2 {
-          color: white; }
-        #panel .panel-content .panel-container .person p {
-          font-size: 1rem;
-          color: white; }
+    padding: 2%;
+    list-style-type: none; }
+    #partners .partners-container article:first-child .organisations li {
+      display: inline;
+      text-decoration: none;
+      margin: 20px;
+      padding: 0; }
+      #partners .partners-container article:first-child .organisations li a {
+        text-decoration: none;
+        color: #262261;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        font-size: 0.9em; }
+        #partners .partners-container article:first-child .organisations li a:hover {
+          opacity: 0.7; }
+      #partners .partners-container article:first-child .organisations li .org-img {
+        height: 80px; }
+  #partners .partners-container article:last-child header h1 {
+    margin: 30px 10%;
+    font-family: "mopsterregular";
+    color: #ff259c;
+    font-size: 1.5rem; }
+  #partners .partners-container article:last-child .partners {
+    text-align: center;
+    padding: 2%;
+    list-style-type: none; }
+    #partners .partners-container article:last-child .partners li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 20px;
+      padding: 0; }
+      #partners .partners-container article:last-child .partners li a {
+        text-decoration: none;
+        color: #262261;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        font-size: 0.9em; }
+        #partners .partners-container article:last-child .partners li a:hover {
+          opacity: 0.7; }
+    #partners .partners-container article:last-child .partners.gold .org-img {
+      height: 100px; }
+    #partners .partners-container article:last-child .partners.silver .org-img {
+      height: 80px; }
+    #partners .partners-container article:last-child .partners.bronze .org-img {
+      height: 60px; }
 
 #sign-in {
   background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed;
@@ -335,64 +334,6 @@ body, html {
       #sign-in .sign-in-container article form #submit {
         margin-top: 20px;
         text-align: center; }
-
-#partners {
-  background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
-  background-size: cover;
-  background-color: #fafafa;
-  display: table; }
-  #partners .partners-container article:first-child header h1 {
-    margin: 30px 10%;
-    font-family: "mopsterregular";
-    color: #262261;
-    font-size: 1.5rem; }
-  #partners .partners-container article:first-child .organisations {
-    text-align: center;
-    padding: 2%;
-    list-style-type: none; }
-    #partners .partners-container article:first-child .organisations li {
-      display: inline;
-      text-decoration: none;
-      margin: 20px;
-      padding: 0; }
-      #partners .partners-container article:first-child .organisations li a {
-        text-decoration: none;
-        color: #262261;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        font-size: 0.9em; }
-        #partners .partners-container article:first-child .organisations li a:hover {
-          opacity: 0.7; }
-      #partners .partners-container article:first-child .organisations li .org-img {
-        height: 80px; }
-  #partners .partners-container article:last-child header h1 {
-    margin: 30px 10%;
-    font-family: "mopsterregular";
-    color: #ff259c;
-    font-size: 1.5rem; }
-  #partners .partners-container article:last-child .partners {
-    text-align: center;
-    padding: 2%;
-    list-style-type: none; }
-    #partners .partners-container article:last-child .partners li {
-      display: inline-block;
-      text-decoration: none;
-      margin: 20px;
-      padding: 0; }
-      #partners .partners-container article:last-child .partners li a {
-        text-decoration: none;
-        color: #262261;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        font-size: 0.9em; }
-        #partners .partners-container article:last-child .partners li a:hover {
-          opacity: 0.7; }
-    #partners .partners-container article:last-child .partners.gold .org-img {
-      height: 100px; }
-    #partners .partners-container article:last-child .partners.silver .org-img {
-      height: 80px; }
-    #partners .partners-container article:last-child .partners.bronze .org-img {
-      height: 60px; }
 
 #error {
   background: url(../img/optimized/error-background.png) no-repeat center center fixed;

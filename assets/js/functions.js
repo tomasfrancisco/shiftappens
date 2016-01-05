@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		anchors: ['home-section','about-section','awards-section','faq-section','panel-section','schedule-section','where-section','partners-section','sign-in-section'],
-		//scrollOverflow: true,
+		scrollOverflow: true,
 		//continuousVertical: true,
 		'verticalCentered': false,
 		menu: "#menu"
