@@ -4,7 +4,9 @@ $(document).ready(function() {
 		scrollOverflow: true,
 		//continuousVertical: true,
 		'verticalCentered': false,
-		menu: "#menu"
+		menu: "#menu",
+		sectionsColor: ['#FAFAFA','#00A5E6','#2D2D2D','#FAFAFA','#231F20','#00A5E6','#00A69C','#FAFAFA'],
+		css3: false
 	});
 
 	/*setTimeout(function() {

@@ -1,9 +1,9 @@
 $(document).ready(function() {
     var askFaculty = function() {
-        $("#faculty").collapse('show');
-        $("#facultyInput").prop('required',true);
         $("#workplace").collapse('hide');
         $("#workplaceInput").prop('required',false);
+        $("#faculty").collapse('show');
+        $("#facultyInput").prop('required',true);
     };
 
     var askWorkPlace = function() {
