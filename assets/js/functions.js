@@ -1,44 +1,9 @@
 $(document).ready(function() {
-
-	$('#scroll-down-to-about').click(function() {
-	    $('#about').animatescroll();
-	});
-
-	$('#scroll-down-to-where').click(function() {
-	    $('#where').animatescroll();
-	});
-
-	$('#scroll-down-to-awards').click(function() {
-	    $('#awards').animatescroll();
-	});
-
-	$('#scroll-down-to-schedule').click(function() {
-	    $('#schedule').animatescroll();
-	});
-
-	$('#scroll-down-to-panel').click(function() {
-	    $('#panel').animatescroll();
-	});
-
-	$('#scroll-down-to-sign-in').click(function() {
-	    $('#sign-in').animatescroll();
-	});
-
-	$('#scroll-down-to-partners').click(function() {
-	    $('#partners').animatescroll();
-	});
-
-	$('#scroll-down-to-faq').click(function() {
-	    $('#faq').animatescroll();
-	});
-
-	$('#scroll-down-to-history').click(function() {
-	    $('#history').animatescroll();
-	});
-
-	$('.carousel').carousel({
-		interval: 2500,
-		pause: "false"
+	$('#fullpage').fullpage({
+		anchors: ['home-section','about-section','awards-section','faq-section','panel-section','schedule-section','where-section','partners-section','sign-in-section'],
+		scrollOverflow: true,
+		continuousVertical: true,
+		menu: '#menu'
 	});
 
 	setTimeout(function() {
@@ -55,10 +20,6 @@ $(document).ready(function() {
 			"margin-left": "21%",
 			"margin-right": "21%",
 			"margin-bottom": "1%"
-		}, 1000);	
-
-		$('#home .scroll-btn').animate({
-			"margin-top": "1%"
 		}, 1000);		
 	}, 1000);
 
