@@ -15,14 +15,15 @@ body, html {
 
 #navigation {
   background-color: #333333; }
-  #navigation .nav-title {
+  #navigation .container .navbar-header .nav-title {
     font-family: "mopsterregular";
-    font-size: 1.6rem; }
-  #navigation .menu {
+    font-size: 1.6rem;
+    line-height: 25px; }
+  #navigation .collapse .menu {
     font-family: "Dosis";
     font-weight: 500;
     font-size: 0.8rem; }
-  #navigation .menu a:hover {
+  #navigation .collapse .menu a:hover {
     color: white;
     -webkit-transition: color 0.2s ease-in-out; }
 
@@ -39,7 +40,8 @@ body, html {
 
 #home {
   background: url(../img/optimized/home-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 20vh; }
   #home .home-container {
     text-align: center; }
     #home .home-container .shift-date {
@@ -297,13 +299,13 @@ body, html {
     width: 100%;
     height: 100%; }
     #sign-in .sign-in-container header h1 {
-      margin: 30px 10%;
+      margin: 20px 20%;
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
       color: #262261;
       text-align: left; }
-    #sign-in .sign-in-container article {
+    #sign-in .sign-in-container .sign-in-content {
       display: inline-block;
       width: 60%;
       min-width: 400px;
@@ -313,25 +315,25 @@ body, html {
       background-color: white;
       font-size: 0.8em;
       box-shadow: -10px -10px 0 #262261; }
-      #sign-in .sign-in-container article form p {
+      #sign-in .sign-in-container .sign-in-content form p {
         font-size: 1.2em;
         font-weight: 700;
         margin-top: 30px; }
-      #sign-in .sign-in-container article form .form-group label {
+      #sign-in .sign-in-container .sign-in-content form .form-group label {
         font-size: 1em;
         font-weight: 400; }
-      #sign-in .sign-in-container article form .form-group .checkbox label {
+      #sign-in .sign-in-container .sign-in-content form .form-group .checkbox label {
         font-size: 0.8em;
         font-weight: 300; }
-      #sign-in .sign-in-container article form .form-group input {
+      #sign-in .sign-in-container .sign-in-content form .form-group input {
         color: #262261; }
-      #sign-in .sign-in-container article form .radio-group p {
+      #sign-in .sign-in-container .sign-in-content form .radio-group p {
         font-size: 1em;
         font-weight: 400; }
-      #sign-in .sign-in-container article form .radio-group .radio label {
+      #sign-in .sign-in-container .sign-in-content form .radio-group .radio label {
         font-size: 0.8em;
         font-weight: 300; }
-      #sign-in .sign-in-container article form #submit {
+      #sign-in .sign-in-container .sign-in-content form #submit {
         margin-top: 20px;
         text-align: center; }
 
