@@ -20,7 +20,7 @@ body, html {
   #navigation .menu {
     font-family: "Dosis";
     font-weight: 500;
-    font-size: 1.2rem; }
+    font-size: 0.8rem; }
   #navigation .menu a:hover {
     color: white;
     -webkit-transition: color 0.2s ease-in-out; }
@@ -98,9 +98,8 @@ body, html {
     font-size: 1.5rem;
     color: white; }
   #awards .awards-container .awards-content {
+    margin-top: 30px;
     text-align: center; }
-    #awards .awards-container .awards-content div img {
-      opacity: 0.2; }
     #awards .awards-container .awards-content div p {
       color: whitesmoke;
       font-weight: 600;
@@ -120,9 +119,12 @@ body, html {
         font-weight: 700;
         font-size: 1.5rem;
         color: #262261; }
-    #faq .faq-container .slide .row div h3 {
-      font-size: 1.2em;
-      font-weight: 400; }
+    #faq .faq-container .row div h3 {
+      font-size: 0.7em;
+      font-weight: 400;
+      margin-bottom: 0px; }
+    #faq .faq-container .row div p {
+      font-size: 0.6em; }
 
 #where {
   background: url(../img/optimized/where-background.png) no-repeat center center fixed;

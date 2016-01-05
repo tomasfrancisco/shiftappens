@@ -7,7 +7,7 @@ $(document).ready(function() {
 		menu: "#menu"
 	});
 
-	setTimeout(function() {
+	/*setTimeout(function() {
 		$('#home .shift-date').animate({
 			"margin-bottom" : "0%",
 			"font-size" : "1.0rem"
@@ -20,9 +20,9 @@ $(document).ready(function() {
 		$('#home .logo').animate({
 			"margin-left": "21%",
 			"margin-right": "21%",
-			"margin-bottom": "1%"
+			"margin-top": "5%"
 		}, 1000);		
-	}, 1000);
+	}, 1000);*/
 
 	$('#schedule-prev').click(function() {
 		var prev = $('#schedule-prev');
