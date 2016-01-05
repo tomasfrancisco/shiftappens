@@ -36,20 +36,20 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand nav-title" href="#home-section">Shift Appens</a>
+                    <a  data-menuanchor="home-section" class="navbar-brand nav-title" href="#home-section">Shift Appens</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
 
                     <ul id="menu" class="menu nav navbar-nav navbar-right">
-                        <li><a href="#about-section">Sobre</a></li>
-                        <li><a href="#awards-section">Prémios</a></li>
-                        <li><a href="#faq-section">FAQ</a></li>
-                        <li><a href="#panel-section">Júri</a></li>
-                        <li><a href="#schedule-section">Programa</a></li>
-                        <li><a href="#where-section">Local</a></li>
-                        <li><a href="#partners-section">Organização</a></li>
-                        <li><a href="#sign-in-section">Inscrições</a></li>
+                        <li data-menuanchor="about-section"><a href="#about-section">Sobre</a></li>
+                        <li data-menuanchor="awards-section"><a href="#awards-section">Prémios</a></li>
+                        <li data-menuanchor="faq-section"><a href="#faq-section">FAQ</a></li>
+                        <li data-menuanchor="panel-section"><a href="#panel-section">Júri</a></li>
+                        <li data-menuanchor="schedule-section"><a href="#schedule-section">Programa</a></li>
+                        <li data-menuanchor="where-section"><a href="#where-section">Local</a></li>
+                        <li data-menuanchor="partners-section"><a href="#partners-section">Organização</a></li>
+                        <li data-menuanchor="sign-in-section"><a href="#sign-in-section">Inscrições</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,129 +68,139 @@
                 </div>
             </div>
             <div id="about" class="section">
-                <div class="about-container">
-                    <article>
-                        <header>
-                            <h1>O <span>shift appens</span> é um Hackathon onde podes desenvolver a tua APP</h1>
-                        </header>
-                        <p>
-                            Com a ajuda de mentores experientes na área, tu e a tua equipa têm 48 horas para desenvolver uma App usando a vossa linguagem de programação preferida.
-                            No fim, o trabalho desenvolvido é apresentado a um juri e é escolhido um vencedor.
-                        </p>
-                        <p>
-                            E já temos pronto o grande Hangover desta edição que podes consultar em: What an Hangover!
-                        </p>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Porquê participar</h2>
-                        </header>
-                        <p>
-                            <span>Tens uma ideia e não sabes como avançar.</span>
-                            No Shift APPens vais conhecer outros participantes com conhecimentos complementares aos teus ou mesmo contar com a ajuda de programadores experientes que te podem dar o kickstart que precisas.
-                        </p>
-                        <p>
-                            <span>Tens uma ideia e não sabes como avançar.</span>
-                            No Shift APPens vais conhecer outros participantes com conhecimentos complementares aos teus ou mesmo contar com a ajuda de programadores experientes que te podem dar o kickstart que precisas.
-                        </p>
-                        <p>
-                            <span>Tens uma ideia e não sabes como avançar.</span>
-                            No Shift APPens vais conhecer outros participantes com conhecimentos complementares aos teus ou mesmo contar com a ajuda de programadores experientes que te podem dar o kickstart que precisas.
-                        </p>
-                    </article>
-                </div>
+                <center>
+                    <div class="about-container container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <header>
+                                    <h1>O <span>shift appens</span> é um Hackathon onde podes desenvolver a tua APP</h1>
+                                </header>
+                                <p>
+                                    Com a ajuda de mentores experientes na área, tu e a tua equipa têm 48 horas para desenvolver uma App usando a vossa linguagem de programação preferida.
+                                    No fim, o trabalho desenvolvido é apresentado a um juri e é escolhido um vencedor.
+                                </p>
+                                <p>
+                                    E já temos pronto o grande Hangover desta edição que podes consultar em: What an Hangover!
+                                </p>
+                            </div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6">
+                                <header>
+                                    <h2>Porquê participar</h2>
+                                </header>
+                                <p>
+                                    <span>Tens uma ideia e não sabes como avançar.</span>
+                                    No Shift APPens vais conhecer outros participantes com conhecimentos complementares aos teus ou mesmo contar com a ajuda de programadores experientes que te podem dar o kickstart que precisas.
+                                </p>
+                                <p>
+                                    <span>Tens uma ideia e não sabes como avançar.</span>
+                                    No Shift APPens vais conhecer outros participantes com conhecimentos complementares aos teus ou mesmo contar com a ajuda de programadores experientes que te podem dar o kickstart que precisas.
+                                </p>
+                            </div class="col-sm-12 col-md-6">
+                        </div>
+                    </div>
+                </center>
             </div>
             <div id="awards" class="section">
-                <div class="awards-container">
-                    <article>
-                        <header>
-                            <h1>Premios</h1>
-                        </header>
-                        <div class="coming-soon">
-                            <h1>COMING SOON</h1>
+                <div class="awards-container container">
+                    <header>
+                        <h1>Premios</h1>
+                    </header>
+                    <div class="row awards-content">
+                        <div class="gold col-sm-4">
+                            <img src="assets/img/gold.png" class="col-sm-offset-2 col-sm-8 img-responsive">
+                            <p>Coming soon</p>
                         </div>
-                        <div class="awards-content">
-                            <div class="gold">
-                                <img src="assets/img/gold.png">
-                            </div>
-                            <div class="silver">
-                                <img src="assets/img/silver.png">
-                            </div>
-                            <div class="bronze">
-                                <img src="assets/img/bronze.png">
-                            </div>
+                        <div class="silver col-sm-4">
+                            <img src="assets/img/silver.png" class="col-sm-offset-2 col-sm-8 img-responsive">
+                            <p>Coming soon</p>
                         </div>
-                    </article>
+                        <div class="bronze col-sm-4">
+                            <img src="assets/img/bronze.png" class="col-sm-offset-2 col-sm-8 img-responsive">
+                            <p>Coming soon</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="faq" class="section">
-                <div class="faq-container">
+                <div class="faq-container container">
                     <header>
                         <h2>Frequently Asked Questions</h2>
                     </header>
-                    <article>
-                        <ul>
-                            <li>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>PARA QUEM?</h3>
                                 <p>Todos os alunos de qualquer instituto de ensino superior, ou que tenham acabado o curso há menos de um ano, podem participar! O importante é ser malta criativa, motivada e bem disposta. Se és assim e tens skills de programação ou design, o Shift APPens é a tua praia.</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>É OBRIGATÓRIO TER EQUIPA?</h3>
                                 <p>Não. O Shift APPens é o sítio ideal para conheceres os teus co-founders e assim criar uma equipa espectacular no início do evento. Não há crise se já tiveres uns bros de código que queiram participar contigo, mas é importante irem de mente aberta para aceitarem novos membros. O número recomendado de elementos é entre 2 e 4.</p>
-                            </li>
-                            <li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>QUE LINGUAGENS POSSO USAR?</h3>
                                 <p>Como sabemos que és o ninja do código, podes usar qualquer linguagem. No entanto, para melhor te apoiarmos recomendamos as seguintes linguagens: JavaScript, Python, Ruby, Java, C++, C#, e Obj-C e suas frameworks derivadas (Ex: Ruby on Rails ou Django).</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>E O AMBIENTE?</h3>
-                                <p>Se já estiveste num hackathon sabes que tens que vir preparado para tudo. Se não estiveste prepara-te para programar à volta da fogueira, descontrair nos puffs e tomar 20 cafés para bater código que nem um doido.</p>
-                            </li>
-                        </ul>
-                    </article>
-                    <article>
-                        <ul>
-                            <li>
+                               <p>Se já estiveste num hackathon sabes que tens que vir preparado para tudo. Se não estiveste prepara-te para programar à volta da fogueira, descontrair nos puffs e tomar 20 cafés para bater código que nem um doido.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>COMO PARTICIPO?</h3>
                                 <p>As inscrições já se encontram encerradas! Os resultados dos participantes selecionados serão divulgadas em breve.</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>É OBRIGATÓRIO TER UMA IDEIA?</h3>
-                                <p>Não. Se tiveres vontade de trabalhar e tiveres skills de design ou programação, podes simplesmente juntar-te a outros participantes que queiram desenvolver uma ideia que te agrade. És livre para escolher a tua equipa no início do evento.</p>
-                            </li>
-                            <li>
+                               <p>Não. Se tiveres vontade de trabalhar e tiveres skills de design ou programação, podes simplesmente juntar-te a outros participantes que queiram desenvolver uma ideia que te agrade. És livre para escolher a tua equipa no início do evento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>VAI SER CARO?</h3>
                                 <p>A inscrição é totalmente gratuita. A participação no caso de seres selecionado terá um custo de 10€!</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>E DORMIR?</h3>
-                                <p>O recinto do evento vai estar aberto e disponível para passares a noite, portanto podes trazer um saco de cama. Infraestruturas para tomar duche não estão disponíveis. Podes por outro lado passar a noite num dos hostels e residenciais que temos em Coimbra.</p>
-                            </li>
-                        </ul>
-                    </article>
-                    <article>
-                        <ul>
-                            <li>
+                               <p>O recinto do evento vai estar aberto e disponível para passares a noite, portanto podes trazer um saco de cama. Infraestruturas para tomar duche não estão disponíveis. Podes por outro lado passar a noite num dos hostels e residenciais que temos em Coimbra.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>QUAL É O FORMATO?</h3>
                                 <p>Nós não somos esquisitos. Aplicações web, mobile, desktop e jogos são bem vindas e vão ser avaliadas sem distinção pelo júri na apresentação final. Os critérios de seleção terão por base a criatividade, dificuldade técnica, grau de finalização e utilidade para o utilizador final. Podes sempre consultar o Hangover da Edição 2014 para teres um ideia do que o pessoal fez por cá na última edição.</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>POSSO LEVAR CÓDIGO FEITO?</h3>
-                                <p>Nós recomendamos que apenas comeces a escrever código para a tua app no evento. Para ser justo para os outros, pedimos que nos avises se já tiveres algum código escrito. APIs e bibliotecas podes usar à fartazana.</p>
-                            </li>
-                            <li>
+                               <p>Nós recomendamos que apenas comeces a escrever código para a tua app no evento. Para ser justo para os outros, pedimos que nos avises se já tiveres algum código escrito. APIs e bibliotecas podes usar à fartazana.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <h3>ONDE É?</h3>
                                 <p>Esta edição do Shift APPens vai ser no Departamento de Engenharia Informática da Faculdade de Ciências e Tecnologias da Universidade de Coimbra (DEI-FCTUC).</p>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-sm-6">
                                 <h3>AS REFEIÇÕES?</h3>
-                                <p>As refeições principais (almoços e jantares) durante o evento vão ser asseguradas por nós e estão incluídas no custo de participação.</p>
-                            </li>
-                        </ul>
-                    </article>
+                               <p>As refeições principais (almoços e jantares) durante o evento vão ser asseguradas por nós e estão incluídas no custo de participação.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="panel" class="section">
+            <div id="panel" class="section container">
                 <header>
                     <h1>Juri</h1>
                 </header>
@@ -220,7 +230,7 @@
                     </div>
                 </div>
             </div>
-            <div id="schedule" class="section">
+            <div id="schedule" class="section container">
                 <div class="schedule-container">
                     <article>
                         <header>
@@ -331,7 +341,7 @@
                     </article>
                 </div>
             </div>
-            <div id="where" class="section">
+            <div id="where" class="section container">
                 <div class="where-container">
                     <header>
                         <h1>Onde tudo acontece</h1>
@@ -345,7 +355,7 @@
                     </article>
                 </div>
             </div>
-            <div id="partners" class="section">
+            <div id="partners" class="section container">
                 <div class="partners-container">
                     <article>
                         <header>
@@ -442,7 +452,7 @@
                     </article>
                 </div>
             </div>
-            <div id="sign-in" class="section">
+            <div id="sign-in" class="section container">
                 <div class="sign-in-container">
                     <header>
                         <h1>Estas interessado? Inscreve-te ja!</h1>
@@ -458,9 +468,10 @@
             </div>
         </div>
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/slimscroll.js"></script>
         <script src="assets/js/fullpage.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/functions.js"></script>
         <script src="assets/js/signin.js"></script>
     </body>

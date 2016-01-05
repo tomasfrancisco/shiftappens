@@ -1,826 +1,511 @@
-@import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800)
 
-html {
-	overflow-x: hidden;
-}
+html
+	overflow-x: hidden
 
-body, html {
-	font-family: 'Dosis';
-	font-size: 1.3em;
-	height: 100%;
-	margin: 0;
-}
+body, html
+	font-family: 'Dosis'
+	font-size: 1.3em
+	height: 100%
+	margin: 0
 
-#home, #about, #history, 
-#where, #schedule, #panel, 
-#awards, #sign-in, #error, 
-#success, #partners, #faq {
-	width: 100vw;
-	height: 100vh;
-	padding-top: 42px;
-}
+#home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq
+	//width: 100vw
+	height: 100vh
+	padding-top: 42px
 
-#navigation {
-	background-color: #333333;
-  .nav-title {
-		font-family: 'mopsterregular';
-		font-size: 1.6rem;
-  }
-  .menu {
-		font-family: "Dosis";
-		font-weight: 500;
-		font-size: 1.2rem;
-  }
-  .menu a:hover {
-		color: white;
-		-webkit-transition: color 0.2s ease-in-out;
-  }
-}
+#navigation
+	background-color: #333333
+	.nav-title
+		font-family: 'mopsterregular'
+		font-size: 1.6rem
+	.menu
+		font-family: "Dosis"
+		font-weight: 500
+		font-size: 1.2rem
+	.menu a:hover
+		color: white
+		-webkit-transition: color 0.2s ease-in-out
 
-#top-shadow {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 42px;
-	z-index: 999;
-	-webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
-}
+#top-shadow
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 42px
+	z-index: 999
+	-webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5)
+	-moz-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5)
+	box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5)
 
-#home {
-	background: url(../img/optimized/home-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(250,250,250);
-	display: table;
-  padding-top: 35vh;
-  .home-container {
+#home
+	background: url(../img/optimized/home-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(250,250,250)
+	margin-top: 50px
+	.home-container
+		text-align: center
+		.shift-date
+			margin-bottom: 5%
+			color: #262261
+			font-size: 1.6rem
+			h2
+				font-weight: 600
+		.logo
+			margin: 0 10%
+			.desktop
+				width: 100%
+				@media (max-width: 700px)
+					display: none
+				@media (min-width: 701px)
+					display: block
+			.mobile
+				width: 100%
+				@media (max-width: 700px)
+					display: block
+				@media (min-width: 701px)
+					display: none
+
+#about
+	background: url(../img/optimized/about-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(0,165,230)
+	.about-container
+		color: white
+		div
+			text-align: left
+			header
+				h1
+					span
+						font-family: 'mopsterregular'
+						color: whitesmoke//rgb(255, 37, 156)
+				h2
+					span
+						font-family: 'mopsterregular'
+						color: whitesmoke//rgb(255, 37, 156)
+			p
+				font-size: 0.8em
+				span
+					font-weight: 700
+					color: whitesmoke//rgb(255, 37, 156)
+
+#awards
+	background: url(../img/optimized/awards-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(45, 45, 45)
+	.awards-container
+		header
+			h1
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: white
+		.awards-content
+			text-align: center
+			div
+				img
+					opacity: 0.2
+				p
+					color: whitesmoke//color: rgb(255, 216, 40)
+					font-weight: 600
+					font-size: 0.9em
+					margin: 0
+
+#faq
+	background: url(../img/optimized/faq-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(250,250,250)
+	.faq-container
+		color: #262261
+		header
+			display: block
+			h2
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: #262261
+		.slide
+			.row
+				div
+					h3
+						font-size: 1.2em
+						font-weight: 400
+
+
+
+#where
+	background: url(../img/optimized/where-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(0,166,156)
+	display: table
+	.where-container
 		display: table-cell
 		text-align: center
-    .shift-date {
-			margin-bottom: 5%;
-			color: #262261;
-			font-size: 1.6rem;
-      h2 {
-				font-weight: 600
-      }
-    }
+		vertical-align: middle
+		padding: 20px 0
+		color: rgb(38, 36, 95)
+		header
+			display: block
+			h1
+				margin: 30px 10%
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: rgb(38, 36, 95)
+				text-align: left
+		article
+			display: inline-block
+			width: 40%
+			min-width: 400px
+			vertical-align: top
+			text-align: left
+			padding: 0 50px 20px 50px
+			&.place-photo
+				background: url(../img/pav-centro-portugal.jpg) no-repeat center center
+				background-size: cover
+				box-shadow: -10px -10px 0 rgb(38, 36, 95)//#00a5e6
+				height: 60vh
+				min-height: 300px
+				margin: 25px 0 0 0
+			header
+				h1
+					span
+						font-family: 'mopsterregular'
+						color: rgb(38, 36, 95)//#00a5e6
+				h2
+					span
+						font-family: 'mopsterregular'
+						color: rgb(38, 36, 95)//#00a5e6
+			p
+				font-size: 0.8em
+				span
+					font-weight: 700
+					color: rgb(38, 36, 95)//#00a5e6
 
-    .logo {
-			margin: 0 10%;
-      .desktop {
-				width: 100%;
-        @media (max-width: 700px) {
-					display: none;
-        }
-        @media (min-width: 701px) {
-					display: block;
-        }
-      }
-
-      .mobile {
-				width: 100%;
-        @media (max-width: 700px) {
-					display: block;
-        }
-        @media (min-width: 701px) {
-					display: none;
-        }
-      }
-    }
-  }
-}
-
-#about {
-	background: url(../img/optimized/about-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(0,165,230);
-	display: table;
-  .about-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		color: white;
-    article {
-			display: inline-block;
-			width: 40%;
-			min-width: 400px;
-			vertical-align: top;
-			text-align: left;
-			padding: 0 50px 20px 50px;
-      header {
-        h1 {
-          span {
-						font-family: 'mopsterregular';
-						color: whitesmoke;
-          }
-        }
-
-        h2 {
-          span {
-						font-family: 'mopsterregular';
-						color: whitesmoke;
-          }
-        }
-      }
-
-      p {
-				font-size: 0.8em;
-        span {
-					font-weight: 700;
-					color: whitesmoke;
-        }
-      }
-    }
-  }
-}
-
-#history {
-	background: url(../img/optimized/history-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(0,166,156);
-	display: table;
-  .history-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		color: rgb(38, 36, 95);
-    article {
-			display: inline-block;
-			width: 40%;
-			min-width: 400px;
-			vertical-align: top;
-			text-align: left;
-			padding: 0 50px 20px 50px;
-      header {
-        h1 {
-          span {
-						font-family: 'mopsterregular';
-						color: rgb(38, 36, 95);
-          }
-        }
-
-        h2 {
-          span {
-						font-family: 'mopsterregular';
-						color: rgb(38, 36, 95);
-          }
-        }
-      }
-
-      p {
-				font-size: 0.8em;
-        span {
-					font-weight: 700;
-					color: rgb(38, 36, 95);
-        }
-      }
-    }
-
-    .scroll-btn {
-			display: block;
-			text-align: center;
-			margin-top: 8vh;
-    }
-  }
-}
-
-#where {
-	background: url(../img/optimized/where-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(0,166,156);
-	display: table;
-  .where-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		padding: 20px 0;
-		color: rgb(38, 36, 95);
-    header {
-			display: block;
-      h1 {
-				margin: 30px 10%;
-				font-family: 'mopsterregular';
-				font-weight: 700;
-				font-size: 1.5rem;
-				color: rgb(38, 36, 95);
-				text-align: left;
-      }
-    }
-    article {
-			display: inline-block;
-			width: 40%;
-			min-width: 400px;
-			vertical-align: top;
-			text-align: left;
-			padding: 0 50px 20px 50px;
-      &.place-photo {
-				background: url(../img/pav-centro-portugal.jpg) no-repeat center center;
-				background-size: cover;
-				box-shadow: -10px -10px 0 rgb(38, 36, 95);
-				height: 60vh;
-				min-height: 300px;
-				margin: 25px 0 0 0;
-      }
-
-      header {
-        h1 {
-          span {
-						font-family: 'mopsterregular';
-						color: rgb(38, 36, 95);
-          }
-        }
-
-        h2 {
-          span {
-						font-family: 'mopsterregular';
-						color: rgb(38, 36, 95);
-          }
-        }
-      }
-
-      p {
-				font-size: 0.8em;
-        span {
-					font-weight: 700;
-					color: rgb(38, 36, 95);
-        }
-      }
-    }
-
-    .scroll-btn {
-			margin-top: 8%;
-    }
-  }
-}
-
-#schedule {
-	background: url(../img/optimized/schedule-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(0,165,230);
-	display: table;
-  .schedule-container {
-		width: 100%;
-		height: 100%;
-		display: table;
-    article {
-			display: table-cell;
-			vertical-align: middle;
-      header {
-				margin: 30px 10%;
-				font-family: 'mopsterregular';
-				font-weight: 700;
-				font-size: 1.5rem;
-				color: white;
-      }
-      .schedule-board-container {
-				width: 100%;
-				display: flex;
-				justify-content: center;
-        table {
-          thead {
-            tr {
-							font-family: 'mopsterregular';
-							border-bottom: 4px solid black;
-							color: white;
-              th {
-								text-align: center;
-                &:not(:last-child) {
-									border-right: 4px solid black;
-                }
-              }
-            }
-          }
-
-          tbody {
+#schedule
+	background: url(../img/optimized/schedule-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(0,165,230)
+	display: table
+	.schedule-container
+		width: 100%
+		height: 100%
+		display: table
+		article
+			display: table-cell
+			vertical-align: middle
+			header
+				margin: 30px 10%
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: white
+			.schedule-board-container
+				width: 100%
+				display: flex
+				justify-content: center
+				table
+					thead
+						tr
+							font-family: 'mopsterregular'
+							border-bottom: 4px solid black
+							color: white
+							th
+								text-align: center
+								&:not(:last-child)
+									border-right: 4px solid black
+					tbody
 						color: white
-            tr {
-              &:not(:last-child) {
-								border-bottom: 4px solid black;
-              }
-
-              th {
-								max-width: 300px;
-								padding: 10px;
-                &:first-child {
-									font-family: 'mopsterregular';
-									vertical-align: middle;
-									transform: rotate(270deg);
-                }
-
-                &:not(:first-child) {
-									font-weight: 300;
-									font-size: 0.7em;
-                }
-
-                &:not(:last-child) {
-									border-right: 4px solid black;
-                }
-              }
-            }
-          }
-        }
-
-        .mobile-schedule {
-					display: none;
-					margin: 10%;
-					color: white;
-          .day {
-            header {
-							margin: 0;
-              h2 {
-								font-family: 'mopsterregular';
-								font-weight: 700;
-								font-size: 1.5rem;
-              }
-            }
-
-            .day-program {
-							list-style: none;
-              p {
-								font-weight: 300;
-								font-size: 0.7em;
-                &:not(:last-child) {
-									border-bottom: 2px solid black;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .scroll-btn {
-				display: block;
-				text-align: center;
-				margin-top: 8vh;
-      }
-    }
-  }
-
-  @media(max-width: 800px) {
-    .schedule-container {
-      article {
-        .schedule-board-container {
-          table {
+						tr
+							&:not(:last-child)
+								border-bottom: 4px solid black
+							th
+								max-width: 300px
+								padding: 10px
+								&:first-child
+									font-family: 'mopsterregular'
+									vertical-align: middle
+									transform: rotate(270deg)
+								&:not(:first-child)
+									font-weight: 300
+									font-size: 0.7em
+								&:not(:last-child)
+									border-right: 4px solid black
+				.mobile-schedule
+					display: none
+					margin: 10%
+					color: white
+					.day
+						header
+							margin: 0
+							h2
+								font-family: 'mopsterregular'
+								font-weight: 700
+								font-size: 1.5rem
+						.day-program
+							list-style: none
+							p
+								font-weight: 300
+								font-size: 0.7em
+								&:not(:last-child)
+									border-bottom: 2px solid black
+	@media(max-width: 800px)
+		.schedule-container
+			article
+				.schedule-board-container
+					table
 						display: none
-          }
-
-          .mobile-schedule {
+					.mobile-schedule
 						display: block
-          }
-        }
-      }
-    }
-  }
-}
 
-#awards {
-	background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(45, 45, 45);
-	display: table;
-  .awards-container {
-    article {
-      header {
-        h1 {
-					margin: 30px 10%;
-					font-family: 'mopsterregular';
-					font-weight: 700;
-					font-size: 1.5rem;
-					color: white;
-        }
-      }
-
-      .coming-soon {
-				text-align: center;
-				vertical-align: middle;
-				padding-top: 30px;
-				background-color: rgb(240,240,240);
-				box-shadow: -10px -10px 0 rgb(100, 100, 100);
-				height: 30%;
-				width: 30%;
-				display: block;
-				position: absolute;
-				margin-left: 35%;
-				margin-top: 10%;
-				z-index: 2;
-        h1 {
-					font-size: 1.5em;
-					font-weight: 600;
-					color: rgb(100,100,100);
-        }
-      }
-
-      .awards-content {
-				text-align: center;
-        div {
-					display: inline-block;
-					margin: 30px;
-					vertical-align: top;
-					width: 200px;
-          img {
-						width: 100%;
-          }
-
-          p {
-						color: rgb(255, 216, 40);
-						font-weight: 600;
-						font-size: 0.9em;
-						margin: 0;
-          }
-        }
-      }
-    }
-
-    .scroll-btn {
-			text-align: center;
-			margin-top: 8vh;
-    }
-  }
-}
-
-#panel {
-	background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(35, 31, 32);
-	display: table;
-  header {
-		margin-top: 5%;
-		width: 100%;
-    h1 {
-			text-align: left;
-			margin: 30px 10%;
-			font-family: 'mopsterregular';
-			font-weight: 700;
-			font-size: 1.5rem;
-			color: white;
-    }
-  }
-
-  .panel-content {
-		text-align: center;
-		display: table-row;
-		width: 100%;
-    .panel-container {
-			display: table-cell;
-			text-align: center;
-			vertical-align: middle;
-			padding: 20px 0;
-			color: rgb(38, 34, 97);
-			width: 100%;
-			height: 100%;
-      .person {
-				vertical-align: top;
-				display: inline-block;
-				width: 240px;
-        article {
-					background: url(../img/eduardo-nunes.png) no-repeat center center;
-					background-size: cover;
-					box-shadow: -10px -10px 0 rgb(38, 34, 97);
-					height: 200px;
-					width: 200px;
-					margin: 25px;
-        }
-
-        h2 {
-					color: white;
-        }
-
-        p {
-					font-size: 1.0rem;
-					color: white;
-        }
-      }
-    }
-  }
-
-  .scroll-btn {
-		text-align: center;
-		margin-top: 8vh;
-  }
-}
+#panel
+	background: url(../img/optimized/panel-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(35, 31, 32)
+	display: table
+	header
+		margin-top: 5%
+		width: 100%
+		h1
+			text-align: left
+			margin: 30px 10%
+			font-family: 'mopsterregular'
+			font-weight: 700
+			font-size: 1.5rem
+			color: white
+	.panel-content
+		text-align: center
+		display: table-row
+		width: 100%
+		.panel-container
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			padding: 20px 0
+			color: rgb(38, 34, 97)
+			width: 100%
+			height: 100%
+			.person
+				vertical-align: top
+				display: inline-block
+				width: 240px
+				article
+					background: url(../img/eduardo-nunes.png) no-repeat center center
+					background-size: cover
+					box-shadow: -10px -10px 0 rgb(38, 34, 97)
+					height: 200px
+					width: 200px
+					margin: 25px
+				h2
+					color: white
+				p
+					font-size: 1.0rem
+					color: white
 
 
-#sign-in {
-	background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(254, 254, 0);
-	display: table;
-
-  .sign-in-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		padding: 20px 0;
-		color: rgb(38, 36, 95);
-		width: 100%;
-		height: 100%;
-    header {
-      h1 {
-				margin: 30px 10%;
-				font-family: 'mopsterregular';
-				font-weight: 700;
-				font-size: 1.5rem;
-				color: rgb(38, 34, 97);
-				text-align: left;
-      }
-    }
-
-    article {
-			display: inline-block;
-			width: 60%;
-			min-width: 400px;
-			vertical-align: middle;
-			text-align: left;
-			padding: 20px 50px 20px 50px;
-			background-color: white;
-			font-size: 0.8em;
-			box-shadow: -10px -10px 0 rgb(38, 34, 97);
-      form {
-        p {
-					font-size: 1.2em;
-					font-weight: 700;
-					margin-top: 30px;
-        }
-
-        .form-group {
-          label {
-						font-size: 1em;
-						font-weight: 400;
-          }
-
-          .checkbox {
-            label {
-							font-size: 0.8em;
-							font-weight: 300;
-            }
-          }
-
-          input {
-						color: rgb(38, 34, 97);
-          }
-        }
-
-        .radio-group {
-          p {
-						font-size: 1em;
-						font-weight: 400;
-          }
-
-          .radio {
-            label {
-							font-size: 0.8em;
-							font-weight: 300;
-            }
-          }
-        }
-
-        #submit {
-					margin-top: 20px;
-					text-align: center;
-        }
-      }
-    }
-  }
-}
+#sign-in
+	background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(254, 254, 0)
+	display: table
+	.sign-in-container
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+		padding: 20px 0
+		color: rgb(38, 36, 95)
+		width: 100%
+		height: 100%
+		header
+			h1
+				margin: 30px 10%
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: rgb(38, 34, 97)
+				text-align: left
+		article
+			display: inline-block
+			width: 60%
+			//height: 200px
+			min-width: 400px
+			vertical-align: middle
+			text-align: left
+			padding: 20px 50px 20px 50px
+			background-color: white
+			font-size: 0.8em
+			box-shadow: -10px -10px 0 rgb(38, 34, 97)
+			form
+				p
+					font-size: 1.2em
+					font-weight: 700
+					margin-top: 30px
+				.form-group
+					label
+						font-size: 1em
+						font-weight: 400
+					.checkbox
+						label
+							font-size: 0.8em
+							font-weight: 300
+					input
+						color: rgb(38, 34, 97)
+				.radio-group
+					p
+						font-size: 1em
+						font-weight: 400
+					.radio
+						label
+							font-size: 0.8em
+							font-weight: 300
+				#submit
+					margin-top: 20px
+					text-align: center
 
 
 
-#partners {
-	background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(250,250,250);
-	display: table;
-  .partners-container {
-		text-align: center;
-    article:first-child {
-      header {
-        h1 {
-					font-family: 'mopsterregular';
-					color: rgb(38, 34, 97);
-					font-size: 1.5rem;
-        }
-      }
 
-      .organisations {
-				padding: 2%;
-				list-style-type: none;
-        li {
-					display: inline;
-					text-decoration: none;
-					margin: 20px;
-					padding: 0;
-          a {
-						text-decoration: none;
-						color: #262261;
-						font-weight: 700;
-						letter-spacing: 0.4px;
-						font-size: 0.9em;
-            &:hover {
-							opacity: 0.7;
-            }
-          }
+#partners
+	background: url(../img/optimized/partners-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(250,250,250)
+	display: table
+	.partners-container
+		//text-align: center
+		article:first-child
+			header
+				h1
+					margin: 30px 10%
+					font-family: 'mopsterregular'
+					color: rgb(38, 34, 97)
+					font-size: 1.5rem
+			.organisations
+				text-align: center
+				padding: 2%
+				list-style-type: none
+				li
+					display: inline
+					text-decoration: none
+					margin: 20px
+					padding: 0
+					a
+						text-decoration: none
+						color: #262261
+						font-weight: 700
+						letter-spacing: 0.4px
+						font-size: 0.9em
+						&:hover
+							opacity: 0.7
+					.org-img
+						height: 80px
+		article:last-child
+			header
+				h1
+					margin: 30px 10%
+					font-family: 'mopsterregular'
+					color: rgb(255, 37, 156)
+					font-size: 1.5rem
+			.partners
+				text-align: center
+				padding: 2%
+				list-style-type: none
+				li
+					display: inline-block
+					text-decoration: none
+					margin: 20px
+					padding: 0
+					a
+						text-decoration: none
+						color: #262261
+						font-weight: 700
+						letter-spacing: 0.4px
+						font-size: 0.9em
+						&:hover
+							opacity: 0.7
+				&.gold
+					.org-img
+						height: 100px
+				&.silver
+					.org-img
+						height: 80px
+				&.bronze
+					.org-img
+						height: 60px
 
-          .org-img {
-						height: 80px;
-          }
-        }
-      }
-    }
+#error
+	background: url(../img/optimized/error-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(250,250,250)
+	display: table
+	.error-container
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+		padding: 20px 0
+		color: rgb(200,30,30)
+		width: 100%
+		height: 100%
+		header
+			h1
+				margin: 30px 10%
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: rgb(200,30,30)
+				text-align: left
+		article
+			display: inline-block
+			width: 60%
+			//height: 200px
+			min-width: 400px
+			vertical-align: middle
+			text-align: left
+			padding: 20px 50px 20px 50px
+			background-color: rgb(230,230,230)
+			font-size: 0.8em
+			box-shadow: -10px -10px 0 rgb(200,30,30)
+			p
+				font-size: 1.2em
+				font-weight: 700
+				margin-top: 30px
 
-    article:last-child {
-      header {
-        h1 {
-					font-family: 'mopsterregular';
-					color: rgb(255, 37, 156);
-					font-size: 1.5rem;
-        }
-      }
-
-      .partners {
-				padding: 2%;
-				list-style-type: none;
-        li {
-					display: inline-block;
-					text-decoration: none;
-					margin: 20px;
-					padding: 0;
-          a {
-						text-decoration: none;
-						color: #262261;
-						font-weight: 700;
-						letter-spacing: 0.4px;
-						font-size: 0.9em;
-            &:hover {
-							opacity: 0.7;
-            }
-          }
-        }
-
-        &.gold {
-          .org-img {
-						height: 100px;
-          }
-        }
-
-        &.silver {
-          .org-img {
-						height: 80px;
-          }
-        }
-
-        &.bronze {
-          .org-img {
-						height: 60px;
-          }
-        }
-      }
-    }
-  }
-
-  .scroll-btn {
-		text-align: center;
-		margin-top: 8vh;
-  }
-}
-
-
-#faq {
-	background: url(../img/optimized/faq-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(250,250,250);
-	display: table;
-  .faq-container {
-		display: table-row;
-		text-align: center;
-		vertical-align: middle;
-		color: #262261;
-
-    header {
-      h2 {
-				font-family: 'mopsterregular';
-				color: #262261;
-      }
-    }
-
-    article {
-			display: inline-block;
-			width: 30%;
-			min-width: 400px;
-			vertical-align: top;
-			text-align: left;
-			padding: 0 50px 20px 50px;
-      ul {
-        li {
-					color: #262261;
-          h3 {
-						font-size: 1.0em;
-          }
-						
-          p {
-						font-size: 0.7em;
-          }
-        }
-      }
-    }
-  }
-
-  .scroll-btn {
-		display: block;
-		text-align: center;
-		margin-top: 8vh;
-  }
-}
-
-#error {
-	background: url(../img/optimized/error-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(250,250,250);
-	display: table;
-  .error-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		padding: 20px 0;
-		color: rgb(200,30,30);
-		width: 100%;
-		height: 100%;
-    header {
-      h1 {
-				margin: 30px 10%;
-				font-family: 'mopsterregular';
-				font-weight: 700;
-				font-size: 1.5rem;
-				color: rgb(200,30,30);
-				text-align: left;
-      }
-    }
-
-    article {
-			display: inline-block;
-			width: 60%;
-			min-width: 400px;
-			vertical-align: middle;
-			text-align: left;
-			padding: 20px 50px 20px 50px;
-			background-color: rgb(230,230,230);
-			font-size: 0.8em;
-			box-shadow: -10px -10px 0 rgb(200,30,30);
-      p {
-				font-size: 1.2em;
-				font-weight: 700;
-				margin-top: 30px;
-      }
-    }
-  }
-}
-
-#success {
-	background: url(../img/optimized/success-background.png) no-repeat center center fixed;
-	background-size: cover;
-	background-color: rgb(35, 31, 32);
-	display: table;
-  .success-container {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		padding: 20px 0;
-		color: whitesmoke;
-		width: 100%;
-		height: 100%;
-    header {
-      h1 {
-				margin: 30px 10%;
-				font-family: 'mopsterregular';
-				font-weight: 700;
-				font-size: 1.5rem;
-				color: whitesmoke;
-				text-align: left;
-      }
-    }
-
-    article {
-			display: inline-block;
-			width: 60%;
-			min-width: 400px;
-			vertical-align: middle;
-			text-align: left;
-			padding: 20px 50px 20px 50px;
-			background-color: rgb(45,45,45);
-			font-size: 0.8em;
-			box-shadow: -10px -10px 0 whitesmoke;
-      p {
-				font-size: 1.2em;
-				font-weight: 700;
-				margin-top: 30px;
-      }
-
-      .form-group {
-				padding-top: 20px;
-				text-align: center;
-				color: rgb(45,45,45);
-      }
-    }
-  }
-}
+#success
+	background: url(../img/optimized/success-background.png) no-repeat center center fixed
+	background-size: cover
+	background-color: rgb(35, 31, 32)
+	display: table
+	.success-container
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+		padding: 20px 0
+		color: whitesmoke
+		width: 100%
+		height: 100%
+		header
+			h1
+				margin: 30px 10%
+				font-family: 'mopsterregular'
+				font-weight: 700
+				font-size: 1.5rem
+				color: whitesmoke
+				text-align: left
+		article
+			display: inline-block
+			width: 60%
+			//height: 200px
+			min-width: 400px
+			vertical-align: middle
+			text-align: left
+			padding: 20px 50px 20px 50px
+			background-color: rgb(45,45,45)
+			font-size: 0.8em
+			box-shadow: -10px -10px 0 whitesmoke
+			p
+				font-size: 1.2em
+				font-weight: 700
+				margin-top: 30px
+			.form-group
+				padding-top: 20px
+				text-align: center
+				color: rgb(45,45,45)

@@ -1,43 +1,469 @@
-/*
-Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 1 tab.
-        on line 25 of assets/sass/core.sass
+@import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+html {
+  overflow-x: hidden; }
 
-20: 	padding-top: 42px;
-21: }
-22: 
-23: #navigation {
-24: 	background-color: #333333;
-25:   .nav-title {
-26: 		font-family: 'mopsterregular';
-27: 		font-size: 1.6rem;
-28:   }
-29:   .menu {
-30: 		font-family: "Dosis";
+body, html {
+  font-family: "Dosis";
+  font-size: 1.3em;
+  height: 100%;
+  margin: 0; }
 
-Backtrace:
-assets/sass/core.sass:25
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:483:in `block in tabulate'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:441:in `each'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:441:in `each_with_index'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:441:in `tabulate'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:406:in `_to_tree'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/tiagonbotelho/.rvm/gems/ruby-2.2.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 1 tab.\A         on line 25 of assets/sass/core.sass\A \A 20: 	padding-top: 42px;\A 21: }\A 22: \A 23: #navigation {\A 24: 	background-color: #333333;\A 25:   .nav-title {\A 26: 		font-family: 'mopsterregular';\A 27: 		font-size: 1.6rem;\A 28:   }\A 29:   .menu {\A 30: 		font-family: \"Dosis\";"; }
+#home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
+  height: 100vh;
+  padding-top: 42px; }
+
+#navigation {
+  background-color: #333333; }
+  #navigation .nav-title {
+    font-family: "mopsterregular";
+    font-size: 1.6rem; }
+  #navigation .menu {
+    font-family: "Dosis";
+    font-weight: 500;
+    font-size: 1.2rem; }
+  #navigation .menu a:hover {
+    color: white;
+    -webkit-transition: color 0.2s ease-in-out; }
+
+#top-shadow {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 42px;
+  z-index: 999;
+  -webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5); }
+
+#home {
+  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fafafa;
+  margin-top: 50px; }
+  #home .home-container {
+    text-align: center; }
+    #home .home-container .shift-date {
+      margin-bottom: 5%;
+      color: #262261;
+      font-size: 1.6rem; }
+      #home .home-container .shift-date h2 {
+        font-weight: 600; }
+    #home .home-container .logo {
+      margin: 0 10%; }
+      #home .home-container .logo .desktop {
+        width: 100%; }
+        @media (max-width: 700px) {
+          #home .home-container .logo .desktop {
+            display: none; } }
+        @media (min-width: 701px) {
+          #home .home-container .logo .desktop {
+            display: block; } }
+      #home .home-container .logo .mobile {
+        width: 100%; }
+        @media (max-width: 700px) {
+          #home .home-container .logo .mobile {
+            display: block; } }
+        @media (min-width: 701px) {
+          #home .home-container .logo .mobile {
+            display: none; } }
+
+#about {
+  background: url(../img/optimized/about-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #00a5e6; }
+  #about .about-container {
+    color: white; }
+    #about .about-container div {
+      text-align: left; }
+      #about .about-container div header h1 span {
+        font-family: "mopsterregular";
+        color: whitesmoke; }
+      #about .about-container div header h2 span {
+        font-family: "mopsterregular";
+        color: whitesmoke; }
+      #about .about-container div p {
+        font-size: 0.8em; }
+        #about .about-container div p span {
+          font-weight: 700;
+          color: whitesmoke; }
+
+#awards {
+  background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #2d2d2d; }
+  #awards .awards-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white; }
+  #awards .awards-container .awards-content {
+    text-align: center; }
+    #awards .awards-container .awards-content div img {
+      opacity: 0.2; }
+    #awards .awards-container .awards-content div p {
+      color: whitesmoke;
+      font-weight: 600;
+      font-size: 0.9em;
+      margin: 0; }
+
+#faq {
+  background: url(../img/optimized/faq-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fafafa; }
+  #faq .faq-container {
+    color: #262261; }
+    #faq .faq-container header {
+      display: block; }
+      #faq .faq-container header h2 {
+        font-family: "mopsterregular";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #262261; }
+    #faq .faq-container .slide .row div h3 {
+      font-size: 1.2em;
+      font-weight: 400; }
+
+#where {
+  background: url(../img/optimized/where-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #00a69c;
+  display: table; }
+  #where .where-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 0;
+    color: #26245f; }
+    #where .where-container header {
+      display: block; }
+      #where .where-container header h1 {
+        margin: 30px 10%;
+        font-family: "mopsterregular";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #26245f;
+        text-align: left; }
+    #where .where-container article {
+      display: inline-block;
+      width: 40%;
+      min-width: 400px;
+      vertical-align: top;
+      text-align: left;
+      padding: 0 50px 20px 50px; }
+      #where .where-container article.place-photo {
+        background: url(../img/pav-centro-portugal.jpg) no-repeat center center;
+        background-size: cover;
+        box-shadow: -10px -10px 0 #26245f;
+        height: 60vh;
+        min-height: 300px;
+        margin: 25px 0 0 0; }
+      #where .where-container article header h1 span {
+        font-family: "mopsterregular";
+        color: #26245f; }
+      #where .where-container article header h2 span {
+        font-family: "mopsterregular";
+        color: #26245f; }
+      #where .where-container article p {
+        font-size: 0.8em; }
+        #where .where-container article p span {
+          font-weight: 700;
+          color: #26245f; }
+
+#schedule {
+  background: url(../img/optimized/schedule-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #00a5e6;
+  display: table; }
+  #schedule .schedule-container {
+    width: 100%;
+    height: 100%;
+    display: table; }
+    #schedule .schedule-container article {
+      display: table-cell;
+      vertical-align: middle; }
+      #schedule .schedule-container article header {
+        margin: 30px 10%;
+        font-family: "mopsterregular";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: white; }
+      #schedule .schedule-container article .schedule-board-container {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        #schedule .schedule-container article .schedule-board-container table thead tr {
+          font-family: "mopsterregular";
+          border-bottom: 4px solid black;
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container table thead tr th {
+            text-align: center; }
+            #schedule .schedule-container article .schedule-board-container table thead tr th:not(:last-child) {
+              border-right: 4px solid black; }
+        #schedule .schedule-container article .schedule-board-container table tbody {
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container table tbody tr:not(:last-child) {
+            border-bottom: 4px solid black; }
+          #schedule .schedule-container article .schedule-board-container table tbody tr th {
+            max-width: 300px;
+            padding: 10px; }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:first-child {
+              font-family: "mopsterregular";
+              vertical-align: middle;
+              transform: rotate(270deg); }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:first-child) {
+              font-weight: 300;
+              font-size: 0.7em; }
+            #schedule .schedule-container article .schedule-board-container table tbody tr th:not(:last-child) {
+              border-right: 4px solid black; }
+        #schedule .schedule-container article .schedule-board-container .mobile-schedule {
+          display: none;
+          margin: 10%;
+          color: white; }
+          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header {
+            margin: 0; }
+            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day header h2 {
+              font-family: "mopsterregular";
+              font-weight: 700;
+              font-size: 1.5rem; }
+          #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program {
+            list-style: none; }
+            #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p {
+              font-weight: 300;
+              font-size: 0.7em; }
+              #schedule .schedule-container article .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
+                border-bottom: 2px solid black; }
+@media(max-width: 800px) {
+  #schedule .schedule-container article .schedule-board-container table {
+    display: none; }
+  #schedule .schedule-container article .schedule-board-container .mobile-schedule {
+    display: block; } }
+#panel {
+  background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #231f20;
+  display: table; }
+  #panel header {
+    margin-top: 5%;
+    width: 100%; }
+    #panel header h1 {
+      text-align: left;
+      margin: 30px 10%;
+      font-family: "mopsterregular";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white; }
+  #panel .panel-content {
+    text-align: center;
+    display: table-row;
+    width: 100%; }
+    #panel .panel-content .panel-container {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      padding: 20px 0;
+      color: #262261;
+      width: 100%;
+      height: 100%; }
+      #panel .panel-content .panel-container .person {
+        vertical-align: top;
+        display: inline-block;
+        width: 240px; }
+        #panel .panel-content .panel-container .person article {
+          background: url(../img/eduardo-nunes.png) no-repeat center center;
+          background-size: cover;
+          box-shadow: -10px -10px 0 #262261;
+          height: 200px;
+          width: 200px;
+          margin: 25px; }
+        #panel .panel-content .panel-container .person h2 {
+          color: white; }
+        #panel .panel-content .panel-container .person p {
+          font-size: 1rem;
+          color: white; }
+
+#sign-in {
+  background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fefe00;
+  display: table; }
+  #sign-in .sign-in-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 0;
+    color: #26245f;
+    width: 100%;
+    height: 100%; }
+    #sign-in .sign-in-container header h1 {
+      margin: 30px 10%;
+      font-family: "mopsterregular";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #262261;
+      text-align: left; }
+    #sign-in .sign-in-container article {
+      display: inline-block;
+      width: 60%;
+      min-width: 400px;
+      vertical-align: middle;
+      text-align: left;
+      padding: 20px 50px 20px 50px;
+      background-color: white;
+      font-size: 0.8em;
+      box-shadow: -10px -10px 0 #262261; }
+      #sign-in .sign-in-container article form p {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-top: 30px; }
+      #sign-in .sign-in-container article form .form-group label {
+        font-size: 1em;
+        font-weight: 400; }
+      #sign-in .sign-in-container article form .form-group .checkbox label {
+        font-size: 0.8em;
+        font-weight: 300; }
+      #sign-in .sign-in-container article form .form-group input {
+        color: #262261; }
+      #sign-in .sign-in-container article form .radio-group p {
+        font-size: 1em;
+        font-weight: 400; }
+      #sign-in .sign-in-container article form .radio-group .radio label {
+        font-size: 0.8em;
+        font-weight: 300; }
+      #sign-in .sign-in-container article form #submit {
+        margin-top: 20px;
+        text-align: center; }
+
+#partners {
+  background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fafafa;
+  display: table; }
+  #partners .partners-container article:first-child header h1 {
+    margin: 30px 10%;
+    font-family: "mopsterregular";
+    color: #262261;
+    font-size: 1.5rem; }
+  #partners .partners-container article:first-child .organisations {
+    text-align: center;
+    padding: 2%;
+    list-style-type: none; }
+    #partners .partners-container article:first-child .organisations li {
+      display: inline;
+      text-decoration: none;
+      margin: 20px;
+      padding: 0; }
+      #partners .partners-container article:first-child .organisations li a {
+        text-decoration: none;
+        color: #262261;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        font-size: 0.9em; }
+        #partners .partners-container article:first-child .organisations li a:hover {
+          opacity: 0.7; }
+      #partners .partners-container article:first-child .organisations li .org-img {
+        height: 80px; }
+  #partners .partners-container article:last-child header h1 {
+    margin: 30px 10%;
+    font-family: "mopsterregular";
+    color: #ff259c;
+    font-size: 1.5rem; }
+  #partners .partners-container article:last-child .partners {
+    text-align: center;
+    padding: 2%;
+    list-style-type: none; }
+    #partners .partners-container article:last-child .partners li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 20px;
+      padding: 0; }
+      #partners .partners-container article:last-child .partners li a {
+        text-decoration: none;
+        color: #262261;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        font-size: 0.9em; }
+        #partners .partners-container article:last-child .partners li a:hover {
+          opacity: 0.7; }
+    #partners .partners-container article:last-child .partners.gold .org-img {
+      height: 100px; }
+    #partners .partners-container article:last-child .partners.silver .org-img {
+      height: 80px; }
+    #partners .partners-container article:last-child .partners.bronze .org-img {
+      height: 60px; }
+
+#error {
+  background: url(../img/optimized/error-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fafafa;
+  display: table; }
+  #error .error-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 0;
+    color: #c81e1e;
+    width: 100%;
+    height: 100%; }
+    #error .error-container header h1 {
+      margin: 30px 10%;
+      font-family: "mopsterregular";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #c81e1e;
+      text-align: left; }
+    #error .error-container article {
+      display: inline-block;
+      width: 60%;
+      min-width: 400px;
+      vertical-align: middle;
+      text-align: left;
+      padding: 20px 50px 20px 50px;
+      background-color: #e6e6e6;
+      font-size: 0.8em;
+      box-shadow: -10px -10px 0 #c81e1e; }
+      #error .error-container article p {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-top: 30px; }
+
+#success {
+  background: url(../img/optimized/success-background.png) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #231f20;
+  display: table; }
+  #success .success-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 0;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%; }
+    #success .success-container header h1 {
+      margin: 30px 10%;
+      font-family: "mopsterregular";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: whitesmoke;
+      text-align: left; }
+    #success .success-container article {
+      display: inline-block;
+      width: 60%;
+      min-width: 400px;
+      vertical-align: middle;
+      text-align: left;
+      padding: 20px 50px 20px 50px;
+      background-color: #2d2d2d;
+      font-size: 0.8em;
+      box-shadow: -10px -10px 0 whitesmoke; }
+      #success .success-container article p {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-top: 30px; }
+      #success .success-container article .form-group {
+        padding-top: 20px;
+        text-align: center;
+        color: #2d2d2d; }
+
+/*# sourceMappingURL=style.css.map */
