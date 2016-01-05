@@ -63,18 +63,8 @@
                     <img class="desktop" src="assets/img/optimized/logo-desktop.png">
                     <img class="mobile" src="assets/img/optimized/logo-mobile.png">
                 </div>
-                <!--<div class="video">
-                    <iframe src="https://www.youtube.com/embed/5c0ouxH13KA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>-->
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="assets/img/carousel/shiftcover2014.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/carousel/shiftcover2015.jpg" alt="">
-                        </div>
-                    </div>
+                <div class="shift-date">
+                    <h2>O hackathon mais louco do país</h2>
                 </div>
                 <!--<div class="scroll-btn">
                     <a id="scroll-down-to-about" href="#about">
