@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		anchors: ['home-section','about-section','awards-section','faq-section','panel-section','schedule-section','where-section','partners-section','sign-in-section'],
+		anchors: ['home-section','about-section','awards-section','faq-section','panel-section','schedule-section','where-section','partners-section','footer-section'],
 		scrollOverflow: true,
 		//continuousVertical: true,
 		'verticalCentered': false,
 		menu: "#menu",
-		sectionsColor: ['#FAFAFA','#00A5E6','#2D2D2D','#FAFAFA','#231F20','#00A5E6','#00A69C','#FAFAFA'],
+		sectionsColor: ['#FAFAFA','#00A5E6','#2D2D2D','#FAFAFA','#231F20','#00A5E6','#00A69C','#FAFAFA','#2D2D2D'],
 		css3: false,
 		scrollingSpeed: 1700
 
