@@ -1,4 +1,21 @@
 $(document).ready(function() {
+	$(function() {
+	    $('a.page-scroll').bind('click', function(event) {
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: $($anchor.attr('href')).offset().top
+	        }, 1500, 'easeInOutExpo');
+	        event.preventDefault();
+	    });
+	});
+
+	$('body').bind('mousewheel', function(event) {
+		event.preventDefault();
+		var scrollTop = this.scrollTop;
+		this.scrollTop = (scrollTop + ((event.deltaY * event.deltaFactor) * -1));
+		//console.log(event.deltaY, event.deltaFactor, event.originalEvent.deltaMode, event.originalEvent.wheelDelta);
+	});
+
 	setTimeout(function() {
 		$('#home .logo').show(2000);
 		$('#home .logo').animate({

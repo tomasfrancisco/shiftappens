@@ -12,7 +12,6 @@
         <link rel="stylesheet" type="text/css" href="assets/css/font.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 
         <meta property="og:url" content="http://shiftappens.com/">
@@ -36,20 +35,20 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand nav-title" href="#home-section">Shift Appens</a>
+                    <a class="navbar-brand nav-title page-scroll" href="#home">Shift Appens</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
 
                     <ul id="menu" class="menu nav navbar-nav navbar-right">
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#awards">Prémios</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#panel">Júri</a></li>
-                        <li><a href="#schedule">Programa</a></li>
-                        <li><a href="#where">Local</a></li>
-                        <li><a href="#partners">Organização</a></li>
-                        <li ><a href="signin.html" class="btn-default">Inscreve-te já!</a></li>
+                        <li><a class="page-scroll" href="#about">Sobre</a></li>
+                        <li><a class="page-scroll" href="#awards">Prémios</a></li>
+                        <li><a class="page-scroll" href="#faq">FAQ</a></li>
+                        <li><a class="page-scroll" href="#panel">Júri</a></li>
+                        <li><a class="page-scroll" href="#schedule">Programa</a></li>
+                        <li><a class="page-scroll" href="#where">Local</a></li>
+                        <li><a class="page-scroll" href="#partners">Organização</a></li>
+                        <li><a href="signin.html" id="signin-button">Inscreve-te já!</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,8 +61,8 @@
                         <h2>19, 20 e 21 de Fevereiro</h2>
                     </div>
                     <div class="logo">
-                        <img class="desktop" src="assets/img/optimized/logo-desktop.png"/>
-                        <img class="mobile" src="assets/img/optimized/logo-mobile.png"/>
+                        <img class="desktop" src="assets/img/logo-desktop.png"/>
+                        <img class="mobile" src="assets/img/logo-mobile.png"/>
                     </div>
                     <div class="shift-date">
                         <h2>O Hackathon mais louco do País!</h2>
@@ -184,9 +183,10 @@
                     </header>
                     <div class="row panel-content">
                         <div class="person col-sm-3">
-                            <img src="assets/img/panel.png" alt="Judge" class="img-responsive">
-                            <h2>Nome de Teste</h2>
-                            <p>Descrição de exemplo Descrição de exemplo Descrição de exemplo</p>
+                            <img src="assets/img/panel/fred-1776.png" alt="Judge" class="img-responsive">
+                            <h2>Fred Oliveira</h2>
+                            <p><i class="fa fa-briefcase"></i> Developer at 1779</p>
+                            <a href="https://twitter.com/f"><p><i class="fa fa-twitter"></i> @f</p></a>
                         </div>
                         <div class="person col-sm-3">
                             <img src="assets/img/panel.png" alt="Judge" class="img-responsive">
@@ -345,10 +345,10 @@
             </div>
             <div id="partners" class="section">
                 <div class="partners-container container">
-                    <article>
-                        <header>
-                            <h1>Organizacao</h1>
-                        </header>
+                    <header>
+                        <h1>Organizacao</h1>
+                    </header>
+                    <div class="partners-content">
                         <ul class="organisations">
                             <li>
                                 <a href="http://jeknowledge.pt" target="_blank">
@@ -361,11 +361,11 @@
                                 </a>
                             </li>
                         </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h1>Parceiros</h1>
-                        </header>
+                    </div>
+                    <header>
+                        <h1>Parceiros</h1>
+                    </header>
+                    <div class="partners-content">
                         <ul class="partners gold">
                         </ul>
                         <ul class="partners silver">
@@ -377,7 +377,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </article>
+                    </div>
                 </div>
             </div>
             <div id="footer" class="section fp-auto-height">
@@ -428,6 +428,8 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/jquery.mousewheel.min.js"></script>
         <script src="assets/js/functions.js"></script>
     </body>
 </html>

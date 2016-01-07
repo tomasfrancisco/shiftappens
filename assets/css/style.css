@@ -1,6 +1,6 @@
 @import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
 html {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 body, html {
   font-family: "Dosis";
@@ -26,6 +26,13 @@ body, html {
   #navigation .collapse .menu a:hover {
     color: white;
     -webkit-transition: color 0.2s ease-in-out; }
+  #navigation .collapse #signin-button {
+    background-color: whitesmoke;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 700; }
+    #navigation .collapse #signin-button:hover {
+      color: #888; }
 
 #top-shadow {
   position: fixed;
@@ -44,14 +51,13 @@ body, html {
   #home .home-container {
     text-align: center; }
     #home .home-container .shift-date {
-      margin-bottom: 5%;
       color: #262261;
       font-size: 1.6rem; }
       #home .home-container .shift-date h2 {
         font-weight: 600; }
     #home .home-container .logo {
       opacity: 0;
-      margin: 0 10%; }
+      margin: 5% 10%; }
       #home .home-container .logo .desktop {
         width: 100%; }
         @media (max-width: 700px) {
@@ -103,8 +109,8 @@ body, html {
     text-align: center; }
     #awards .awards-container .coming-soon p {
       color: whitesmoke;
-      font-weight: 600;
-      font-size: 1em;
+      font-weight: 500;
+      font-size: 1.7em;
       margin-top: 30px; }
 
 #faq {
@@ -136,9 +142,14 @@ body, html {
       box-shadow: -10px -10px 0 white; }
     #panel .panel-container .panel-content .person h2 {
       color: white; }
+    #panel .panel-container .panel-content .person a {
+      text-decoration: none; }
     #panel .panel-container .panel-content .person p {
       font-size: 1rem;
       color: white; }
+      #panel .panel-container .panel-content .person p i {
+        font-size: 1rem;
+        color: white; }
 
 #schedule {
   background-color: #00A5E6; }
@@ -219,61 +230,59 @@ body, html {
 #partners {
   background-color: #FAFAFA;
   display: table; }
-  #partners .partners-container article:first-child header h1 {
-    margin: 0px 10%;
+  #partners .partners-container header:first-child h1 {
     font-family: "mopsterregular";
     color: #262261;
     font-size: 2rem; }
-  #partners .partners-container article:first-child .organisations {
+  #partners .partners-container header h1 {
+    font-family: "mopsterregular";
+    color: #ff259c;
+    font-size: 2rem; }
+  #partners .partners-container .partners-content .organisations {
     text-align: center;
     padding: 2%;
     list-style-type: none; }
-    #partners .partners-container article:first-child .organisations li {
+    #partners .partners-container .partners-content .organisations li {
       display: inline;
       text-decoration: none;
       margin: 20px;
       padding: 0; }
-      #partners .partners-container article:first-child .organisations li a {
+      #partners .partners-container .partners-content .organisations li a {
         text-decoration: none;
         color: #262261;
         font-weight: 700;
         letter-spacing: 0.4px;
         font-size: 0.9em; }
-        #partners .partners-container article:first-child .organisations li a:hover {
+        #partners .partners-container .partners-content .organisations li a:hover {
           opacity: 0.7; }
-      #partners .partners-container article:first-child .organisations li .org-img {
+      #partners .partners-container .partners-content .organisations li .org-img {
         height: 80px; }
-  #partners .partners-container article:last-child header h1 {
-    margin: 30px 10%;
-    font-family: "mopsterregular";
-    color: #ff259c;
-    font-size: 2rem; }
-  #partners .partners-container article:last-child .partners {
+  #partners .partners-container .partners-content .partners {
     text-align: center;
     padding: 2%;
     list-style-type: none; }
-    #partners .partners-container article:last-child .partners li {
+    #partners .partners-container .partners-content .partners li {
       display: inline-block;
       text-decoration: none;
       margin: 20px;
       padding: 0; }
-      #partners .partners-container article:last-child .partners li a {
+      #partners .partners-container .partners-content .partners li a {
         text-decoration: none;
         color: #262261;
         font-weight: 700;
         letter-spacing: 0.4px;
         font-size: 0.9em; }
-        #partners .partners-container article:last-child .partners li a:hover {
+        #partners .partners-container .partners-content .partners li a:hover {
           opacity: 0.7; }
-    #partners .partners-container article:last-child .partners.gold .org-img {
+    #partners .partners-container .partners-content .partners.gold .org-img {
       height: 100px; }
-    #partners .partners-container article:last-child .partners.silver .org-img {
+    #partners .partners-container .partners-content .partners.silver .org-img {
       height: 80px; }
-    #partners .partners-container article:last-child .partners.bronze .org-img {
+    #partners .partners-container .partners-content .partners.bronze .org-img {
       height: 60px; }
 
 #footer {
-  background-color: #9D9D9D;
+  background-color: #ADADAD;
   text-align: center;
   padding-top: 28px;
   padding-bottom: 28px; }
@@ -305,8 +314,8 @@ body, html {
       font-size: 1em;
       font-weight: 400; }
     #footer .footer-container .footer-content .row .contacts .row {
-      padding-left: 20%;
-      padding-right: 20%; }
+      padding-left: 25%;
+      padding-right: 25%; }
       #footer .footer-container .footer-content .row .contacts .row .contact {
         display: block;
         text-align: center; }

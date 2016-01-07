@@ -1,7 +1,7 @@
 @import url(https:fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800)
 
 html
-	overflow-x: hidden
+	overflow: hidden
 
 body, html
 	font-family: 'Dosis'
@@ -30,6 +30,13 @@ body, html
 		.menu a:hover
 			color: white
 			-webkit-transition: color 0.2s ease-in-out
+		#signin-button
+			background-color: whitesmoke
+			color: #333
+			font-size: 1.2em
+			font-weight: 700
+			&:hover
+				color: #888
 
 #top-shadow
 	position: fixed
@@ -48,14 +55,14 @@ body, html
 	.home-container
 		text-align: center
 		.shift-date
-			margin-bottom: 5%
+			//margin-bottom: 5%
 			color: #262261
 			font-size: 1.6rem
 			h2
 				font-weight: 600
 		.logo
 			opacity: 0
-			margin: 0 10%
+			margin: 5% 10%
 			.desktop
 				width: 100%
 				@media (max-width: 700px)
@@ -109,8 +116,8 @@ body, html
 			text-align: center
 			p
 				color: whitesmoke
-				font-weight: 600
-				font-size: 1em
+				font-weight: 500
+				font-size: 1.7em
 				margin-top: 30px
 
 #faq
@@ -148,9 +155,15 @@ body, html
 					box-shadow: -10px -10px 0 white//rgb(38, 34, 97)
 				h2
 					color: white
+				a
+					text-decoration: none
 				p
 					font-size: 1.0rem
 					color: white
+					i
+						font-size: 1.0rem
+						color: white
+
 
 #schedule
 	background-color: #00A5E6
@@ -249,13 +262,17 @@ body, html
 	display: table
 	.partners-container
 		//text-align: center
-		article:first-child
-			header
-				h1
-					margin: 0px 10%
-					font-family: 'mopsterregular'
-					color: rgb(38, 34, 97)
-					font-size: 2rem
+		header:first-child
+			h1
+				font-family: 'mopsterregular'
+				color: #262261
+				font-size: 2rem
+		header
+			h1
+				font-family: 'mopsterregular'
+				color: #ff259c
+				font-size: 2rem
+		.partners-content
 			.organisations
 				text-align: center
 				padding: 2%
@@ -275,13 +292,6 @@ body, html
 							opacity: 0.7
 					.org-img
 						height: 80px
-		article:last-child
-			header
-				h1
-					margin: 30px 10%
-					font-family: 'mopsterregular'
-					color: rgb(255, 37, 156)
-					font-size: 2rem
 			.partners
 				text-align: center
 				padding: 2%
@@ -310,7 +320,7 @@ body, html
 						height: 60px
 
 #footer
-	background-color: #9D9D9D
+	background-color: #ADADAD
 	text-align: center
 	padding-top: 28px
 	padding-bottom: 28px
@@ -345,8 +355,8 @@ body, html
 						font-size: 1.0em
 						font-weight: 400
 					.row
-						padding-left: 20%
-						padding-right: 20%
+						padding-left: 25%
+						padding-right: 25%
 						.contact
 							display: block
 							text-align: center
