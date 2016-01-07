@@ -115,7 +115,7 @@ body, html {
 
 #faq {
   background-color: #FAFAFA;
-  padding-bottom: 20px; }
+  padding-bottom: 50px; }
   #faq .faq-container {
     color: #262261; }
     #faq .faq-container header h1 {
@@ -123,14 +123,16 @@ body, html {
       font-weight: 700;
       font-size: 2rem;
       color: #262261; }
-    #faq .faq-container .row div h3 {
-      font-size: 0.7em;
-      font-weight: 400;
-      margin-bottom: 0px; }
-    #faq .faq-container .row div p {
-      font-size: 0.8em; }
-      #faq .faq-container .row div p span {
-        font-weight: 700; }
+    #faq .faq-container .faq-list {
+      margin-top: 20px; }
+      #faq .faq-container .faq-list div h3 {
+        font-size: 0.7em;
+        font-weight: 400;
+        margin-bottom: 0px; }
+      #faq .faq-container .faq-list div p {
+        font-size: 0.8em; }
+        #faq .faq-container .faq-list div p span {
+          font-weight: 700; }
 
 #panel {
   background-color: #2D2D2D; }
@@ -155,13 +157,15 @@ body, html {
         color: white; }
 
 #schedule {
-  background-color: #00A5E6; }
+  background-color: #00A5E6;
+  padding-bottom: 50px; }
   #schedule .schedule-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: white; }
   #schedule .schedule-container .schedule-board-container {
+    padding-top: 30px;
     display: flex;
     justify-content: center; }
     #schedule .schedule-container .schedule-board-container table {
