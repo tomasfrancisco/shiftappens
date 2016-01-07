@@ -303,7 +303,8 @@ body, html {
       font-size: 1em;
       font-weight: 400; }
     #footer .footer-container .footer-content .row .contacts .row .contact {
-      font-family: sans-serif; }
+      display: block;
+      font-size: 1.2em; }
   #footer .footer-container .footer-content #copyright .col-md-4 {
     color: #4D4D4D;
     font-size: 0.5em; }
