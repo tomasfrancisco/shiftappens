@@ -273,17 +273,19 @@ body, html {
       height: 60px; }
 
 #footer {
-  background-color: #EDEDED;
-  text-align: center; }
+  background-color: #9D9D9D;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 28px; }
   #footer .footer-container .footer-content .row .past-editions {
     display: block; }
     #footer .footer-container .footer-content .row .past-editions .footer-title {
-      color: #4D4D4D;
+      color: #2D2D2D;
       font-size: 1em;
       font-weight: 400; }
     #footer .footer-container .footer-content .row .past-editions a {
       color: #4D4D4D;
-      font-size: 0.8em;
+      font-size: 16px;
       font-weight: 300;
       text-decoration: underline; }
       #footer .footer-container .footer-content .row .past-editions a:hover {
@@ -292,22 +294,31 @@ body, html {
     height: 100%;
     vertical-align: middle; }
     #footer .footer-container .footer-content .row .organizers .footer-title {
-      color: #4D4D4D;
+      color: #2D2D2D;
       font-size: 1em;
       font-weight: 400; }
   #footer .footer-container .footer-content .row .contacts {
     height: 100%;
     vertical-align: middle; }
     #footer .footer-container .footer-content .row .contacts .footer-title {
-      color: #4D4D4D;
+      color: #2D2D2D;
       font-size: 1em;
       font-weight: 400; }
-    #footer .footer-container .footer-content .row .contacts .row .contact {
-      display: block;
-      font-size: 1.2em; }
-  #footer .footer-container .footer-content #copyright .col-md-4 {
-    color: #4D4D4D;
-    font-size: 0.5em; }
+    #footer .footer-container .footer-content .row .contacts .row {
+      padding-left: 20%;
+      padding-right: 20%; }
+      #footer .footer-container .footer-content .row .contacts .row .contact {
+        display: block;
+        text-align: center; }
+        #footer .footer-container .footer-content .row .contacts .row .contact p {
+          font-size: 0.4em; }
+        #footer .footer-container .footer-content .row .contacts .row .contact a i {
+          color: #2D2D2D; }
+  #footer .footer-container .footer-content #copyright {
+    padding-top: 20px; }
+    #footer .footer-container .footer-content #copyright .col-md-4 {
+      color: #4D4D4D;
+      font-size: 12px; }
 
 #sign-in {
   background-color: #fefe00;
