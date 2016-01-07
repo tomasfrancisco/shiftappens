@@ -1,32 +1,10 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage({
-		anchors: ['home-section','about-section','awards-section','faq-section','panel-section','schedule-section','where-section','partners-section','footer-section'],
-		scrollOverflow: true,
-		//continuousVertical: true,
-		'verticalCentered': false,
-		menu: "#menu",
-		sectionsColor: ['#FAFAFA','#00A5E6','#2D2D2D','#FAFAFA','#231F20','#00A5E6','#00A69C','#FAFAFA','#2D2D2D'],
-		css3: false,
-		scrollingSpeed: 1700
-
-	});
-
-	/*setTimeout(function() {
-		$('#home .shift-date').animate({
-			"margin-bottom" : "0%",
-			"font-size" : "1.0rem"
-		}, 1000, function() {
-			$('#home .video').show(1000);
-			$('#home .video').animate({
-				opacity: 1,
-			}, 1000);
-		});	
+	setTimeout(function() {
+		$('#home .logo').show(2000);
 		$('#home .logo').animate({
-			"margin-left": "21%",
-			"margin-right": "21%",
-			"margin-top": "5%"
-		}, 1000);		
-	}, 1000);*/
+			opacity: 1,
+		}, 2000);		
+	}, 1000);
 
 	$('#schedule-prev').click(function() {
 		var prev = $('#schedule-prev');

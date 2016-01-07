@@ -39,8 +39,7 @@ body, html {
   box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5); }
 
 #home {
-  background: url(../img/optimized/home-background.png) no-repeat center center fixed;
-  background-size: cover;
+  background-color: #FAFAFA;
   padding-top: 20vh; }
   #home .home-container {
     text-align: center; }
@@ -51,6 +50,7 @@ body, html {
       #home .home-container .shift-date h2 {
         font-weight: 600; }
     #home .home-container .logo {
+      opacity: 0;
       margin: 0 10%; }
       #home .home-container .logo .desktop {
         width: 100%; }
@@ -70,16 +70,12 @@ body, html {
             display: none; } }
 
 #about {
-  background: url(../img/optimized/about-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-color: #00A5E6; }
   #about .about-container {
     color: white; }
     #about .about-container div {
       text-align: left; }
       #about .about-container div header h1 span {
-        font-family: "mopsterregular";
-        color: whitesmoke; }
-      #about .about-container div header h2 span {
         font-family: "mopsterregular";
         color: whitesmoke; }
       #about .about-container div p {
@@ -89,12 +85,11 @@ body, html {
           color: whitesmoke; }
 
 #awards {
-  background: url(../img/optimized/awards-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-color: #2D2D2D; }
   #awards .awards-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white; }
   #awards .awards-container .awards-content {
     margin-top: 30px;
@@ -113,14 +108,13 @@ body, html {
       margin-top: 30px; }
 
 #faq {
-  background: url(../img/optimized/faq-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-color: #FAFAFA; }
   #faq .faq-container {
     color: #262261; }
     #faq .faq-container header h1 {
       font-family: "mopsterregular";
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #262261; }
     #faq .faq-container .row div h3 {
       font-size: 0.7em;
@@ -130,17 +124,16 @@ body, html {
       font-size: 0.6em; }
 
 #panel {
-  background: url(../img/optimized/panel-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-color: #2D2D2D; }
   #panel .panel-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white; }
   #panel .panel-container .panel-content {
     padding: 20px 0; }
     #panel .panel-container .panel-content .person img {
-      box-shadow: -10px -10px 0 #262261; }
+      box-shadow: -10px -10px 0 white; }
     #panel .panel-container .panel-content .person h2 {
       color: white; }
     #panel .panel-container .panel-content .person p {
@@ -148,75 +141,70 @@ body, html {
       color: white; }
 
 #schedule {
-  background: url(../img/optimized/schedule-background.png) no-repeat center center fixed;
-  background-size: cover; }
-  #schedule .schedule-container {
-    margin-bottom: 50px; }
-    #schedule .schedule-container header h1 {
-      font-family: "mopsterregular";
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: white; }
-    #schedule .schedule-container .schedule-board-container {
-      width: 100%;
-      display: flex;
-      justify-content: center; }
-      #schedule .schedule-container .schedule-board-container table {
-        font-size: 0.9em; }
-        #schedule .schedule-container .schedule-board-container table thead tr {
-          font-family: "mopsterregular";
-          border-bottom: 4px solid black;
-          color: white; }
-          #schedule .schedule-container .schedule-board-container table thead tr th {
-            text-align: center; }
-            #schedule .schedule-container .schedule-board-container table thead tr th:not(:last-child) {
-              border-right: 4px solid black; }
-        #schedule .schedule-container .schedule-board-container table tbody {
-          color: white; }
-          #schedule .schedule-container .schedule-board-container table tbody tr:not(:last-child) {
-            border-bottom: 4px solid black; }
-          #schedule .schedule-container .schedule-board-container table tbody tr th {
-            max-width: 300px;
-            padding: 10px; }
-            #schedule .schedule-container .schedule-board-container table tbody tr th:first-child {
-              font-family: "mopsterregular";
-              vertical-align: middle; }
-            #schedule .schedule-container .schedule-board-container table tbody tr th:not(:first-child) {
-              font-weight: 500;
-              font-size: 0.6em; }
-            #schedule .schedule-container .schedule-board-container table tbody tr th:not(:last-child) {
-              border-right: 4px solid black; }
-      #schedule .schedule-container .schedule-board-container .mobile-schedule {
-        display: none;
-        margin: 10%;
+  background-color: #00A5E6; }
+  #schedule .schedule-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 2rem;
+    color: white; }
+  #schedule .schedule-container .schedule-board-container {
+    display: flex;
+    justify-content: center; }
+    #schedule .schedule-container .schedule-board-container table {
+      font-size: 0.9em; }
+      #schedule .schedule-container .schedule-board-container table thead tr {
+        font-family: "mopsterregular";
+        border-bottom: 4px solid black;
         color: white; }
-        #schedule .schedule-container .schedule-board-container .mobile-schedule .day header {
-          margin: 0; }
-          #schedule .schedule-container .schedule-board-container .mobile-schedule .day header h2 {
+        #schedule .schedule-container .schedule-board-container table thead tr th {
+          text-align: center; }
+          #schedule .schedule-container .schedule-board-container table thead tr th:not(:last-child) {
+            border-right: 4px solid black; }
+      #schedule .schedule-container .schedule-board-container table tbody {
+        color: white; }
+        #schedule .schedule-container .schedule-board-container table tbody tr:not(:last-child) {
+          border-bottom: 4px solid black; }
+        #schedule .schedule-container .schedule-board-container table tbody tr th {
+          max-width: 300px;
+          padding: 10px; }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:first-child {
             font-family: "mopsterregular";
+            vertical-align: middle; }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:not(:first-child) {
             font-weight: 700;
-            font-size: 1.5rem; }
-        #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program {
-          list-style: none; }
-          #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p {
-            font-weight: 300;
             font-size: 0.7em; }
-            #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
-              border-bottom: 2px solid black; }
+          #schedule .schedule-container .schedule-board-container table tbody tr th:not(:last-child) {
+            border-right: 4px solid black; }
+    #schedule .schedule-container .schedule-board-container .mobile-schedule {
+      display: none;
+      margin: 10%;
+      color: white; }
+      #schedule .schedule-container .schedule-board-container .mobile-schedule .day header {
+        margin: 0; }
+        #schedule .schedule-container .schedule-board-container .mobile-schedule .day header h2 {
+          font-family: "mopsterregular";
+          font-weight: 700;
+          font-size: 1.5rem; }
+      #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program {
+        list-style: none; }
+        #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p {
+          font-weight: 300;
+          font-size: 0.7em; }
+          #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
+            border-bottom: 2px solid black; }
 @media(max-width: 800px) {
   #schedule .schedule-container .schedule-board-container table {
     display: none; }
   #schedule .schedule-container .schedule-board-container .mobile-schedule {
     display: block; } }
 #where {
-  background: url(../img/optimized/where-background.png) no-repeat center center fixed;
-  background-size: cover; }
+  background-color: #262261; }
   #where .where-container {
     color: white; }
     #where .where-container header h1 {
       font-family: "mopsterregular";
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: white; }
     #where .where-container .where-content {
       padding: 20px 0; }
@@ -229,14 +217,13 @@ body, html {
           color: white; }
 
 #partners {
-  background: url(../img/optimized/partners-background.png) no-repeat center center fixed;
-  background-size: cover;
+  background-color: #FAFAFA;
   display: table; }
   #partners .partners-container article:first-child header h1 {
     margin: 0px 10%;
     font-family: "mopsterregular";
     color: #262261;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
   #partners .partners-container article:first-child .organisations {
     text-align: center;
     padding: 2%;
@@ -260,7 +247,7 @@ body, html {
     margin: 30px 10%;
     font-family: "mopsterregular";
     color: #ff259c;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
   #partners .partners-container article:last-child .partners {
     text-align: center;
     padding: 2%;
@@ -286,31 +273,30 @@ body, html {
       height: 60px; }
 
 #footer {
+  background-color: #EDEDED;
   text-align: center; }
   #footer .footer-container .footer-content .row .past-editions .footer-title {
-    color: white;
+    color: #4D4D4D;
     font-size: 1em;
     font-weight: 300; }
   #footer .footer-container .footer-content .row .past-editions .row .col-md-6 a {
-    color: white;
+    color: #4D4D4D;
     font-size: 0.8em;
     font-weight: 300; }
   #footer .footer-container .footer-content .row .past-editions .row .col-md-12 {
     padding-top: 3vh; }
     #footer .footer-container .footer-content .row .past-editions .row .col-md-12 .copyright {
-      color: white;
+      color: #4D4D4D;
       font-size: 0.5em; }
   #footer .footer-container .footer-content .row .organizers {
     height: 100%;
     vertical-align: middle; }
     #footer .footer-container .footer-content .row .organizers .footer-title {
-      color: white;
+      color: #4D4D4D;
       font-size: 1em;
       font-weight: 300; }
 
 #sign-in {
-  background: url(../img/optimized/sign-in-background.png) no-repeat center center fixed;
-  background-size: cover;
   background-color: #fefe00;
   display: table; }
   #sign-in .sign-in-container {
@@ -361,8 +347,6 @@ body, html {
         text-align: center; }
 
 #error {
-  background: url(../img/optimized/error-background.png) no-repeat center center fixed;
-  background-size: cover;
   background-color: #fafafa;
   display: table; }
   #error .error-container {
@@ -396,8 +380,6 @@ body, html {
         margin-top: 30px; }
 
 #success {
-  background: url(../img/optimized/success-background.png) no-repeat center center fixed;
-  background-size: cover;
   background-color: #231f20;
   display: table; }
   #success .success-container {
