@@ -11,7 +11,10 @@ body, html {
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
   min-height: 100vh;
-  padding-top: 75px; }
+  padding-top: 75px;
+  padding-bottom: 75px; }
+  #home .container header h1, #about .container header h1, #history .container header h1, #where .container header h1, #schedule .container header h1, #panel .container header h1, #awards .container header h1, #sign-in .container header h1, #error .container header h1, #success .container header h1, #partners .container header h1, #faq .container header h1 {
+    padding-bottom: 7vh; }
 
 #navigation {
   background-color: #333333; }
@@ -51,6 +54,7 @@ body, html {
   #home .home-container {
     text-align: center; }
     #home .home-container .shift-date {
+      opacity: 0;
       color: #262261;
       font-size: 1.6rem; }
       #home .home-container .shift-date h2 {
@@ -98,7 +102,6 @@ body, html {
     font-size: 2rem;
     color: white; }
   #awards .awards-container .awards-content {
-    margin-top: 30px;
     text-align: center; }
     #awards .awards-container .awards-content div p {
       color: whitesmoke;
@@ -114,8 +117,7 @@ body, html {
       margin-top: 30px; }
 
 #faq {
-  background-color: #FAFAFA;
-  padding-bottom: 50px; }
+  background-color: #FAFAFA; }
   #faq .faq-container {
     color: #262261; }
     #faq .faq-container header h1 {
@@ -157,8 +159,7 @@ body, html {
         color: white; }
 
 #schedule {
-  background-color: #00A5E6;
-  padding-bottom: 50px; }
+  background-color: #00A5E6; }
   #schedule .schedule-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
@@ -291,8 +292,8 @@ body, html {
 #footer {
   background-color: #ADADAD;
   text-align: center;
-  padding-top: 28px;
-  padding-bottom: 28px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
   #footer .footer-container .footer-content .row .past-editions {
     display: block; }
     #footer .footer-container .footer-content .row .past-editions .footer-title {

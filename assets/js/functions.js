@@ -13,14 +13,15 @@ $(document).ready(function() {
 		event.preventDefault();
 		var scrollTop = this.scrollTop;
 		this.scrollTop = (scrollTop + ((event.deltaY * event.deltaFactor) * -1));
-		//console.log(event.deltaY, event.deltaFactor, event.originalEvent.deltaMode, event.originalEvent.wheelDelta);
 	});
 
 	setTimeout(function() {
-		$('#home .logo').show(2000);
 		$('#home .logo').animate({
 			opacity: 1,
-		}, 2000);		
+		}, 1000);	
+		$('#home .shift-date').animate({
+			opacity: 1,
+		}, 1000);	
 	}, 1000);
 
 	$('#schedule-prev').click(function() {
