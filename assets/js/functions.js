@@ -39,10 +39,13 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$('#home .logo').animate({
 			opacity: 1,
-		}, 1000);	
+		}, 1000);
 		$('#home .shift-date').animate({
 			opacity: 1,
-		}, 1000);	
+		}, 1000);
+		$('#home .arrow').animate({
+			opacity: 1,
+		}, 1000);
 	}, 1000);
 
 	$('#schedule-prev').click(function() {
