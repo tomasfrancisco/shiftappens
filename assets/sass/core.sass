@@ -11,11 +11,11 @@ body, html
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq
 	width: 100vw
-	//min-height: 100vh
 	padding-top: 27px
 	padding-bottom: 75px
 	.container
-		header
+		> header
+			text-align: center
 			h1
 				padding-bottom: 25px
 
@@ -92,12 +92,18 @@ body, html
 					display: block
 				@media (min-width: 701px)
 					display: none
+		#clock
+			color: #262261
+			font-size: 3.5rem
+			font-weight: 600
+			padding: 10px
 		.arrow
 			opacity: 0
 
 
 #about
-	background-color: #00A5E6
+	background-color: #00A79D
+	text-align: left
 	.about-container
 		color: white
 		div
@@ -134,19 +140,18 @@ body, html
 					color: whitesmoke
 					font-weight: 600
 					font-size: 0.9em
-					margin: 0
+					margin-top: 10px
 					opacity: 0
 
 #faq
 	background-color: #FAFAFA
 	.faq-container
-		color: #262261
 		header
 			h1
 				font-family: 'mopsterregular'
 				font-weight: 700
 				font-size: 2rem
-				color: #262261
+				color: #FF259C
 		.faq-list
 			margin-top: 20px
 			div
@@ -155,36 +160,43 @@ body, html
 					font-weight: 400
 					margin-bottom: 0px
 				p
+					color: #262261
 					font-size: 0.8em
 					span
 						font-weight: 700
+						color: #FF259C
 					a
-						color: #ff259c
+						text-decoration: underline
+						color: #262261
+						&:hover
+							color: #337AB7
 
 #panel
-	background-color: #2D2D2D
+	background-color: #FEFE00
 	.panel-container
 		header
 			h1
 				font-family: 'mopsterregular'
 				font-weight: 700
 				font-size: 2rem
-				color: white
+				color: #262261
 		.panel-content
-			padding: 20px 0
+			padding-top: 20px
+			padding-bottom: 20px
+			padding-left: 10px
 			.person
 				img
-					box-shadow: -10px -10px 0 white//rgb(38, 34, 97)
+					box-shadow: -10px -10px 0 #262261//rgb(38, 34, 97)
 				h2
-					color: white
+					color: #262261
 				a
 					text-decoration: none
 				p
 					font-size: 1.0rem
-					color: white
+					color: #262261
 					i
 						font-size: 1.0rem
-						color: white
+						color: #262261
 
 
 #schedule
@@ -280,7 +292,6 @@ body, html
 
 #partners
 	background-color: #FAFAFA
-	display: table
 	.partners-container
 		header:first-child
 			h1
@@ -292,8 +303,8 @@ body, html
 				font-family: 'mopsterregular'
 				color: #ff259c
 				font-size: 2rem
-				margin: 0
-				padding: 0
+				margin-bottom: 0
+				padding-bottom: 0
 		.partners-content
 			margin: 0
 			padding: 0

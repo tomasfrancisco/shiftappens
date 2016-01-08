@@ -12,8 +12,10 @@ body, html {
   width: 100vw;
   padding-top: 27px;
   padding-bottom: 75px; }
-  #home .container header h1, #about .container header h1, #history .container header h1, #where .container header h1, #schedule .container header h1, #panel .container header h1, #awards .container header h1, #sign-in .container header h1, #error .container header h1, #success .container header h1, #partners .container header h1, #faq .container header h1 {
-    padding-bottom: 25px; }
+  #home .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
+    text-align: center; }
+    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
+      padding-bottom: 25px; }
 
 #navigation {
   top: -52px;
@@ -88,11 +90,17 @@ body, html {
         @media (min-width: 701px) {
           #home .home-container .logo .mobile {
             display: none; } }
+    #home .home-container #clock {
+      color: #262261;
+      font-size: 3.5rem;
+      font-weight: 600;
+      padding: 10px; }
     #home .home-container .arrow {
       opacity: 0; }
 
 #about {
-  background-color: #00A5E6; }
+  background-color: #00A79D;
+  text-align: left; }
   #about .about-container {
     color: white; }
     #about .about-container div {
@@ -123,52 +131,57 @@ body, html {
       color: whitesmoke;
       font-weight: 600;
       font-size: 0.9em;
-      margin: 0;
+      margin-top: 10px;
       opacity: 0; }
 
 #faq {
   background-color: #FAFAFA; }
-  #faq .faq-container {
-    color: #262261; }
-    #faq .faq-container header h1 {
-      font-family: "mopsterregular";
-      font-weight: 700;
-      font-size: 2rem;
-      color: #262261; }
-    #faq .faq-container .faq-list {
-      margin-top: 20px; }
-      #faq .faq-container .faq-list div h3 {
-        font-size: 0.7em;
-        font-weight: 400;
-        margin-bottom: 0px; }
-      #faq .faq-container .faq-list div p {
-        font-size: 0.8em; }
-        #faq .faq-container .faq-list div p span {
-          font-weight: 700; }
-        #faq .faq-container .faq-list div p a {
-          color: #ff259c; }
+  #faq .faq-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 2rem;
+    color: #FF259C; }
+  #faq .faq-container .faq-list {
+    margin-top: 20px; }
+    #faq .faq-container .faq-list div h3 {
+      font-size: 0.7em;
+      font-weight: 400;
+      margin-bottom: 0px; }
+    #faq .faq-container .faq-list div p {
+      color: #262261;
+      font-size: 0.8em; }
+      #faq .faq-container .faq-list div p span {
+        font-weight: 700;
+        color: #FF259C; }
+      #faq .faq-container .faq-list div p a {
+        text-decoration: underline;
+        color: #262261; }
+        #faq .faq-container .faq-list div p a:hover {
+          color: #337AB7; }
 
 #panel {
-  background-color: #2D2D2D; }
+  background-color: #FEFE00; }
   #panel .panel-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
-    color: white; }
+    color: #262261; }
   #panel .panel-container .panel-content {
-    padding: 20px 0; }
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px; }
     #panel .panel-container .panel-content .person img {
-      box-shadow: -10px -10px 0 white; }
+      box-shadow: -10px -10px 0 #262261; }
     #panel .panel-container .panel-content .person h2 {
-      color: white; }
+      color: #262261; }
     #panel .panel-container .panel-content .person a {
       text-decoration: none; }
     #panel .panel-container .panel-content .person p {
       font-size: 1rem;
-      color: white; }
+      color: #262261; }
       #panel .panel-container .panel-content .person p i {
         font-size: 1rem;
-        color: white; }
+        color: #262261; }
 
 #schedule {
   background-color: #00A79D; }
@@ -249,8 +262,7 @@ body, html {
           color: white; }
 
 #partners {
-  background-color: #FAFAFA;
-  display: table; }
+  background-color: #FAFAFA; }
   #partners .partners-container header:first-child h1 {
     font-family: "mopsterregular";
     color: #262261;
@@ -259,8 +271,8 @@ body, html {
     font-family: "mopsterregular";
     color: #ff259c;
     font-size: 2rem;
-    margin: 0;
-    padding: 0; }
+    margin-bottom: 0;
+    padding-bottom: 0; }
   #partners .partners-container .partners-content {
     margin: 0;
     padding: 0; }

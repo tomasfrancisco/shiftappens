@@ -67,6 +67,13 @@ $(document).ready(function() {
 		$('#home .arrow').animate({
 			opacity: 1,
 		}, 1000);
+		$('#clock').countdown('2016/02/19 12:00:00',function(event){
+			var $this = $(this).html(event.strftime(''
+				+ '<span>%D</span>d '
+				+ '<span>%H</span>h '
+				+ '<span>%M</span>m '
+				+ '<span>%S</span>s'));
+		});
 	}, 1000);
 
 	$('#schedule-prev').click(function() {
