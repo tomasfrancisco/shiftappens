@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	var isOnTop = true;
 	var vh = $(window).innerHeight();
-	alert(vh);
 
 	$(window).scroll(function() {
 	    if ($(".navbar-fixed-top").offset().top >= (vh-52)) {
