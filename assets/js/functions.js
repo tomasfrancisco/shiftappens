@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var vh = $(window).innerHeight();
 
 	$(window).scroll(function() {
-	    if ($(".navbar-fixed-top").offset().top >= (vh-152)) {
+	    if ($(".navbar-fixed-top").offset().top >= (vh-103)) {
 	    	if(isOnTop == true) {
     			$('.navbar-fixed-top').animate({
 					//opacity: 1,
