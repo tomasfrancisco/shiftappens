@@ -1,4 +1,26 @@
 $(document).ready(function() {
+	var isOnTop = true;
+	var vh = $(window).innerHeight();
+	alert(vh);
+
+	$(window).scroll(function() {
+	    if ($(".navbar-fixed-top").offset().top >= (vh-52)) {
+	    	if(isOnTop == true) {
+    			$('.navbar-fixed-top').animate({
+					//opacity: 1,
+					top: "0px"
+				}, 0);
+	    		isOnTop = false;
+	    	}
+	    } else if ($(".navbar-fixed-top").offset().top < (vh-102)){
+			$('.navbar-fixed-top').animate({
+				//opacity: 0,
+				top: "-52px"
+			}, 0);
+			isOnTop = true;
+	    }
+	});
+
 	$(function() {
 	    $('a.page-scroll').bind('click', function(event) {
 	        var $anchor = $(this);

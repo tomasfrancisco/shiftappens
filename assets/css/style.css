@@ -10,13 +10,13 @@ body, html {
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
-  min-height: 100vh;
   padding-top: 75px;
   padding-bottom: 75px; }
   #home .container header h1, #about .container header h1, #history .container header h1, #where .container header h1, #schedule .container header h1, #panel .container header h1, #awards .container header h1, #sign-in .container header h1, #error .container header h1, #success .container header h1, #partners .container header h1, #faq .container header h1 {
     padding-bottom: 7vh; }
 
 #navigation {
+  top: -52px;
   background-color: #333333; }
   #navigation .container .navbar-header .nav-title {
     font-family: "mopsterregular";
@@ -49,8 +49,9 @@ body, html {
   box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5); }
 
 #home {
+  height: 100vh;
   background-color: #FAFAFA;
-  padding-top: 20vh; }
+  padding-top: 15vh; }
   #home .home-container {
     text-align: center; }
     #home .home-container .shift-date {
