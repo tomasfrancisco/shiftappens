@@ -10,7 +10,7 @@ body, html {
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
-  padding-top: 79px;
+  padding-top: 27px;
   padding-bottom: 75px; }
   #home .container header h1, #about .container header h1, #history .container header h1, #where .container header h1, #schedule .container header h1, #panel .container header h1, #awards .container header h1, #sign-in .container header h1, #error .container header h1, #success .container header h1, #partners .container header h1, #faq .container header h1 {
     padding-bottom: 25px; }
@@ -145,6 +145,8 @@ body, html {
         font-size: 0.8em; }
         #faq .faq-container .faq-list div p span {
           font-weight: 700; }
+        #faq .faq-container .faq-list div p a {
+          color: #ff259c; }
 
 #panel {
   background-color: #2D2D2D; }
@@ -169,12 +171,12 @@ body, html {
         color: white; }
 
 #schedule {
-  background-color: #00A5E6; }
+  background-color: #00A79D; }
   #schedule .schedule-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
-    color: white; }
+    color: #FEFE00; }
   #schedule .schedule-container .schedule-board-container {
     padding-top: 30px;
     display: flex;
@@ -183,27 +185,29 @@ body, html {
       font-size: 0.9em; }
       #schedule .schedule-container .schedule-board-container table thead tr {
         font-family: "mopsterregular";
-        border-bottom: 4px solid black;
+        border-bottom: 4px solid #262261;
         color: white; }
         #schedule .schedule-container .schedule-board-container table thead tr th {
+          color: #FEFE00;
           text-align: center; }
           #schedule .schedule-container .schedule-board-container table thead tr th:not(:last-child) {
-            border-right: 4px solid black; }
+            border-right: 4px solid #262261; }
       #schedule .schedule-container .schedule-board-container table tbody {
         color: white; }
         #schedule .schedule-container .schedule-board-container table tbody tr:not(:last-child) {
-          border-bottom: 4px solid black; }
+          border-bottom: 4px solid #262261; }
         #schedule .schedule-container .schedule-board-container table tbody tr th {
           max-width: 300px;
           padding: 10px; }
           #schedule .schedule-container .schedule-board-container table tbody tr th:first-child {
+            color: #FEFE00;
             font-family: "mopsterregular";
             vertical-align: middle; }
           #schedule .schedule-container .schedule-board-container table tbody tr th:not(:first-child) {
             font-weight: 700;
             font-size: 0.7em; }
           #schedule .schedule-container .schedule-board-container table tbody tr th:not(:last-child) {
-            border-right: 4px solid black; }
+            border-right: 4px solid #262261; }
     #schedule .schedule-container .schedule-board-container .mobile-schedule {
       display: none;
       margin: 10%;
@@ -211,6 +215,7 @@ body, html {
       #schedule .schedule-container .schedule-board-container .mobile-schedule .day header {
         margin: 0; }
         #schedule .schedule-container .schedule-board-container .mobile-schedule .day header h2 {
+          color: #FEFE00;
           font-family: "mopsterregular";
           font-weight: 700;
           font-size: 1.5rem; }
@@ -220,7 +225,7 @@ body, html {
           font-weight: 300;
           font-size: 0.7em; }
           #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
-            border-bottom: 2px solid black; }
+            border-bottom: 2px solid #262261; }
 @media(max-width: 800px) {
   #schedule .schedule-container .schedule-board-container table {
     display: none; }
@@ -253,49 +258,53 @@ body, html {
   #partners .partners-container header h1 {
     font-family: "mopsterregular";
     color: #ff259c;
-    font-size: 2rem; }
-  #partners .partners-container .partners-content .organisations {
-    text-align: center;
-    padding: 2%;
-    list-style-type: none; }
-    #partners .partners-container .partners-content .organisations li {
-      display: inline;
-      text-decoration: none;
-      margin: 20px;
-      padding: 0; }
-      #partners .partners-container .partners-content .organisations li a {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0; }
+  #partners .partners-container .partners-content {
+    margin: 0;
+    padding: 0; }
+    #partners .partners-container .partners-content .organisations {
+      text-align: center;
+      padding: 2%;
+      list-style-type: none; }
+      #partners .partners-container .partners-content .organisations li {
+        display: inline;
         text-decoration: none;
-        color: #262261;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        font-size: 0.9em; }
-        #partners .partners-container .partners-content .organisations li a:hover {
-          opacity: 0.7; }
-      #partners .partners-container .partners-content .organisations li .org-img {
-        height: 80px; }
-  #partners .partners-container .partners-content .partners {
-    text-align: center;
-    padding: 2%;
-    list-style-type: none; }
-    #partners .partners-container .partners-content .partners li {
-      display: inline-block;
-      text-decoration: none;
-      margin: 20px;
-      padding: 0; }
-      #partners .partners-container .partners-content .partners li a {
+        margin: 20px;
+        padding: 0; }
+        #partners .partners-container .partners-content .organisations li a {
+          text-decoration: none;
+          color: #262261;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          font-size: 0.9em; }
+          #partners .partners-container .partners-content .organisations li a:hover {
+            opacity: 0.7; }
+        #partners .partners-container .partners-content .organisations li .org-img {
+          height: 80px; }
+    #partners .partners-container .partners-content .partners {
+      text-align: center;
+      padding: 0;
+      list-style-type: none; }
+      #partners .partners-container .partners-content .partners li {
+        display: inline-block;
         text-decoration: none;
-        color: #262261;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        font-size: 0.9em; }
-        #partners .partners-container .partners-content .partners li a:hover {
-          opacity: 0.7; }
-    #partners .partners-container .partners-content .partners.gold .org-img {
-      height: 100px; }
-    #partners .partners-container .partners-content .partners.silver .org-img {
-      height: 80px; }
-    #partners .partners-container .partners-content .partners.bronze .org-img {
-      height: 60px; }
+        padding: 0; }
+        #partners .partners-container .partners-content .partners li a {
+          text-decoration: none;
+          color: #262261;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          font-size: 0.9em; }
+          #partners .partners-container .partners-content .partners li a:hover {
+            opacity: 0.7; }
+      #partners .partners-container .partners-content .partners.gold .org-img {
+        width: 300px; }
+      #partners .partners-container .partners-content .partners.silver .org-img {
+        width: 200px; }
+      #partners .partners-container .partners-content .partners.bronze .org-img {
+        width: 120px; }
 
 #footer {
   background-color: #ADADAD;

@@ -12,7 +12,7 @@ body, html
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq
 	width: 100vw
 	//min-height: 100vh
-	padding-top: 79px
+	padding-top: 27px
 	padding-bottom: 75px
 	.container
 		header
@@ -158,6 +158,8 @@ body, html
 					font-size: 0.8em
 					span
 						font-weight: 700
+					a
+						color: #ff259c
 
 #panel
 	background-color: #2D2D2D
@@ -186,14 +188,14 @@ body, html
 
 
 #schedule
-	background-color: #00A5E6
+	background-color: #00A79D
 	.schedule-container
 		header
 			h1
 				font-family: 'mopsterregular'
 				font-weight: 700
 				font-size: 2rem
-				color: white
+				color: #FEFE00
 		.schedule-board-container
 			padding-top: 30px
 			display: flex
@@ -203,21 +205,23 @@ body, html
 				thead
 					tr
 						font-family: 'mopsterregular'
-						border-bottom: 4px solid black
+						border-bottom: 4px solid #262261
 						color: white
 						th
+							color: #FEFE00
 							text-align: center
 							&:not(:last-child)
-								border-right: 4px solid black
+								border-right: 4px solid #262261
 				tbody
 					color: white
 					tr
 						&:not(:last-child)
-							border-bottom: 4px solid black
+							border-bottom: 4px solid #262261
 						th
 							max-width: 300px
 							padding: 10px
 							&:first-child
+								color: #FEFE00
 								font-family: 'mopsterregular'
 								vertical-align: middle
 								//transform: rotate(270deg)
@@ -225,7 +229,7 @@ body, html
 								font-weight: 700
 								font-size: 0.7em
 							&:not(:last-child)
-								border-right: 4px solid black
+								border-right: 4px solid #262261
 			.mobile-schedule
 				display: none
 				margin: 10%
@@ -234,6 +238,7 @@ body, html
 					header
 						margin: 0
 						h2
+							color: #FEFE00
 							font-family: 'mopsterregular'
 							font-weight: 700
 							font-size: 1.5rem
@@ -243,7 +248,7 @@ body, html
 							font-weight: 300
 							font-size: 0.7em
 							&:not(:last-child)
-								border-bottom: 2px solid black
+								border-bottom: 2px solid #262261
 	@media(max-width: 800px)
 		.schedule-container
 			.schedule-board-container
@@ -287,7 +292,11 @@ body, html
 				font-family: 'mopsterregular'
 				color: #ff259c
 				font-size: 2rem
+				margin: 0
+				padding: 0
 		.partners-content
+			margin: 0
+			padding: 0
 			.organisations
 				text-align: center
 				padding: 2%
@@ -309,12 +318,12 @@ body, html
 						height: 80px
 			.partners
 				text-align: center
-				padding: 2%
+				padding: 0
 				list-style-type: none
 				li
 					display: inline-block
 					text-decoration: none
-					margin: 20px
+					//margin: 20px
 					padding: 0
 					a
 						text-decoration: none
@@ -326,13 +335,13 @@ body, html
 							opacity: 0.7
 				&.gold
 					.org-img
-						height: 100px
+						width: 300px
 				&.silver
 					.org-img
-						height: 80px
+						width: 200px
 				&.bronze
 					.org-img
-						height: 60px
+						width: 120px
 
 #footer
 	background-color: #ADADAD

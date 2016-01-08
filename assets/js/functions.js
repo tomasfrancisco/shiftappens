@@ -38,11 +38,14 @@ $(document).ready(function() {
 		$(".bronze>p").css('opacity', '0');
 	});
 
+	$('body').scrollspy({target: "#navigation", offset: 52});
+
 	$(function() {
 	    $('a.page-scroll').bind('click', function(event) {
 	        var $anchor = $(this);
+	        $(this).addClass("active");
 	        $('html, body').stop().animate({
-	            scrollTop: $($anchor.attr('href')).offset().top
+	            scrollTop: $($anchor.attr('href')).offset().top - 50
 	        }, 1500, 'easeInOutExpo');
 	        event.preventDefault();
 	    });
