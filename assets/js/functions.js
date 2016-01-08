@@ -20,6 +20,24 @@ $(document).ready(function() {
 	    }
 	});
 
+	$("#gold").hover(function(){
+		$(".gold>p").css('opacity', '1');
+	},function(){
+		$(".gold>p").css('opacity', '0');
+	});
+
+	$("#silver").hover(function(){
+		$(".silver>p").css('opacity', '1');
+	},function(){
+		$(".silver>p").css('opacity', '0');
+	});
+
+	$("#bronze").hover(function(){
+		$(".bronze>p").css('opacity', '1');
+	},function(){
+		$(".bronze>p").css('opacity', '0');
+	});
+
 	$(function() {
 	    $('a.page-scroll').bind('click', function(event) {
 	        var $anchor = $(this);

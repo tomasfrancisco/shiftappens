@@ -12,31 +12,39 @@ body, html
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq
 	width: 100vw
 	//min-height: 100vh
-	padding-top: 75px
+	padding-top: 79px
 	padding-bottom: 75px
 	.container
 		header
 			h1
-				padding-bottom: 7vh
+				padding-bottom: 25px
 
 #navigation
-	//opacity: 0
 	top: -52px
-	background-color: #333333
+	background-color: #fff
 	.container
 		.navbar-header
 			.nav-title
 				font-family: 'mopsterregular'
 				font-size: 1.6rem
 				line-height: 25px
+				color: #262261
+				&:hover
+					color: #FF259C
 	.collapse
 		.menu
 			font-family: "Dosis"
 			font-weight: 500
 			font-size: 0.8rem
-		.menu a:hover
-			color: white
-			-webkit-transition: color 0.2s ease-in-out
+			.active
+				a
+					background-color: white
+					color: #FF259C
+			a
+				color: #262261
+				&:hover
+					color: #FF259C
+					-webkit-transition: color 0.2s ease-in-out
 		#signin-button
 			background-color: whitesmoke
 			color: #333
@@ -117,19 +125,17 @@ body, html
 				color: white
 		.awards-content
 			text-align: center
-			div
+			.award
+				opacity: 0.3
+				&:hover
+					opacity: 1
+			.gold,.silver,.bronze
 				p
 					color: whitesmoke
 					font-weight: 600
 					font-size: 0.9em
 					margin: 0
-		.coming-soon
-			text-align: center
-			p
-				color: whitesmoke
-				font-weight: 500
-				font-size: 1.7em
-				margin-top: 30px
+					opacity: 0
 
 #faq
 	background-color: #FAFAFA
@@ -260,12 +266,7 @@ body, html
 			padding: 20px 0
 			div
 				img
-					//background: url(../img/pav-centro-portugal.jpg) no-repeat center center
-					//background-size: cover
-					box-shadow: -10px -10px 0 white//rgb(38, 36, 95)//#00a5e6
-					//height: 60vh
-					//min-height: 300px
-					//margin: 25px 0 0 0
+					//box-shadow: -10px -10px 0 white//rgb(38, 36, 95)//#00a5e6
 				p
 					font-size: 0.8em
 					span

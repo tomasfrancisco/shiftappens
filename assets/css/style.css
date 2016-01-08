@@ -10,25 +10,33 @@ body, html {
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
-  padding-top: 75px;
+  padding-top: 79px;
   padding-bottom: 75px; }
   #home .container header h1, #about .container header h1, #history .container header h1, #where .container header h1, #schedule .container header h1, #panel .container header h1, #awards .container header h1, #sign-in .container header h1, #error .container header h1, #success .container header h1, #partners .container header h1, #faq .container header h1 {
-    padding-bottom: 7vh; }
+    padding-bottom: 25px; }
 
 #navigation {
   top: -52px;
-  background-color: #333333; }
+  background-color: #fff; }
   #navigation .container .navbar-header .nav-title {
     font-family: "mopsterregular";
     font-size: 1.6rem;
-    line-height: 25px; }
+    line-height: 25px;
+    color: #262261; }
+    #navigation .container .navbar-header .nav-title:hover {
+      color: #FF259C; }
   #navigation .collapse .menu {
     font-family: "Dosis";
     font-weight: 500;
     font-size: 0.8rem; }
-  #navigation .collapse .menu a:hover {
-    color: white;
-    -webkit-transition: color 0.2s ease-in-out; }
+    #navigation .collapse .menu .active a {
+      background-color: white;
+      color: #FF259C; }
+    #navigation .collapse .menu a {
+      color: #262261; }
+      #navigation .collapse .menu a:hover {
+        color: #FF259C;
+        -webkit-transition: color 0.2s ease-in-out; }
   #navigation .collapse #signin-button {
     background-color: whitesmoke;
     color: #333;
@@ -107,18 +115,16 @@ body, html {
     color: white; }
   #awards .awards-container .awards-content {
     text-align: center; }
-    #awards .awards-container .awards-content div p {
+    #awards .awards-container .awards-content .award {
+      opacity: 0.3; }
+      #awards .awards-container .awards-content .award:hover {
+        opacity: 1; }
+    #awards .awards-container .awards-content .gold p, #awards .awards-container .awards-content .silver p, #awards .awards-container .awards-content .bronze p {
       color: whitesmoke;
       font-weight: 600;
       font-size: 0.9em;
-      margin: 0; }
-  #awards .awards-container .coming-soon {
-    text-align: center; }
-    #awards .awards-container .coming-soon p {
-      color: whitesmoke;
-      font-weight: 500;
-      font-size: 1.7em;
-      margin-top: 30px; }
+      margin: 0;
+      opacity: 0; }
 
 #faq {
   background-color: #FAFAFA; }
@@ -231,8 +237,6 @@ body, html {
       color: white; }
     #where .where-container .where-content {
       padding: 20px 0; }
-      #where .where-container .where-content div img {
-        box-shadow: -10px -10px 0 white; }
       #where .where-container .where-content div p {
         font-size: 0.8em; }
         #where .where-container .where-content div p span {
