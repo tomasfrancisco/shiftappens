@@ -252,9 +252,13 @@ body, html {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 2rem;
-      color: white; }
+      color: #ff259c; }
     #where .where-container .where-content {
-      padding: 20px 0; }
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px; }
+      #where .where-container .where-content div img {
+        box-shadow: -10px -10px 0 #ff259c; }
       #where .where-container .where-content div p {
         font-size: 0.8em; }
         #where .where-container .where-content div p span {
