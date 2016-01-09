@@ -47,7 +47,12 @@ if($db = new MyDB()) {
     $phone = $db->escapeString($_POST['phone']);
     $username = $db->escapeString($_POST['username']);
     $occupation = $db->escapeString($_POST['occupation']);
-    $workplace = $db->escapeString($_POST['workplace']);
+    $workplace = "";
+    if($occupation == "student") {
+        $workplace = $db->escapeString($_POST['faculty']);
+    } else {
+        $workplace = $db->escapeString($_POST['workplace']);
+    }
     $twitter = $db->escapeString($_POST['twitter']);
     $linkedin = $db->escapeString($_POST['linkedin']);
     $website = $db->escapeString($_POST['website']);
@@ -60,8 +65,9 @@ if($db = new MyDB()) {
     $team = $db->escapeString($_POST['team']);
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = $db->escapeString($_POST['otherSkill']);
+    $otherSkill = $db->escapeString($_POST['otherSkills']);
     $framework = $db->escapeString($_POST['framework']);
+    $hash = "";
 
     $db->exec('CREATE TABLE IF NOT EXISTS entries(
         name TEXT NOT NULL,
@@ -69,7 +75,7 @@ if($db = new MyDB()) {
         phone INT UNIQUE NOT NULL,
         username TEXT UNIQUE NOT NULL,
         occupation TEXT NOT NULL,
-        workplace TEXT NOT NULL,
+        workplace TEXT,
         twitter TEXT,
         linkedin TEXT,
         website TEXT,
@@ -89,6 +95,10 @@ if($db = new MyDB()) {
         email TEXT REFERENCES entries (email) ON DELETE CASCADE,
         skill TEXT NOT NULL)');
 
+    $db->exec('CREATE TABLE IF NOT EXISTS otherSkills(
+        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
+        skill TEXT NOT NULL)');
+
     $db->exec('CREATE TABLE IF NOT EXISTS frameworks(
         email TEXT REFERENCES entries (email) ON DELETE CASCADE,
         framework TEXT NOT NULL)');
@@ -97,9 +107,19 @@ if($db = new MyDB()) {
         email TEXT REFERENCES entries (email) ON DELETE CASCADE,
         hash TEXT NOT NULL)');
 
-
-    $db->exec("INSERT INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
-                VALUES ('{$name}','{$email}','{$phone}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
+    if($_POST['action'] == "create") {
+        $db->exec("INSERT OR ROLLBACK INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+                    VALUES ('{$name}','{$email}','{$phone}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
+        $hash = md5("bubadeira".$email);
+        $db->exec("INSERT OR ROLLBACK INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
+    } else {
+        $db->exec("UPDATE OR ROLLBACK entries SET name='{$name}',phone='{$phone}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
+        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $row = $result->fetchArray();
+        $hash = $row['hash'];
+    }
 
     if($db->lastErrorCode() == 19){
         $msg = $db->lastErrorMsg();
@@ -110,6 +130,8 @@ if($db = new MyDB()) {
             $error = "Já existe um user com esse contacto";
         } elseif(strpos($msg,'username') !== false) {
             $error = "Já existe um user com esse username";
+        } else {
+            $error = "Houve um erro a guardar as alterações";
         }
 
         print("
@@ -133,28 +155,37 @@ if($db = new MyDB()) {
         
         
     } else {
-        foreach ($areas as $area) {
-            $db->exec("INSERT INTO areas (email,area) VALUES ('{$email}','{$area}')");
-        }
-        foreach ($skills as $skill) {
-            $db->exec("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
-        }
-        if(strlen($otherSkill) > 0) {
-            $db->exec("INSERT INTO skills (email,skill) VALUES ('{$email}','{$otherSkill}')");
-        }
-        if(strlen($framework) > 0) {
-            $db->exec("INSERT INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+        if($_POST['action'] == "edit") {
+            $db->exec("DELETE FROM areas WHERE email = '{$email}'");
+            $db->exec("DELETE FROM skills WHERE email = '{$email}'");
+            $db->exec("DELETE FROM otherSkills WHERE email = '{$email}'");
+            $db->exec("DELETE FROM frameworks WHERE email = '{$email}'");
         }
 
-        print("
+        foreach ($areas as $area) {
+            $db->exec("INSERT OR ROLLBACK INTO areas (email,area) VALUES ('{$email}','{$area}')");
+        }
+        foreach ($skills as $skill) {
+            $db->exec("INSERT OR ROLLBACK INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
+        }
+        if(strlen($otherSkill) > 0) {
+            $db->exec("INSERT OR ROLLBACK INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
+        }
+        if(strlen($framework) > 0) {
+            $db->exec("INSERT OR ROLLBACK INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+        }
+
+        if($_POST['action'] == "edit") {
+            print("
 
         <section id=\"success\">
             <section class=\"success-container\">
                 <header>
-                    <h1>Utilizador inscrito com sucesso</h1>
+                    <h1>Alterações guardadas com sucesso</h1>
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
+                    <p>Podes alterar os teus dados em <a href=\"https:shiftappens.com/signin.php?id={$hash}\">\"https:shiftappens.com/signin.php?id={$hash}\"</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input type=\"submit\" value=\"Voltar à página principal\"/>
@@ -164,6 +195,27 @@ if($db = new MyDB()) {
             </section>
         </section>
             ");
+        } else {
+            print("
+
+        <section id=\"success\">
+            <section class=\"success-container\">
+                <header>
+                    <h1>Utilizador inscrito com sucesso</h1>
+                </header>
+                <article>
+                    <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
+                    <p>Podes alterar os teus dados em <a href=\"https:shiftappens.com/signin.php?id={$hash}\">\"https:shiftappens.com/signin.php?id={$hash}\"</a></p>
+                    <form action=\"index.php\" method=\"POST\">
+                        <div class=\"form-group\" id=\"submit\">
+                            <input type=\"submit\" value=\"Voltar à página principal\"/>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </section>
+            ");
+        }
     }
 } else {
         print("

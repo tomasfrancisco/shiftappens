@@ -1,9 +1,10 @@
 <?php
 $edit = false;
 $entries = NULL;
-$areas = NULL;
-$skills = NULL;
-$frameworks = NULL;
+$areas = array();
+$skills = array();
+$otherSkill = "";
+$frameworks = array();
 
 class MyDB extends SQLite3
 {
@@ -34,17 +35,28 @@ if (isset($_GET['id']) and $db = new MyDB()) {
         $query = $db->prepare("SELECT * FROM areas WHERE email = :email;");
         $query->bindValue(":email",$email);
         $result = $query->execute();
-        $areas = $result->fetchArray();
+        while($row = $result->fetchArray()) {
+            $areas[] = $row["area"];
+        }
 
         $query = $db->prepare("SELECT * FROM skills WHERE email = :email;");
         $query->bindValue(":email",$email);
         $result = $query->execute();
-        $skills = $result->fetchArray();
+        while($row = $result->fetchArray()) {
+            $skills[] = $row["skill"];
+        }
+
+        $query = $db->prepare("SELECT * FROM otherSkills WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $otherSkill = $result->fetchArray();
 
         $query = $db->prepare("SELECT * FROM frameworks WHERE email = :email;");
         $query->bindValue(":email",$email);
         $result = $query->execute();
-        $frameworks = $result->fetchArray();
+        while($row = $result->fetchArray()) {
+            $frameworks[] = $row["framework"];
+        }
     } else {
         $edit = false;
     }
@@ -85,89 +97,89 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                     <form method="POST" action="handleSignin.php">
                         <p>Dados Pessoais</p>
                         <div class="form-group">
-                            <label for="nameInput" class="control-label">Nome</label>
-                            <input type="text" name="name" class="form-control" id="nameInput" placeholder="Nome" required/>
+                            <label for="nameInput" class="control-label">Nome completo</label>
+                            <input type="text" name="name" class="form-control" id="nameInput" placeholder="Nome completo" <?php if($edit){echo "value=\"".$entries['name']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
                             <label for="emailInput" class="control-label">Email</label>
-                            <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email" required/>
+                            <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email" <?php if($edit){echo "readonly value=\"".$entries['email']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
                             <label for="phoneInput" class="control-label">Telefone</label>
-                            <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" required/>
+                            <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" <?php if($edit){echo "value=\"".$entries['phone']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
                             <label for="userNameInput" class="control-label">Username</label>
-                            <input type="text" name="username" class="form-control" id="userNameInput" placeholder="Username" required/>
+                            <input type="text" name="username" class="form-control" id="userNameInput" placeholder="Como queres ser conhecido no slack e nas credenciais" <?php if($edit){echo "value=\"".$entries['username']."\"";} ?> required/>
                         </div>
                         <div class="form-group radio-group">
                             <p>Profissão</p>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="occupation" id="worker" value="worker" required/>
+                                    <input type="radio" name="occupation" id="worker" value="worker" <?php if($edit and $entries['occupation']=='worker'){echo "checked";} ?> required/>
                                     Trabalhador
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="occupation" id="student" value="student" required/>
+                                    <input type="radio" name="occupation" id="student" value="student" <?php if($edit and $entries['occupation']=='student'){echo "checked";} ?> required/>
                                     Estudante
                                 </label>
                             </div>
                         </div>
                         <div class="form-group collapse" id="faculty">
-                            <label for="workplaceInput" class="control-label">Faculdade</label>
-                            <input type="text" name="workplace" class="form-control" id="facultyInput" placeholder="Faculdade"/>
+                            <label for="facultyInput" class="control-label">Faculdade</label>
+                            <input type="text" name="faculty" class="form-control" id="facultyInput" placeholder="Faculdade" <?php if($edit and $entries['occupation']=='student'){echo "value=\"".$entries['workplace']."\"";} ?>/>
                         </div>
                         <div class="form-group collapse" id="workplace">
                             <label for="workplaceInput" class="control-label">Local de Trabalho</label>
-                            <input type="text" name="workplace" class="form-control" id="workplaceInput" placeholder="Local de Trabalho"/>
+                            <input type="text" name="workplace" class="form-control" id="workplaceInput" placeholder="Local de Trabalho" <?php if($edit and $entries['occupation']=='worker'){echo "value=\"".$entries['workplace']."\"";} ?>/>
                         </div>
 
 
                         <p>Web Presence</p>
                         <div class="form-group">
                             <label for="twitterInput" class="control-label">Twitter</label>
-                            <input type="url" class="form-control" name="twitter" id="twitterInput" placeholder="Twitter"/>
+                            <input type="url" class="form-control" name="twitter" id="twitterInput" placeholder="Twitter" <?php if($edit){echo "value=\"".$entries['twitter']."\"";} ?>/>
                         </div>
                         <div class="form-group">
                             <label for="linkedinInput" class="control-label">Linkedin</label>
-                            <input type="url" class="form-control" name="linkedin" id="linkedinInput" placeholder="Linkedin"/>
+                            <input type="url" class="form-control" name="linkedin" id="linkedinInput" placeholder="Linkedin" <?php if($edit){echo "value=\"".$entries['linkedin']."\"";} ?>/>
                         </div>
                         <div class="form-group">
                             <label for="websiteInput" class="control-label">Website ou Blog</label>
-                            <input type="url" class="form-control" name="website" id="websiteInput" placeholder="Website ou Blog"/>
+                            <input type="url" class="form-control" name="website" id="websiteInput" placeholder="Website ou Blog" <?php if($edit){echo "value=\"".$entries['website']."\"";} ?>/>
                         </div>
                         <div class="form-group">
-                            <label for="repositoryInput" class="control-label">Repositório (github, bitbucket, gitlab)</label>
-                            <input type="url" class="form-control" name="repository" id="repositoryInput" placeholder="Repositório"/>
+                            <label for="repositoryInput" class="control-label">Repositório</label>
+                            <input type="url" class="form-control" name="repository" id="repositoryInput" placeholder="Repositório (github, bitbucket, gitlab)" <?php if($edit){echo "value=\"".$entries['repository']."\"";} ?>/>
                         </div>
 
 
                         <p>Motivação</p>
                         <div class="form-group">
                             <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste?</label>
-                            <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required></textarea>
+                            <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required><?php if($edit){echo $entries['about'];} ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar?</label>
-                            <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required></textarea>
+                            <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required><?php if($edit){echo $entries['why'];} ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="ideaInput" class="control-label">Tens alguma ideia para desenvolver no ShiftAPPens?</label>
-                            <textarea name="idea" class="form-control" id="ideaInput" rows="5" placeholder="Se sim, descreve." required></textarea>
+                            <textarea name="idea" class="form-control" id="ideaInput" rows="5" placeholder="Se sim, descreve." required><?php if($edit){echo $entries['idea'];} ?></textarea>
                         </div>
                         <div class="form-group radio-group">
                             <p>Já participaste em alguma das edições passadas do ShiftAPPens?</p>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="pastEditions" value="yes" required/>
+                                    <input type="radio" name="pastEditions" value="yes" <?php if($edit and $entries['pastEditions']=='yes'){echo "checked";} ?> required/>
                                     Sim
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="pastEditions" value="no" required/>
+                                    <input type="radio" name="pastEditions" value="no" <?php if($edit and $entries['pastEditions']=='no'){echo "checked";} ?> required/>
                                     Não
                                 </label>
                             </div>
@@ -176,187 +188,207 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                             <p>E noutros hackathons?</p>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hackathons" value="yes" required/>
+                                    <input type="radio" name="hackathons" value="yes" <?php if($edit and $entries['hackathons']=='yes'){echo "checked";} ?> required/>
                                     Sim
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hackathons" value="no" required/>
+                                    <input type="radio" name="hackathons" value="no" <?php if($edit and $entries['hackathons']=='no'){echo "checked";} ?> required/>
                                     Não
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="teamInput" class="control-label">Já tens equipa em mente? Indica os nomes dos teus colegas.</label>
-                            <input type="text" name="team" class="form-control" id="teamInput" placeholder="Isto pode ajudar-nos a associar as pessoas a uma equipa"/>
+                            <input type="text" name="team" class="form-control" id="teamInput" placeholder="Isto pode ajudar-nos a associar as pessoas a uma equipa" <?php if($edit){echo "value=\"".$entries['team']."\"";} ?>/>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <p>Top Skills</p>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="PHP" <?php if($edit and in_array("PHP", $skills)){echo "checked";} ?>/>
+                                            PHP
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Java" <?php if($edit and in_array("Java", $skills)){echo "checked";} ?>/>
+                                            Java
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="JavaScript" <?php if($edit and in_array("JavaScript", $skills)){echo "checked";} ?>/>
+                                            JavaScript
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Ruby" <?php if($edit and in_array("Ruby", $skills)){echo "checked";} ?>/>
+                                            Ruby
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="HTML5+CSS3" <?php if($edit and in_array("HTML5+CSS3", $skills)){echo "checked";} ?>/>
+                                            HTML5+CSS3
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Python" <?php if($edit and in_array("Python", $skills)){echo "checked";} ?>/>
+                                            Python
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="C/C++" <?php if($edit and in_array("C/C++", $skills)){echo "checked";} ?>/>
+                                            C/C++
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Cocoa/Objective-C/Swift" <?php if($edit and in_array("Cocoa/Objective-C/Swift", $skills)){echo "checked";} ?>/>
+                                            Cocoa/Objective-C/Swift
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value=".NET/Mono" <?php if($edit and in_array(".NET/Mono", $skills)){echo "checked";} ?>/>
+                                            .NET/Mono
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Android" <?php if($edit and in_array("Android", $skills)){echo "checked";} ?>/>
+                                            Android
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="iOS" <?php if($edit and in_array("iOS", $skills)){echo "checked";} ?>/>
+                                            iOS
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Devops" <?php if($edit and in_array("Devops", $skills)){echo "checked";} ?>/>
+                                            Devops
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="APIs" <?php if($edit and in_array("APIs", $skills)){echo "checked";} ?>/>
+                                            APIs
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Databases" <?php if($edit and in_array("Databases", $skills)){echo "checked";} ?>/>
+                                            Databases
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Sketch/Photoshop" <?php if($edit and in_array("Sketch/Photoshop", $skills)){echo "checked";} ?>/>
+                                            Sketch/Photoshop
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="skills[]" value="Go Lang" <?php if($edit and in_array("Go Lang", $skills)){echo "checked";} ?>/>
+                                            Go Lang
+                                        </label>
+                                    </div>
+                                </div>
+                                <label for="otherSkillsInput" class="control-label">Outro:</label>
+                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkill['skill']."\"";} ?>/>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>Quais são as tuas áreas?</p>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Full-stack" <?php if($edit and in_array("Full-stack", $areas)){echo "checked";} ?>/>
+                                            Full-stack
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Backend" <?php if($edit and in_array("Backend", $areas)){echo "checked";} ?>/>
+                                            Backend
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Frontend" <?php if($edit and in_array("Frontend", $areas)){echo "checked";} ?>/>
+                                            Frontend
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Game Dev" <?php if($edit and in_array("Game Dev", $areas)){echo "checked";} ?>/>
+                                            Game Dev
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Design"  <?php if($edit and in_array("Design", $areas)){echo "checked";} ?>/>
+                                            Design
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Segurança" <?php if($edit and in_array("Segurança", $areas)){echo "checked";} ?>/>
+                                            Segurança
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Desktop" <?php if($edit and in_array("Desktop", $areas)){echo "checked";} ?>/>
+                                            Desktop
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Mobile" <?php if($edit and in_array("Mobile", $areas)){echo "checked";} ?>/>
+                                            Mobile
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Bioinformatics" <?php if($edit and in_array("Bioinformatics", $areas)){echo "checked";} ?>/>
+                                            Bioinformatics
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Hardware" <?php if($edit and in_array("Hardware", $areas)){echo "checked";} ?>/>
+                                            Hardware
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Cooking" <?php if($edit and in_array("Cooking", $areas)){echo "checked";} ?>/>
+                                            Cooking
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="areas[]" value="Nickles Batatóides"  <?php if($edit and in_array("Nickles Batatóides", $areas)){echo "checked";} ?>/>
+                                            Nickles Batatóides
+                                        </label>
+                                    </div>
+                                </div>
+                                <label for="frameworkInput" class="control-label">Tens alguma framework de preferência? Se sim, qual?</label>
+                                <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor"/>
 
-                        <p>Em que áreas te sentes mais confortável?</p>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Backend"/>
-                                    Backend
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Frontend"/>
-                                    Frontend
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Sou full-stack"/>
-                                    Sou full-stack
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Game Dev"/>
-                                    Game Dev
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Segurança"/>
-                                    Segurança
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Mobile"/>
-                                    Mobile
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Hardware"/>
-                                    Hardware
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="areas[]" value="Nickles Batatóides"/>
-                                    Nickles Batatóides
-                                </label>
                             </div>
                         </div>
-
-
-                        <p>Top Skills</p>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="PHP"/>
-                                    PHP
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Java"/>
-                                    Java
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="JavaScript"/>
-                                    JavaScript
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Ruby"/>
-                                    Ruby
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="HTML5+CSS3"/>
-                                    HTML5+CSS3
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Python"/>
-                                    Python
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="C/C++"/>
-                                    C/C++
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Cocoa/Objective-C/Swift"/>
-                                    Cocoa/Objective-C/Swift
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value=".NET/Mono"/>
-                                    .NET/Mono
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Devops"/>
-                                    Devops
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Desktop"/>
-                                    Desktop
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="APIs"/>
-                                    APIs
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Databases"/>
-                                    Databases
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Cooking"/>
-                                    Cooking
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Bioinformatics"/>
-                                    Bioinformatics
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Sketch/Photoshop"/>
-                                    Sketch/Photoshop
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="skills[]" value="Go Lang"/>
-                                    Go Lang
-                                </label>
-                            </div>
-
-                            <label for="otherSkillInput" class="control-label">Outro:</label>
-                            <input type="text" class="form-control" name="otherSkill" id="otherSkillInput" placeholder="Awesome skill"/>
-
-                            <label for="frameworkInput" class="control-label">Tens alguma framework de preferência? Se sim, qual?</label>
-                            <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor"/>
-                        </div>
-
+                        <input type="hidden" name="action" value="<?php if($edit){echo "edit";}else{echo "create";}?>"/>
                         <div class="form-group" id="submit">
                             <input type="submit" value="Inscrever-me"/>
                         </div>
@@ -369,5 +401,22 @@ if (isset($_GET['id']) and $db = new MyDB()) {
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.mousewheel.min.js"></script>
         <script src="assets/js/signin.js"></script>
+<?php
+if($edit and $entries['occupation']=='student'){
+    print("
+        <script type=\"text/javascript\">
+            $(\"#faculty\").collapse('show');
+        </script>
+        ");
+} else if($edit and $entries['occupation']=='worker'){
+    print("
+        <script type=\"text/javascript\">
+            $(\"#workplace\").collapse('show');
+        </script>
+        ");
+}
+
+
+?>
     </body>
 </html>
