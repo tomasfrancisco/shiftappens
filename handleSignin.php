@@ -150,7 +150,7 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.php\" method=\"POST\">
+                    <form action=\"index.html\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>
@@ -170,7 +170,7 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.php\" method=\"POST\">
+                    <form action=\"index.html\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>

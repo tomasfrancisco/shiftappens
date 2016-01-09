@@ -49,7 +49,7 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
 
 html
-	overflow: hidden
+	overflow-x: hidden
 
 body, html
 	font-family: 'Dosis'
@@ -115,7 +115,7 @@ body, html
 	box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5)
 
 #home
-	height: 100vh
+	min-height: 100vh
 	background-color: #FAFAFA
 	padding-top: 15vh
 	overflow-y: hidden
@@ -196,37 +196,6 @@ body, html
 
 #challenges
 	background-color: #FEFE00
-	#modal
-		.modal-dialog
-			.modal-content
-				line-height: 0.9em
-				border-radius: 0px
-				background-color: #FEFE00
-				box-shadow: -10px -10px 0 #262261
-				.modal-header
-					padding-left: 40px
-					border: none
-					.modal-title, .close
-						font-family: 'mopsterregular'
-						font-weight: 700
-						font-size: 1.5rem
-						color: #262261
-				.modal-body
-					padding-left: 40px
-					padding-right: 40px
-					font-size: 0.9em
-					font-weight: 400
-					p
-						line-height: 1.2em
-						span
-							font-weight: 600
-					.list-group
-						.list-group-item
-							padding-top: 4px
-							padding-bottom: 4px
-							margin-left: 10px
-							background-color: #FEFE00
-							border: none
 	.challenges-container
 		header
 			h1
@@ -254,6 +223,38 @@ body, html
 					font-size: 0.9em
 					font-weight: 400
 					margin-top: 10px
+
+#modal
+	.modal-dialog
+		.modal-content
+			line-height: 0.9em
+			border-radius: 0px
+			background-color: #FEFE00
+			box-shadow: -10px -10px 0 #262261
+			.modal-header
+				padding-left: 40px
+				border: none
+				.modal-title, .close
+					font-family: 'mopsterregular'
+					font-weight: 700
+					font-size: 1.5rem
+					color: #262261
+			.modal-body
+				padding-left: 40px
+				padding-right: 40px
+				font-size: 0.9em
+				font-weight: 400
+				p
+					line-height: 1.2em
+					span
+						font-weight: 600
+				.list-group
+					.list-group-item
+						padding-top: 4px
+						padding-bottom: 4px
+						margin-left: 10px
+						background-color: #FEFE00
+						border: none
 
 #faq
 	background-color: #FAFAFA
