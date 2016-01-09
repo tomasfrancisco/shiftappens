@@ -5,13 +5,13 @@ body, html {
   height: 100%;
   margin: 0; }
 
-#home, #about, #history, #where, #schedule, #panel, #awards, #sign-in, #error, #success, #partners, #faq {
+#home, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
   width: 100%;
   padding-top: 27px;
   padding-bottom: 75px; }
-  #home .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
+  #home .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
     text-align: center; }
-    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
+    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1,#challenges .container > header, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
       padding-bottom: 25px; }
 
 #navigation {
@@ -131,6 +131,26 @@ body, html {
       margin-top: 10px;
       opacity: 0; }
 
+#challenges {
+  background-color: #FEFE00; }
+  #challenges .challenges-container header h1 {
+    font-family: "mopsterregular";
+    font-weight: 700;
+    font-size: 2rem;
+    color: #262261; }
+  #challenges .challenges-container .challenges-content {
+    text-align: center; }
+    #challenges .challenges-container .challenges-content .award {
+      opacity: 0.3; }
+      #challenges .challenges-container .challenges-content .award:hover {
+        opacity: 1; }
+    #challenges .challenges-container .challenges-content .gold p, #challenges .challenges-container .challenges-content .silver p, #challenges .challenges-container .challenges-content .bronze p {
+      color: whitesmoke;
+      font-weight: 600;
+      font-size: 0.9em;
+      margin-top: 10px;
+      opacity: 0; }
+
 #faq {
   background-color: #FFFFFF; }
   #faq .faq-container header h1 {
@@ -241,6 +261,7 @@ body, html {
     display: none; }
   #schedule .schedule-container .schedule-board-container .mobile-schedule {
     display: block; } }
+
 #where {
   background-color: #262261; }
   #where .where-container {
