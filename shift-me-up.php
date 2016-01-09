@@ -16,6 +16,7 @@ if(mysqli_connect_errno() == 0) {
         $query->bind_param("s",$hash);
 
         $stmt = $query->execute();
+        $result = $stmt->get_result();
         if($result !== false) {
             $edit = true;
 
