@@ -2,6 +2,7 @@
 
 require_once("class.phpmailer.php");
 require_once("class.smtp.php");
+require_once("class.pop3.php");
 
 if (count($_POST)==0) {
     header("location:index.html");
@@ -183,6 +184,7 @@ if($link) {
         </section>
             ");
 
+            $pop = POP3::popBeforeSmtp('pop.zoho.com', 110, 30, 'geral@shiftappens.com', 'password', 1);
             $mail = new PHPMailer;
 
             $mail->isSMTP();
@@ -193,9 +195,8 @@ if($link) {
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
-            $mail->setFrom('geram@shiftappens.com', 'Shift APPens');
+            $mail->setFrom('geral@shiftappens.com', 'Shift APPens');
             $mail->addAddress($email, $name);
-            $mail->addReplyTo('info@shiftappens.com', 'Shift APPens');
 
             $mail->isHTML(true);
 
