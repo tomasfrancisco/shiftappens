@@ -4,58 +4,42 @@ $entries = NULL;
 $areas = array();
 $skills = array();
 $otherSkill = "";
-$frameworks = array();
+$frameworks = "";
 
-class MyDB extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('mysqlitedb.db');
-    }
-}
-
-if (isset($_GET['id']) and $db = new MyDB()) {
+if(isset($_GET) and isset($_GET['id'])) {
     $hash = $_GET['id'];
 
-    $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = :hash;");
-    $query->bindValue(":hash",$hash);
+    $link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
+    if($link) {
+        $db = mysql_select_db('shiftappens2016', $link);
 
-    $result = $query->execute();
-    if($result !== false) {
-        $edit = true;
+        $result = mysql_query("SELECT * FROM hashcodes WHERE hash = '{$hash}';");
+        if(mysql_num_rows($result) != 0) {
+            $edit = true;
 
-        $row = $result->fetchArray();
-        $email = $row['email'];
+            $row = mysql_fetch_array($result);
+            $email = $row['email'];
 
-        $query = $db->prepare("SELECT * FROM entries WHERE email = :email;");
-        $query->bindValue(":email",$email);
-        $result = $query->execute();
-        $entries = $result->fetchArray();
+            $result = mysql_query("SELECT * FROM entries WHERE email = '{$email}';");
+            $entries = mysql_fetch_array($result);
 
-        $query = $db->prepare("SELECT * FROM areas WHERE email = :email;");
-        $query->bindValue(":email",$email);
-        $result = $query->execute();
-        while($row = $result->fetchArray()) {
-            $areas[] = $row["area"];
-        }
+            $result = mysql_query("SELECT * FROM areas WHERE email = '{$email}';");
+            while($row = mysql_fetch_array($result)) {
+                $areas[] = $row["area"];
+            }
 
-        $query = $db->prepare("SELECT * FROM skills WHERE email = :email;");
-        $query->bindValue(":email",$email);
-        $result = $query->execute();
-        while($row = $result->fetchArray()) {
-            $skills[] = $row["skill"];
-        }
+            $result = mysql_query("SELECT * FROM skills WHERE email = '{$email}';");
+            while($row = mysql_fetch_array($result)) {
+                $skills[] = $row["skill"];
+            }
 
-        $query = $db->prepare("SELECT * FROM otherSkills WHERE email = :email;");
-        $query->bindValue(":email",$email);
-        $result = $query->execute();
-        $otherSkill = $result->fetchArray();
+            $result = mysql_query("SELECT * FROM otherSkills WHERE email = '{$email}';");
+            $otherSkills = mysql_fetch_array($result);
 
-        $query = $db->prepare("SELECT * FROM frameworks WHERE email = :email;");
-        $query->bindValue(":email",$email);
-        $result = $query->execute();
-        while($row = $result->fetchArray()) {
-            $frameworks[] = $row["framework"];
+            $result = mysql_query("SELECT * FROM frameworks WHERE email = '{$email}';");
+            $frameworks = mysql_fetch_array($result);
+        } else {
+            $edit = false;
         }
     } else {
         $edit = false;
@@ -132,8 +116,8 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                             </div>
                         </div>
                         <div class="form-group collapse" id="faculty">
-                            <label for="facultyInput" class="control-label">Faculdade</label>
-                            <input type="text" name="faculty" class="form-control" id="facultyInput" placeholder="Faculdade" <?php if($edit and $entries['occupation']=='student'){echo "value=\"".$entries['workplace']."\"";} ?>/>
+                            <label for="facultyInput" class="control-label">Faculdade e curso</label>
+                            <input type="text" name="faculty" class="form-control" id="facultyInput" placeholder="Faculdade e curso" <?php if($edit and $entries['occupation']=='student'){echo "value=\"".$entries['workplace']."\"";} ?>/>
                         </div>
                         <div class="form-group collapse" id="workplace">
                             <label for="workplaceInput" class="control-label">Local de Trabalho</label>
@@ -302,7 +286,7 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                                     </div>
                                 </div>
                                 <label for="otherSkillsInput" class="control-label">Outro:</label>
-                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkill['skill']."\"";} ?>/>
+                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkills['skill']."\"";} ?>/>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <p>Quais são as tuas áreas?</p>
@@ -381,7 +365,7 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                                     </div>
                                 </div>
                                 <label for="frameworkInput" class="control-label">Tens alguma framework de preferência? Se sim, qual?</label>
-                                <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor"/>
+                                <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor" <?php if($edit){echo "value=\"".$frameworks['framework']."\"";} ?>/>
 
                             </div>
                         </div>

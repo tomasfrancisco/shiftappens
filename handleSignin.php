@@ -1,5 +1,8 @@
 <?php
 
+require_once("class.phpmailer.php");
+require_once("class.smtp.php");
+
 if (count($_POST)==0) {
     header("location:index.html");
 }
@@ -33,55 +36,51 @@ if (count($_POST)==0) {
 
 <?php
 
-$db = new mysqli('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy', 'shiftappens2016');
+$link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
 
-if(mysqli_connect_errno() == 0) {
-    $name = $db->real_escape_string($_POST['name']);
-    $email = $db->real_escape_string($_POST['email']);
-    $phone = $db->real_escape_string($_POST['phone']);
-    $age = $db->real_escape_string($_POST['age']);
-    $username = $db->real_escape_string($_POST['username']);
-    $occupation = $db->real_escape_string($_POST['occupation']);
+if($link) {
+    $db = mysql_select_db('shiftappens2016', $link);
+
+    $name = mysql_real_escape_string(htmlentities($_POST['name']));
+    $email = mysql_real_escape_string(htmlentities($_POST['email']));
+    $phone = mysql_real_escape_string(htmlentities($_POST['phone']));
+    $age = mysql_real_escape_string(htmlentities($_POST['age']));
+    $username = mysql_real_escape_string(htmlentities($_POST['username']));
+    $occupation = mysql_real_escape_string(htmlentities($_POST['occupation']));
     $workplace = "";
     if($occupation == "student") {
-        $workplace = $db->real_escape_string($_POST['faculty']);
+        $workplace = mysql_real_escape_string(htmlentities($_POST['faculty']));
     } else {
-        $workplace = $db->real_escape_string($_POST['workplace']);
+        $workplace = mysql_real_escape_string(htmlentities($_POST['workplace']));
     }
-    $twitter = $db->real_escape_string($_POST['twitter']);
-    $linkedin = $db->real_escape_string($_POST['linkedin']);
-    $website = $db->real_escape_string($_POST['website']);
-    $repository = $db->real_escape_string($_POST['repository']);
-    $about = $db->real_escape_string($_POST['about']);
-    $why = $db->real_escape_string($_POST['why']);
-    $idea = $db->real_escape_string($_POST['idea']);
-    $pastEditions = $db->real_escape_string($_POST['pastEditions']);
-    $hackathons = $db->real_escape_string($_POST['hackathons']);
-    $team = $db->real_escape_string($_POST['team']);
+    $twitter = mysql_real_escape_string(htmlentities($_POST['twitter']));
+    $linkedin = mysql_real_escape_string(htmlentities($_POST['linkedin']));
+    $website = mysql_real_escape_string(htmlentities($_POST['website']));
+    $repository = mysql_real_escape_string(htmlentities($_POST['repository']));
+    $about = mysql_real_escape_string(htmlentities($_POST['about']));
+    $why = mysql_real_escape_string(htmlentities($_POST['why']));
+    $idea = mysql_real_escape_string(htmlentities($_POST['idea']));
+    $pastEditions = mysql_real_escape_string(htmlentities($_POST['pastEditions']));
+    $hackathons = mysql_real_escape_string(htmlentities($_POST['hackathons']));
+    $team = mysql_real_escape_string(htmlentities($_POST['team']));
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = $db->real_escape_string($_POST['otherSkills']);
-    $framework = $db->real_escape_string($_POST['framework']);
+    $otherSkills = mysql_real_escape_string(htmlentities($_POST['otherSkills']));
+    $framework = mysql_real_escape_string(htmlentities($_POST['framework']));
     $hash = "";
 
     if($_POST['action'] == "create") {
-        $db->query("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+        mysql_query("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
                     VALUES ('{$name}','{$email}','{$phone}','{$age}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
     } else {
-        $db->query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
-        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :?;");
-        $query->bindParam($email);
-        $result = $query->execute();
-        $row = $result->fetchArray();
-        $query->close();
+        mysql_query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
+        $result = mysql_query("SELECT * FROM hashcodes WHERE email = '{$email}';");
+        $row = mysql_fetch_array($result);
         $hash = $row['hash'];
     }
 
-    echo $db->errno;
-    echo $db->error;
-
-    /*if($db->lastErrorCode() == 19){
-        $msg = $db->lastErrorMsg();
+    if(mysql_errno() == 1062){
+        $msg = mysql_error();
         $title = "";
         if($_POST['action'] == "create"){
             $title = "Erro a inscrever";
@@ -89,10 +88,10 @@ if(mysqli_connect_errno() == 0) {
             $title = "Erro a guardar alteracoes";
         }
         $error = "";
-        if(strpos($msg,'email') !== false) {
+        if(strpos($msg,'PRIMARY') !== false) {
             $error = "Já existe um user com esse email";
         } elseif(strpos($msg,'phone') !== false) {
-            $error = "Já existe um user com esse contacto";
+            $error = "Já existe um user com esse número de telefone";
         } elseif(strpos($msg,'username') !== false) {
             $error = "Já existe um user com esse username";
         } else {
@@ -119,28 +118,28 @@ if(mysqli_connect_errno() == 0) {
             ");
         
         
-    } else {*/
+    } else {
         if($_POST['action'] == "create") {
             $hash = md5("bubadeira".$email);
-            $db->query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
+            mysql_query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
         } else {
-            $db->query("DELETE FROM areas WHERE email = '{$email}'");
-            $db->query("DELETE FROM skills WHERE email = '{$email}'");
-            $db->query("DELETE FROM otherSkills WHERE email = '{$email}'");
-            $db->query("DELETE FROM frameworks WHERE email = '{$email}'");
+            mysql_query("DELETE FROM areas WHERE email = '{$email}'");
+            mysql_query("DELETE FROM skills WHERE email = '{$email}'");
+            mysql_query("DELETE FROM otherSkills WHERE email = '{$email}'");
+            mysql_query("DELETE FROM frameworks WHERE email = '{$email}'");
         }
 
         foreach ($areas as $area) {
-            $db->query("INSERT OR ROLLBACK INTO areas (email,area) VALUES ('{$email}','{$area}')");
+            mysql_query("INSERT INTO areas (email,area) VALUES ('{$email}','{$area}')");
         }
         foreach ($skills as $skill) {
-            $db->query("INSERT OR ROLLBACK INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
+            mysql_query("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
         }
-        if(strlen($otherSkill) > 0) {
-            $db->query("INSERT OR ROLLBACK INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
+        if(strlen($otherSkills) > 0) {
+            mysql_query("INSERT INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
         }
         if(strlen($framework) > 0) {
-            $db->query("INSERT OR ROLLBACK INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+            mysql_query("INSERT INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
         }
 
         if($_POST['action'] == "edit") {
@@ -154,7 +153,7 @@ if(mysqli_connect_errno() == 0) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.php\" method=\"POST\">
+                    <form action=\"index.html\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>
@@ -174,7 +173,7 @@ if(mysqli_connect_errno() == 0) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.php\" method=\"POST\">
+                    <form action=\"index.html\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>
@@ -183,9 +182,38 @@ if(mysqli_connect_errno() == 0) {
             </section>
         </section>
             ");
+
+            $mail = new PHPMailer;
+
+            $mail->isSMTP();
+            $mail->Host = 'smtp.zoho.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'geral@shiftappens.com';
+            $mail->Password = 'secret';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
+
+            $mail->setFrom('geram@shiftappens.com', 'Shift APPens');
+            $mail->addAddress($email, $name);
+            $mail->addReplyTo('info@shiftappens.com', 'Shift APPens');
+
+            $mail->isHTML(true);
+
+            $mail->Subject = 'Shift APPens - candidatura recebida';
+            $mail->Body    = 'Viva Shifter wannabe,
+
+A tua candidatura ao Shift APPens 2016 foi aceite.
+No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.
+
+Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.
+
+Lorem Ipsum,
+A equipa do Shift APPens
+';
+
+            $mail->send();
         }
-    //}
-    $db->close();
+    }
 } else {
         print("
 
