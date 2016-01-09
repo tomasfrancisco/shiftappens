@@ -181,7 +181,6 @@ if($link) {
             ");
         }
     }
-    $db->close();
 } else {
         print("
 
