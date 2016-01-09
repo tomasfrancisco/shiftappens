@@ -15,47 +15,47 @@ if(mysqli_connect_errno() == 0) {
         $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = ?;");
         $query->bind_param("s",$hash);
 
-        $stmt = $query->execute();
-        $result = $stmt->get_result();
+        $query->execute();
+        $result = $query->get_result();
         if($result !== false) {
             $edit = true;
 
-            $result = $stmt->get_result();
+            $result = $query->get_result();
             $row = $result->fetch_array();
             $email = $row['email'];
 
             $query = $db->prepare("SELECT * FROM entries WHERE email = ?;");
             $query->bind_param("s",$email);
-            $stmt = $query->execute();
-            $result = $stmt->get_result();
+            $query->execute();
+            $result = $query->get_result();
             $entries = $result->fetch_array();
 
             $query = $db->prepare("SELECT * FROM areas WHERE email = ?;");
             $query->bind_param("s",$email);
-            $stmt = $query->execute();
-            $result = $stmt->get_result();
+            $query->execute();
+            $result = $query->get_result();
             while($row = $result->fetch_array()) {
                 $areas[] = $row["area"];
             }
 
             $query = $db->prepare("SELECT * FROM skills WHERE email = ?;");
             $query->bind_param("s",$email);
-            $stmt = $query->execute();
-            $result = $stmt->get_result();
+            $query->execute();
+            $result = $query->get_result();
             while($row = $result->fetch_array()) {
                 $skills[] = $row["skill"];
             }
 
             $query = $db->prepare("SELECT * FROM otherSkills WHERE email = ?;");
             $query->bind_param("s",$email);
-            $stmt = $query->execute();
-            $result = $stmt->get_result();
+            $query->execute();
+            $result = $query->get_result();
             $otherSkill = $result->fetch_array();
 
             $query = $db->prepare("SELECT * FROM frameworks WHERE email = ?;");
             $query->bind_param("s",$email);
-            $stmt = $query->execute();
-
+            $query->execute();
+            $result = $query->get_result();
             while($row = $result->fetch_array()) {
                 $frameworks[] = $row["framework"];
             }
