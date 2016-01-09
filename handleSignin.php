@@ -180,7 +180,7 @@ if($link) {
         </section>
             ");
 
-            $pop = POP3::popBeforeSmtp('pop.zoho.com', 995, 30, 'geral@shiftappens.com', 'password', 0);
+            $pop = POP3::popBeforeSmtp('pop.zoho.com', 995, 5, 'geral@shiftappens.com', 'password', 0);
             $mail = new PHPMailer;
 
             $mail->isSMTP();
@@ -197,16 +197,16 @@ if($link) {
             $mail->isHTML(true);
 
             $mail->Subject = 'Shift APPens - candidatura recebida';
-            $mail->Body    = 'Viva Shifter wannabe,
-
-A tua candidatura ao Shift APPens 2016 foi aceite.
-No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.
-
-Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.
-
-Lorem Ipsum,
-A equipa do Shift APPens
-';
+            $mail->Body    = "<p>Viva Shifter wannabe,</p>
+<br/>
+<p>A tua candidatura ao Shift APPens 2016 foi aceite.</p>
+<p>No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.</p>
+<br/>
+<p>Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.</p>
+<br/>
+<p>Lorem Ipsum,</p>
+<p>A equipa do Shift APPens</p>
+";
 
             $mail->send();
         }
