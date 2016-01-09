@@ -154,11 +154,9 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.html\" method=\"POST\">
-                        <div class=\"form-group\" id=\"submit\">
-                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
-                        </div>
-                    </form>
+                    <div class=\"form-group\" id=\"submit\">
+                        <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
+                    </div>
                 </article>
             </section>
         </section>
@@ -174,17 +172,15 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.html\" method=\"POST\">
-                        <div class=\"form-group\" id=\"submit\">
-                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
-                        </div>
-                    </form>
+                    <div class=\"form-group\" id=\"submit\">
+                        <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
+                    </div>
                 </article>
             </section>
         </section>
             ");
 
-            $pop = POP3::popBeforeSmtp('pop.zoho.com', 995, 30, 'geral@shiftappens.com', 'password', 0);
+            $pop = POP3::popBeforeSmtp('pop.zoho.com', 995, 5, 'geral@shiftappens.com', 'password', 0);
             $mail = new PHPMailer;
 
             $mail->isSMTP();
@@ -201,23 +197,18 @@ if($link) {
             $mail->isHTML(true);
 
             $mail->Subject = 'Shift APPens - candidatura recebida';
-            $mail->Body    = 'Viva Shifter wannabe,
+            $mail->Body    = "<p>Viva Shifter wannabe,</p>
+<br/>
+<p>A tua candidatura ao Shift APPens 2016 foi aceite.</p>
+<p>No dia 12 de fevereiro ir&aacute;s descobrir se foste escolhido para participar neste evento &eacute;pico.</p>
+<br/>
+<p>Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.</p>
+<br/>
+<p>Lorem Ipsum,</p>
+<p>A equipa do Shift APPens</p>
+";
 
-A tua candidatura ao Shift APPens 2016 foi aceite.
-No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.
-
-Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.
-
-Lorem Ipsum,
-A equipa do Shift APPens
-';
-
-            if(!$mail->send()) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
-            } else {
-                echo 'Message has been sent';
-            }
+            $mail->send();
         }
     }
 } else {
