@@ -6,19 +6,13 @@ $skills = array();
 $otherSkill = "";
 $frameworks = array();
 
-class MyDB extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('mysqlitedb.db');
-    }
-}
+$db = new mysqli('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy', 'shiftappens2016');
 
-if (isset($_GET['id']) and $db = new MyDB()) {
+if(mysqli_connect_errno() == 0) {
     $hash = $_GET['id'];
 
-    $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = :hash;");
-    $query->bindValue(":hash",$hash);
+    $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = ?;");
+    $query->bindParam($hash);
 
     $result = $query->execute();
     if($result !== false) {
@@ -27,32 +21,32 @@ if (isset($_GET['id']) and $db = new MyDB()) {
         $row = $result->fetchArray();
         $email = $row['email'];
 
-        $query = $db->prepare("SELECT * FROM entries WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $query = $db->prepare("SELECT * FROM entries WHERE email = ?;");
+        $query->bindParam($email);
         $result = $query->execute();
         $entries = $result->fetchArray();
 
-        $query = $db->prepare("SELECT * FROM areas WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $query = $db->prepare("SELECT * FROM areas WHERE email = ?;");
+        $query->bindParam($email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $areas[] = $row["area"];
         }
 
-        $query = $db->prepare("SELECT * FROM skills WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $query = $db->prepare("SELECT * FROM skills WHERE email = ?;");
+        $query->bindParam($email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $skills[] = $row["skill"];
         }
 
-        $query = $db->prepare("SELECT * FROM otherSkills WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $query = $db->prepare("SELECT * FROM otherSkills WHERE email = ?;");
+        $query->bindParam($email);
         $result = $query->execute();
         $otherSkill = $result->fetchArray();
 
-        $query = $db->prepare("SELECT * FROM frameworks WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $query = $db->prepare("SELECT * FROM frameworks WHERE email = ?;");
+        $query->bindParam($email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $frameworks[] = $row["framework"];
