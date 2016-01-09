@@ -426,25 +426,32 @@ body, html {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px; }
-  #footer .footer-container .footer-content .row .past-editions {
-    display: block; }
-    #footer .footer-container .footer-content .row .past-editions a {
-      color: #4D4D4D;
-      font-size: 16px;
-      font-weight: 300;
-      text-decoration: underline; }
-      #footer .footer-container .footer-content .row .past-editions a:hover {
-        color: #1D1D1D; }
-  #footer .footer-container .footer-content .row .contacts {
-    height: 100%;
+  #footer .footer-container .footer-content .row {
     vertical-align: middle; }
-    #footer .footer-container .footer-content .row .contacts a {
-      margin-left: 15px;
-      margin-right: 15px; }
-      #footer .footer-container .footer-content .row .contacts a i {
-        color: #2D2D2D; }
-      #footer .footer-container .footer-content .row .contacts a:hover {
-        color: #1D1D1D; }
+    #footer .footer-container .footer-content .row .past-editions {
+      padding-top: 5px;
+      padding-bottom: 8px;
+      margin-top: 5px;
+      margin-bottom: 7px;
+      display: block; }
+      #footer .footer-container .footer-content .row .past-editions a {
+        color: #4D4D4D;
+        font-size: 16px;
+        line-height: 15px;
+        font-weight: 300;
+        text-decoration: underline; }
+        #footer .footer-container .footer-content .row .past-editions a:hover {
+          color: #1D1D1D; }
+    #footer .footer-container .footer-content .row .contacts {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+      #footer .footer-container .footer-content .row .contacts a {
+        margin-left: 15px;
+        margin-right: 15px; }
+        #footer .footer-container .footer-content .row .contacts a i {
+          color: #2D2D2D; }
+        #footer .footer-container .footer-content .row .contacts a:hover {
+          color: #1D1D1D; }
 
 #sign-in {
   background-color: #FEFE00;

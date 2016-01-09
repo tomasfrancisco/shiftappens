@@ -84,6 +84,10 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	$(window).scroll(function(event) {
+		$("#modal").modal("hide");
+	});
+
 	$("#security").click(function(event) {
 		$('#modal').modal('show');
 	});
