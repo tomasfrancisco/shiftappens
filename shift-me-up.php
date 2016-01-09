@@ -286,7 +286,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                                     </div>
                                 </div>
                                 <label for="otherSkillsInput" class="control-label">Outro:</label>
-                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkills['skill']."\"";} ?>/>
+                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkill['skill']."\"";} ?>/>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <p>Quais são as tuas áreas?</p>
