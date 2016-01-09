@@ -116,7 +116,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                             </div>
                         </div>
                         <div class="form-group collapse" id="faculty">
-                            <label for="facultyInput" class="control-label">Faculdade</label>
+                            <label for="facultyInput" class="control-label">Faculdade e curso</label>
                             <input type="text" name="faculty" class="form-control" id="facultyInput" placeholder="Faculdade e curso" <?php if($edit and $entries['occupation']=='student'){echo "value=\"".$entries['workplace']."\"";} ?>/>
                         </div>
                         <div class="form-group collapse" id="workplace">
