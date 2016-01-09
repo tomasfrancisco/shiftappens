@@ -69,9 +69,10 @@ if(mysqli_connect_errno() == 0) {
                     VALUES ('{$name}','{$email}','{$phone}','{$age}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
     } else {
         $db->query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
-        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :?;");
-        $query->bindParam($email);
+        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = ?;");
+        $query->bind_param("s",$email);
         $result = $query->execute();
+        $result = $result->get_result();
         $row = $result->fetchArray();
         $query->close();
         $hash = $row['hash'];
@@ -128,16 +129,16 @@ if(mysqli_connect_errno() == 0) {
         }
 
         foreach ($areas as $area) {
-            $db->query("INSERT OR ROLLBACK INTO areas (email,area) VALUES ('{$email}','{$area}')");
+            $db->query("INSERT INTO areas (email,area) VALUES ('{$email}','{$area}')");
         }
         foreach ($skills as $skill) {
-            $db->query("INSERT OR ROLLBACK INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
+            $db->query("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
         }
         if(strlen($otherSkill) > 0) {
-            $db->query("INSERT OR ROLLBACK INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
+            $db->query("INSERT INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
         }
         if(strlen($framework) > 0) {
-            $db->query("INSERT OR ROLLBACK INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+            $db->query("INSERT INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
         }
 
         if($_POST['action'] == "edit") {

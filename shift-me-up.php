@@ -12,7 +12,7 @@ if(mysqli_connect_errno() == 0) {
     $hash = $_GET['id'];
 
     $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = ?;");
-    $query->bindParam($hash);
+    $query->bind_param("s",$hash);
 
     $result = $query->execute();
     if($result !== false) {
@@ -22,31 +22,31 @@ if(mysqli_connect_errno() == 0) {
         $email = $row['email'];
 
         $query = $db->prepare("SELECT * FROM entries WHERE email = ?;");
-        $query->bindParam($email);
+        $query->bind_param("s",$email);
         $result = $query->execute();
         $entries = $result->fetchArray();
 
         $query = $db->prepare("SELECT * FROM areas WHERE email = ?;");
-        $query->bindParam($email);
+        $query->bind_param("s",$email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $areas[] = $row["area"];
         }
 
         $query = $db->prepare("SELECT * FROM skills WHERE email = ?;");
-        $query->bindParam($email);
+        $query->bind_param("s",$email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $skills[] = $row["skill"];
         }
 
         $query = $db->prepare("SELECT * FROM otherSkills WHERE email = ?;");
-        $query->bindParam($email);
+        $query->bind_param("s",$email);
         $result = $query->execute();
         $otherSkill = $result->fetchArray();
 
         $query = $db->prepare("SELECT * FROM frameworks WHERE email = ?;");
-        $query->bindParam($email);
+        $query->bind_param("s",$email);
         $result = $query->execute();
         while($row = $result->fetchArray()) {
             $frameworks[] = $row["framework"];
