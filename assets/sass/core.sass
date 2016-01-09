@@ -56,6 +56,8 @@ body, html
 	font-size: 1.3em
 	height: 100%
 	margin: 0
+	&.modal-open
+		overflow: visible
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq
 	width: 100vw
@@ -158,15 +160,18 @@ body, html
 			text-align: left
 			header
 				h1
+					font-size: 45px
 					span
-						font-size
 						font-family: 'mopsterregular'
-						color: whitesmoke//rgb(255, 37, 156)
+						color: #FEFE00
 			p
+				margin-top: 20px
 				font-size: 0.8em
 				span
 					font-weight: 700
-					color: whitesmoke//rgb(255, 37, 156)
+					color: #FEFE00
+				a
+					color: #FFFFFF
 
 #awards
 	background-color: #2D2D2D
@@ -191,6 +196,37 @@ body, html
 
 #challenges
 	background-color: #FEFE00
+	#modal
+		.modal-dialog
+			.modal-content
+				line-height: 0.9em
+				border-radius: 0px
+				background-color: #FEFE00
+				box-shadow: -10px -10px 0 #262261
+				.modal-header
+					padding-left: 40px
+					border: none
+					.modal-title, .close
+						font-family: 'mopsterregular'
+						font-weight: 700
+						font-size: 1.5rem
+						color: #262261
+				.modal-body
+					padding-left: 40px
+					padding-right: 40px
+					font-size: 0.9em
+					font-weight: 400
+					p
+						line-height: 1.2em
+						span
+							font-weight: 600
+					.list-group
+						.list-group-item
+							padding-top: 4px
+							padding-bottom: 4px
+							margin-left: 10px
+							background-color: #FEFE00
+							border: none
 	.challenges-container
 		header
 			h1
@@ -200,18 +236,24 @@ body, html
 				color: #262261
 		.challenges-content
 			text-align: center
-			.challenge
+			#more
 				opacity: 0.3
 			.security
 				.challenge
 					cursor: pointer
-			.security,.more
+			.more
 				p
 					color: #262261
-					font-weight: 600
 					font-size: 0.9em
+					font-weight: 600
 					margin-top: 10px
 					opacity: 0
+			.security
+				p
+					color: #262261
+					font-size: 0.9em
+					font-weight: 400
+					margin-top: 10px
 
 #faq
 	background-color: #FAFAFA

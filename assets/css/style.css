@@ -55,6 +55,8 @@ body, html {
   font-size: 1.3em;
   height: 100%;
   margin: 0; }
+  body.modal-open, html.modal-open {
+    overflow: visible; }
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
@@ -153,14 +155,19 @@ body, html {
     color: white; }
     #about .about-container div {
       text-align: left; }
-      #about .about-container div header h1 span {
-        font-family: "mopsterregular";
-        color: whitesmoke; }
+      #about .about-container div header h1 {
+        font-size: 45px; }
+        #about .about-container div header h1 span {
+          font-family: "mopsterregular";
+          color: #FEFE00; }
       #about .about-container div p {
+        margin-top: 20px;
         font-size: 0.8em; }
         #about .about-container div p span {
           font-weight: 700;
-          color: whitesmoke; }
+          color: #FEFE00; }
+        #about .about-container div p a {
+          color: #FFFFFF; }
 
 #awards {
   background-color: #2D2D2D; }
@@ -182,6 +189,34 @@ body, html {
 
 #challenges {
   background-color: #FEFE00; }
+  #challenges #modal .modal-dialog .modal-content {
+    line-height: 0.9em;
+    border-radius: 0px;
+    background-color: #FEFE00;
+    box-shadow: -10px -10px 0 #262261; }
+    #challenges #modal .modal-dialog .modal-content .modal-header {
+      padding-left: 40px;
+      border: none; }
+      #challenges #modal .modal-dialog .modal-content .modal-header .modal-title, #challenges #modal .modal-dialog .modal-content .modal-header .close {
+        font-family: "mopsterregular";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #262261; }
+    #challenges #modal .modal-dialog .modal-content .modal-body {
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 0.9em;
+      font-weight: 400; }
+      #challenges #modal .modal-dialog .modal-content .modal-body p {
+        line-height: 1.2em; }
+        #challenges #modal .modal-dialog .modal-content .modal-body p span {
+          font-weight: 600; }
+      #challenges #modal .modal-dialog .modal-content .modal-body .list-group .list-group-item {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-left: 10px;
+        background-color: #FEFE00;
+        border: none; }
   #challenges .challenges-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
@@ -189,16 +224,21 @@ body, html {
     color: #262261; }
   #challenges .challenges-container .challenges-content {
     text-align: center; }
-    #challenges .challenges-container .challenges-content .challenge {
+    #challenges .challenges-container .challenges-content #more {
       opacity: 0.3; }
     #challenges .challenges-container .challenges-content .security .challenge {
       cursor: pointer; }
-    #challenges .challenges-container .challenges-content .security p, #challenges .challenges-container .challenges-content .more p {
+    #challenges .challenges-container .challenges-content .more p {
       color: #262261;
-      font-weight: 600;
       font-size: 0.9em;
+      font-weight: 600;
       margin-top: 10px;
       opacity: 0; }
+    #challenges .challenges-container .challenges-content .security p {
+      color: #262261;
+      font-size: 0.9em;
+      font-weight: 400;
+      margin-top: 10px; }
 
 #faq {
   background-color: #FAFAFA; }

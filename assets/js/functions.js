@@ -68,22 +68,6 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	$("#security").hover(function(){
-		$('.security>p').animate({
-			opacity: 1,
-		}, 200);
-		$('.security>.row>.challenge').animate({
-			opacity: 1,
-		}, 200);
-	},function(){
-		$('.security>p').animate({
-			opacity: 0,
-		}, 200);
-		$('.security>.row>.challenge').animate({
-			opacity: 0.3,
-		}, 200);
-	});
-
 	$("#more").hover(function(){
 		$('.more>p').animate({
 			opacity: 1,
@@ -98,6 +82,10 @@ $(document).ready(function() {
 		$('.more>.row>.challenge').animate({
 			opacity: 0.3,
 		}, 200);
+	});
+
+	$("#security").click(function(event) {
+		$('#modal').modal('show');
 	});
 
 	$('body').scrollspy({target: "#navigation", offset: 52});
