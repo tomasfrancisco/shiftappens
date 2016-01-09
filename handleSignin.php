@@ -186,34 +186,32 @@ if($link) {
             $mail = new PHPMailer;
 
             $mail->isSMTP();
-            $mail->Host = 'smtp1.example.com;smtp2.example.com';
+            $mail->Host = 'smtp.zoho.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'user@example.com';
+            $mail->Username = 'geral@shiftappens.com';
             $mail->Password = 'secret';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
 
-            $mail->setFrom('from@example.com', 'Mailer');
-            $mail->addAddress('joe@example.net', 'Joe User');
-            $mail->addAddress('ellen@example.com');
-            $mail->addReplyTo('info@example.com', 'Information');
-            $mail->addCC('cc@example.com');
-            $mail->addBCC('bcc@example.com');
+            $mail->setFrom('geram@shiftappens.com', 'Shift APPens');
+            $mail->addAddress($email, $name);
+            $mail->addReplyTo('info@shiftappens.com', 'Shift APPens');
 
-            $mail->addAttachment('/var/tmp/file.tar.gz');
-            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');
             $mail->isHTML(true);
 
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Subject = 'Shift APPens - candidatura recebida';
+            $mail->Body    = 'Viva Shifter wannabe,
 
-            if(!$mail->send()) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
-            } else {
-                echo 'Message has been sent';
-            }
+A tua candidatura ao Shift APPens 2016 foi aceite.
+No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.
+
+Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.
+
+Lorem Ipsum,
+A equipa do Shift APPens
+';
+
+            $mail->send();
         }
     }
 } else {
