@@ -81,27 +81,27 @@ if(isset($_GET) and isset($_GET['id'])) {
                     <form method="POST" action="handleSignin.php">
                         <p>Dados Pessoais</p>
                         <div class="form-group">
-                            <label for="nameInput" class="control-label">Nome completo</label>
+                            <label for="nameInput" class="control-label">Nome completo *</label>
                             <input type="text" name="name" class="form-control" id="nameInput" placeholder="Nome completo" <?php if($edit){echo "value=\"".$entries['name']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
-                            <label for="emailInput" class="control-label">Email</label>
+                            <label for="emailInput" class="control-label">Email *</label>
                             <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email" <?php if($edit){echo "readonly value=\"".$entries['email']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
-                            <label for="phoneInput" class="control-label">Telefone</label>
+                            <label for="phoneInput" class="control-label">Telefone *</label>
                             <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" <?php if($edit){echo "value=\"".$entries['phone']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
-                            <label for="ageInput" class="control-label">Idade</label>
+                            <label for="ageInput" class="control-label">Idade *</label>
                             <input type="number" name="age" class="form-control" id="ageInput" placeholder="Idade" <?php if($edit){echo "value=\"".$entries['age']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
-                            <label for="userNameInput" class="control-label">Username</label>
+                            <label for="userNameInput" class="control-label">Username *</label>
                             <input type="text" name="username" class="form-control" id="userNameInput" placeholder="Como queres ser conhecido no slack e nas credenciais" <?php if($edit){echo "value=\"".$entries['username']."\"";} ?> required/>
                         </div>
                         <div class="form-group radio-group">
-                            <p>Profissão</p>
+                            <p>Profissão *</p>
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="occupation" id="worker" value="worker" <?php if($edit and $entries['occupation']=='worker'){echo "checked";} ?> required/>
@@ -145,7 +145,7 @@ if(isset($_GET) and isset($_GET['id'])) {
 
                         <p>Preparação</p>
                         <div class="form-group">
-                            <label for="ideaInput" class="control-label">Tens alguma ideia para desenvolver no ShiftAPPens?</label>
+                            <label for="ideaInput" class="control-label">Tens alguma ideia para desenvolver no ShiftAPPens? *</label>
                             <textarea name="idea" class="form-control" id="ideaInput" rows="5" placeholder="Se sim, descreve." required><?php if($edit){echo $entries['idea'];} ?></textarea>
                         </div>
                         <div class="form-group">
@@ -155,7 +155,7 @@ if(isset($_GET) and isset($_GET['id'])) {
 
                         <p>Experiência</p>
                         <div class="form-group radio-group">
-                            <p>Já participaste em alguma das edições passadas do ShiftAPPens?</p>
+                            <p>Já participaste em alguma das edições passadas do ShiftAPPens? *</p>
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="pastEditions" value="yes" <?php if($edit and $entries['pastEditions']=='yes'){echo "checked";} ?> required/>
@@ -170,7 +170,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                             </div>
                         </div>
                         <div class="form-group radio-group">
-                            <p>E noutros hackathons?</p>
+                            <p>E noutros hackathons? *</p>
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="hackathons" value="yes" <?php if($edit and $entries['hackathons']=='yes'){echo "checked";} ?> required/>
@@ -372,11 +372,11 @@ if(isset($_GET) and isset($_GET['id'])) {
 
                         <p>Agora convence-nos</p>
                         <div class="form-group">
-                            <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste?</label>
+                            <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste? *</label>
                             <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required><?php if($edit){echo $entries['about'];} ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar?</label>
+                            <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar? *</label>
                             <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required><?php if($edit){echo $entries['why'];} ?></textarea>
                         </div>
 
