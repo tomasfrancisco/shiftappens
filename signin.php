@@ -1,3 +1,56 @@
+<?php
+$edit = false;
+$entries = NULL;
+$areas = NULL;
+$skills = NULL;
+$frameworks = NULL;
+
+class MyDB extends SQLite3
+{
+    function __construct()
+    {
+        $this->open('mysqlitedb.db');
+    }
+}
+
+if (isset($_GET['id']) and $db = new MyDB()) {
+    $hash = $_GET['id'];
+
+    $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = :hash;");
+    $query->bindValue(":hash",$hash);
+
+    $result = $query->execute();
+    if($result !== false) {
+        $edit = true;
+
+        $row = $result->fetchArray();
+        $email = $row['email'];
+
+        $query = $db->prepare("SELECT * FROM entries WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $entries = $result->fetchArray();
+
+        $query = $db->prepare("SELECT * FROM areas WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $areas = $result->fetchArray();
+
+        $query = $db->prepare("SELECT * FROM skills WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $skills = $result->fetchArray();
+
+        $query = $db->prepare("SELECT * FROM frameworks WHERE email = :email;");
+        $query->bindValue(":email",$email);
+        $result = $query->execute();
+        $frameworks = $result->fetchArray();
+    } else {
+        $edit = false;
+    }
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
