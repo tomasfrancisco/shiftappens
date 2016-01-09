@@ -4,7 +4,7 @@ $entries = NULL;
 $areas = array();
 $skills = array();
 $otherSkill = "";
-$frameworks = array();
+$frameworks = "";
 
 if(isset($_GET) and isset($_GET['id'])) {
     $hash = $_GET['id'];
@@ -37,9 +37,7 @@ if(isset($_GET) and isset($_GET['id'])) {
             $otherSkill = mysql_fetch_array($result);
 
             $result = mysql_query("SELECT * FROM frameworks WHERE email = '{$email}';");
-            while($row = mysql_fetch_array($result)) {
-                $frameworks[] = $row["framework"];
-            }
+            $frameworks = mysql_fetch_array($result);
         } else {
             $edit = false;
         }

@@ -62,7 +62,7 @@ if($link) {
     $team = mysql_real_escape_string(htmlentities($_POST['team']));
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = mysql_real_escape_string(htmlentities($_POST['otherSkills']));
+    $otherSkills = mysql_real_escape_string(htmlentities($_POST['otherSkills']));
     $framework = mysql_real_escape_string(htmlentities($_POST['framework']));
     $hash = "";
 
