@@ -16,7 +16,6 @@ if(isset($_GET) and isset($_GET['id'])) {
         $result = mysql_query("SELECT * FROM hashcodes WHERE hash = '{$hash}';");
         if(mysql_num_rows($result) != 0) {
             $edit = true;
-            echo $edit;
 
             $row = mysql_fetch_array($result);
             $email = $row['email'];
