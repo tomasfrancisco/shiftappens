@@ -93,6 +93,10 @@ if($db = new MyDB()) {
         email TEXT REFERENCES entries (email) ON DELETE CASCADE,
         framework TEXT NOT NULL)');
 
+    $db->exec('CREATE TABLE IF NOT EXISTS hashcodes(
+        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
+        hash TEXT NOT NULL)');
+
 
     $db->exec("INSERT INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
                 VALUES ('{$name}','{$email}','{$phone}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
