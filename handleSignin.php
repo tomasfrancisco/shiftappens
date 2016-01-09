@@ -62,7 +62,7 @@ if($link) {
     $team = mysql_real_escape_string(htmlentities($_POST['team']));
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkills = mysql_real_escape_string(htmlentities($_POST['otherSkill']));
+    $otherSkills = mysql_real_escape_string(htmlentities($_POST['otherSkills']));
     $framework = mysql_real_escape_string(htmlentities($_POST['framework']));
     $hash = "";
 
@@ -132,7 +132,7 @@ if($link) {
         foreach ($skills as $skill) {
             mysql_query("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
         }
-        if(strlen($otherSkill) > 0) {
+        if(strlen($otherSkills) > 0) {
             mysql_query("INSERT INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
         }
         if(strlen($framework) > 0) {
