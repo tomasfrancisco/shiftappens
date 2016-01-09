@@ -77,11 +77,8 @@ if(mysqli_connect_errno() == 0) {
         $hash = $row['hash'];
     }
 
-    echo $db->errno;
-    echo $db->error;
-
-    /*if($db->lastErrorCode() == 19){
-        $msg = $db->lastErrorMsg();
+    if($db->errno == 1062){
+        $msg = $db->error;
         $title = "";
         if($_POST['action'] == "create"){
             $title = "Erro a inscrever";
@@ -89,7 +86,7 @@ if(mysqli_connect_errno() == 0) {
             $title = "Erro a guardar alteracoes";
         }
         $error = "";
-        if(strpos($msg,'email') !== false) {
+        if(strpos($msg,'PRIMARY') !== false) {
             $error = "Já existe um user com esse email";
         } elseif(strpos($msg,'phone') !== false) {
             $error = "Já existe um user com esse contacto";
@@ -119,7 +116,7 @@ if(mysqli_connect_errno() == 0) {
             ");
         
         
-    } else {*/
+    } else {
         if($_POST['action'] == "create") {
             $hash = md5("bubadeira".$email);
             $db->query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
@@ -184,7 +181,7 @@ if(mysqli_connect_errno() == 0) {
         </section>
             ");
         }
-    //}
+    }
     $db->close();
 } else {
         print("
