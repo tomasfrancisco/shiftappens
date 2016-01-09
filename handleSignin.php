@@ -154,11 +154,9 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.html\" method=\"POST\">
-                        <div class=\"form-group\" id=\"submit\">
-                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
-                        </div>
-                    </form>
+                    <div class=\"form-group\" id=\"submit\">
+                        <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
+                    </div>
                 </article>
             </section>
         </section>
@@ -174,11 +172,9 @@ if($link) {
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
                     <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
-                    <form action=\"index.html\" method=\"POST\">
-                        <div class=\"form-group\" id=\"submit\">
-                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
-                        </div>
-                    </form>
+                    <div class=\"form-group\" id=\"submit\">
+                        <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
+                    </div>
                 </article>
             </section>
         </section>
@@ -212,12 +208,7 @@ Lorem Ipsum,
 A equipa do Shift APPens
 ';
 
-            if(!$mail->send()) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
-            } else {
-                echo 'Message has been sent';
-            }
+            $mail->send();
         }
     }
 } else {
