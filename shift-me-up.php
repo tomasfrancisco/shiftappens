@@ -109,6 +109,10 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                             <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" <?php if($edit){echo "value=\"".$entries['phone']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
+                            <label for="ageInput" class="control-label">Idade</label>
+                            <input type="number" name="age" class="form-control" id="ageInput" placeholder="Idade" <?php if($edit){echo "value=\"".$entries['age']."\"";} ?> required/>
+                        </div>
+                        <div class="form-group">
                             <label for="userNameInput" class="control-label">Username</label>
                             <input type="text" name="username" class="form-control" id="userNameInput" placeholder="Como queres ser conhecido no slack e nas credenciais" <?php if($edit){echo "value=\"".$entries['username']."\"";} ?> required/>
                         </div>
@@ -155,20 +159,17 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                             <input type="url" class="form-control" name="repository" id="repositoryInput" placeholder="Repositório (github, bitbucket, gitlab)" <?php if($edit){echo "value=\"".$entries['repository']."\"";} ?>/>
                         </div>
 
-
-                        <p>Motivação</p>
-                        <div class="form-group">
-                            <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste?</label>
-                            <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required><?php if($edit){echo $entries['about'];} ?></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar?</label>
-                            <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required><?php if($edit){echo $entries['why'];} ?></textarea>
-                        </div>
+                        <p>Preparação</p>
                         <div class="form-group">
                             <label for="ideaInput" class="control-label">Tens alguma ideia para desenvolver no ShiftAPPens?</label>
                             <textarea name="idea" class="form-control" id="ideaInput" rows="5" placeholder="Se sim, descreve." required><?php if($edit){echo $entries['idea'];} ?></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="teamInput" class="control-label">Já tens equipa em mente? Indica os nomes dos teus colegas.</label>
+                            <input type="text" name="team" class="form-control" id="teamInput" placeholder="Isto pode ajudar-nos a associar as pessoas a uma equipa" <?php if($edit){echo "value=\"".$entries['team']."\"";} ?>/>
+                        </div>
+
+                        <p>Experiência</p>
                         <div class="form-group radio-group">
                             <p>Já participaste em alguma das edições passadas do ShiftAPPens?</p>
                             <div class="radio">
@@ -198,10 +199,6 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                                     Não
                                 </label>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="teamInput" class="control-label">Já tens equipa em mente? Indica os nomes dos teus colegas.</label>
-                            <input type="text" name="team" class="form-control" id="teamInput" placeholder="Isto pode ajudar-nos a associar as pessoas a uma equipa" <?php if($edit){echo "value=\"".$entries['team']."\"";} ?>/>
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
@@ -388,6 +385,17 @@ if (isset($_GET['id']) and $db = new MyDB()) {
 
                             </div>
                         </div>
+
+                        <p>Agora convence-nos</p>
+                        <div class="form-group">
+                            <label for="aboutInput" class="control-label">Fala-nos sobre ti. Quais os projetos que já desenvolveste?</label>
+                            <textarea name="about" class="form-control" id="aboutInput" rows="5" placeholder="Pretendemos que escrevas uma pequena biografia e que te refiras a todos os projetos que já desenvolveste e que aches relevantes." required><?php if($edit){echo $entries['about'];} ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="whyInput" class="control-label">Porque é que deves ser escolhido para participar?</label>
+                            <textarea name="why" class="form-control" id="whyInput" rows="5" placeholder="Não te desleixes nesta, convence-nos de que deves ser escolhido." required><?php if($edit){echo $entries['why'];} ?></textarea>
+                        </div>
+
                         <input type="hidden" name="action" value="<?php if($edit){echo "edit";}else{echo "create";}?>"/>
                         <div class="form-group" id="submit">
                             <input class="button" type="submit" value="<?php if($edit){echo "Guardar alterações";}else{echo "Shift me up";}?>"/>

@@ -45,6 +45,7 @@ if($db = new MyDB()) {
     $name = $db->escapeString($_POST['name']);
     $email = $db->escapeString($_POST['email']);
     $phone = $db->escapeString($_POST['phone']);
+    $age = $db->escapeString($_POST['age']);
     $username = $db->escapeString($_POST['username']);
     $occupation = $db->escapeString($_POST['occupation']);
     $workplace = "";
@@ -73,6 +74,7 @@ if($db = new MyDB()) {
         name TEXT NOT NULL,
         email TEXT PRIMARY KEY UNIQUE NOT NULL,
         phone INT UNIQUE NOT NULL,
+        age INT UNIQUE NOT NULL,
         username TEXT UNIQUE NOT NULL,
         occupation TEXT NOT NULL,
         workplace TEXT,
@@ -108,10 +110,10 @@ if($db = new MyDB()) {
         hash TEXT NOT NULL)');
 
     if($_POST['action'] == "create") {
-        $db->exec("INSERT INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
-                    VALUES ('{$name}','{$email}','{$phone}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
+        $db->exec("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+                    VALUES ('{$name}','{$email}','{$phone}','{$age}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
     } else {
-        $db->exec("UPDATE OR ROLLBACK entries SET name='{$name}',phone='{$phone}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
+        $db->exec("UPDATE OR ROLLBACK entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
         $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :email;");
         $query->bindValue(":email",$email);
         $result = $query->execute();
@@ -192,7 +194,7 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">http://www.shiftappens.com/signin.php?id={$hash}</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
@@ -212,7 +214,7 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">http://www.shiftappens.com/signin.php?id={$hash}</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
