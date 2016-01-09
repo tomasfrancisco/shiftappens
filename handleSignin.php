@@ -33,95 +33,54 @@ if (count($_POST)==0) {
 
 <?php
 
-class MyDB extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('mysqlitedb.db');
-    }
-}
+$db = new mysqli('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy', 'shiftappens2016');
 
-if($db = new MyDB()) {
-    $name = $db->escapeString($_POST['name']);
-    $email = $db->escapeString($_POST['email']);
-    $phone = $db->escapeString($_POST['phone']);
-    $age = $db->escapeString($_POST['age']);
-    $username = $db->escapeString($_POST['username']);
-    $occupation = $db->escapeString($_POST['occupation']);
+if(mysqli_connect_errno() == 0) {
+    $name = $db->real_escape_string($_POST['name']);
+    $email = $db->real_escape_string($_POST['email']);
+    $phone = $db->real_escape_string($_POST['phone']);
+    $age = $db->real_escape_string($_POST['age']);
+    $username = $db->real_escape_string($_POST['username']);
+    $occupation = $db->real_escape_string($_POST['occupation']);
     $workplace = "";
     if($occupation == "student") {
-        $workplace = $db->escapeString($_POST['faculty']);
+        $workplace = $db->real_escape_string($_POST['faculty']);
     } else {
-        $workplace = $db->escapeString($_POST['workplace']);
+        $workplace = $db->real_escape_string($_POST['workplace']);
     }
-    $twitter = $db->escapeString($_POST['twitter']);
-    $linkedin = $db->escapeString($_POST['linkedin']);
-    $website = $db->escapeString($_POST['website']);
-    $repository = $db->escapeString($_POST['repository']);
-    $about = $db->escapeString($_POST['about']);
-    $why = $db->escapeString($_POST['why']);
-    $idea = $db->escapeString($_POST['idea']);
-    $pastEditions = $db->escapeString($_POST['pastEditions']);
-    $hackathons = $db->escapeString($_POST['hackathons']);
-    $team = $db->escapeString($_POST['team']);
+    $twitter = $db->real_escape_string($_POST['twitter']);
+    $linkedin = $db->real_escape_string($_POST['linkedin']);
+    $website = $db->real_escape_string($_POST['website']);
+    $repository = $db->real_escape_string($_POST['repository']);
+    $about = $db->real_escape_string($_POST['about']);
+    $why = $db->real_escape_string($_POST['why']);
+    $idea = $db->real_escape_string($_POST['idea']);
+    $pastEditions = $db->real_escape_string($_POST['pastEditions']);
+    $hackathons = $db->real_escape_string($_POST['hackathons']);
+    $team = $db->real_escape_string($_POST['team']);
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = $db->escapeString($_POST['otherSkills']);
-    $framework = $db->escapeString($_POST['framework']);
+    $otherSkill = $db->real_escape_string($_POST['otherSkills']);
+    $framework = $db->real_escape_string($_POST['framework']);
     $hash = "";
 
-    $db->exec('CREATE TABLE IF NOT EXISTS entries(
-        name TEXT NOT NULL,
-        email TEXT PRIMARY KEY UNIQUE NOT NULL,
-        phone INT UNIQUE NOT NULL,
-        age INT UNIQUE NOT NULL,
-        username TEXT UNIQUE NOT NULL,
-        occupation TEXT NOT NULL,
-        workplace TEXT,
-        twitter TEXT,
-        linkedin TEXT,
-        website TEXT,
-        repository TEXT,
-        about TEXT NOT NULL,
-        why TEXT NOT NULL,
-        idea TEXT NOT NULL,
-        pastEditions TEXT NOT NULL,
-        hackathons TEXT NOT NULL,
-        team TEXT)');
-
-    $db->exec('CREATE TABLE IF NOT EXISTS areas(
-        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
-        area TEXT NOT NULL)');
-
-    $db->exec('CREATE TABLE IF NOT EXISTS skills(
-        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
-        skill TEXT NOT NULL)');
-
-    $db->exec('CREATE TABLE IF NOT EXISTS otherSkills(
-        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
-        skill TEXT NOT NULL)');
-
-    $db->exec('CREATE TABLE IF NOT EXISTS frameworks(
-        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
-        framework TEXT NOT NULL)');
-
-    $db->exec('CREATE TABLE IF NOT EXISTS hashcodes(
-        email TEXT REFERENCES entries (email) ON DELETE CASCADE,
-        hash TEXT NOT NULL)');
-
     if($_POST['action'] == "create") {
-        $db->exec("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+        $db->query("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
                     VALUES ('{$name}','{$email}','{$phone}','{$age}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
     } else {
-        $db->exec("UPDATE OR ROLLBACK entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
-        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :email;");
-        $query->bindValue(":email",$email);
+        $db->query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
+        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :?;");
+        $query->bindParam($email);
         $result = $query->execute();
         $row = $result->fetchArray();
+        $query->close();
         $hash = $row['hash'];
     }
 
-    if($db->lastErrorCode() == 19){
+    echo $db->errno;
+    echo $db->error;
+
+    /*if($db->lastErrorCode() == 19){
         $msg = $db->lastErrorMsg();
         $title = "";
         if($_POST['action'] == "create"){
@@ -160,28 +119,28 @@ if($db = new MyDB()) {
             ");
         
         
-    } else {
+    } else {*/
         if($_POST['action'] == "create") {
             $hash = md5("bubadeira".$email);
-            $db->exec("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
+            $db->query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
         } else {
-            $db->exec("DELETE FROM areas WHERE email = '{$email}'");
-            $db->exec("DELETE FROM skills WHERE email = '{$email}'");
-            $db->exec("DELETE FROM otherSkills WHERE email = '{$email}'");
-            $db->exec("DELETE FROM frameworks WHERE email = '{$email}'");
+            $db->query("DELETE FROM areas WHERE email = '{$email}'");
+            $db->query("DELETE FROM skills WHERE email = '{$email}'");
+            $db->query("DELETE FROM otherSkills WHERE email = '{$email}'");
+            $db->query("DELETE FROM frameworks WHERE email = '{$email}'");
         }
 
         foreach ($areas as $area) {
-            $db->exec("INSERT OR ROLLBACK INTO areas (email,area) VALUES ('{$email}','{$area}')");
+            $db->query("INSERT OR ROLLBACK INTO areas (email,area) VALUES ('{$email}','{$area}')");
         }
         foreach ($skills as $skill) {
-            $db->exec("INSERT OR ROLLBACK INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
+            $db->query("INSERT OR ROLLBACK INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
         }
         if(strlen($otherSkill) > 0) {
-            $db->exec("INSERT OR ROLLBACK INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
+            $db->query("INSERT OR ROLLBACK INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
         }
         if(strlen($framework) > 0) {
-            $db->exec("INSERT OR ROLLBACK INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+            $db->query("INSERT OR ROLLBACK INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
         }
 
         if($_POST['action'] == "edit") {
@@ -225,7 +184,8 @@ if($db = new MyDB()) {
         </section>
             ");
         }
-    }
+    //}
+    $db->close();
 } else {
         print("
 
