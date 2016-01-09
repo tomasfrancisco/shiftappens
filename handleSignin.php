@@ -184,7 +184,7 @@ if($link) {
         </section>
             ");
 
-            $pop = POP3::popBeforeSmtp('pop.zoho.com', 110, 30, 'geral@shiftappens.com', 'password', 1);
+            $pop = POP3::popBeforeSmtp('pop.zoho.com', 995, 30, 'geral@shiftappens.com', 'password', 0);
             $mail = new PHPMailer;
 
             $mail->isSMTP();
