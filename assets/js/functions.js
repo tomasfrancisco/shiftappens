@@ -21,21 +21,51 @@ $(document).ready(function() {
 	});
 
 	$("#gold").hover(function(){
-		$(".gold>p").css('opacity', '1');
+		$('.gold>p').animate({
+			opacity: 1,
+		}, 500);
+		$('.gold>.row>.award').animate({
+			opacity: 1,
+		}, 500);
 	},function(){
-		$(".gold>p").css('opacity', '0');
+		$('.gold>p').animate({
+			opacity: 0,
+		}, 500);
+		$('.gold>.row>.award').animate({
+			opacity: 0.3,
+		}, 500);
 	});
 
 	$("#silver").hover(function(){
-		$(".silver>p").css('opacity', '1');
+		$('.silver>p').animate({
+			opacity: 1,
+		}, 500);
+		$('.silver>.row>.award').animate({
+			opacity: 1,
+		}, 500);
 	},function(){
-		$(".silver>p").css('opacity', '0');
+		$('.silver>p').animate({
+			opacity: 0,
+		}, 500);
+		$('.silver>.row>.award').animate({
+			opacity: 0.3,
+		}, 500);
 	});
 
 	$("#bronze").hover(function(){
-		$(".bronze>p").css('opacity', '1');
+		$('.bronze>p').animate({
+			opacity: 1,
+		}, 500);
+		$('.bronze>.row>.award').animate({
+			opacity: 1,
+		}, 500);
 	},function(){
-		$(".bronze>p").css('opacity', '0');
+		$('.bronze>p').animate({
+			opacity: 0,
+		}, 500);
+		$('.bronze>.row>.award').animate({
+			opacity: 0.3,
+		}, 500);
 	});
 
 	$('body').scrollspy({target: "#navigation", offset: 52});
