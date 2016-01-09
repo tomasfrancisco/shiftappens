@@ -68,6 +68,38 @@ $(document).ready(function() {
 		}, 500);
 	});
 
+	$("#security").hover(function(){
+		$('.security>p').animate({
+			opacity: 1,
+		}, 500);
+		$('.security>.row>.challenge').animate({
+			opacity: 1,
+		}, 500);
+	},function(){
+		$('.security>p').animate({
+			opacity: 0,
+		}, 500);
+		$('.security>.row>.challenge').animate({
+			opacity: 0.3,
+		}, 500);
+	});
+
+	$("#more").hover(function(){
+		$('.more>p').animate({
+			opacity: 1,
+		}, 500);
+		$('.more>.row>.challenge').animate({
+			opacity: 1,
+		}, 500);
+	},function(){
+		$('.more>p').animate({
+			opacity: 0,
+		}, 500);
+		$('.more>.row>.challenge').animate({
+			opacity: 0.3,
+		}, 500);
+	});
+
 	$('body').scrollspy({target: "#navigation", offset: 52});
 
 	$(function() {

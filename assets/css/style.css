@@ -57,12 +57,12 @@ body, html {
   margin: 0; }
 
 #home, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
-  width: 100%;
+  width: 100vw;
   padding-top: 27px;
   padding-bottom: 75px; }
   #home .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
     text-align: center; }
-    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1,#challenges .container > header, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
+    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #challenges .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
       padding-bottom: 25px; }
 
 #navigation {
@@ -108,7 +108,7 @@ body, html {
 
 #home {
   height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   padding-top: 15vh;
   overflow-y: hidden; }
   #home .home-container {
@@ -189,19 +189,19 @@ body, html {
     color: #262261; }
   #challenges .challenges-container .challenges-content {
     text-align: center; }
-    #challenges .challenges-container .challenges-content .award {
+    #challenges .challenges-container .challenges-content .challenge {
       opacity: 0.3; }
-      #challenges .challenges-container .challenges-content .award:hover {
-        opacity: 1; }
-    #challenges .challenges-container .challenges-content .gold p, #challenges .challenges-container .challenges-content .silver p, #challenges .challenges-container .challenges-content .bronze p {
-      color: whitesmoke;
+    #challenges .challenges-container .challenges-content .security .challenge {
+      cursor: pointer; }
+    #challenges .challenges-container .challenges-content .security p, #challenges .challenges-container .challenges-content .more p {
+      color: #262261;
       font-weight: 600;
       font-size: 0.9em;
       margin-top: 10px;
       opacity: 0; }
 
 #faq {
-  background-color: #FFFFFF; }
+  background-color: #FAFAFA; }
   #faq .faq-container header h1 {
     font-family: "mopsterregular";
     font-weight: 700;
@@ -310,7 +310,6 @@ body, html {
     display: none; }
   #schedule .schedule-container .schedule-board-container .mobile-schedule {
     display: block; } }
-
 #where {
   background-color: #262261; }
   #where .where-container {
@@ -333,7 +332,7 @@ body, html {
           color: white; }
 
 #partners {
-  background-color: #FFFFFF; }
+  background-color: #FAFAFA; }
   #partners .partners-container header:first-child h1 {
     font-family: "mopsterregular";
     color: #262261;
@@ -433,8 +432,7 @@ body, html {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
-      color: #262261;
-      text-align: left; }
+      color: #262261; }
     #sign-in .sign-in-container .sign-in-content {
       display: inline-block;
       width: 60%;
@@ -468,7 +466,8 @@ body, html {
         text-align: center; }
 
 #error {
-  background-color: #FFFFFF;
+  height: 100vh;
+  background-color: #fafafa;
   display: table; }
   #error .error-container {
     display: table-cell;
@@ -501,14 +500,14 @@ body, html {
         margin-top: 30px; }
 
 #success {
-  background-color: #231f20;
+  height: 100vh;
+  background-color: #ff259c;
   display: table; }
   #success .success-container {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     padding: 20px 0;
-    color: whitesmoke;
     width: 100%;
     height: 100%; }
     #success .success-container header h1 {
@@ -516,7 +515,7 @@ body, html {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
-      color: whitesmoke;
+      color: white;
       text-align: left; }
     #success .success-container article {
       display: inline-block;
@@ -525,13 +524,16 @@ body, html {
       vertical-align: middle;
       text-align: left;
       padding: 20px 50px 20px 50px;
-      background-color: #2d2d2d;
+      background-color: #262261;
       font-size: 0.8em;
-      box-shadow: -10px -10px 0 whitesmoke; }
+      box-shadow: -10px -10px 0 white; }
       #success .success-container article p {
         font-size: 1.2em;
         font-weight: 700;
-        margin-top: 30px; }
+        margin-top: 30px;
+        color: #fff; }
+        #success .success-container article p a {
+          color: #fff; }
       #success .success-container article .form-group {
         padding-top: 20px;
         text-align: center;

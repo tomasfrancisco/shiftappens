@@ -13,7 +13,7 @@ if (count($_POST)==0) {
         <meta charset="utf-8"/>
         <title>Shift APPens</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.jpeg"/>
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico"/>
 
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
@@ -185,7 +185,7 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"https:shiftappens.com/signin.php?id={$hash}\">\"https:shiftappens.com/signin.php?id={$hash}\"</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">\"http://www.shiftappens.com/signin.php?id={$hash}\"</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input type=\"submit\" value=\"Voltar à página principal\"/>
@@ -205,7 +205,7 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"https:shiftappens.com/signin.php?id={$hash}\">\"https:shiftappens.com/signin.php?id={$hash}\"</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">\"http://www.shiftappens.com/signin.php?id={$hash}\"</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
                             <input type=\"submit\" value=\"Voltar à página principal\"/>

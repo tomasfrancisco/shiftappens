@@ -70,7 +70,7 @@ if (isset($_GET['id']) and $db = new MyDB()) {
         <meta charset="utf-8"/>
         <title>Shift APPens</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.jpeg"/>
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico"/>
 
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
@@ -390,7 +390,7 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                         </div>
                         <input type="hidden" name="action" value="<?php if($edit){echo "edit";}else{echo "create";}?>"/>
                         <div class="form-group" id="submit">
-                            <input type="submit" value="Inscrever-me"/>
+                            <input type="submit" value="<?php if($edit){echo "Guardar alterações";}else{echo "Shift me up";}?>"/>
                         </div>
 
                     </form>
