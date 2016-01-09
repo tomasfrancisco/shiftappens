@@ -382,11 +382,14 @@ body, html {
           #partners .partners-container .partners-content .partners li a:hover {
             opacity: 0.7; }
       #partners .partners-container .partners-content .partners.gold .org-img {
-        width: 300px; }
+        margin: 5px;
+        width: 150px; }
       #partners .partners-container .partners-content .partners.silver .org-img {
-        width: 200px; }
-      #partners .partners-container .partners-content .partners.bronze .org-img {
+        margin: 5px;
         width: 120px; }
+      #partners .partners-container .partners-content .partners.bronze .org-img {
+        margin: 5px;
+        width: 150px; }
 
 #footer {
   background-color: #DDDDDD;
@@ -417,7 +420,7 @@ body, html {
     font-size: 12px; }
 
 #sign-in {
-  background-color: #fefe00;
+  background-color: #FEFE00;
   display: table; }
   #sign-in .sign-in-container {
     display: table-cell;
@@ -464,17 +467,30 @@ body, html {
       #sign-in .sign-in-container .sign-in-content form #submit {
         margin-top: 20px;
         text-align: center; }
+        #sign-in .sign-in-container .sign-in-content form #submit .button {
+          background-color: #262261;
+          color: #FFFFFF;
+          border: none;
+          font-size: 1.2em;
+          font-weight: 600;
+          margin-right: 3px;
+          margin-bottom: 3px; }
+          #sign-in .sign-in-container .sign-in-content form #submit .button:hover {
+            box-shadow: -3px -3px 0 #999999;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 3px;
+            margin-top: 3px; }
 
 #error {
   height: 100vh;
-  background-color: #fafafa;
+  background-color: #ff259c;
   display: table; }
   #error .error-container {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     padding: 20px 0;
-    color: #c81e1e;
     width: 100%;
     height: 100%; }
     #error .error-container header h1 {
@@ -482,8 +498,7 @@ body, html {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
-      color: #c81e1e;
-      text-align: left; }
+      color: #FFFFFF; }
     #error .error-container article {
       display: inline-block;
       width: 60%;
@@ -491,17 +506,37 @@ body, html {
       vertical-align: middle;
       text-align: left;
       padding: 20px 50px 20px 50px;
-      background-color: #e6e6e6;
+      background-color: #262261;
       font-size: 0.8em;
-      box-shadow: -10px -10px 0 #c81e1e; }
+      box-shadow: -10px -10px 0 #FFFFFF; }
       #error .error-container article p {
         font-size: 1.2em;
-        font-weight: 700;
-        margin-top: 30px; }
+        font-weight: 600;
+        margin-top: 30px;
+        color: #FFFFFF; }
+        #error .error-container article p a {
+          color: #FFFFFF; }
+      #error .error-container article .form-group {
+        padding-top: 20px;
+        text-align: center; }
+        #error .error-container article .form-group .button {
+          background-color: #FFFFFF;
+          color: #262261;
+          border: none;
+          font-size: 1.2em;
+          font-weight: 600;
+          margin-right: 3px;
+          margin-bottom: 3px; }
+          #error .error-container article .form-group .button:hover {
+            box-shadow: -3px -3px 0 #B2B2B2;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 3px;
+            margin-top: 3px; }
 
 #success {
   height: 100vh;
-  background-color: #ff259c;
+  background-color: #00A79D;
   display: table; }
   #success .success-container {
     display: table-cell;
@@ -515,8 +550,7 @@ body, html {
       font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
-      color: white;
-      text-align: left; }
+      color: #fff; }
     #success .success-container article {
       display: inline-block;
       width: 60%;
@@ -526,7 +560,7 @@ body, html {
       padding: 20px 50px 20px 50px;
       background-color: #262261;
       font-size: 0.8em;
-      box-shadow: -10px -10px 0 white; }
+      box-shadow: -10px -10px 0 #fff; }
       #success .success-container article p {
         font-size: 1.2em;
         font-weight: 700;
@@ -536,7 +570,20 @@ body, html {
           color: #fff; }
       #success .success-container article .form-group {
         padding-top: 20px;
-        text-align: center;
-        color: #2d2d2d; }
+        text-align: center; }
+        #success .success-container article .form-group .button {
+          background-color: #FFFFFF;
+          color: #262261;
+          border: none;
+          font-size: 1.2em;
+          font-weight: 600;
+          margin-right: 3px;
+          margin-bottom: 3px; }
+          #success .success-container article .form-group .button:hover {
+            box-shadow: -3px -3px 0 #B2B2B2;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 3px;
+            margin-top: 3px; }
 
 /*# sourceMappingURL=style.css.map */

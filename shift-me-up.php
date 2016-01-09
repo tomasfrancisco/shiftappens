@@ -390,7 +390,7 @@ if (isset($_GET['id']) and $db = new MyDB()) {
                         </div>
                         <input type="hidden" name="action" value="<?php if($edit){echo "edit";}else{echo "create";}?>"/>
                         <div class="form-group" id="submit">
-                            <input type="submit" value="<?php if($edit){echo "Guardar alterações";}else{echo "Shift me up";}?>"/>
+                            <input class="button" type="submit" value="<?php if($edit){echo "Guardar alterações";}else{echo "Shift me up";}?>"/>
                         </div>
 
                     </form>

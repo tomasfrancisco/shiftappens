@@ -108,10 +108,8 @@ if($db = new MyDB()) {
         hash TEXT NOT NULL)');
 
     if($_POST['action'] == "create") {
-        $db->exec("INSERT OR ROLLBACK INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+        $db->exec("INSERT INTO entries (name,email,phone,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
                     VALUES ('{$name}','{$email}','{$phone}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
-        $hash = md5("bubadeira".$email);
-        $db->exec("INSERT OR ROLLBACK INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
     } else {
         $db->exec("UPDATE OR ROLLBACK entries SET name='{$name}',phone='{$phone}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
         $query = $db->prepare("SELECT * FROM hashcodes WHERE email = :email;");
@@ -123,6 +121,12 @@ if($db = new MyDB()) {
 
     if($db->lastErrorCode() == 19){
         $msg = $db->lastErrorMsg();
+        $title = "";
+        if($_POST['action'] == "create"){
+            $title = "Erro a inscrever";
+        } else {
+            $title = "Erro a guardar alteracoes";
+        }
         $error = "";
         if(strpos($msg,'email') !== false) {
             $error = "Já existe um user com esse email";
@@ -145,7 +149,7 @@ if($db = new MyDB()) {
                     <p>{$error}</p>
                     <form action=\"javascript:history.go(-1)\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
-                            <input type=\"submit\" value=\"Voltar atrás\"/>
+                            <input class=\"button\" type=\"submit\" value=\"Voltar atrás\"/>
                         </div>
                     </form>
                 </article>
@@ -155,7 +159,10 @@ if($db = new MyDB()) {
         
         
     } else {
-        if($_POST['action'] == "edit") {
+        if($_POST['action'] == "create") {
+            $hash = md5("bubadeira".$email);
+            $db->exec("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
+        } else {
             $db->exec("DELETE FROM areas WHERE email = '{$email}'");
             $db->exec("DELETE FROM skills WHERE email = '{$email}'");
             $db->exec("DELETE FROM otherSkills WHERE email = '{$email}'");
@@ -185,10 +192,10 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">\"http://www.shiftappens.com/signin.php?id={$hash}\"</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">http://www.shiftappens.com/signin.php?id={$hash}</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
-                            <input type=\"submit\" value=\"Voltar à página principal\"/>
+                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>
                     </form>
                 </article>
@@ -205,10 +212,10 @@ if($db = new MyDB()) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">\"http://www.shiftappens.com/signin.php?id={$hash}\"</a></p>
+                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/signin.php?id={$hash}\">http://www.shiftappens.com/signin.php?id={$hash}</a></p>
                     <form action=\"index.php\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
-                            <input type=\"submit\" value=\"Voltar à página principal\"/>
+                            <input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/>
                         </div>
                     </form>
                 </article>
@@ -229,7 +236,7 @@ if($db = new MyDB()) {
                     <p>Infelizmente, ocorreu um erro interno</p>
                     <form action=\"javascript:history.go(-1)\" method=\"POST\">
                         <div class=\"form-group\" id=\"submit\">
-                            <input type=\"submit\" value=\"Voltar atrás\"/>
+                            <input class=\"button\" type=\"submit\" value=\"Voltar atrás\"/>
                         </div>
                     </form>
                 </article>

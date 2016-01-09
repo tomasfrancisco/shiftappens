@@ -23,81 +23,81 @@ $(document).ready(function() {
 	$("#gold").hover(function(){
 		$('.gold>p').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 		$('.gold>.row>.award').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 	},function(){
 		$('.gold>p').animate({
 			opacity: 0,
-		}, 500);
+		}, 200);
 		$('.gold>.row>.award').animate({
 			opacity: 0.3,
-		}, 500);
+		}, 200);
 	});
 
 	$("#silver").hover(function(){
 		$('.silver>p').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 		$('.silver>.row>.award').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 	},function(){
 		$('.silver>p').animate({
 			opacity: 0,
-		}, 500);
+		}, 200);
 		$('.silver>.row>.award').animate({
 			opacity: 0.3,
-		}, 500);
+		}, 200);
 	});
 
 	$("#bronze").hover(function(){
 		$('.bronze>p').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 		$('.bronze>.row>.award').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 	},function(){
 		$('.bronze>p').animate({
 			opacity: 0,
-		}, 500);
+		}, 200);
 		$('.bronze>.row>.award').animate({
 			opacity: 0.3,
-		}, 500);
+		}, 200);
 	});
 
 	$("#security").hover(function(){
 		$('.security>p').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 		$('.security>.row>.challenge').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 	},function(){
 		$('.security>p').animate({
 			opacity: 0,
-		}, 500);
+		}, 200);
 		$('.security>.row>.challenge').animate({
 			opacity: 0.3,
-		}, 500);
+		}, 200);
 	});
 
 	$("#more").hover(function(){
 		$('.more>p').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 		$('.more>.row>.challenge').animate({
 			opacity: 1,
-		}, 500);
+		}, 200);
 	},function(){
 		$('.more>p').animate({
 			opacity: 0,
-		}, 500);
+		}, 200);
 		$('.more>.row>.challenge').animate({
 			opacity: 0.3,
-		}, 500);
+		}, 200);
 	});
 
 	$('body').scrollspy({target: "#navigation", offset: 52});
@@ -129,7 +129,7 @@ $(document).ready(function() {
 		$('#home .arrow').animate({
 			opacity: 1,
 		}, 1000);
-		$('#clock').countdown('2016/02/19 12:00:00',function(event){
+		$('#clock').countdown('2016/02/19 15:00:00',function(event){
 			var $this = $(this).html(event.strftime(''
 				+ '<span>%D</span>d '
 				+ '<span>%H</span>h '
