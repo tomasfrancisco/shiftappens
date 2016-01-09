@@ -37,32 +37,33 @@ $link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
 
 if($link) {
     $db = mysql_select_db('shiftappens2016', $link);
-    $name = mysql_real_escape_string($_POST['name']);
-    $email = mysql_real_escape_string($_POST['email']);
-    $phone = mysql_real_escape_string($_POST['phone']);
-    $age = mysql_real_escape_string($_POST['age']);
-    $username = mysql_real_escape_string($_POST['username']);
-    $occupation = mysql_real_escape_string($_POST['occupation']);
+
+    $name = mysql_real_escape_string(htmlentities($_POST['name']));
+    $email = mysql_real_escape_string(htmlentities($_POST['email']));
+    $phone = mysql_real_escape_string(htmlentities($_POST['phone']));
+    $age = mysql_real_escape_string(htmlentities($_POST['age']));
+    $username = mysql_real_escape_string(htmlentities($_POST['username']));
+    $occupation = mysql_real_escape_string(htmlentities($_POST['occupation']));
     $workplace = "";
     if($occupation == "student") {
-        $workplace = mysql_real_escape_string($_POST['faculty']);
+        $workplace = mysql_real_escape_string(htmlentities($_POST['faculty']));
     } else {
-        $workplace = mysql_real_escape_string($_POST['workplace']);
+        $workplace = mysql_real_escape_string(htmlentities($_POST['workplace']));
     }
-    $twitter = mysql_real_escape_string($_POST['twitter']);
-    $linkedin = mysql_real_escape_string($_POST['linkedin']);
-    $website = mysql_real_escape_string($_POST['website']);
-    $repository = mysql_real_escape_string($_POST['repository']);
-    $about = mysql_real_escape_string($_POST['about']);
-    $why = mysql_real_escape_string($_POST['why']);
-    $idea = mysql_real_escape_string($_POST['idea']);
-    $pastEditions = mysql_real_escape_string($_POST['pastEditions']);
-    $hackathons = mysql_real_escape_string($_POST['hackathons']);
-    $team = mysql_real_escape_string($_POST['team']);
+    $twitter = mysql_real_escape_string(htmlentities($_POST['twitter']));
+    $linkedin = mysql_real_escape_string(htmlentities($_POST['linkedin']));
+    $website = mysql_real_escape_string(htmlentities($_POST['website']));
+    $repository = mysql_real_escape_string(htmlentities($_POST['repository']));
+    $about = mysql_real_escape_string(htmlentities($_POST['about']));
+    $why = mysql_real_escape_string(htmlentities($_POST['why']));
+    $idea = mysql_real_escape_string(htmlentities($_POST['idea']));
+    $pastEditions = mysql_real_escape_string(htmlentities($_POST['pastEditions']));
+    $hackathons = mysql_real_escape_string(htmlentities($_POST['hackathons']));
+    $team = mysql_real_escape_string(htmlentities($_POST['team']));
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = mysql_real_escape_string($_POST['otherSkills']);
-    $framework = mysql_real_escape_string($_POST['framework']);
+    $otherSkill = mysql_real_escape_string(htmlentities($_POST['otherSkills']));
+    $framework = mysql_real_escape_string(htmlentities($_POST['framework']));
     $hash = "";
 
     if($_POST['action'] == "create") {
