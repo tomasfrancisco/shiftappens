@@ -286,7 +286,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                                     </div>
                                 </div>
                                 <label for="otherSkillsInput" class="control-label">Outro:</label>
-                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkill['skill']."\"";} ?>/>
+                                <input type="text" class="form-control" name="otherSkills" id="otherSkillsInput" placeholder="Awesome skill" <?php if($edit){echo "value=\"".$otherSkills['skill']."\"";} ?>/>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <p>Quais são as tuas áreas?</p>
@@ -365,7 +365,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                                     </div>
                                 </div>
                                 <label for="frameworkInput" class="control-label">Tens alguma framework de preferência? Se sim, qual?</label>
-                                <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor"/>
+                                <input type="text" name="framework" class="form-control" id="frameworkInput" placeholder="Ex: Ruby on Rails, Django, Phoenix, Laravel, React, Meteor" <?php if($edit){echo "value=\"".$frameworks['framework']."\"";} ?>/>
 
                             </div>
                         </div>
