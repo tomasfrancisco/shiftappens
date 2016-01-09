@@ -200,7 +200,7 @@ if($link) {
             $mail->Body    = "<p>Viva Shifter wannabe,</p>
 <br/>
 <p>A tua candidatura ao Shift APPens 2016 foi aceite.</p>
-<p>No dia 12 de fevereiro irás descobrir se foste escolhido para participar neste evento épico.</p>
+<p>No dia 12 de fevereiro ir&aacute;s descobrir se foste escolhido para participar neste evento &eacute;pico.</p>
 <br/>
 <p>Podes alterar a tua candidatura em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a>.</p>
 <br/>
