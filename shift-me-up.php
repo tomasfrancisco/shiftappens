@@ -34,7 +34,7 @@ if(isset($_GET) and isset($_GET['id'])) {
             }
 
             $result = mysql_query("SELECT * FROM otherSkills WHERE email = '{$email}';");
-            $otherSkill = $result->fetch_array();
+            $otherSkill = mysql_fetch_array($result);
 
             $result = mysql_query("SELECT * FROM frameworks WHERE email = '{$email}';");
             while($row = mysql_fetch_array($result)) {
