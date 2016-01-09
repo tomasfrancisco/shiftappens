@@ -89,7 +89,7 @@ if(mysqli_connect_errno() == 0) {
         if(strpos($msg,'PRIMARY') !== false) {
             $error = "Já existe um user com esse email";
         } elseif(strpos($msg,'phone') !== false) {
-            $error = "Já existe um user com esse contacto";
+            $error = "Já existe um user com esse número de telefone";
         } elseif(strpos($msg,'username') !== false) {
             $error = "Já existe um user com esse username";
         } else {
