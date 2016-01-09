@@ -6,58 +6,43 @@ $skills = array();
 $otherSkill = "";
 $frameworks = array();
 
-$db = new mysqli('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy', 'shiftappens2016');
-
-if(mysqli_connect_errno() == 0) {
+if($link) {
     if(isset($_GET) and isset($_GET['id'])) {
         $hash = $_GET['id'];
 
-        $query = $db->prepare("SELECT * FROM hashcodes WHERE hash = ?;");
-        $query->bind_param("s",$hash);
+        $link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
+        if($link) {
+            $db = mysql_select_db('shiftappens2016', $link);
 
-        $query->execute();
-        $result = $query->get_result();
-        if($result !== false) {
-            $edit = true;
+            $result = mysql_query("SELECT * FROM hashcodes WHERE hash = '{$hash}';");
+            if($result !== false) {
+                $edit = true;
 
-            $result = $query->get_result();
-            $row = $result->fetch_array();
-            $email = $row['email'];
+                $row = mysql_fetch_array($result);
+                $email = $row['email'];
 
-            $query = $db->prepare("SELECT * FROM entries WHERE email = ?;");
-            $query->bind_param("s",$email);
-            $query->execute();
-            $result = $query->get_result();
-            $entries = $result->fetch_array();
+                $result = mysql_query("SELECT * FROM entries WHERE email = '{$email}';");
+                $entries = mysql_fetch_array($result);
 
-            $query = $db->prepare("SELECT * FROM areas WHERE email = ?;");
-            $query->bind_param("s",$email);
-            $query->execute();
-            $result = $query->get_result();
-            while($row = $result->fetch_array()) {
-                $areas[] = $row["area"];
-            }
+                $result = mysql_query("SELECT * FROM areas WHERE email = '{$email}';");
+                while($row = mysql_fetch_array($result)) {
+                    $areas[] = $row["area"];
+                }
 
-            $query = $db->prepare("SELECT * FROM skills WHERE email = ?;");
-            $query->bind_param("s",$email);
-            $query->execute();
-            $result = $query->get_result();
-            while($row = $result->fetch_array()) {
-                $skills[] = $row["skill"];
-            }
+                $result = mysql_query("SELECT * FROM skills WHERE email = '{$email}';");
+                while($row = mysql_fetch_array($result)) {
+                    $skills[] = $row["skill"];
+                }
 
-            $query = $db->prepare("SELECT * FROM otherSkills WHERE email = ?;");
-            $query->bind_param("s",$email);
-            $query->execute();
-            $result = $query->get_result();
-            $otherSkill = $result->fetch_array();
+                $result = mysql_query("SELECT * FROM otherSkills WHERE email = '{$email}';");
+                $otherSkill = $result->fetch_array();
 
-            $query = $db->prepare("SELECT * FROM frameworks WHERE email = ?;");
-            $query->bind_param("s",$email);
-            $query->execute();
-            $result = $query->get_result();
-            while($row = $result->fetch_array()) {
-                $frameworks[] = $row["framework"];
+                $result = mysql_query("SELECT * FROM frameworks WHERE email = '{$email}';");
+                while($row = mysql_fetch_array($result)) {
+                    $frameworks[] = $row["framework"];
+                }
+            } else {
+                $edit = false;
             }
         } else {
             $edit = false;

@@ -33,53 +33,50 @@ if (count($_POST)==0) {
 
 <?php
 
-$db = new mysqli('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy', 'shiftappens2016');
+$link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
 
-if(mysqli_connect_errno() == 0) {
-    $name = $db->real_escape_string($_POST['name']);
-    $email = $db->real_escape_string($_POST['email']);
-    $phone = $db->real_escape_string($_POST['phone']);
-    $age = $db->real_escape_string($_POST['age']);
-    $username = $db->real_escape_string($_POST['username']);
-    $occupation = $db->real_escape_string($_POST['occupation']);
+if($link) {
+    $db = mysql_select_db('shiftappens2016', $link);
+    $name = mysql_real_escape_string($_POST['name']);
+    $email = mysql_real_escape_string($_POST['email']);
+    $phone = mysql_real_escape_string($_POST['phone']);
+    $age = mysql_real_escape_string($_POST['age']);
+    $username = mysql_real_escape_string($_POST['username']);
+    $occupation = mysql_real_escape_string($_POST['occupation']);
     $workplace = "";
     if($occupation == "student") {
-        $workplace = $db->real_escape_string($_POST['faculty']);
+        $workplace = mysql_real_escape_string($_POST['faculty']);
     } else {
-        $workplace = $db->real_escape_string($_POST['workplace']);
+        $workplace = mysql_real_escape_string($_POST['workplace']);
     }
-    $twitter = $db->real_escape_string($_POST['twitter']);
-    $linkedin = $db->real_escape_string($_POST['linkedin']);
-    $website = $db->real_escape_string($_POST['website']);
-    $repository = $db->real_escape_string($_POST['repository']);
-    $about = $db->real_escape_string($_POST['about']);
-    $why = $db->real_escape_string($_POST['why']);
-    $idea = $db->real_escape_string($_POST['idea']);
-    $pastEditions = $db->real_escape_string($_POST['pastEditions']);
-    $hackathons = $db->real_escape_string($_POST['hackathons']);
-    $team = $db->real_escape_string($_POST['team']);
+    $twitter = mysql_real_escape_string($_POST['twitter']);
+    $linkedin = mysql_real_escape_string($_POST['linkedin']);
+    $website = mysql_real_escape_string($_POST['website']);
+    $repository = mysql_real_escape_string($_POST['repository']);
+    $about = mysql_real_escape_string($_POST['about']);
+    $why = mysql_real_escape_string($_POST['why']);
+    $idea = mysql_real_escape_string($_POST['idea']);
+    $pastEditions = mysql_real_escape_string($_POST['pastEditions']);
+    $hackathons = mysql_real_escape_string($_POST['hackathons']);
+    $team = mysql_real_escape_string($_POST['team']);
     $areas = $_POST['areas'];
     $skills = $_POST['skills'];
-    $otherSkill = $db->real_escape_string($_POST['otherSkills']);
-    $framework = $db->real_escape_string($_POST['framework']);
+    $otherSkill = mysql_real_escape_string($_POST['otherSkills']);
+    $framework = mysql_real_escape_string($_POST['framework']);
     $hash = "";
 
     if($_POST['action'] == "create") {
-        $db->query("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
+        mysql_query("INSERT INTO entries (name,email,phone,age,username,occupation,workplace,twitter,linkedin,website,repository,about,why,idea,pastEditions,hackathons,team)
                     VALUES ('{$name}','{$email}','{$phone}','{$age}','{$username}','{$occupation}','{$workplace}','{$twitter}','{$linkedin}','{$website}','{$repository}','{$about}','{$why}','{$idea}','{$pastEditions}','{$hackathons}','{$team}')");
     } else {
-        $db->query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
-        $query = $db->prepare("SELECT * FROM hashcodes WHERE email = ?;");
-        $query->bind_param("s",$email);
-        $result = $query->execute();
-        $result = $result->get_result();
-        $row = $result->fetchArray();
-        $query->close();
+        mysql_query("UPDATE entries SET name='{$name}',phone='{$phone}',age='{$age}',username='{$username}',occupation='{$occupation}',workplace='{$workplace}',twitter='{$twitter}',linkedin='{$linkedin}',website='{$website}',repository='{$repository}',about='{$about}',why='{$why}',idea='{$idea}',pastEditions='{$pastEditions}',hackathons='{$hackathons}',team='{$team}' WHERE email='{$email}'");
+        $result = mysql_query("SELECT * FROM hashcodes WHERE email = '{$email}';");
+        $row = mysql_fetch_array($result);
         $hash = $row['hash'];
     }
 
-    if($db->errno == 1062){
-        $msg = $db->error;
+    if(mysql_errno() == 1062){
+        $msg = mysql_error();
         $title = "";
         if($_POST['action'] == "create"){
             $title = "Erro a inscrever";
@@ -120,25 +117,25 @@ if(mysqli_connect_errno() == 0) {
     } else {
         if($_POST['action'] == "create") {
             $hash = md5("bubadeira".$email);
-            $db->query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
+            mysql_query("INSERT INTO hashcodes (email,hash) VALUES ('{$email}','{$hash}')");
         } else {
-            $db->query("DELETE FROM areas WHERE email = '{$email}'");
-            $db->query("DELETE FROM skills WHERE email = '{$email}'");
-            $db->query("DELETE FROM otherSkills WHERE email = '{$email}'");
-            $db->query("DELETE FROM frameworks WHERE email = '{$email}'");
+            mysql_query("DELETE FROM areas WHERE email = '{$email}'");
+            mysql_query("DELETE FROM skills WHERE email = '{$email}'");
+            mysql_query("DELETE FROM otherSkills WHERE email = '{$email}'");
+            mysql_query("DELETE FROM frameworks WHERE email = '{$email}'");
         }
 
         foreach ($areas as $area) {
-            $db->query("INSERT INTO areas (email,area) VALUES ('{$email}','{$area}')");
+            mysql_query("INSERT INTO areas (email,area) VALUES ('{$email}','{$area}')");
         }
         foreach ($skills as $skill) {
-            $db->query("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
+            mysql_query("INSERT INTO skills (email,skill) VALUES ('{$email}','{$skill}')");
         }
         if(strlen($otherSkill) > 0) {
-            $db->query("INSERT INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
+            mysql_query("INSERT INTO otherSkills (email,skill) VALUES ('{$email}','{$otherSkills}')");
         }
         if(strlen($framework) > 0) {
-            $db->query("INSERT INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
+            mysql_query("INSERT INTO frameworks (email,framework) VALUES ('{$email}','{$framework}')");
         }
 
         if($_POST['action'] == "edit") {
