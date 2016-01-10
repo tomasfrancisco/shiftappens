@@ -636,4 +636,7 @@ body, html {
             margin-left: 3px;
             margin-top: 3px; }
 
+.regulamento a {
+  text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */

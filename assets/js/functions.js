@@ -20,7 +20,7 @@ $(document).ready(function() {
 	    }
 	});
 
-	var shift_colors = ["#262261", "#FF259C", "#00A79D", "#2D2D2D", "#FEFE00"]
+	var shift_colors = ["#262261", "#FF259C", "#262261", "#FF259C", "#262261", "#FF259C", "#00A79D", "#00A79D", "#FEFE00"]
 	$(".navbar-brand").css("color", shift_colors[Math.floor(Math.random()*shift_colors.length)])
 
 	$("#gold").hover(function(){
