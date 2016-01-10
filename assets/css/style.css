@@ -456,7 +456,8 @@ body, html {
         font-weight: 600;
         text-decoration: underline; }
         #footer .footer-container .footer-content .row .past-editions a:hover {
-          color: #1D1D1D; }
+          color: #FF259C;
+          text-decoration: none; }
     #footer .footer-container .footer-content .row .contacts {
       margin-top: 15px;
       margin-bottom: 15px; }
