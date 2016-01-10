@@ -90,7 +90,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                         </div>
                         <div class="form-group">
                             <label for="phoneInput" class="control-label">Telefone *</label>
-                            <input type="tel" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" <?php if($edit){echo "value=\"".$entries['phone']."\"";} ?> required/>
+                            <input type="text" name="phone" class="form-control" id="phoneInput" placeholder="Telefone" <?php if($edit){echo "value=\"".$entries['phone']."\"";} ?> required/>
                         </div>
                         <div class="form-group">
                             <label for="ageInput" class="control-label">Idade *</label>
