@@ -563,6 +563,7 @@ body, html {
         margin-top: 30px;
         color: #FFFFFF; }
         #error .error-container article p a {
+          text-decoration: underline;
           color: #FFFFFF; }
       #error .error-container article .form-group {
         padding-top: 20px;
@@ -615,6 +616,7 @@ body, html {
         margin-top: 30px;
         color: #FFFFFF; }
         #success .success-container article p a {
+          text-decoration: underline;
           color: #FFFFFF; }
       #success .success-container article .form-group {
         padding-top: 20px;

@@ -80,7 +80,7 @@ if($link) {
         $hash = $row['hash'];
     }
 
-    if(mysql_errno() == 1062){
+    if(mysql_errno() != 0){
         $msg = mysql_error();
         $title = "";
         if($_POST['action'] == "create"){
@@ -153,7 +153,9 @@ if($link) {
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
+                    <p>Podes alterar os teus dados em:</p>
+                    <p><a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
+                    <p>Vê todas as informações <a href=\"http://www.shiftappens.com/regulamento.pdf\">aqui</a></p>
                     <div class=\"form-group\" id=\"submit\">
                         <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
                     </div>
@@ -167,11 +169,13 @@ if($link) {
         <section id=\"success\">
             <section class=\"success-container\">
                 <header>
-                    <h1>Utilizador inscrito com sucesso</h1>
+                    <h1>Foste inscrito com sucesso</h1>
                 </header>
                 <article>
                     <p>Em breve sairá a lista de participantes selecionados. Mantém-te atento!</p>
-                    <p>Podes alterar os teus dados em <a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
+                    <p>Podes alterar os teus dados em:</p>
+                    <p><a href=\"http://www.shiftappens.com/shift-me-up.php?id={$hash}\">http://www.shiftappens.com/shift-me-up.php?id={$hash}</a></p>
+                    <p>Vê todas as informações <a href=\"http://www.shiftappens.com/regulamento.pdf\">aqui</a></p>
                     <div class=\"form-group\" id=\"submit\">
                         <a href=\"index.html\"><input class=\"button\" type=\"submit\" value=\"Voltar à página principal\"/></a>
                     </div>
@@ -193,6 +197,7 @@ if($link) {
 
             $mail->setFrom('geral@shiftappens.com', 'Shift APPens');
             $mail->addAddress($email, $name);
+            $mail->addBCC('inscricoes@shiftappens.com','Shift APPens');
 
             $mail->isHTML(true);
 
