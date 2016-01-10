@@ -267,8 +267,6 @@ body, html {
       #faq .faq-container .faq-list div p a {
         text-decoration: underline;
         color: #262261; }
-        #faq .faq-container .faq-list div p a:hover {
-          color: #337AB7; }
 
 #panel {
   background-color: #FEFE00; }
