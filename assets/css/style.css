@@ -187,6 +187,8 @@ body, html {
     text-align: center; }
     #challenges .challenges-container .challenges-content #more {
       opacity: 0.3; }
+    #challenges .challenges-container .challenges-content #security {
+      opacity: 0.3; }
     #challenges .challenges-container .challenges-content .security .challenge {
       cursor: pointer; }
     #challenges .challenges-container .challenges-content .more p {
@@ -195,40 +197,53 @@ body, html {
       font-weight: 600;
       margin-top: 10px;
       opacity: 0; }
-    #challenges .challenges-container .challenges-content .security p {
-      color: #262261;
-      font-size: 0.9em;
-      font-weight: 400;
-      margin-top: 10px; }
-
-#modal .modal-dialog .modal-content {
-  line-height: 0.9em;
-  border-radius: 0px;
-  background-color: #FEFE00;
-  box-shadow: -10px -10px 0 #262261; }
-  #modal .modal-dialog .modal-content .modal-header {
-    padding-left: 40px;
-    border: none; }
-    #modal .modal-dialog .modal-content .modal-header .modal-title, #modal .modal-dialog .modal-content .modal-header .close {
-      font-family: "mopsterregular";
-      font-weight: 700;
-      font-size: 1.5rem;
+    #challenges .challenges-container .challenges-content .security {
       color: #262261; }
-  #modal .modal-dialog .modal-content .modal-body {
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 0.9em;
-    font-weight: 400; }
-    #modal .modal-dialog .modal-content .modal-body p {
-      line-height: 1.2em; }
-      #modal .modal-dialog .modal-content .modal-body p span {
-        font-weight: 600; }
-    #modal .modal-dialog .modal-content .modal-body .list-group .list-group-item {
-      padding-top: 4px;
-      padding-bottom: 4px;
-      margin-left: 10px;
-      background-color: #FEFE00;
+      #challenges .challenges-container .challenges-content .security p {
+        font-size: 0.9em;
+        font-weight: 400;
+        margin-top: 10px; }
+
+#modal .modal-dialog {
+  margin-top: 20vh; }
+  #modal .modal-dialog .modal-content {
+    line-height: 0.9em;
+    border-radius: 0px;
+    background-color: #FEFE00;
+    box-shadow: -10px -10px 0 #262261; }
+    #modal .modal-dialog .modal-content .modal-header {
+      padding-left: 50px;
+      padding-bottom: 0;
       border: none; }
+      #modal .modal-dialog .modal-content .modal-header .modal-title, #modal .modal-dialog .modal-content .modal-header .close {
+        font-family: "mopsterregular";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #262261; }
+      #modal .modal-dialog .modal-content .modal-header .close {
+        margin-top: 5px; }
+    #modal .modal-dialog .modal-content .modal-body {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 0;
+      font-size: 0.9em;
+      font-weight: 400; }
+      #modal .modal-dialog .modal-content .modal-body h3 {
+        font-weight: 600; }
+      #modal .modal-dialog .modal-content .modal-body .first {
+        margin-bottom: 8vh; }
+      #modal .modal-dialog .modal-content .modal-body p {
+        line-height: 1.2em;
+        font-size: 1.1rem; }
+      #modal .modal-dialog .modal-content .modal-body .list-group .list-group-item {
+        font-size: 1.1rem;
+        padding-left: 0;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color: #FEFE00;
+        border: none; }
+        #modal .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon {
+          font-size: 1rem; }
 
 #faq {
   background-color: #FFFFFF; }
@@ -422,7 +437,7 @@ body, html {
         width: 150px; }
 
 #footer {
-  background-color: #DDDDDD;
+  background-color: #262261;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px; }
@@ -435,10 +450,10 @@ body, html {
       margin-bottom: 7px;
       display: block; }
       #footer .footer-container .footer-content .row .past-editions a {
-        color: #4D4D4D;
+        color: #FF259C;
         font-size: 16px;
         line-height: 15px;
-        font-weight: 300;
+        font-weight: 600;
         text-decoration: underline; }
         #footer .footer-container .footer-content .row .past-editions a:hover {
           color: #1D1D1D; }
@@ -449,7 +464,7 @@ body, html {
         margin-left: 15px;
         margin-right: 15px; }
         #footer .footer-container .footer-content .row .contacts a i {
-          color: #2D2D2D; }
+          color: #FF259C; }
         #footer .footer-container .footer-content .row .contacts a:hover {
           color: #1D1D1D; }
 

@@ -20,6 +20,9 @@ $(document).ready(function() {
 	    }
 	});
 
+	var shift_colors = ["#262261", "#FF259C", "#00A79D", "#2D2D2D", "#FEFE00"]
+	$(".navbar-brand").css("color", shift_colors[Math.floor(Math.random()*shift_colors.length)])
+
 	$("#gold").hover(function(){
 		$('.gold>p').animate({
 			opacity: 1,
@@ -80,6 +83,16 @@ $(document).ready(function() {
 			opacity: 0,
 		}, 200);
 		$('.more>.row>.challenge').animate({
+			opacity: 0.3,
+		}, 200);
+	});
+
+	$("#security").hover(function(){
+		$(".security>.row>.challenge").animate({
+			opacity: 1,
+		}, 200);
+	}, function(){
+		$('.security>.row>.challenge').animate({
 			opacity: 0.3,
 		}, 200);
 	});
