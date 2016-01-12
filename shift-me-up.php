@@ -13,7 +13,7 @@ if(isset($_GET) and isset($_GET['id'])) {
     if($link) {
         $db = mysql_select_db('shiftappens2016', $link);
 
-        $result = mysql_query("SELECT * FROM hashcodes WHERE hash = '{$hash}';");
+        $result = mysql_query("SELECT * FROM hashcodes WHERE hash = '{mysql_real_escape_string($hash)}';");
         if(mysql_num_rows($result) != 0) {
             $edit = true;
 
