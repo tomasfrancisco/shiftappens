@@ -5,7 +5,6 @@
   src: local(Dosis ExtraLight), local(Dosis-ExtraLight), url("../fonts/RPKDmaFi75RJkvjWaDDb0vesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis ExtraLight), local(Dosis-ExtraLight), url(../fonts/RPKDmaFi75RJkvjWaDDb0vesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -13,7 +12,6 @@
   src: local(Dosis Light), local(Dosis-Light), url("../fonts/7aJzV14HzAOiwNTiPgucGfesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis Light), local(Dosis-Light), url(../fonts/7aJzV14HzAOiwNTiPgucGfesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -21,7 +19,6 @@
   src: local(Dosis Regular), local(Dosis-Regular), url("../fonts/4hYyXH_8WmbBLamf6WjLwg.woff2") format("woff2");
   src: local(Dosis Regular), local(Dosis-Regular), url(../fonts/4hYyXH_8WmbBLamf6WjLwg.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -29,7 +26,6 @@
   src: local(Dosis Medium), local(Dosis-Medium), url("../fonts/mAcLJWdPWDNiDJwJvcWKc_esZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis Medium), local(Dosis-Medium), url(../fonts/mAcLJWdPWDNiDJwJvcWKc_esZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -37,7 +33,6 @@
   src: local(Dosis SemiBold), local(Dosis-SemiBold), url("../fonts/O6SOu9hYsPHTU43R17NS5fesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis SemiBold), local(Dosis-SemiBold), url(../fonts/O6SOu9hYsPHTU43R17NS5fesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -45,7 +40,6 @@
   src: local(Dosis Bold), local(Dosis-Bold), url("../fonts/22aDRG5X9l7obljtz7tihvesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis Bold), local(Dosis-Bold), url(../fonts/22aDRG5X9l7obljtz7tihvesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 @font-face {
   font-family: Dosis;
   font-style: normal;
@@ -53,12 +47,11 @@
   src: local(Dosis ExtraBold), local(Dosis-ExtraBold), url("../fonts/nq3OPeKr7RUSF_YDJ1woxvesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
   src: local(Dosis ExtraBold), local(Dosis-ExtraBold), url(../fonts/nq3OPeKr7RUSF_YDJ1woxvesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-
 html {
   overflow-x: hidden; }
 
 body, html {
-  font-family: 'Dosis';
+  font-family: "Dosis";
   font-size: 1.3em;
   height: 100%;
   margin: 0; }
@@ -78,7 +71,7 @@ body, html {
   top: -52px;
   background-color: #FFFFFF; }
   #navigation .container .navbar-header .nav-title {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-size: 1.6rem;
     line-height: 25px;
     color: #262261; }
@@ -117,6 +110,28 @@ body, html {
       font-size: 1.6rem; }
       #home .home-container .shift-date h2 {
         font-weight: 600; }
+      #home .home-container .shift-date .date {
+        margin-bottom: 40px; }
+      #home .home-container .shift-date .signup-button {
+        box-shadow: -3px -3px 0 #262261;
+        background-color: #ED509C;
+        color: #FFFFFF;
+        border: none;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        text-decoration: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px; }
+        #home .home-container .shift-date .signup-button:hover {
+          box-shadow: -4px -4px 0 #262261;
+          margin-right: 0px;
+          margin-bottom: 0px;
+          margin-left: 3px;
+          margin-top: 3px; }
     #home .home-container .logo {
       opacity: 0;
       margin: 5% 10%; }
@@ -154,7 +169,7 @@ body, html {
       #about .about-container div header h1 {
         font-size: 45px; }
         #about .about-container div header h1 span {
-          font-family: 'mopsterregular';
+          font-family: "mopsterregular";
           color: #FEFE00; }
       #about .about-container div p {
         margin-top: 20px;
@@ -168,7 +183,7 @@ body, html {
 #awards {
   background-color: #2D2D2D; }
   #awards .awards-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: #FFFFFF; }
@@ -186,7 +201,7 @@ body, html {
 #challenges {
   background-color: #FEFE00; }
   #challenges .challenges-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: #262261; }
@@ -223,7 +238,7 @@ body, html {
       padding-bottom: 0;
       border: none; }
       #modal .modal-dialog .modal-content .modal-header .modal-title, #modal .modal-dialog .modal-content .modal-header .close {
-        font-family: 'mopsterregular';
+        font-family: "mopsterregular";
         font-weight: 700;
         font-size: 1.5rem;
         color: #262261; }
@@ -255,7 +270,7 @@ body, html {
 #faq {
   background-color: #FFFFFF; }
   #faq .faq-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: #FF259C; }
@@ -278,7 +293,7 @@ body, html {
 #panel {
   background-color: #FEFE00; }
   #panel .panel-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: #262261; }
@@ -293,16 +308,16 @@ body, html {
     #panel .panel-container .panel-content .person a {
       text-decoration: none; }
     #panel .panel-container .panel-content .person p {
-      font-size: 1.0rem;
+      font-size: 1rem;
       color: #262261; }
       #panel .panel-container .panel-content .person p i {
-        font-size: 1.0rem;
+        font-size: 1rem;
         color: #262261; }
 
 #schedule {
   background-color: #00A79D; }
   #schedule .schedule-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     font-weight: 700;
     font-size: 2rem;
     color: #FEFE00; }
@@ -313,7 +328,7 @@ body, html {
     #schedule .schedule-container .schedule-board-container table {
       font-size: 0.9em; }
       #schedule .schedule-container .schedule-board-container table thead tr {
-        font-family: 'mopsterregular';
+        font-family: "mopsterregular";
         border-bottom: 4px solid #262261;
         color: #FFFFFF; }
         #schedule .schedule-container .schedule-board-container table thead tr th {
@@ -330,7 +345,7 @@ body, html {
           padding: 10px; }
           #schedule .schedule-container .schedule-board-container table tbody tr th:first-child {
             color: #FEFE00;
-            font-family: 'mopsterregular';
+            font-family: "mopsterregular";
             vertical-align: middle; }
           #schedule .schedule-container .schedule-board-container table tbody tr th:not(:first-child) {
             font-weight: 500;
@@ -345,7 +360,7 @@ body, html {
         margin: 0; }
         #schedule .schedule-container .schedule-board-container .mobile-schedule .day header h2 {
           color: #FEFE00;
-          font-family: 'mopsterregular';
+          font-family: "mopsterregular";
           font-weight: 700;
           font-size: 1.5rem; }
       #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program {
@@ -355,18 +370,17 @@ body, html {
           font-size: 0.7em; }
           #schedule .schedule-container .schedule-board-container .mobile-schedule .day .day-program p:not(:last-child) {
             border-bottom: 2px solid #262261; }
-  @media (max-width: 800px) {
-    #schedule .schedule-container .schedule-board-container table {
-      display: none; }
-    #schedule .schedule-container .schedule-board-container .mobile-schedule {
-      display: block; } }
-
+@media(max-width: 800px) {
+  #schedule .schedule-container .schedule-board-container table {
+    display: none; }
+  #schedule .schedule-container .schedule-board-container .mobile-schedule {
+    display: block; } }
 #where {
   background-color: #262261; }
   #where .where-container {
     color: #FFFFFF; }
     #where .where-container header h1 {
-      font-family: 'mopsterregular';
+      font-family: "mopsterregular";
       font-weight: 700;
       font-size: 2rem;
       color: #FF259C; }
@@ -385,11 +399,11 @@ body, html {
 #partners {
   background-color: #FFFFFF; }
   #partners .partners-container header:first-child h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     color: #262261;
     font-size: 2rem; }
   #partners .partners-container header h1 {
-    font-family: 'mopsterregular';
+    font-family: "mopsterregular";
     color: #FF259C;
     font-size: 2rem;
     margin-bottom: 0;
@@ -492,7 +506,7 @@ body, html {
     height: 100%; }
     #sign-in .sign-in-container header h1 {
       margin: 20px 20%;
-      font-family: 'mopsterregular';
+      font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
       color: #262261; }
@@ -555,7 +569,7 @@ body, html {
     height: 100%; }
     #error .error-container header h1 {
       margin: 30px 10%;
-      font-family: 'mopsterregular';
+      font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
       color: #FFFFFF; }
@@ -608,7 +622,7 @@ body, html {
     height: 100%; }
     #success .success-container header h1 {
       margin: 30px 10%;
-      font-family: 'mopsterregular';
+      font-family: "mopsterregular";
       font-weight: 700;
       font-size: 1.5rem;
       color: #FFFFFF; }
@@ -650,3 +664,5 @@ body, html {
 
 .regulamento a {
   text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */
