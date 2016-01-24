@@ -73,6 +73,36 @@ if(isset($_GET) and isset($_GET['id'])) {
         <meta property="og:image" content="http://shiftappens.com/assets/img/logo-mobile.png" />
     </head>
     <body>
+        <nav id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand nav-title page-scroll" href="#home">Shift Appens</a>
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    <ul id="menu" class="menu nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#about">SOBRE</a></li>
+                        <li><a class="page-scroll" href="#awards">PRÉMIOS</a></li>
+                        <li><a class="page-scroll" href="#challenges">DESAFIOS</a></li>
+                        <li><a class="page-scroll" href="#faq">FAQ</a></li>
+                        <li><a class="page-scroll" href="#panel">JÚRI</a></li>
+                        <li><a class="page-scroll" href="#schedule">PROGRAMA</a></li>
+                        <li><a class="page-scroll" href="#where">LOCAL</a></li>
+                        <li><a class="page-scroll" href="#partners">ORGANIZAÇÃO</a></li>
+                        <li><a href="shift-me-up.php" id="signin-button" target="_blank">INSCREVE-TE JÁ!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <section id="sign-in">
             <section class="sign-in-container">
                 <header>
@@ -394,6 +424,7 @@ if(isset($_GET) and isset($_GET['id'])) {
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.mousewheel.min.js"></script>
         <script src="assets/js/signin.js"></script>
+        <script src="assets/js/functions.js"></script>
 <?php
 if($edit and $entries['occupation']=='student'){
     print("
