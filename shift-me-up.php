@@ -84,7 +84,7 @@ if(isset($_GET) and isset($_GET['id'])) {
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand nav-title page-scroll" href="#home">Shift Appens</a>
+                    <a class="navbar-brand nav-title page-scroll" href="index.html" target="_blank">Shift Appens</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
