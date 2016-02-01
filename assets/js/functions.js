@@ -2,6 +2,10 @@ $(document).ready(function() {
 	var isOnTop = true;
 	var vh = $(window).innerHeight();
 
+	if($(".shift-bar").offset().top < (vh-102)) {
+		$("#navigation").css('top', '-52px');
+	}
+
 	$(window).scroll(function() {
 	    if ($(".shift-bar").offset().top >= (vh-103)) {
 	    	if(isOnTop == true) {
@@ -57,7 +61,7 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	$("#bronze").hover(function(){
+	/*$("#bronze").hover(function(){
 		$('.bronze>p').animate({
 			opacity: 1,
 		}, 200);
@@ -71,7 +75,7 @@ $(document).ready(function() {
 		$('.bronze>.row>.award').animate({
 			opacity: 0.3,
 		}, 200);
-	});
+	});*/
 
 	$("#more").hover(function(){
 		$('.more>p').animate({
