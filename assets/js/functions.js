@@ -45,7 +45,7 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	$("#silver").hover(function(){
+	/*$("#silver").hover(function(){
 		$('.silver>p').animate({
 			opacity: 1,
 		}, 200);
@@ -59,7 +59,7 @@ $(document).ready(function() {
 		$('.silver>.row>.award').animate({
 			opacity: 0.3,
 		}, 200);
-	});
+	});*/
 
 	/*$("#bronze").hover(function(){
 		$('.bronze>p').animate({
