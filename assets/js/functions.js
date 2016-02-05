@@ -29,54 +29,6 @@ $(document).ready(function() {
 	$(".navbar-brand").css("color", color);
 	$("#signin-button").css("color", color);
 
-	$("#gold").hover(function(){
-		$('.gold>p').animate({
-			opacity: 1,
-		}, 200);
-		$('.gold>.row>.award').animate({
-			opacity: 1,
-		}, 200);
-	},function(){
-		$('.gold>p').animate({
-			opacity: 0,
-		}, 200);
-		$('.gold>.row>.award').animate({
-			opacity: 0.3,
-		}, 200);
-	});
-
-	/*$("#silver").hover(function(){
-		$('.silver>p').animate({
-			opacity: 1,
-		}, 200);
-		$('.silver>.row>.award').animate({
-			opacity: 1,
-		}, 200);
-	},function(){
-		$('.silver>p').animate({
-			opacity: 0,
-		}, 200);
-		$('.silver>.row>.award').animate({
-			opacity: 0.3,
-		}, 200);
-	});*/
-
-	/*$("#bronze").hover(function(){
-		$('.bronze>p').animate({
-			opacity: 1,
-		}, 200);
-		$('.bronze>.row>.award').animate({
-			opacity: 1,
-		}, 200);
-	},function(){
-		$('.bronze>p').animate({
-			opacity: 0,
-		}, 200);
-		$('.bronze>.row>.award').animate({
-			opacity: 0.3,
-		}, 200);
-	});*/
-
 	$("#more").hover(function(){
 		$('.more>p').animate({
 			opacity: 1,

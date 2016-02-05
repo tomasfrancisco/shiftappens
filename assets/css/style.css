@@ -188,15 +188,7 @@ body, html {
     color: #FFFFFF; }
   #awards .awards-container .awards-content {
     text-align: center; }
-    #awards .awards-container .awards-content .award {
-      opacity: 0.3; }
-    #awards .awards-container .awards-content .gold p {
-      color: #FFFFFF;
-      font-weight: 600;
-      font-size: 0.9em;
-      margin-top: 10px;
-      opacity: 0; }
-    #awards .awards-container .awards-content .silver p, #awards .awards-container .awards-content .bronze p {
+    #awards .awards-container .awards-content .gold p, #awards .awards-container .awards-content .silver p, #awards .awards-container .awards-content .bronze p {
       color: #FFFFFF;
       font-weight: 600;
       font-size: 0.9em;
