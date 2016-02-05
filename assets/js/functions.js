@@ -30,14 +30,14 @@ $(document).ready(function() {
 	$("#signin-button").css("color", color);
 
 	$("#more").hover(function(){
-		$('.more>p').animate({
+		$('.more>h2').animate({
 			opacity: 1,
 		}, 200);
 		$('.more>.row>.challenge').animate({
 			opacity: 1,
 		}, 200);
 	},function(){
-		$('.more>p').animate({
+		$('.more>h2').animate({
 			opacity: 0,
 		}, 200);
 		$('.more>.row>.challenge').animate({
@@ -46,21 +46,51 @@ $(document).ready(function() {
 	});
 
 	$("#security").hover(function(){
-		$(".security>.row>.challenge").animate({
+		$(".security>.row>center>.challenge").animate({
 			opacity: 1,
 		}, 200);
 	}, function(){
-		$('.security>.row>.challenge').animate({
+		$('.security>.row>center>.challenge').animate({
+			opacity: 0.3,
+		}, 200);
+	});
+
+	$("#quizz").hover(function(){
+		$(".quizz>.row>center>.challenge").animate({
+			opacity: 1,
+		}, 200);
+	}, function(){
+		$('.quizz>.row>center>.challenge').animate({
+			opacity: 0.3,
+		}, 200);
+	});
+
+	$("#pokemon").hover(function(){
+		$(".pokemon>.row>center>.challenge").animate({
+			opacity: 1,
+		}, 200);
+	}, function(){
+		$('.pokemon>.row>center>.challenge').animate({
 			opacity: 0.3,
 		}, 200);
 	});
 
 	$(window).scroll(function(event) {
-		$("#modal").modal("hide");
+		$("#modal_dognaedis").modal("hide");
+		$("#modal_whitesmith").modal("hide");
+		$("#modal_pokemon").modal("hide");
 	});
 
 	$("#security").click(function(event) {
-		$('#modal').modal('show');
+		$('#modal_dognaedis').modal('show');
+	});
+
+	$("#quizz").click(function(event) {
+		$('#modal_whitesmith').modal('show');
+	});
+
+	$("#pokemon").click(function(event) {
+		$('#modal_pokemon').modal('show');
 	});
 
 	$('body').scrollspy({target: ".shift-bar", offset: 52});
