@@ -2,8 +2,8 @@ $(document).ready(function() {
 	var isOnTop = true;
 	var vh = $(window).innerHeight();
 
-	if($(".shift-bar").offset().top < (vh-102)) {
-		$("#navigation").css('top', '-52px');
+	if($(".shift-bar").offset().top >= (vh-103)) {
+		$("#navigation").css('top', '0px');
 	}
 
 	$(window).scroll(function() {

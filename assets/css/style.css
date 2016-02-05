@@ -68,6 +68,7 @@ body, html {
       padding-bottom: 25px; }
 
 #navigation {
+  top: -52px;
   background-color: #FFFFFF; }
   #navigation .container .navbar-header .nav-title {
     font-family: "mopsterregular";
