@@ -204,68 +204,61 @@ body, html {
     color: #262261; }
   #challenges .challenges-container .challenges-content {
     text-align: center; }
-    #challenges .challenges-container .challenges-content #more {
-      opacity: 0.3; }
-    #challenges .challenges-container .challenges-content #security, #challenges .challenges-container .challenges-content #quizz, #challenges .challenges-container .challenges-content #pokemon, #challenges .challenges-container .challenges-content #more {
+    #challenges .challenges-container .challenges-content #security, #challenges .challenges-container .challenges-content #quizz, #challenges .challenges-container .challenges-content #health, #challenges .challenges-container .challenges-content #pokemon {
       opacity: 0.3;
       height: 170px;
       width: auto; }
-    #challenges .challenges-container .challenges-content .security .challenge, #challenges .challenges-container .challenges-content .quizz .challenge, #challenges .challenges-container .challenges-content .pokemon .challenge {
+    #challenges .challenges-container .challenges-content .security .challenge, #challenges .challenges-container .challenges-content .quizz .challenge, #challenges .challenges-container .challenges-content .health .challenge, #challenges .challenges-container .challenges-content .pokemon .challenge {
       cursor: pointer; }
-    #challenges .challenges-container .challenges-content .more h2 {
-      color: #262261;
-      font-size: 0.9em;
-      font-weight: 600;
-      opacity: 0; }
-    #challenges .challenges-container .challenges-content .security, #challenges .challenges-container .challenges-content .quizz, #challenges .challenges-container .challenges-content .pokemon {
+    #challenges .challenges-container .challenges-content .security, #challenges .challenges-container .challenges-content .quizz, #challenges .challenges-container .challenges-content .health, #challenges .challenges-container .challenges-content .pokemon {
       color: #262261; }
-      #challenges .challenges-container .challenges-content .security h2, #challenges .challenges-container .challenges-content .quizz h2, #challenges .challenges-container .challenges-content .pokemon h2 {
+      #challenges .challenges-container .challenges-content .security h2, #challenges .challenges-container .challenges-content .quizz h2, #challenges .challenges-container .challenges-content .health h2, #challenges .challenges-container .challenges-content .pokemon h2 {
         font-size: 0.9em;
         font-weight: 600; }
-      #challenges .challenges-container .challenges-content .security p, #challenges .challenges-container .challenges-content .quizz p, #challenges .challenges-container .challenges-content .pokemon p {
+      #challenges .challenges-container .challenges-content .security p, #challenges .challenges-container .challenges-content .quizz p, #challenges .challenges-container .challenges-content .health p, #challenges .challenges-container .challenges-content .pokemon p {
         font-size: 0.8em;
         font-weight: 400;
         margin-top: 10px; }
 
-#modal_dognaedis .modal-dialog, #modal_whitesmith .modal-dialog, #modal_pokemon .modal-dialog {
+#modal_dognaedis .modal-dialog, #modal_whitesmith .modal-dialog, #modal_subvisual .modal-dialog, #modal_pokemon .modal-dialog {
   margin-top: 20vh; }
-  #modal_dognaedis .modal-dialog .modal-content, #modal_whitesmith .modal-dialog .modal-content, #modal_pokemon .modal-dialog .modal-content {
+  #modal_dognaedis .modal-dialog .modal-content, #modal_whitesmith .modal-dialog .modal-content, #modal_subvisual .modal-dialog .modal-content, #modal_pokemon .modal-dialog .modal-content {
     line-height: 0.9em;
     border-radius: 0px;
     background-color: #FEFE00;
     box-shadow: -10px -10px 0 #262261; }
-    #modal_dognaedis .modal-dialog .modal-content .modal-header, #modal_whitesmith .modal-dialog .modal-content .modal-header, #modal_pokemon .modal-dialog .modal-content .modal-header {
+    #modal_dognaedis .modal-dialog .modal-content .modal-header, #modal_whitesmith .modal-dialog .modal-content .modal-header, #modal_subvisual .modal-dialog .modal-content .modal-header, #modal_pokemon .modal-dialog .modal-content .modal-header {
       padding-left: 50px;
       padding-bottom: 0;
       border: none; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-header .modal-title, #modal_dognaedis .modal-dialog .modal-content .modal-header .close, #modal_whitesmith .modal-dialog .modal-content .modal-header .modal-title, #modal_whitesmith .modal-dialog .modal-content .modal-header .close, #modal_pokemon .modal-dialog .modal-content .modal-header .modal-title, #modal_pokemon .modal-dialog .modal-content .modal-header .close {
+      #modal_dognaedis .modal-dialog .modal-content .modal-header .modal-title, #modal_dognaedis .modal-dialog .modal-content .modal-header .close, #modal_whitesmith .modal-dialog .modal-content .modal-header .modal-title, #modal_whitesmith .modal-dialog .modal-content .modal-header .close, #modal_subvisual .modal-dialog .modal-content .modal-header .modal-title, #modal_subvisual .modal-dialog .modal-content .modal-header .close, #modal_pokemon .modal-dialog .modal-content .modal-header .modal-title, #modal_pokemon .modal-dialog .modal-content .modal-header .close {
         font-family: "mopsterregular";
         font-weight: 700;
         font-size: 1.5rem;
         color: #262261; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-header .close, #modal_whitesmith .modal-dialog .modal-content .modal-header .close, #modal_pokemon .modal-dialog .modal-content .modal-header .close {
+      #modal_dognaedis .modal-dialog .modal-content .modal-header .close, #modal_whitesmith .modal-dialog .modal-content .modal-header .close, #modal_subvisual .modal-dialog .modal-content .modal-header .close, #modal_pokemon .modal-dialog .modal-content .modal-header .close {
         margin-top: 5px; }
-    #modal_dognaedis .modal-dialog .modal-content .modal-body, #modal_whitesmith .modal-dialog .modal-content .modal-body, #modal_pokemon .modal-dialog .modal-content .modal-body {
+    #modal_dognaedis .modal-dialog .modal-content .modal-body, #modal_whitesmith .modal-dialog .modal-content .modal-body, #modal_subvisual .modal-dialog .modal-content .modal-body, #modal_pokemon .modal-dialog .modal-content .modal-body {
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 0;
       font-size: 0.9em;
       font-weight: 400; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-body h3, #modal_whitesmith .modal-dialog .modal-content .modal-body h3, #modal_pokemon .modal-dialog .modal-content .modal-body h3 {
+      #modal_dognaedis .modal-dialog .modal-content .modal-body h3, #modal_whitesmith .modal-dialog .modal-content .modal-body h3, #modal_subvisual .modal-dialog .modal-content .modal-body h3, #modal_pokemon .modal-dialog .modal-content .modal-body h3 {
         font-weight: 600; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-body .first, #modal_whitesmith .modal-dialog .modal-content .modal-body .first, #modal_pokemon .modal-dialog .modal-content .modal-body .first {
+      #modal_dognaedis .modal-dialog .modal-content .modal-body .first, #modal_whitesmith .modal-dialog .modal-content .modal-body .first, #modal_subvisual .modal-dialog .modal-content .modal-body .first, #modal_pokemon .modal-dialog .modal-content .modal-body .first {
         margin-bottom: 8vh; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-body p, #modal_whitesmith .modal-dialog .modal-content .modal-body p, #modal_pokemon .modal-dialog .modal-content .modal-body p {
+      #modal_dognaedis .modal-dialog .modal-content .modal-body p, #modal_whitesmith .modal-dialog .modal-content .modal-body p, #modal_subvisual .modal-dialog .modal-content .modal-body p, #modal_pokemon .modal-dialog .modal-content .modal-body p {
         line-height: 1.2em;
         font-size: 1.1rem; }
-      #modal_dognaedis .modal-dialog .modal-content .modal-body .list-group .list-group-item, #modal_whitesmith .modal-dialog .modal-content .modal-body .list-group .list-group-item, #modal_pokemon .modal-dialog .modal-content .modal-body .list-group .list-group-item {
+      #modal_dognaedis .modal-dialog .modal-content .modal-body .list-group .list-group-item, #modal_whitesmith .modal-dialog .modal-content .modal-body .list-group .list-group-item, #modal_subvisual .modal-dialog .modal-content .modal-body .list-group .list-group-item, #modal_pokemon .modal-dialog .modal-content .modal-body .list-group .list-group-item {
         font-size: 1.1rem;
         padding-left: 0;
         padding-top: 4px;
         padding-bottom: 4px;
         background-color: #FEFE00;
         border: none; }
-        #modal_dognaedis .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon, #modal_whitesmith .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon, #modal_pokemon .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon {
+        #modal_dognaedis .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon, #modal_whitesmith .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon, #modal_subvisual .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon, #modal_pokemon .modal-dialog .modal-content .modal-body .list-group .list-group-item .arrow-icon {
           font-size: 1rem; }
 
 #faq {
@@ -461,7 +454,7 @@ body, html {
         max-height: 150px;
         max-width: 150px; }
         #partners .partners-container .partners-content .partners.bronze .org-img#fctuc {
-          max-width: 250px; }
+          max-width: 275px; }
 
 #footer {
   background-color: #262261;

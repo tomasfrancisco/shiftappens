@@ -29,22 +29,6 @@ $(document).ready(function() {
 	$(".navbar-brand").css("color", color);
 	$("#signin-button").css("color", color);
 
-	$("#more").hover(function(){
-		$('.more>h2').animate({
-			opacity: 1,
-		}, 200);
-		$('.more>.row>.challenge').animate({
-			opacity: 1,
-		}, 200);
-	},function(){
-		$('.more>h2').animate({
-			opacity: 0,
-		}, 200);
-		$('.more>.row>.challenge').animate({
-			opacity: 0.3,
-		}, 200);
-	});
-
 	$("#security").hover(function(){
 		$(".security>.row>center>.challenge").animate({
 			opacity: 1,
@@ -65,6 +49,16 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	$("#health").hover(function(){
+		$(".health>.row>center>.challenge").animate({
+			opacity: 1,
+		}, 200);
+	}, function(){
+		$('.health>.row>center>.challenge').animate({
+			opacity: 0.3,
+		}, 200);
+	});
+
 	$("#pokemon").hover(function(){
 		$(".pokemon>.row>center>.challenge").animate({
 			opacity: 1,
@@ -78,6 +72,7 @@ $(document).ready(function() {
 	$(window).scroll(function(event) {
 		$("#modal_dognaedis").modal("hide");
 		$("#modal_whitesmith").modal("hide");
+		$("#modal_subvisual").modal("hide");
 		$("#modal_pokemon").modal("hide");
 	});
 
@@ -87,6 +82,10 @@ $(document).ready(function() {
 
 	$("#quizz").click(function(event) {
 		$('#modal_whitesmith').modal('show');
+	});
+
+	$("#health").click(function(event) {
+		$('#modal_subvisual').modal('show');
 	});
 
 	$("#pokemon").click(function(event) {
