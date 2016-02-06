@@ -89,6 +89,14 @@ body, html {
       #navigation .collapse .menu a:hover {
         color: #FF259C;
         -webkit-transition: color 0.2s ease-in-out; }
+    #navigation .collapse .menu .tooltip {
+      font-family: "Dosis";
+      font-weight: 500;
+      font-size: 1.2rem; }
+      #navigation .collapse .menu .tooltip .tooltip-arrow {
+        border-bottom-color: #FF259C; }
+      #navigation .collapse .menu .tooltip .tooltip-inner {
+        background-color: #FF259C; }
   #navigation .collapse #signin-button {
     background-color: #FFFFFF;
     color: #333;

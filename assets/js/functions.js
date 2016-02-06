@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 	if($(".shift-bar").offset().top >= (vh-103)) {
 		$("#navigation").css('top', '0px');
+		$("#shift-me-up").tooltip("show");
 	}
 
 	$(window).scroll(function() {
@@ -15,11 +16,13 @@ $(document).ready(function() {
 				}, 0);
 	    		isOnTop = false;
 	    	}
+	    	$("#shift-me-up").tooltip("show");
 	    } else if ($(".shift-bar").offset().top < (vh-102)){
 			$('.shift-bar').animate({
 				//opacity: 0,
 				top: "-52px"
 			}, 0);
+			$("#shift-me-up").tooltip("hide");
 			isOnTop = true;
 	    }
 	});
