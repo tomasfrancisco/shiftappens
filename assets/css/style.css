@@ -216,10 +216,10 @@ body, html {
       opacity: 0.3;
       height: 170px;
       width: auto; }
-    #challenges .challenges-container .challenges-content .security .challenge, #challenges .challenges-container .challenges-content .quizz .challenge, #challenges .challenges-container .challenges-content .health .challenge, #challenges .challenges-container .challenges-content .pokemon .challenge {
-      cursor: pointer; }
     #challenges .challenges-container .challenges-content .security, #challenges .challenges-container .challenges-content .quizz, #challenges .challenges-container .challenges-content .health, #challenges .challenges-container .challenges-content .pokemon {
       color: #262261; }
+      #challenges .challenges-container .challenges-content .security .challenge, #challenges .challenges-container .challenges-content .quizz .challenge, #challenges .challenges-container .challenges-content .health .challenge, #challenges .challenges-container .challenges-content .pokemon .challenge {
+        cursor: pointer; }
       #challenges .challenges-container .challenges-content .security h2, #challenges .challenges-container .challenges-content .quizz h2, #challenges .challenges-container .challenges-content .health h2, #challenges .challenges-container .challenges-content .pokemon h2 {
         font-size: 0.9em;
         font-weight: 600; }
@@ -227,6 +227,11 @@ body, html {
         font-size: 0.8em;
         font-weight: 400;
         margin-top: 10px; }
+        #challenges .challenges-container .challenges-content .security p a, #challenges .challenges-container .challenges-content .quizz p a, #challenges .challenges-container .challenges-content .health p a, #challenges .challenges-container .challenges-content .pokemon p a {
+          color: #262261;
+          text-decoration: underline; }
+          #challenges .challenges-container .challenges-content .security p a:hover, #challenges .challenges-container .challenges-content .quizz p a:hover, #challenges .challenges-container .challenges-content .health p a:hover, #challenges .challenges-container .challenges-content .pokemon p a:hover {
+            text-decoration: none; }
 
 #modal_dognaedis .modal-dialog, #modal_whitesmith .modal-dialog, #modal_subvisual .modal-dialog, #modal_pokemon .modal-dialog {
   margin-top: 20vh; }
