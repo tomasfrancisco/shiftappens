@@ -93,14 +93,14 @@ body, html {
 #main {
   height: 100vh;
   width: 100wh;
-  background-color: #FEFE00;
-  color: #262261;
+  background-color: #262261;
+  color: #FF259C;
   padding-top: 100px; }
   #main .container > header {
     text-align: center; }
     #main .container > header h1 {
       font-family: "mopsterregular";
-      font-size: 1.6em;
+      font-size: 2.2em;
       padding-bottom: 25px; }
   #main .container .article header p {
     font-weight: 600;
