@@ -39,7 +39,7 @@ if(!isset($_SESSION['logged'])) {
     <?php
     $link = mysql_connect('localhost', 'shiftappens', 'ianchLansn_*a1?zJHAmaxvy');
     $db = mysql_select_db('shiftappens2016',$link);
-    $emails_query = mysql_query("SELECT email FROM entries;");
+    $emails_query = mysql_query("SELECT email FROM entries ORDER BY name;");
     while($emails_result = mysql_fetch_array($emails_query)) {
         $email = $emails_result['email'];
         $entries_query = mysql_query("SELECT * FROM entries WHERE email='{$email}';");
