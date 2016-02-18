@@ -462,6 +462,8 @@ body, html {
         margin: 5px;
         max-height: 220px;
         max-width: 220px; }
+        #partners .partners-container .partners-content .partners.silver .org-img#critical {
+          max-width: 180px; }
       #partners .partners-container .partners-content .partners.bronze .org-img {
         margin: 5px;
         max-height: 150px;
