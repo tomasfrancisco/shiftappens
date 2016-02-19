@@ -129,7 +129,7 @@ $(document).ready(function() {
 			limit: 3,
 			get: 'popular',
 	        clientId: '83b980446cfc450eade4beec44388ee5',
-	        accessToken: '5f34f1b6acf9414783dd308bd18a5456',
+	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4',
 	        error: function(message) {
 	        	alert(message);
 	        }
