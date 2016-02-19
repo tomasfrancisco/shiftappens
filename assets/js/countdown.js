@@ -14,9 +14,9 @@ $(document).ready(function() {
                 console.log(time);
                 $("#time").text(time);
             } else {
-                stopTimer();
-                time = max_time;
+                time = 0;
                 $("#time").text(time);
+                clearInterval(main);
             }
         },1000);
         $("#start_timer").css("opacity", "0.5");
@@ -26,7 +26,7 @@ $(document).ready(function() {
     }
 
     function stopTimer() {
-        time = 0;
+        time = max_time;
         $("#time").text(time);
         clearInterval(main);
         $("#stop_timer").css("opacity", "0.5");
