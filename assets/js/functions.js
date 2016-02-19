@@ -133,7 +133,7 @@ $(document).ready(function() {
 	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4',
 	        resolution: 'standard_resolution',
 	        target: 'home',
-	        template: '<style>#home{background-image:url({{image}});background-repeat:no-repeat; background-position: center; background-size: auto 100%;}</style>'
+	        template: '<style>#home{background-image:url({{image}});background-repeat:no-repeat; background-position: center; background-size: auto 100%;  filter: alpha(Opacity=30); opacity: 0.3; }</style>'
 	    });
 	    feed.run();
 	}, 1000);
