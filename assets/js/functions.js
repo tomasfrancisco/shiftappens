@@ -126,14 +126,14 @@ $(document).ready(function() {
 				+ '<span>%S</span>s'));
 		});
 		var feed = new Instafeed({
-			limit: 3,
+			limit: 1,
 			get: 'user',
 			userId: '759309076',
 	        clientId: '83b980446cfc450eade4beec44388ee5',
 	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4',
 	        resolution: 'standard_resolution',
 	        target: 'home',
-	        template: '<style>#home{background-image:url({{image}});}</style>'
+	        template: '<style>#home{background-image:url({{image}});background-repeat:no-repeat; background-position: center; background-size: 100% 100%;}</style>'
 	    });
 	    feed.run();
 	}, 1000);
