@@ -125,6 +125,11 @@ $(document).ready(function() {
 				+ '<span>%M</span>m '
 				+ '<span>%S</span>s'));
 		});
+		var feed = new Instafeed({
+			limit: 5,
+	        clientId: '83b980446cfc450eade4beec44388ee5'
+	    });
+	    feed.run();
 	}, 1000);
 
 	$('#schedule-prev').click(function() {
