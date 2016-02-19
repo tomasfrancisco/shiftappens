@@ -129,7 +129,10 @@ $(document).ready(function() {
 			limit: 3,
 			get: 'popular',
 	        clientId: '83b980446cfc450eade4beec44388ee5',
-	        accessToken: '5f34f1b6acf9414783dd308bd18a5456'
+	        accessToken: '5f34f1b6acf9414783dd308bd18a5456',
+	        error: function(message) {
+	        	alert(message);
+	        }
 	    });
 	    feed.run();
 	}, 1000);
