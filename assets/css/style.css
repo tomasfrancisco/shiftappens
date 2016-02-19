@@ -58,13 +58,13 @@ body, html {
   body.modal-open, html.modal-open {
     overflow: visible; }
 
-#home, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
+#home, #background, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
   width: 100vw;
   padding-top: 27px;
   padding-bottom: 75px; }
-  #home .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
+  #home .container > header, #background .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
     text-align: center; }
-    #home .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #challenges .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
+    #home .container > header h1, #background .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #challenges .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
       padding-bottom: 25px; }
 
 #navigation {
@@ -166,6 +166,17 @@ body, html {
       padding: 10px; }
     #home .home-container .arrow {
       opacity: 0; }
+
+#background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  z-index: -1;
+  background-position: center;
+  background-size: auto 100%;
+  filter: alpha(Opacity=30);
+  opacity: 0.3; }
 
 #about {
   background-color: #00A79D;
