@@ -128,9 +128,10 @@ $(document).ready(function() {
 		var feed = new Instafeed({
 			limit: 3,
 			get: 'user',
-			userId: '83b980446cfc450eade4beec44388ee5',
+			userId: 'shiftappens',
 	        clientId: '83b980446cfc450eade4beec44388ee5',
-	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4'
+	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4',
+	        template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
 	    });
 	    feed.run();
 	}, 1000);
