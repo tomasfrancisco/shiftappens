@@ -133,7 +133,7 @@ $(document).ready(function() {
 	        accessToken: '759309076.1677ed0.ae99b8d0ea124ac1952bfaa3069ec2e4',
 	        resolution: 'standard_resolution',
 	        target: 'home',
-	        template: '<style>background-image:url({{image}})</style>'
+	        template: '<style>#home{background-image:url({{image}});}</style>'
 	    });
 	    feed.run();
 	}, 1000);
