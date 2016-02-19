@@ -1,0 +1,19 @@
+html {
+  overflow: hidden; }
+
+body, html {
+  font-family: "Dosis";
+  font-size: 1.3em;
+  height: 100%;
+  margin: 0; }
+  body.modal-open, html.modal-open {
+    overflow: visible; }
+
+iframe {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    overflow: hidden;
+}
