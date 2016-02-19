@@ -126,8 +126,12 @@ $(document).ready(function() {
 				+ '<span>%S</span>s'));
 		});
 		var feed = new Instafeed({
-			limit: 5,
-	        clientId: '83b980446cfc450eade4beec44388ee5'
+			limit: 3,
+			get: 'popular',
+	        clientId: '83b980446cfc450eade4beec44388ee5',
+	        error: function(message) {
+	        	alert(message);
+	        }
 	    });
 	    feed.run();
 	}, 1000);
