@@ -176,8 +176,8 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
-  filter: alpha(Opacity=75);
-  opacity: 0.75; }
+  filter: alpha(Opacity=50);
+  opacity: 0.5; }
 
 #about {
   background-color: #00A79D;
