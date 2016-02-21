@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var main;
-    var max_time = 10;
+    var max_time = 120;
     var time = max_time;
     $("#time").text(time);
     $("#stop_timer").css("opacity", "0.5");
