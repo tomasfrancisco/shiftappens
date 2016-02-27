@@ -1,5 +1,135 @@
-html, body {
-  height: 100vh;
-  width: 100wh; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 200;
+  src: local(Dosis ExtraLight), local(Dosis-ExtraLight), url("../fonts/RPKDmaFi75RJkvjWaDDb0vesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis ExtraLight), local(Dosis-ExtraLight), url(../fonts/RPKDmaFi75RJkvjWaDDb0vesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 300;
+  src: local(Dosis Light), local(Dosis-Light), url("../fonts/7aJzV14HzAOiwNTiPgucGfesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis Light), local(Dosis-Light), url(../fonts/7aJzV14HzAOiwNTiPgucGfesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Dosis Regular), local(Dosis-Regular), url("../fonts/4hYyXH_8WmbBLamf6WjLwg.woff2") format("woff2");
+  src: local(Dosis Regular), local(Dosis-Regular), url(../fonts/4hYyXH_8WmbBLamf6WjLwg.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 500;
+  src: local(Dosis Medium), local(Dosis-Medium), url("../fonts/mAcLJWdPWDNiDJwJvcWKc_esZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis Medium), local(Dosis-Medium), url(../fonts/mAcLJWdPWDNiDJwJvcWKc_esZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 600;
+  src: local(Dosis SemiBold), local(Dosis-SemiBold), url("../fonts/O6SOu9hYsPHTU43R17NS5fesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis SemiBold), local(Dosis-SemiBold), url(../fonts/O6SOu9hYsPHTU43R17NS5fesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 700;
+  src: local(Dosis Bold), local(Dosis-Bold), url("../fonts/22aDRG5X9l7obljtz7tihvesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis Bold), local(Dosis-Bold), url(../fonts/22aDRG5X9l7obljtz7tihvesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 800;
+  src: local(Dosis ExtraBold), local(Dosis-ExtraBold), url("../fonts/nq3OPeKr7RUSF_YDJ1woxvesZW2xOQ-xsNqO47m55DA.woff2") format("woff2");
+  src: local(Dosis ExtraBold), local(Dosis-ExtraBold), url(../fonts/nq3OPeKr7RUSF_YDJ1woxvesZW2xOQ-xsNqO47m55DA.ttf) format(truetype);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+html {
+  overflow-x: hidden; }
+
+body, html {
+  font-family: "Dosis";
+  font-size: 1.3em;
+  height: 100%;
+  margin: 0; }
+  body.modal-open, html.modal-open {
+    overflow: visible; }
+
+#home, #background, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
+  width: 100vw;
+  padding-top: 27px;
+  padding-bottom: 75px; }
+  #home .container > header, #background .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
+    text-align: center; }
+    #home .container > header h1, #background .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #challenges .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
+      padding-bottom: 25px; }
+
+#navigation {
+  background-color: #FFFFFF; }
+  #navigation .container .navbar-header .nav-title {
+    font-family: "mopsterregular";
+    font-size: 1.6rem;
+    line-height: 25px;
+    color: #262261; }
+    #navigation .container .navbar-header .nav-title:hover {
+      color: #FF259C; }
+  #navigation .collapse .menu {
+    font-family: "Dosis";
+    font-weight: 500;
+    font-size: 0.8rem; }
+    #navigation .collapse .menu .active a {
+      background-color: #FFFFFF;
+      color: #FF259C; }
+    #navigation .collapse .menu a {
+      color: #262261; }
+      #navigation .collapse .menu a:hover {
+        color: #FF259C;
+        -webkit-transition: color 0.2s ease-in-out; }
+    #navigation .collapse .menu .tooltip {
+      font-family: "Dosis";
+      font-weight: 500;
+      font-size: 1.2rem; }
+      #navigation .collapse .menu .tooltip .tooltip-arrow {
+        border-bottom-color: #FF259C; }
+      #navigation .collapse .menu .tooltip .tooltip-inner {
+        background-color: #FF259C; }
+
+#home {
+  height: 40vh;
+  padding-top: 10vh;
+  vertical-align: middle;
+  overflow-y: hidden;
+  position: relative;
+  background-color: #262261; }
+  #home .home-container {
+    text-align: center; }
+    #home .home-container header h1 {
+      margin: 0;
+      padding: 0;
+      font-family: "mopsterregular";
+      font-size: 20vh;
+      color: #FFFFFF; }
+    #home .home-container header p {
+      margin: 0;
+      padding: 0;
+      font-family: "Dosis";
+      font-size: 5vh;
+      color: white; }
+
+.team {
+  height: 100vh; }
+  .team .team-info .team-name {
+    font-family: "Dosis";
+    font-size: 5vh; }
+  .team .team-info .img-rounded {
+    width: auto;
+    height: auto; }
+  .team .team-info .member {
+    font-family: "Dosis";
+    font-size: 3vh;
+    margin: 1vh 0 0 0; }
 
 /*# sourceMappingURL=hangover.css.map */
