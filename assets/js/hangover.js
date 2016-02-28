@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var jsonContent;
-    $.getJSON('assets/js/teams.json', function(data) {
+    $.getJSON('../assets/js/teams.json', function(data) {
         jsonContent = data['team'];
         for (var i = 0 ; i < jsonContent.length ; i++) {
             var id = jsonContent[i]['id'];
