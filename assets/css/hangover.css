@@ -112,20 +112,29 @@ body, html {
       color: white; }
 
 .team {
-  min-heigth: 100%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
   margin-left: 5vw;
   margin-right: 5vw; }
-  .team .team-info .team-name {
-    font-family: "Dosis";
-    font-size: 5vh; }
-  .team .team-info .img-rounded {
-    width: auto;
-    height: auto; }
-  .team .team-info .member {
-    font-family: "Dosis";
-    font-size: 3vh;
-    margin: 1vh 0 0 0; }
+  .team .team-info {
+    margin-top: 5vh;
+    margin-bottom: 5vh; }
+    .team .team-info .team-name {
+      font-family: "Dosis";
+      font-size: 5vh; }
+    .team .team-info .img-rounded {
+      width: auto;
+      height: auto; }
+    .team .team-info .member {
+      font-family: "Dosis";
+      font-size: 3vh;
+      margin: 1vh 0 0 0; }
+  .team .project-info {
+    margin-top: 5vh;
+    margin-bottom: 5vh; }
+    .team .project-info .project-name {
+      font-family: "Dosis";
+      font-size: 5vh; }
+    .team .project-info .project-content {
+      font-family: "Dosis";
+      font-size: 3vh; }
 
 /*# sourceMappingURL=hangover.css.map */
