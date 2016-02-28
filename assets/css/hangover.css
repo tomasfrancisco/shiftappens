@@ -146,10 +146,6 @@ body, html {
       font-family: "Dosis";
       font-size: 3vh;
       margin: 1vh 0 0 0; }
-    .team .team-info .award {
-      font-family: "Dosis";
-      font-size: 5vh;
-      font-weight: 600; }
   .team .project-info {
     margin-top: 5vh;
     margin-bottom: 10vh; }
@@ -158,12 +154,52 @@ body, html {
       font-family: "Dosis";
       font-size: 5vh;
       font-weight: 600; }
+      .team .project-info .project-name .award {
+        font-family: "Dosis";
+        font-size: 5vh;
+        font-weight: 600;
+        margin: 1vh 0 0 0;
+        padding: 1vh 0 1vh 0; }
     .team .project-info .project-content {
       font-family: "Dosis";
       font-size: 4vh;
-      word-spacing: 2px; }
+      word-spacing: 2px;
+      margin: 1vh 5% 2vh 5%; }
     .team .project-info .project-video {
       margin-left: 15%;
       margin-right: 15%; }
+
+#footer {
+  background-color: #262261;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  #footer .footer-container .footer-content .row {
+    vertical-align: middle; }
+    #footer .footer-container .footer-content .row .past-editions {
+      padding-top: 5px;
+      padding-bottom: 8px;
+      margin-top: 5px;
+      margin-bottom: 7px;
+      display: block; }
+      #footer .footer-container .footer-content .row .past-editions a {
+        color: #FF259C;
+        font-size: 16px;
+        line-height: 15px;
+        font-weight: 600;
+        text-decoration: underline; }
+        #footer .footer-container .footer-content .row .past-editions a:hover {
+          color: #FF259C;
+          text-decoration: none; }
+    #footer .footer-container .footer-content .row .contacts {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+      #footer .footer-container .footer-content .row .contacts a {
+        margin-left: 15px;
+        margin-right: 15px; }
+        #footer .footer-container .footer-content .row .contacts a i {
+          color: #FF259C; }
+        #footer .footer-container .footer-content .row .contacts a:hover {
+          color: #1D1D1D; }
 
 /*# sourceMappingURL=hangover.css.map */
