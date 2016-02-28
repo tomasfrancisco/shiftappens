@@ -1,0 +1,233 @@
+{
+    "team":
+    [
+        {
+            "id":"01",
+            "team-name":"#Viemosparacomer",
+            "image":"",
+            "team-members":["André Gradil","João Sousa","Ricardo Barbosa","Ricardo Loureira"],
+            "project-name":"Space Pew",
+            "project-content":"Space Pew é um shooter no espaço com naves, meteoros e possivelmente nazis",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"02",
+            "team-name":"El Vodka",
+            "image":"",
+            "team-members":["José Castanheira","Nelson Pinto","Oleg Vasylyeo","Tiago Santo"],
+            "project-name":"Utakit",
+            "project-content":"Quando um grupo de amigos quer sair em conjunto, uma das maiores chatices é saber quem leva o carro e como, seja por causa do combustivel ou por ser a pessoa que nao sabe beber àlcool. O Utakit regista todas as viagens que um grupo de amigos faz e decide quem será o próximo condutor, de acordo com os kms percorridos por cada um, Assim não se divide o custo do combustivel e acabam-se os voluntários.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"03",
+            "team-name":"Team Tagus",
+            "team-members":["Filipe Fernandes","Luis Martins","Tiago Martins","Tomás Martins"],
+            "project-name":"Study@",
+            "project-content":"Desenvolvo uma web app onde os utilizadores podem procurar e consutlar faculdades e/ou locais de estudo, Podem tambem adicionar os seus proprios locais, bem como selecionar favoritos e avaliar esses locais",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"04",
+            "team-name":"1' = '1'; DROP TABLES; Team",
+            "team-members":["João Jesus","Ricardo Gonçalves"],
+            "project-name":"Lookout Pi",
+            "project-content":"Deteção de intrusos, firewall, VPN/TOR, utilizando raspberry como router",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"05",
+            "team-name":"Aqueke",
+            "team-members":["Ivo Frasão","João Bento","Mariana Roque"],
+            "project-name":"Controla o Vicio!",
+            "project-content":"Pretendemos fazer uma aplicaçao para ajudar na contagem dos dados móveis , dando ao utilizador total liberdade na configuraçao do tarifario, incluindo a escolha das aplicaçoes moveis que pretende, ou nao, contabilizar.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"06",
+            "team-name":"Stuff Appens",
+            "team-members":["Vargo Gomes","António Ferreira","Karino Moura","Sofia Bernardino"],
+            "project-name":"My Global Social Network",
+            "project-content":"Criação de uma extensao para o google chrome onde é possivel aceder numa só janela a várias aplicaçoes temáticas, designadamente redes sociais (facebook, Google +, Twitter), chat (WhatsApp) e fotografia (Instagram, Flickr, Tumblr e Pinterest). Esta extensao deve ser personalizada consoante as preferencias/gostos do utilizador, possibilitando a selecçao das aplicaçoes desejadas. A extensao pode ser portada para o Opera e futuramente para o Firefox e Microsoft Edge.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"07",
+            "team-name":"Hackathons 101",
+            "team-members":["David Gomes","Miguel Duarte","Pedro Paredes"],
+            "project-name":"The old york times",
+            "project-content":"A nossa ideia consiste numa plataforma que permite consultar de forma dsimples as noticias que ocorreram num dado intervalo de tempo. Podemos, por exemplo ver as noticias mais relevantes de 1600 a 1750 ou ver um resumo dos ultimas 2 semanas",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"08",
+            "team-name":"Os nemporisso",
+            "team-members":["Luis Miguel Agonte","João Miguel Cunha Amorim","Jéssica Parente"],
+            "project-name":"Dalton",
+            "project-content":"Aplicação para daltonicos que permite saber mais acerca de daltonicos, descobrir se é daltonico, descobrirquais as cores dos objetos e combinar diversas cores. Queremos dar enfase à combinação e descoberta das cores porque sao problemas frequentes no dia a dia de um daltonico",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"09",
+            "team-name":"Can Orange Team",
+            "team-members":["Tiago Martins Andrade","Daniel Bastos","Carlos Sobral","Andreia Sofia Antunes"],
+            "project-name":"aMAZEing World",
+            "project-content":"Desenvimento de jogo de realidade virtual, utilizando Unity e Oculus Rift, sob o tema de um labirinto.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"10",
+            "team-name":"Just Duck my shift up fam",
+            "team-members":["Cesário Silva","Francisco Ferreira","João Ferreira","Teresa Salazar"],
+            "project-name":"Challenge Accepted",
+            "project-content":"Plataforma web baseado no lançamento e concretização de desafios",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"11",
+            "team-name":"23:59",
+            "team-members":["Miguel Cine","Rafael Ferreira","Tomás Marques"],
+            "project-name":"X",
+            "project-content":"O nosso grupo tem uma ideia que procura conciliar a àrea digital com a analógica. Trata-se de um serviço print on demand, que irá possibilitar novas experiências na leitura semanal \"print is not dead\"",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"12",
+            "team-name":"Os forretas",
+            "team-members":["Fábio Viana","Rafael Viana","Paulo Auomba","Mário Santos"],
+            "project-name":"Forreta",
+            "project-content":"Aplicacao Mobile a lista de compras/mercearia colaborativa com integracao de comparador de precos de supermercado. Esta aplicacao veio eincluir tasks os produtos de spermercado, assim como produto para farmacias.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"13",
+            "team-name":"Harry Potter e o tesouro do judeu escondido",
+            "team-members":["João Oliveira","Miguel Freitas","Tomás Carvalho","Telmo Neves"],
+            "project-name":"Treebaking",
+            "project-content":"Website para brainstorming e criaçao de equipas para desenvolvimento de microprojetos. Os brainstorms terão o aspecto de árvores e terão um tempo de \"vida\" limitado, existirão árvores comunitárias (geradas pelo Website) e privadas (criadas pelo utilizador). O objetivo é obter feedback á cerca de ideias (através do algoritmo criado para balancear as àrvores) e criar uma comunidade de utilizadores criativos e com espirito de entre-ajuda. os projetos não tem de ser ligados á area de informática.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"14",
+            "team-name":"Polistereno Extrudido",
+            "team-members":["@gui","@joni","@bdiogo","@tiago_aryan"],
+            "project-name":"SLICE",
+            "project-content":"Ferramenta que permite a fácil oranização de fundos monetários para posterior utilização em compras, eventos, prendas, etc..",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"15",
+            "team-name":"404",
+            "team-members":["António Simões","Inês Rodrigues","João Lopes"],
+            "project-name":"Cuzzle",
+            "project-content":"Jogo de puzzles que consiste com mver 2 cubos simultaneamente para um ponto de chegada. Estes cubos terao de interceptar antes da posicao final ser ativada",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"16",
+            "team-name":"Baco",
+            "team-members":["Pedro Caseiro","João Bernardo","André Baptista","José Marcelino"],
+            "project-name":"Baco",
+            "project-content":"Aplicação Operaçoes Stop com crawler,",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"17",
+            "team-name":"Gone",
+            "team-members":["David José Nogueira Alecrim","João Pedro Oliveira Carvalho","Luis Filipe Oliveira","João Miguel Silva Sousa"],
+            "project-name":"Gone",
+            "project-content":"O Gone é uma aplicaçao para o planeamento e registo das tuas viagens , de forma fácil, intuitiva e com uma componente social. A aplicaçao tem parte web e parte mobile , sendo que ambas as partes permitem planear a tua viagem, mas apenas a mobile permite fazer um diário de viagem ,  registando os locais por onde passas e fotos que tires nesses locais. Na web, mais tarde, podes necessitar as tuas viagens vendo os acontecimentos numa timeline.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"18",
+            "team-name":"Forward",
+            "team-members":["André Lizardo","Bruno Leão","Daniel Amaral","Eduardo Silva","Jorge Araújo"],
+            "project-name":"Megaphone",
+            "project-content":"Serviço de broadcast de mensagens- O novo paradigma de difusão de informação pelas massas",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"19",
+            "team-name":"Teamfit",
+            "image":"19.jpg",
+            "team-members":["Ana Rafaela Ferro","Bernardo Casaleiro","Maria Margarida"],
+            "project-name":"FitAppens",
+            "project-content":"Uma webapp para ajudar as pessoas a ficarem fit. Elabora planos de treino e alimentares de acordo com os objetivos do utilizador",
+            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-VHZxa3ExSzROWlE/preview",
+            "video2":"https://drive.google.com/file/d/0B6adD_-su_m-SVVpRGtic3dHX0E/preview"
+        },
+        {
+            "id":"20",
+            "team-name":"404",
+            "team-members":["Marco António Correia dos Santos","Eduardo Luis Alves Rodrigues","João Carlos do Nascimento","Matias da Silva Godinho"],
+            "project-name":"Escape obliterizer",
+            "project-content":"A ideia proposta pela a nossa equipa é um jogo para desktop e mobile e com um feeling arcade onde o jogador tem que usar as quatro direcoes para se desviar de hazards variados. the catch é que o flayer está preso no centro e ao fim de alguns segundos volta a posição inicial. o player tem que esclhors bem quando se movimenta",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"21",
+            "team-name":"No clue",
+            "team-members":["Joaquim Ferrer","Diogo Mesquita"],
+            "project-name":"Best Odds",
+            "project-content":"Uma aplicação que mostra as melhores odds para apostar baseado em diversas fontes. Isto aplicado em apostas de desporto.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"22",
+            "team-name":"vim > emacs",
+            "team-members":["Miguel Machado","António Lima","Pedro Belém","Luis Ribeiro"],
+            "project-name":"Julio",
+            "project-content":"Ajuda no estudo",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"23",
+            "team-name":"Alcoólicos Anónimos",
+            "team-members":["Alexandre Jesus","Nuno Eufrásio","Mário Balça"],
+            "project-name":"SlideOps",
+            "project-content":"O objetivo é fazer uma aplicação web para criar apresentações powerpoint interativo atraves de smartphones. Queremos usar meteor para ter uma boa base para implementar as features realtime e também para podermos tirar do que ja existe na criacao de apresentações powerpoint. A partir daí o céu é o limite e podemos implenmentar as features que acreditarmos que acrescentariam algo de interessante e inovador as apresentações powerpoint.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"24",
+            "team-name":"Wave Scripters",
+            "team-members":["Hugo Jorge Araújo Lobo","Nino Melo","Tiago Filipe Nunes Ribeiro"],
+            "project-name":"Rippler",
+            "project-content":"Jogo em Javascript de endless survival que consiste em destruir obstáculos através de disparos de pulsos de energia adequados á ameaça. O objetivo do jogo é obter a maior pontuaçao possivel antes do game-over.",
+            "video1":"",
+            "video2":""
+        },
+        {
+            "id":"25",
+            "team-name":"RadioPixel",
+            "team-members":["Mariana Martins","Sofia Rocha"],
+            "project-name":"PixelJournal",
+            "project-content":"Versão digital do bullet journal que te agenda a registar o que fiizeste hoje e plantar o que vais fazer amanha",
+            "video1":"",
+            "video2":""
+        }
+    ]
+}
