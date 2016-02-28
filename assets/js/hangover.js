@@ -9,14 +9,9 @@ $(document).ready(function() {
                 <div id=\"project-info-" + id + "\" class=\"project-info col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8 col-lg-push-4\"> \
                     <h1 class=\"project-name\">" + jsonContent[i]['project-name'] + "</h1> \
                     <p class=\"project-content\">\"" + jsonContent[i]['project-content'] + "\"</p> \
-                    <div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"> \
+                    <div class=\"project-video\"> \
                         <div class=\"embed-responsive embed-responsive-16by9\"> \
                             <iframe class=\"embed-responsive-item\" src=\"" + jsonContent[i]['video1'] + "\" allowfullscreen=\"allowfullscreen\"></iframe> \
-                        </div> \
-                    </div> \
-                    <div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"> \
-                        <div class=\"embed-responsive embed-responsive-16by9\"> \
-                            <iframe class=\"embed-responsive-item\" src=\"" + jsonContent[i]['video2'] + "\" allowfullscreen=\"allowfullscreen\"></iframe> \
                         </div> \
                     </div> \
                 </div> \
@@ -27,6 +22,9 @@ $(document).ready(function() {
             </div>");
             for (var j = 0 ; j < jsonContent[i]['team-members'].length ; j++) {
                 $("#team-info-"+id).append("<p class=\"member\">" + jsonContent[i]['team-members'][j] + "</p>");
+            }
+            if(jsonContent[i]['award']!="") {
+                $("#project-info-"+id+">.project-name").append("<p class=\"award\">" + jsonContent[i]['award'] + "</p>");
             }
         }
     });

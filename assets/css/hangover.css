@@ -112,39 +112,58 @@ body, html {
       color: white; }
 
 .team {
-  min-height: 80vh;
   padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-right: 5vw;
+  overflow: auto; }
   .team:nth-child(3n+1) {
     background-color: #FEFE00;
     color: #262261; }
+    .team:nth-child(3n+1) .project-info .project-name .award {
+      background-color: #262261;
+      color: #FEFE00; }
   .team:nth-child(3n+2) {
     background-color: #00A79D;
     color: #FEFE00; }
+    .team:nth-child(3n+2) .project-info .project-name .award {
+      background-color: #FEFE00;
+      color: #00A79D; }
   .team:nth-child(3n+3) {
     background-color: #262261;
     color: #FF259C; }
+    .team:nth-child(3n+3) .project-info .project-name .award {
+      background-color: #FF259C;
+      color: #262261; }
   .team .team-info {
     margin-top: 5vh;
-    margin-bottom: 5vh; }
+    margin-bottom: 10vh; }
     .team .team-info .team-name {
       font-family: "Dosis";
       font-size: 5vh; }
     .team .team-info .img-rounded {
-      width: auto;
+      width: 80%;
       height: auto; }
     .team .team-info .member {
       font-family: "Dosis";
       font-size: 3vh;
       margin: 1vh 0 0 0; }
+    .team .team-info .award {
+      font-family: "Dosis";
+      font-size: 5vh;
+      font-weight: 600; }
   .team .project-info {
     margin-top: 5vh;
-    margin-bottom: 5vh; }
+    margin-bottom: 10vh; }
     .team .project-info .project-name {
+      text-align: center;
       font-family: "Dosis";
-      font-size: 5vh; }
+      font-size: 5vh;
+      font-weight: 600; }
     .team .project-info .project-content {
       font-family: "Dosis";
-      font-size: 3vh; }
+      font-size: 4vh;
+      word-spacing: 2px; }
+    .team .project-info .project-video {
+      margin-left: 15%;
+      margin-right: 15%; }
 
 /*# sourceMappingURL=hangover.css.map */
