@@ -4,7 +4,6 @@
         {
             "id":"01",
             "team-name":"#Viemosparacomer",
-            "image":"",
             "team-members":["André Gradil","João Sousa","Ricardo Barbosa","Ricardo Loureira"],
             "project-name":"Space Pew",
             "project-content":"Space Pew é um shooter no espaço com naves, meteoros e possivelmente nazis",
@@ -14,7 +13,6 @@
         {
             "id":"02",
             "team-name":"El Vodka",
-            "image":"",
             "team-members":["José Castanheira","Nelson Pinto","Oleg Vasylyeo","Tiago Santo"],
             "project-name":"Utakit",
             "project-content":"Quando um grupo de amigos quer sair em conjunto, uma das maiores chatices é saber quem leva o carro e como, seja por causa do combustivel ou por ser a pessoa que nao sabe beber àlcool. O Utakit regista todas as viagens que um grupo de amigos faz e decide quem será o próximo condutor, de acordo com os kms percorridos por cada um, Assim não se divide o custo do combustivel e acabam-se os voluntários.",
@@ -51,7 +49,7 @@
         {
             "id":"06",
             "team-name":"Stuff Appens",
-            "team-members":["Vargo Gomes","António Ferreira","Karino Moura","Sofia Bernardino"],
+            "team-members":["Vargo Gomes","António Ferreira","Karina Moura","Sofia Bernardino"],
             "project-name":"My Global Social Network",
             "project-content":"Criação de uma extensao para o google chrome onde é possivel aceder numa só janela a várias aplicaçoes temáticas, designadamente redes sociais (facebook, Google +, Twitter), chat (WhatsApp) e fotografia (Instagram, Flickr, Tumblr e Pinterest). Esta extensao deve ser personalizada consoante as preferencias/gostos do utilizador, possibilitando a selecçao das aplicaçoes desejadas. A extensao pode ser portada para o Opera e futuramente para o Firefox e Microsoft Edge.",
             "video1":"",
@@ -168,7 +166,6 @@
         {
             "id":"19",
             "team-name":"Teamfit",
-            "image":"19.jpg",
             "team-members":["Ana Rafaela Ferro","Bernardo Casaleiro","Maria Margarida"],
             "project-name":"FitAppens",
             "project-content":"Uma webapp para ajudar as pessoas a ficarem fit. Elabora planos de treino e alimentares de acordo com os objetivos do utilizador",
