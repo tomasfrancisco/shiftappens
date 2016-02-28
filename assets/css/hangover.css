@@ -58,15 +58,6 @@ body, html {
   body.modal-open, html.modal-open {
     overflow: visible; }
 
-#home, #background, #about, #history, #where, #schedule, #panel, #awards, #challenges, #sign-in, #error, #success, #partners, #faq {
-  width: 100vw;
-  padding-top: 27px;
-  padding-bottom: 75px; }
-  #home .container > header, #background .container > header, #about .container > header, #history .container > header, #where .container > header, #schedule .container > header, #panel .container > header, #awards .container > header, #challenges .container > header, #sign-in .container > header, #error .container > header, #success .container > header, #partners .container > header, #faq .container > header {
-    text-align: center; }
-    #home .container > header h1, #background .container > header h1, #about .container > header h1, #history .container > header h1, #where .container > header h1, #schedule .container > header h1, #panel .container > header h1, #awards .container > header h1, #challenges .container > header h1, #sign-in .container > header h1, #error .container > header h1, #success .container > header h1, #partners .container > header h1, #faq .container > header h1 {
-      padding-bottom: 25px; }
-
 #navigation {
   background-color: #FFFFFF; }
   #navigation .container .navbar-header .nav-title {
@@ -99,6 +90,7 @@ body, html {
 
 #home {
   height: 40vh;
+  width: 100vw;
   padding-top: 10vh;
   vertical-align: middle;
   overflow-y: hidden;
@@ -120,7 +112,11 @@ body, html {
       color: white; }
 
 .team {
-  height: 100vh; }
+  min-heigth: 100%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw; }
   .team .team-info .team-name {
     font-family: "Dosis";
     font-size: 5vh; }
