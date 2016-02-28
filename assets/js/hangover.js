@@ -8,9 +8,17 @@ $(document).ready(function() {
             <div class=\"team\" id=\"" + id + "\"> \
                 <div id=\"project-info-" + id + "\" class=\"project-info col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8 col-lg-push-4\"> \
                     <h1 class=\"project-name\">" + jsonContent[i]['project-name'] + "</h1> \
-                    <p class=\"project-content\">" + jsonContent[i]['project-content'] + "</p> \
-                    <iframe src=\"" + jsonContent[i]['video1'] + "\"></iframe> \
-                    <iframe src=\"" + jsonContent[i]['video2'] + "\"></iframe> \
+                    <p class=\"project-content\">\"" + jsonContent[i]['project-content'] + "\"</p> \
+                    <div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"> \
+                        <div class=\"embed-responsive embed-responsive-16by9\"> \
+                            <iframe class=\"embed-responsive-item\" src=\"" + jsonContent[i]['video1'] + "\" allowfullscreen=\"allowfullscreen\"></iframe> \
+                        </div> \
+                    </div> \
+                    <div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"> \
+                        <div class=\"embed-responsive embed-responsive-16by9\"> \
+                            <iframe class=\"embed-responsive-item\" src=\"" + jsonContent[i]['video2'] + "\" allowfullscreen=\"allowfullscreen\"></iframe> \
+                        </div> \
+                    </div> \
                 </div> \
                 <div id=\"team-info-" + id + "\" class=\"team-info col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4 col-lg-pull-8\"> \
                     <h1 class=\"team-name\">" + jsonContent[i]['team-name'] + "</h1> \

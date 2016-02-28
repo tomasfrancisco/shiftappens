@@ -112,8 +112,18 @@ body, html {
       color: white; }
 
 .team {
-  margin-left: 5vw;
-  margin-right: 5vw; }
+  min-height: 80vh;
+  padding-left: 5vw;
+  padding-right: 5vw; }
+  .team:nth-child(3n+1) {
+    background-color: #FEFE00;
+    color: #262261; }
+  .team:nth-child(3n+2) {
+    background-color: #00A79D;
+    color: #FEFE00; }
+  .team:nth-child(3n+3) {
+    background-color: #262261;
+    color: #FF259C; }
   .team .team-info {
     margin-top: 5vh;
     margin-bottom: 5vh; }
