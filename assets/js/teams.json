@@ -22,7 +22,7 @@
         {
             "id":"11",
             "team-name":"23:59",
-            "team-members":["Miguel Cine","Rafael Ferreira","Tomás Marques"],
+            "team-members":["Miguel Cruz","Rafael Ferreira","Tomás Marques"],
             "project-name":"X",
             "project-content":"O nosso grupo tem uma ideia que procura conciliar a área digital com a analógica. Trata-se de um serviço print on demand, que irá possibilitar novas experiências na leitura semanal \"print is not dead\"",
             "video1":"https://drive.google.com/file/d/0B6adD_-su_m-V1IyRHV6cWU4c2c/preview",
@@ -79,7 +79,7 @@
             "team-members":["João Jesus","Ricardo Gonçalves"],
             "project-name":"Lookout Pi",
             "project-content":"Deteção de intrusos, firewall, VPN/TOR, utilizando raspberry como router",
-            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-OUNESThSMnpvSkk/preview",
+            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-MWpaUkxteFdiTXM/preview",
             "award":""
         },
         {
@@ -139,7 +139,7 @@
         {
             "id":"14",
             "team-name":"Polistereno Extrudido",
-            "team-members":["@gui","@joni","@bdiogo","@tiago_aryan"],
+            "team-members":["Rodrigo Carvalho","Joana Vieira","Beatriz Diogo","Tiago Sequeira"],
             "project-name":"SLICE",
             "project-content":"Ferramenta que permite a fácil oranização de fundos monetários para posterior utilização em compras, eventos, prendas, etc..",
             "video1":"https://drive.google.com/file/d/0B6adD_-su_m-MXdCUHdRMmg5OFk/preview",

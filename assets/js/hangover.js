@@ -17,7 +17,7 @@ $(document).ready(function() {
                 </div> \
                 <div id=\"team-info-" + id + "\" class=\"team-info col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4 col-lg-pull-8\"> \
                     <h1 class=\"team-name\">" + jsonContent[i]['team-name'] + "</h1> \
-                    <img src=\"../assets/img/team/" + id + ".jpg\" class=\"img-responsive img-rounded\" /> \
+                    <img src=\"../assets/img/team/" + id + ".jpg\" class=\"img-responsive img\" /> \
                 </div> \
             </div>");
             for (var j = 0 ; j < jsonContent[i]['team-members'].length ; j++) {
@@ -27,5 +27,16 @@ $(document).ready(function() {
                 $("#project-info-"+id+">.project-name").append("<p class=\"award\">" + jsonContent[i]['award'] + "</p>");
             }
         }
+    });
+
+    $(function() {
+        $('a.page-scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            $(this).addClass("active");
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
     });
 });

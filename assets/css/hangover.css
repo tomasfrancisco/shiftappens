@@ -58,58 +58,32 @@ body, html {
   body.modal-open, html.modal-open {
     overflow: visible; }
 
-#navigation {
-  background-color: #FFFFFF; }
-  #navigation .container .navbar-header .nav-title {
-    font-family: "mopsterregular";
-    font-size: 1.6rem;
-    line-height: 25px;
-    color: #262261; }
-    #navigation .container .navbar-header .nav-title:hover {
-      color: #FF259C; }
-  #navigation .collapse .menu {
-    font-family: "Dosis";
-    font-weight: 500;
-    font-size: 0.8rem; }
-    #navigation .collapse .menu .active a {
-      background-color: #FFFFFF;
-      color: #FF259C; }
-    #navigation .collapse .menu a {
-      color: #262261; }
-      #navigation .collapse .menu a:hover {
-        color: #FF259C;
-        -webkit-transition: color 0.2s ease-in-out; }
-    #navigation .collapse .menu .tooltip {
-      font-family: "Dosis";
-      font-weight: 500;
-      font-size: 1.2rem; }
-      #navigation .collapse .menu .tooltip .tooltip-arrow {
-        border-bottom-color: #FF259C; }
-      #navigation .collapse .menu .tooltip .tooltip-inner {
-        background-color: #FF259C; }
-
 #home {
-  height: 40vh;
+  height: 100vh;
   width: 100vw;
-  padding-top: 10vh;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
   vertical-align: middle;
   overflow-y: hidden;
   position: relative;
-  background-color: #262261; }
+  background-color: #FFFFFF; }
   #home .home-container {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 10vh;
+    padding-bottom: 10vh; }
     #home .home-container header h1 {
       margin: 0;
       padding: 0;
       font-family: "mopsterregular";
       font-size: 20vh;
-      color: #FFFFFF; }
+      color: #FF259C; }
     #home .home-container header p {
       margin: 0;
       padding: 0;
       font-family: "Dosis";
       font-size: 5vh;
-      color: white; }
+      font-weight: 600;
+      color: #262261; }
 
 #powered {
   position: fixed;
@@ -159,36 +133,39 @@ body, html {
     margin-bottom: 5vh; }
     #main .team .team-info .team-name {
       font-family: "Dosis";
-      font-size: 5vh; }
-    #main .team .team-info .img-rounded {
+      font-size: 34px;
+      font-weight: 600; }
+    #main .team .team-info .img {
       width: 80%;
       height: auto; }
     #main .team .team-info .member {
       font-family: "Dosis";
-      font-size: 3vh;
-      margin: 1vh 0 0 0; }
+      font-size: 24px;
+      font-weight: 600;
+      margin: 3px 0 0 0; }
   #main .team .project-info {
     margin-top: 5vh;
-    margin-bottom: 5vh; }
+    margin-bottom: 10vh; }
     #main .team .project-info .project-name {
       text-align: center;
-      font-family: "Dosis";
+      font-family: "mopsterregular";
       font-size: 5vh;
-      font-weight: 600; }
+      font-weight: 600;
+      margin: 2vh 5% 3vh 5%; }
       #main .team .project-info .project-name .award {
         font-family: "Dosis";
         font-size: 5vh;
         font-weight: 600;
-        margin: 1vh 0 0 0;
+        margin: 2vh 0 2vh 0;
         padding: 1vh 0 1vh 0; }
     #main .team .project-info .project-content {
       font-family: "Dosis";
       font-size: 3vh;
       word-spacing: 2px;
-      margin: 1vh 5% 2vh 5%; }
+      margin: 2vh 5% 3vh 5%; }
     #main .team .project-info .project-video {
-      margin-left: 15%;
-      margin-right: 15%; }
+      margin-left: 5%;
+      margin-right: 5%; }
 
 #footer {
   background-color: #262261;
