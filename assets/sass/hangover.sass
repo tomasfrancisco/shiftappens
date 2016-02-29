@@ -117,69 +117,91 @@ body, html
                 font-size: 5vh
                 color: white
 
-.team
-    padding-left: 5vw
-    padding-right: 5vw
-    overflow: auto
-    &:nth-child(3n+1)
-        background-color: #FEFE00
-        color: #262261
+#powered
+    position: fixed
+    height: 60px
+    top: 0
+    right: 0
+    background-color: #000000
+    text-align: center
+    padding: 10px
+    z-index: 1000
+    a
+        color: #FFFFFF
+        font-family: 'mopsterregular'
+        font-size: 14px
+        text-decoration: none
+        letter-spacing: 2px
+        margin: 0
+        padding: 0
+        p
+            margin: 0
+            padding: 0
+
+#main
+    .team
+        padding-left: 5vw
+        padding-right: 5vw
+        overflow: auto
+        &:nth-child(3n+1)
+            background-color: #FEFE00
+            color: #262261
+            .project-info
+                .project-name
+                    .award
+                        background-color: #262261
+                        color: #FEFE00
+        &:nth-child(3n+2)
+            background-color: #00A79D
+            color: #FEFE00
+            .project-info
+                .project-name
+                    .award
+                        background-color: #FEFE00
+                        color: #00A79D
+        &:nth-child(3n+3)
+            background-color: #262261
+            color: #FF259C
+            .project-info
+                .project-name
+                    .award
+                        background-color: #FF259C
+                        color: #262261
+        .team-info
+            margin-top: 5vh
+            margin-bottom: 5vh
+            .team-name
+                font-family: 'Dosis'
+                font-size: 5vh
+            .img-rounded
+                width: 80%
+                height: auto
+            .member
+                font-family: 'Dosis'
+                font-size: 3vh
+                margin: 1vh 0 0 0
         .project-info
+            margin-top: 5vh
+            margin-bottom: 5vh
             .project-name
-                .award
-                    background-color: #262261
-                    color: #FEFE00
-    &:nth-child(3n+2)
-        background-color: #00A79D
-        color: #FEFE00
-        .project-info
-            .project-name
-                .award
-                    background-color: #FEFE00
-                    color: #00A79D
-    &:nth-child(3n+3)
-        background-color: #262261
-        color: #FF259C
-        .project-info
-            .project-name
-                .award
-                    background-color: #FF259C
-                    color: #262261
-    .team-info
-        margin-top: 5vh
-        margin-bottom: 10vh
-        .team-name
-            font-family: 'Dosis'
-            font-size: 5vh
-        .img-rounded
-            width: 80%
-            height: auto
-        .member
-            font-family: 'Dosis'
-            font-size: 3vh
-            margin: 1vh 0 0 0
-    .project-info
-        margin-top: 5vh
-        margin-bottom: 10vh
-        .project-name
-            text-align: center
-            font-family: 'Dosis'
-            font-size: 5vh
-            font-weight: 600
-            .award
+                text-align: center
                 font-family: 'Dosis'
                 font-size: 5vh
                 font-weight: 600
-                margin: 1vh 0 0 0
-                padding: 1vh 0 1vh 0
-        .project-content
-            font-family: 'Dosis'
-            font-size: 4vh
-            word-spacing: 2px
-            margin: 1vh 5% 2vh 5%
-        .project-video
-            margin-left: 15%
-            margin-right: 15%
+                .award
+                    font-family: 'Dosis'
+                    font-size: 5vh
+                    font-weight: 600
+                    margin: 1vh 0 0 0
+                    padding: 1vh 0 1vh 0
+            .project-content
+                font-family: 'Dosis'
+                font-size: 3vh
+                word-spacing: 2px
+                margin: 1vh 5% 2vh 5%
+            .project-video
+                margin-left: 15%
+                margin-right: 15%
 
 #footer
     background-color: #262261

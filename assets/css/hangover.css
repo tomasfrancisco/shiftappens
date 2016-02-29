@@ -111,61 +111,82 @@ body, html {
       font-size: 5vh;
       color: white; }
 
-.team {
+#powered {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000; }
+  #powered a {
+    color: #FFFFFF;
+    font-family: "mopsterregular";
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0; }
+    #powered a p {
+      margin: 0;
+      padding: 0; }
+
+#main .team {
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: auto; }
-  .team:nth-child(3n+1) {
+  #main .team:nth-child(3n+1) {
     background-color: #FEFE00;
     color: #262261; }
-    .team:nth-child(3n+1) .project-info .project-name .award {
+    #main .team:nth-child(3n+1) .project-info .project-name .award {
       background-color: #262261;
       color: #FEFE00; }
-  .team:nth-child(3n+2) {
+  #main .team:nth-child(3n+2) {
     background-color: #00A79D;
     color: #FEFE00; }
-    .team:nth-child(3n+2) .project-info .project-name .award {
+    #main .team:nth-child(3n+2) .project-info .project-name .award {
       background-color: #FEFE00;
       color: #00A79D; }
-  .team:nth-child(3n+3) {
+  #main .team:nth-child(3n+3) {
     background-color: #262261;
     color: #FF259C; }
-    .team:nth-child(3n+3) .project-info .project-name .award {
+    #main .team:nth-child(3n+3) .project-info .project-name .award {
       background-color: #FF259C;
       color: #262261; }
-  .team .team-info {
+  #main .team .team-info {
     margin-top: 5vh;
-    margin-bottom: 10vh; }
-    .team .team-info .team-name {
+    margin-bottom: 5vh; }
+    #main .team .team-info .team-name {
       font-family: "Dosis";
       font-size: 5vh; }
-    .team .team-info .img-rounded {
+    #main .team .team-info .img-rounded {
       width: 80%;
       height: auto; }
-    .team .team-info .member {
+    #main .team .team-info .member {
       font-family: "Dosis";
       font-size: 3vh;
       margin: 1vh 0 0 0; }
-  .team .project-info {
+  #main .team .project-info {
     margin-top: 5vh;
-    margin-bottom: 10vh; }
-    .team .project-info .project-name {
+    margin-bottom: 5vh; }
+    #main .team .project-info .project-name {
       text-align: center;
       font-family: "Dosis";
       font-size: 5vh;
       font-weight: 600; }
-      .team .project-info .project-name .award {
+      #main .team .project-info .project-name .award {
         font-family: "Dosis";
         font-size: 5vh;
         font-weight: 600;
         margin: 1vh 0 0 0;
         padding: 1vh 0 1vh 0; }
-    .team .project-info .project-content {
+    #main .team .project-info .project-content {
       font-family: "Dosis";
-      font-size: 4vh;
+      font-size: 3vh;
       word-spacing: 2px;
       margin: 1vh 5% 2vh 5%; }
-    .team .project-info .project-video {
+    #main .team .project-info .project-video {
       margin-left: 15%;
       margin-right: 15%; }
 
