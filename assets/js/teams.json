@@ -16,7 +16,7 @@
             "team-members":["Alexandre Jesus","Nuno Eufrásio","Mário Balça"],
             "project-name":"SlideOps",
             "project-content":"O objetivo é fazer uma aplicação web para criar apresentações powerpoint interativas atraves de smartphones. Queremos usar meteor para ter uma boa base para implementar as features realtime e também para podermos tirar do que já existe na criação de apresentações powerpoint. A partir daí o céu é o limite e podemos implementar as features que acreditarmos que acrescentariam algo de interessante e inovador às apresentações powerpoint.",
-            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-X3F0QUpUcGl0UlE/preview",
+            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-ZmhVQ3R4V05mNVk/preview",
             "award":"2º LUGAR"
         },
         {
@@ -146,15 +146,6 @@
             "award":""
         },
         {
-            "id":"15",
-            "team-name":"404",
-            "team-members":["António Simões","Inês Rodrigues","João Lopes"],
-            "project-name":"Cuzzle",
-            "project-content":"Jogo de puzzles que consiste com mver 2 cubos simultaneamente para um ponto de chegada. Estes cubos terao de interceptar antes da posicao final ser ativada",
-            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-/preview",
-            "award":""
-        },
-        {
             "id":"16",
             "team-name":"Baco",
             "team-members":["Pedro Caseiro","João Bernardo","André Baptista","José Marcelino"],
@@ -191,15 +182,6 @@
             "award":""
         },
         {
-            "id":"21",
-            "team-name":"No clue",
-            "team-members":["Joaquim Ferrer","Diogo Mesquita"],
-            "project-name":"Best Odds",
-            "project-content":"Uma aplicação que mostra as melhores odds para apostar baseado em diversas fontes. Isto aplicado em apostas de desporto.",
-            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-/preview",
-            "award":""
-        },
-        {
             "id":"22",
             "team-name":"vim > emacs",
             "team-members":["Miguel Machado","António Lima","Pedro Belém","Luis Ribeiro"],
@@ -215,15 +197,6 @@
             "project-name":"Rippler",
             "project-content":"Jogo em Javascript de endless survival que consiste em destruir obstáculos através de disparos de pulsos de energia adequados á ameaça. O objetivo do jogo é obter a maior pontuaçao possivel antes do game-over.",
             "video1":"https://drive.google.com/file/d/0B6adD_-su_m-WTRfV2Z5OWxXZ1k/preview",
-            "award":""
-        },
-        {
-            "id":"25",
-            "team-name":"RadioPixel",
-            "team-members":["Mariana Martins","Sofia Rocha"],
-            "project-name":"PixelJournal",
-            "project-content":"Versão digital do bullet journal que te agenda a registar o que fiizeste hoje e plantar o que vais fazer amanha",
-            "video1":"https://drive.google.com/file/d/0B6adD_-su_m-RllrN3ZSTTI3VFE/preview",
             "award":""
         }
     ]
