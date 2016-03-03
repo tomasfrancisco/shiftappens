@@ -23,7 +23,7 @@
             "id":"11",
             "team-name":"23:59",
             "team-members":["Miguel Cruz","Rafael Ferreira","Tomás Marques"],
-            "project-name":"X",
+            "project-name":"X · NEWS",
             "project-content":"A&nbsp; x&nbsp;·&nbsp;news&nbsp; é um serviço de Print on Demand, no qual o subscritor recebe pelo correio um jornal personalizado com as notícias guardadas (Read Later) no Feedly.<br>O público-alvo da&nbsp; x&nbsp;·&nbsp;news&nbsp; são pessoas que utilizam um computador o dia inteiro; a&nbsp; x&nbsp;·&nbsp;news&nbsp; permite que um subscritor se mantenha up-to-date com as últimas notícias (apenas disponíveis na internet) utilizando um meio de leitura muito mais confortável.<br>A Desktop App da&nbsp; x&nbsp;·&nbsp;news&nbsp; que desenvolvemos foi construída com recurso à framework Electron que permite criar software multi-plataforma (Mac, Windows e Linux). A ligação à API do Feedly foi realizada através do módulo node-feedly.<br>x · news, Print is not dead! ",
             "video1":"https://drive.google.com/file/d/0B6adD_-su_m-V1IyRHV6cWU4c2c/preview",
             "award":"3º LUGAR"
